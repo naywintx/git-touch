@@ -62,9 +62,7 @@ class BlobView extends StatelessWidget {
                 ? codeProvider.themeDark
                 : codeProvider.theme]!,
             padding: CommonStyle.padding,
-            textStyle: TextStyle(
-                fontSize: codeProvider.fontSize.toDouble(),
-                fontFamily: codeProvider.fontFamilyUsed),
+            textStyle: codeProvider.fontStyle,
           ),
         );
     }

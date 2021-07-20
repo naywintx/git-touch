@@ -52,6 +52,7 @@ dependencies:
   webview_flutter: ^2.0.4
   sentry_flutter: ^5.1.0
   pub_semver: ^2.0.0
+  google_fonts:
 
 dev_dependencies:
   flutter_test:
@@ -71,52 +72,6 @@ flutter:
   uses-material-design: true
   assets:
     - images/
-  fonts:
-    - family: Fira Code
-      fonts:
-        - asset: fonts/FiraCode-Regular.ttf
-        - asset: fonts/FiraCode-Bold.ttf
-          weight: 700
-    - family: Inconsolata
-      fonts:
-        - asset: fonts/Inconsolata-Regular.ttf
-        - asset: fonts/Inconsolata-Bold.ttf
-          weight: 700
-    - family: PT Mono
-      fonts:
-        - asset: fonts/PTMono-Regular.ttf
-    - family: Source Code Pro
-      fonts:
-        - asset: fonts/SourceCodePro-Regular.ttf
-        - asset: fonts/SourceCodePro-RegularItalic.ttf
-          style: italic
-        - asset: fonts/SourceCodePro-Bold.ttf
-          weight: 700
-        - asset: fonts/SourceCodePro-BoldItalic.ttf
-          style: italic
-          weight: 700
-    - family: Ubuntu Mono
-      fonts:
-        - asset: fonts/UbuntuMono-Regular.ttf
-        - asset: fonts/UbuntuMono-RegularItalic.ttf
-          style: italic
-        - asset: fonts/UbuntuMono-Bold.ttf
-          weight: 700
-        - asset: fonts/UbuntuMono-BoldItalic.ttf
-          style: italic
-          weight: 700
-    - family: Cascadia Code
-      fonts:
-        - asset: fonts/Cascadia.ttf
-    - family: JetBrains Mono
-      fonts:
-        - asset: fonts/JetBrainsMono-Regular.ttf
-        - asset: fonts/JetBrainsMono-Italic.ttf
-          style: italic
-        - asset: fonts/JetBrainsMono-Bold.ttf
-          weight: 700
-        - asset: fonts/JetBrainsMono-Bold-Italic.ttf
-          style: italic
-          weight: 700
+    - google_fonts/
 flutter_intl:
   enabled: true

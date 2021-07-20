@@ -164,7 +164,7 @@ class MarkdownFlutterView extends StatelessWidget {
             backgroundColor: theme.palette.grayBackground,
             fontSize: 16 * 0.85,
             height: 1.45,
-            fontFamily: code.fontFamilyUsed,
+            fontFamily: code.fontStyle.fontFamily,
           ),
           h1: _hStyle.copyWith(fontSize: 32),
           h2: _hStyle.copyWith(fontSize: 24),

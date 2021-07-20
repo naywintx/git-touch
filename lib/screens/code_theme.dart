@@ -133,20 +133,14 @@ class MyApp extends StatelessWidget {
             _getCode(false),
             language: 'dart',
             theme: themeMap[codeProvider.theme]!,
-            textStyle: TextStyle(
-              fontSize: codeProvider.fontSize.toDouble(),
-              fontFamily: codeProvider.fontFamilyUsed,
-            ),
+            textStyle: codeProvider.fontStyle,
             padding: CommonStyle.padding,
           ),
           HighlightView(
             _getCode(true),
             language: 'dart',
             theme: themeMap[codeProvider.themeDark]!,
-            textStyle: TextStyle(
-              fontSize: codeProvider.fontSize.toDouble(),
-              fontFamily: codeProvider.fontFamilyUsed,
-            ),
+            textStyle: codeProvider.fontStyle,
             padding: CommonStyle.padding,
           ),
         ],

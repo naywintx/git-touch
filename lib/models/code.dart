@@ -1,7 +1,9 @@
 import 'package:fimber/fimber.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_highlight/theme_map.dart';
 import 'package:git_touch/utils/utils.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class CodeModel with ChangeNotifier {
@@ -15,7 +17,7 @@ class CodeModel with ChangeNotifier {
     'PT Mono',
     'Source Code Pro',
     'Ubuntu Mono',
-    'Cascadia Code',
+    // 'Cascadia Code', // TODO: https://github.com/google/fonts/issues/2179
   ];
 
   String _theme = 'vs';
@@ -25,10 +27,17 @@ class CodeModel with ChangeNotifier {
 
   String get theme => _theme;
   String get themeDark => _themeDark;
+
   int get fontSize => _fontSize;
   String get fontFamily => _fontFamily;
-  String get fontFamilyUsed =>
-      _fontFamily == 'System' ? CommonStyle.monospace : _fontFamily;
+  TextStyle get fontStyle {
+    if (_fontFamily == 'System') {
+      return TextStyle(
+          fontFamily: CommonStyle.monospace, fontSize: fontSize.toDouble());
+    } else {
+      return GoogleFonts.getFont(_fontFamily, fontSize: fontSize.toDouble());
+    }
+  }
 
   Future<void> init() async {
     var prefs = await SharedPreferences.getInstance();

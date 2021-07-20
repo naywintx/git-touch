@@ -47,9 +47,7 @@ class FilesItem extends StatelessWidget {
               theme: themeMap[theme.brightness == Brightness.dark
                   ? codeProvider.themeDark
                   : codeProvider.theme]!,
-              textStyle: TextStyle(
-                  fontSize: codeProvider.fontSize.toDouble(),
-                  fontFamily: codeProvider.fontFamilyUsed),
+              textStyle: codeProvider.fontStyle,
             ),
           ),
         ],
