@@ -85,8 +85,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
           GCommitsData_repository_defaultBranchRef_target__asCommit.serializer)
       ..add(GCommitsData_repository_defaultBranchRef_target__asCommit_history
           .serializer)
-      ..add(GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes
-          .serializer)
+      ..add(
+          GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes
+              .serializer)
       ..add(
           GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_author
               .serializer)
@@ -166,8 +167,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GCrossReferencedEventPartsData_source__asPullRequest.serializer)
       ..add(GCrossReferencedEventPartsData_source__asPullRequest_repository
           .serializer)
-      ..add(GCrossReferencedEventPartsData_source__asPullRequest_repository_owner
-          .serializer)
+      ..add(
+          GCrossReferencedEventPartsData_source__asPullRequest_repository_owner
+              .serializer)
       ..add(GCrossReferencedEventPartsData_source__base.serializer)
       ..add(GCrossReferencedEventPartsReq.serializer)
       ..add(GCrossReferencedEventPartsVars.serializer)
@@ -326,225 +328,630 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GIssueData_repository_issueOrPullRequest__asIssue_author.serializer)
       ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems
           .serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent
-          .serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent_actor
-          .serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent_assignee__asBot
-          .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent_assignee__asBot
+              .serializer)
       ..add(
           GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent_assignee__asMannequin
               .serializer)
       ..add(
           GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent_assignee__asOrganization
               .serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent_assignee__asUser.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent_assignee__base.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asClosedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asClosedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__asIssue.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__asIssue_repository.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__asIssue_repository_owner.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__asPullRequest.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__asPullRequest_repository.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__asPullRequest_repository_owner.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__base.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asDemilestonedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asDemilestonedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_CONFUSED.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_EYES.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_HEART.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_HOORAY.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_LAUGH.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_ROCKET.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_THUMBS_DOWN.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_THUMBS_UP.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_author.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asLabeledEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asLabeledEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asLabeledEvent_label.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asLockedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asLockedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asMentionedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asMentionedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asMilestonedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asMilestonedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asPinnedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asPinnedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReferencedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReferencedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReferencedEvent_commit.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReferencedEvent_commitRepository.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReferencedEvent_commitRepository_owner.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asRenamedTitleEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asRenamedTitleEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReopenedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReopenedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asSubscribedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asSubscribedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asTransferredEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asTransferredEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asTransferredEvent_fromRepository.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asTransferredEvent_fromRepository_owner.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent_assignee__asBot.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent_assignee__asMannequin.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent_assignee__asOrganization.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent_assignee__asUser.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent_assignee__base.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnlabeledEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnlabeledEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnlabeledEvent_label.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnlockedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnlockedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnsubscribedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnsubscribedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__base.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_pageInfo.serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent_assignee__asUser
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent_assignee__base
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asClosedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asClosedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__asIssue
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__asIssue_repository
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__asIssue_repository_owner
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__asPullRequest
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__asPullRequest_repository
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__asPullRequest_repository_owner
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__base
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asDemilestonedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asDemilestonedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_CONFUSED
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_EYES
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_HEART
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_HOORAY
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_LAUGH
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_ROCKET
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_THUMBS_DOWN
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_THUMBS_UP
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_author
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asLabeledEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asLabeledEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asLabeledEvent_label
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asLockedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asLockedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asMentionedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asMentionedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asMilestonedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asMilestonedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asPinnedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asPinnedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReferencedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReferencedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReferencedEvent_commit
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReferencedEvent_commitRepository
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReferencedEvent_commitRepository_owner
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asRenamedTitleEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asRenamedTitleEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReopenedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReopenedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asSubscribedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asSubscribedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asTransferredEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asTransferredEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asTransferredEvent_fromRepository
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asTransferredEvent_fromRepository_owner
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent_assignee__asBot
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent_assignee__asMannequin
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent_assignee__asOrganization
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent_assignee__asUser
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent_assignee__base
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnlabeledEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnlabeledEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnlabeledEvent_label
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnlockedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnlockedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnsubscribedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnsubscribedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__base
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_pageInfo
+              .serializer)
       ..add(GIssueData_repository_issueOrPullRequest__asPullRequest.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_CONFUSED.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_EYES.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_HEART.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_HOORAY.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_LAUGH.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_ROCKET.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_THUMBS_DOWN.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_THUMBS_UP.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_author.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_commits.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent_assignee__asBot.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent_assignee__asMannequin.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent_assignee__asOrganization.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent_assignee__asUser.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent_assignee__base.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asBaseRefForcePushedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asBaseRefForcePushedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asBaseRefForcePushedEvent_afterCommit.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asBaseRefForcePushedEvent_beforeCommit.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asBaseRefForcePushedEvent_pullRequest.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asBaseRefForcePushedEvent_pullRequest_baseRef.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asClosedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asClosedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__asIssue.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__asIssue_repository.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__asIssue_repository_owner.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__asPullRequest.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__asPullRequest_repository.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__asPullRequest_repository_owner.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__base.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDemilestonedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDemilestonedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeployedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeployedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeployedEvent_pullRequest.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeployedEvent_pullRequest_headRef.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeploymentEnvironmentChangedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeploymentEnvironmentChangedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeploymentEnvironmentChangedEvent_deploymentStatus.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeploymentEnvironmentChangedEvent_deploymentStatus_deployment.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefDeletedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefDeletedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefForcePushedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefForcePushedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefForcePushedEvent_afterCommit.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefForcePushedEvent_beforeCommit.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefForcePushedEvent_pullRequest.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefRestoredEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefRestoredEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefRestoredEvent_pullRequest.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_CONFUSED.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_EYES.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_HEART.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_HOORAY.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_LAUGH.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_ROCKET.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_THUMBS_DOWN.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_THUMBS_UP.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_author.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asLabeledEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asLabeledEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asLabeledEvent_label.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asLockedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asLockedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMentionedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMentionedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMergedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMergedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMergedEvent_commit.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMilestonedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMilestonedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPinnedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPinnedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestCommit.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestCommit_commit.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestCommit_commit_author.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestCommit_commit_author_user.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_author.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_CONFUSED.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_EYES.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_HEART.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_HOORAY.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_LAUGH.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_ROCKET.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_THUMBS_DOWN.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_THUMBS_UP.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_author.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReferencedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReferencedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReferencedEvent_commit.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReferencedEvent_commitRepository.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReferencedEvent_commitRepository_owner.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asRenamedTitleEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asRenamedTitleEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReopenedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReopenedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewDismissedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewDismissedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewDismissedEvent_pullRequest.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewDismissedEvent_pullRequest_author.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestRemovedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestRemovedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestRemovedEvent_requestedReviewer__asUser.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestRemovedEvent_requestedReviewer__base.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestedEvent_requestedReviewer__asUser.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestedEvent_requestedReviewer__base.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asSubscribedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asSubscribedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asTransferredEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asTransferredEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asTransferredEvent_fromRepository.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asTransferredEvent_fromRepository_owner.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent_assignee__asBot.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent_assignee__asMannequin.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent_assignee__asOrganization.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent_assignee__asUser.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent_assignee__base.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnlabeledEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnlabeledEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnlabeledEvent_label.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnlockedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnlockedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnsubscribedEvent.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnsubscribedEvent_actor.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__base.serializer)
-      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_pageInfo.serializer)
+      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_CONFUSED
+          .serializer)
+      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_EYES
+          .serializer)
+      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_HEART
+          .serializer)
+      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_HOORAY
+          .serializer)
+      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_LAUGH
+          .serializer)
+      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_ROCKET
+          .serializer)
+      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_THUMBS_DOWN
+          .serializer)
+      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_THUMBS_UP
+          .serializer)
+      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_author
+          .serializer)
+      ..add(GIssueData_repository_issueOrPullRequest__asPullRequest_commits
+          .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent_assignee__asBot
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent_assignee__asMannequin
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent_assignee__asOrganization
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent_assignee__asUser
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent_assignee__base
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asBaseRefForcePushedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asBaseRefForcePushedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asBaseRefForcePushedEvent_afterCommit
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asBaseRefForcePushedEvent_beforeCommit
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asBaseRefForcePushedEvent_pullRequest
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asBaseRefForcePushedEvent_pullRequest_baseRef
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asClosedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asClosedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__asIssue
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__asIssue_repository
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__asIssue_repository_owner
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__asPullRequest
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__asPullRequest_repository
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__asPullRequest_repository_owner
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__base
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDemilestonedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDemilestonedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeployedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeployedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeployedEvent_pullRequest
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeployedEvent_pullRequest_headRef
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeploymentEnvironmentChangedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeploymentEnvironmentChangedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeploymentEnvironmentChangedEvent_deploymentStatus
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeploymentEnvironmentChangedEvent_deploymentStatus_deployment
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefDeletedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefDeletedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefForcePushedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefForcePushedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefForcePushedEvent_afterCommit
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefForcePushedEvent_beforeCommit
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefForcePushedEvent_pullRequest
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefRestoredEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefRestoredEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefRestoredEvent_pullRequest
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_CONFUSED
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_EYES
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_HEART
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_HOORAY
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_LAUGH
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_ROCKET
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_THUMBS_DOWN
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_THUMBS_UP
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_author
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asLabeledEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asLabeledEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asLabeledEvent_label
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asLockedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asLockedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMentionedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMentionedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMergedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMergedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMergedEvent_commit
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMilestonedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMilestonedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPinnedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPinnedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestCommit
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestCommit_commit
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestCommit_commit_author
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestCommit_commit_author_user
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_author
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_CONFUSED
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_EYES
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_HEART
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_HOORAY
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_LAUGH
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_ROCKET
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_THUMBS_DOWN
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_THUMBS_UP
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_author
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReferencedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReferencedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReferencedEvent_commit
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReferencedEvent_commitRepository
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReferencedEvent_commitRepository_owner
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asRenamedTitleEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asRenamedTitleEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReopenedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReopenedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewDismissedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewDismissedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewDismissedEvent_pullRequest
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewDismissedEvent_pullRequest_author
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestRemovedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestRemovedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestRemovedEvent_requestedReviewer__asUser
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestRemovedEvent_requestedReviewer__base
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestedEvent_requestedReviewer__asUser
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestedEvent_requestedReviewer__base
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asSubscribedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asSubscribedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asTransferredEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asTransferredEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asTransferredEvent_fromRepository
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asTransferredEvent_fromRepository_owner
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent_assignee__asBot
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent_assignee__asMannequin
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent_assignee__asOrganization
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent_assignee__asUser
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent_assignee__base
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnlabeledEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnlabeledEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnlabeledEvent_label
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnlockedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnlockedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnsubscribedEvent
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnsubscribedEvent_actor
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__base
+              .serializer)
+      ..add(
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_pageInfo
+              .serializer)
       ..add(GIssueData_repository_issueOrPullRequest__base.serializer)
       ..add(GIssueData_repository_owner.serializer)
       ..add(GIssueFilters.serializer)
@@ -624,9 +1031,11 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GOrgRemoveMemberAuditEntryReason.serializer)
       ..add(GOrgRemoveOutsideCollaboratorAuditEntryMembershipType.serializer)
       ..add(GOrgRemoveOutsideCollaboratorAuditEntryReason.serializer)
-      ..add(GOrgUpdateDefaultRepositoryPermissionAuditEntryPermission.serializer)
+      ..add(
+          GOrgUpdateDefaultRepositoryPermissionAuditEntryPermission.serializer)
       ..add(GOrgUpdateMemberAuditEntryPermission.serializer)
-      ..add(GOrgUpdateMemberRepositoryCreationPermissionAuditEntryVisibility.serializer)
+      ..add(GOrgUpdateMemberRepositoryCreationPermissionAuditEntryVisibility
+          .serializer)
       ..add(GOrganizationInvitationRole.serializer)
       ..add(GOrganizationInvitationType.serializer)
       ..add(GOrganizationMemberRole.serializer)
@@ -738,7 +1147,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GReleasesData_repository_releases_nodes.serializer)
       ..add(GReleasesData_repository_releases_nodes_author.serializer)
       ..add(GReleasesData_repository_releases_nodes_releaseAssets.serializer)
-      ..add(GReleasesData_repository_releases_nodes_releaseAssets_nodes.serializer)
+      ..add(GReleasesData_repository_releases_nodes_releaseAssets_nodes
+          .serializer)
       ..add(GReleasesData_repository_releases_pageInfo.serializer)
       ..add(GReleasesReq.serializer)
       ..add(GReleasesVars.serializer)
@@ -775,7 +1185,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GRepoData_repository.serializer)
       ..add(GRepoData_repository_defaultBranchRef.serializer)
       ..add(GRepoData_repository_defaultBranchRef_target__asCommit.serializer)
-      ..add(GRepoData_repository_defaultBranchRef_target__asCommit_history.serializer)
+      ..add(GRepoData_repository_defaultBranchRef_target__asCommit_history
+          .serializer)
       ..add(GRepoData_repository_defaultBranchRef_target__base.serializer)
       ..add(GRepoData_repository_forks.serializer)
       ..add(GRepoData_repository_issues.serializer)
@@ -860,8 +1271,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GReviewDismissedEventPartsVars.serializer)
       ..add(GReviewRequestRemovedEventPartsData.serializer)
       ..add(GReviewRequestRemovedEventPartsData_actor.serializer)
-      ..add(GReviewRequestRemovedEventPartsData_requestedReviewer__asUser.serializer)
-      ..add(GReviewRequestRemovedEventPartsData_requestedReviewer__base.serializer)
+      ..add(GReviewRequestRemovedEventPartsData_requestedReviewer__asUser
+          .serializer)
+      ..add(GReviewRequestRemovedEventPartsData_requestedReviewer__base
+          .serializer)
       ..add(GReviewRequestRemovedEventPartsReq.serializer)
       ..add(GReviewRequestRemovedEventPartsVars.serializer)
       ..add(GReviewRequestedEventPartsData.serializer)
@@ -910,7 +1323,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GStarsData_user_starredRepositories_nodes.serializer)
       ..add(GStarsData_user_starredRepositories_nodes_forks.serializer)
       ..add(GStarsData_user_starredRepositories_nodes_owner.serializer)
-      ..add(GStarsData_user_starredRepositories_nodes_primaryLanguage.serializer)
+      ..add(
+          GStarsData_user_starredRepositories_nodes_primaryLanguage.serializer)
       ..add(GStarsData_user_starredRepositories_nodes_stargazers.serializer)
       ..add(GStarsData_user_starredRepositories_pageInfo.serializer)
       ..add(GStarsReq.serializer)
@@ -982,21 +1396,29 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GUpdateDiscussionCommentInput.serializer)
       ..add(GUpdateDiscussionInput.serializer)
       ..add(GUpdateEnterpriseAdministratorRoleInput.serializer)
-      ..add(GUpdateEnterpriseAllowPrivateRepositoryForkingSettingInput.serializer)
+      ..add(
+          GUpdateEnterpriseAllowPrivateRepositoryForkingSettingInput.serializer)
       ..add(GUpdateEnterpriseDefaultRepositoryPermissionSettingInput.serializer)
-      ..add(GUpdateEnterpriseMembersCanChangeRepositoryVisibilitySettingInput.serializer)
-      ..add(GUpdateEnterpriseMembersCanCreateRepositoriesSettingInput.serializer)
+      ..add(GUpdateEnterpriseMembersCanChangeRepositoryVisibilitySettingInput
+          .serializer)
+      ..add(
+          GUpdateEnterpriseMembersCanCreateRepositoriesSettingInput.serializer)
       ..add(GUpdateEnterpriseMembersCanDeleteIssuesSettingInput.serializer)
-      ..add(GUpdateEnterpriseMembersCanDeleteRepositoriesSettingInput.serializer)
-      ..add(GUpdateEnterpriseMembersCanInviteCollaboratorsSettingInput.serializer)
+      ..add(
+          GUpdateEnterpriseMembersCanDeleteRepositoriesSettingInput.serializer)
+      ..add(
+          GUpdateEnterpriseMembersCanInviteCollaboratorsSettingInput.serializer)
       ..add(GUpdateEnterpriseMembersCanMakePurchasesSettingInput.serializer)
-      ..add(GUpdateEnterpriseMembersCanUpdateProtectedBranchesSettingInput.serializer)
-      ..add(GUpdateEnterpriseMembersCanViewDependencyInsightsSettingInput.serializer)
+      ..add(GUpdateEnterpriseMembersCanUpdateProtectedBranchesSettingInput
+          .serializer)
+      ..add(GUpdateEnterpriseMembersCanViewDependencyInsightsSettingInput
+          .serializer)
       ..add(GUpdateEnterpriseOrganizationProjectsSettingInput.serializer)
       ..add(GUpdateEnterpriseProfileInput.serializer)
       ..add(GUpdateEnterpriseRepositoryProjectsSettingInput.serializer)
       ..add(GUpdateEnterpriseTeamDiscussionsSettingInput.serializer)
-      ..add(GUpdateEnterpriseTwoFactorAuthenticationRequiredSettingInput.serializer)
+      ..add(GUpdateEnterpriseTwoFactorAuthenticationRequiredSettingInput
+          .serializer)
       ..add(GUpdateEnvironmentInput.serializer)
       ..add(GUpdateIpAllowListEnabledSettingInput.serializer)
       ..add(GUpdateIpAllowListEntryInput.serializer)
@@ -1018,41 +1440,85 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GUserBlockDuration.serializer)
       ..add(GUserData.serializer)
       ..add(GUserData_repositoryOwner__asOrganization.serializer)
-      ..add(GUserData_repositoryOwner__asOrganization_membersWithRole.serializer)
+      ..add(
+          GUserData_repositoryOwner__asOrganization_membersWithRole.serializer)
       ..add(GUserData_repositoryOwner__asOrganization_pinnableItems.serializer)
-      ..add(GUserData_repositoryOwner__asOrganization_pinnableItems_nodes__asRepository.serializer)
-      ..add(GUserData_repositoryOwner__asOrganization_pinnableItems_nodes__asRepository_forks.serializer)
-      ..add(GUserData_repositoryOwner__asOrganization_pinnableItems_nodes__asRepository_owner.serializer)
-      ..add(GUserData_repositoryOwner__asOrganization_pinnableItems_nodes__asRepository_primaryLanguage.serializer)
-      ..add(GUserData_repositoryOwner__asOrganization_pinnableItems_nodes__asRepository_stargazers.serializer)
-      ..add(GUserData_repositoryOwner__asOrganization_pinnableItems_nodes__base.serializer)
+      ..add(
+          GUserData_repositoryOwner__asOrganization_pinnableItems_nodes__asRepository
+              .serializer)
+      ..add(
+          GUserData_repositoryOwner__asOrganization_pinnableItems_nodes__asRepository_forks
+              .serializer)
+      ..add(
+          GUserData_repositoryOwner__asOrganization_pinnableItems_nodes__asRepository_owner
+              .serializer)
+      ..add(
+          GUserData_repositoryOwner__asOrganization_pinnableItems_nodes__asRepository_primaryLanguage
+              .serializer)
+      ..add(
+          GUserData_repositoryOwner__asOrganization_pinnableItems_nodes__asRepository_stargazers
+              .serializer)
+      ..add(GUserData_repositoryOwner__asOrganization_pinnableItems_nodes__base
+          .serializer)
       ..add(GUserData_repositoryOwner__asOrganization_pinnedItems.serializer)
-      ..add(GUserData_repositoryOwner__asOrganization_pinnedItems_nodes__asRepository.serializer)
-      ..add(GUserData_repositoryOwner__asOrganization_pinnedItems_nodes__asRepository_forks.serializer)
-      ..add(GUserData_repositoryOwner__asOrganization_pinnedItems_nodes__asRepository_owner.serializer)
-      ..add(GUserData_repositoryOwner__asOrganization_pinnedItems_nodes__asRepository_primaryLanguage.serializer)
-      ..add(GUserData_repositoryOwner__asOrganization_pinnedItems_nodes__asRepository_stargazers.serializer)
-      ..add(GUserData_repositoryOwner__asOrganization_pinnedItems_nodes__base.serializer)
+      ..add(
+          GUserData_repositoryOwner__asOrganization_pinnedItems_nodes__asRepository
+              .serializer)
+      ..add(
+          GUserData_repositoryOwner__asOrganization_pinnedItems_nodes__asRepository_forks
+              .serializer)
+      ..add(
+          GUserData_repositoryOwner__asOrganization_pinnedItems_nodes__asRepository_owner
+              .serializer)
+      ..add(
+          GUserData_repositoryOwner__asOrganization_pinnedItems_nodes__asRepository_primaryLanguage
+              .serializer)
+      ..add(
+          GUserData_repositoryOwner__asOrganization_pinnedItems_nodes__asRepository_stargazers
+              .serializer)
+      ..add(GUserData_repositoryOwner__asOrganization_pinnedItems_nodes__base
+          .serializer)
       ..add(GUserData_repositoryOwner__asUser.serializer)
-      ..add(GUserData_repositoryOwner__asUser_contributionsCollection.serializer)
-      ..add(GUserData_repositoryOwner__asUser_contributionsCollection_contributionCalendar.serializer)
-      ..add(GUserData_repositoryOwner__asUser_contributionsCollection_contributionCalendar_weeks.serializer)
-      ..add(GUserData_repositoryOwner__asUser_contributionsCollection_contributionCalendar_weeks_contributionDays.serializer)
+      ..add(
+          GUserData_repositoryOwner__asUser_contributionsCollection.serializer)
+      ..add(
+          GUserData_repositoryOwner__asUser_contributionsCollection_contributionCalendar
+              .serializer)
+      ..add(
+          GUserData_repositoryOwner__asUser_contributionsCollection_contributionCalendar_weeks
+              .serializer)
+      ..add(
+          GUserData_repositoryOwner__asUser_contributionsCollection_contributionCalendar_weeks_contributionDays
+              .serializer)
       ..add(GUserData_repositoryOwner__asUser_followers.serializer)
       ..add(GUserData_repositoryOwner__asUser_following.serializer)
       ..add(GUserData_repositoryOwner__asUser_pinnedItems.serializer)
-      ..add(GUserData_repositoryOwner__asUser_pinnedItems_nodes__asRepository.serializer)
-      ..add(GUserData_repositoryOwner__asUser_pinnedItems_nodes__asRepository_forks.serializer)
-      ..add(GUserData_repositoryOwner__asUser_pinnedItems_nodes__asRepository_owner.serializer)
-      ..add(GUserData_repositoryOwner__asUser_pinnedItems_nodes__asRepository_primaryLanguage.serializer)
-      ..add(GUserData_repositoryOwner__asUser_pinnedItems_nodes__asRepository_stargazers.serializer)
-      ..add(GUserData_repositoryOwner__asUser_pinnedItems_nodes__base.serializer)
+      ..add(GUserData_repositoryOwner__asUser_pinnedItems_nodes__asRepository
+          .serializer)
+      ..add(
+          GUserData_repositoryOwner__asUser_pinnedItems_nodes__asRepository_forks
+              .serializer)
+      ..add(
+          GUserData_repositoryOwner__asUser_pinnedItems_nodes__asRepository_owner
+              .serializer)
+      ..add(
+          GUserData_repositoryOwner__asUser_pinnedItems_nodes__asRepository_primaryLanguage
+              .serializer)
+      ..add(
+          GUserData_repositoryOwner__asUser_pinnedItems_nodes__asRepository_stargazers
+              .serializer)
+      ..add(
+          GUserData_repositoryOwner__asUser_pinnedItems_nodes__base.serializer)
       ..add(GUserData_repositoryOwner__asUser_repositories.serializer)
       ..add(GUserData_repositoryOwner__asUser_repositories_nodes.serializer)
-      ..add(GUserData_repositoryOwner__asUser_repositories_nodes_forks.serializer)
-      ..add(GUserData_repositoryOwner__asUser_repositories_nodes_owner.serializer)
-      ..add(GUserData_repositoryOwner__asUser_repositories_nodes_primaryLanguage.serializer)
-      ..add(GUserData_repositoryOwner__asUser_repositories_nodes_stargazers.serializer)
+      ..add(
+          GUserData_repositoryOwner__asUser_repositories_nodes_forks.serializer)
+      ..add(
+          GUserData_repositoryOwner__asUser_repositories_nodes_owner.serializer)
+      ..add(GUserData_repositoryOwner__asUser_repositories_nodes_primaryLanguage
+          .serializer)
+      ..add(GUserData_repositoryOwner__asUser_repositories_nodes_stargazers
+          .serializer)
       ..add(GUserData_repositoryOwner__asUser_starredRepositories.serializer)
       ..add(GUserData_repositoryOwner__base.serializer)
       ..add(GUserItemData.serializer)
@@ -1060,17 +1526,23 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GUserItemVars.serializer)
       ..add(GUserPartsData.serializer)
       ..add(GUserPartsData_contributionsCollection.serializer)
-      ..add(GUserPartsData_contributionsCollection_contributionCalendar.serializer)
-      ..add(GUserPartsData_contributionsCollection_contributionCalendar_weeks.serializer)
-      ..add(GUserPartsData_contributionsCollection_contributionCalendar_weeks_contributionDays.serializer)
+      ..add(GUserPartsData_contributionsCollection_contributionCalendar
+          .serializer)
+      ..add(GUserPartsData_contributionsCollection_contributionCalendar_weeks
+          .serializer)
+      ..add(
+          GUserPartsData_contributionsCollection_contributionCalendar_weeks_contributionDays
+              .serializer)
       ..add(GUserPartsData_followers.serializer)
       ..add(GUserPartsData_following.serializer)
       ..add(GUserPartsData_pinnedItems.serializer)
       ..add(GUserPartsData_pinnedItems_nodes__asRepository.serializer)
       ..add(GUserPartsData_pinnedItems_nodes__asRepository_forks.serializer)
       ..add(GUserPartsData_pinnedItems_nodes__asRepository_owner.serializer)
-      ..add(GUserPartsData_pinnedItems_nodes__asRepository_primaryLanguage.serializer)
-      ..add(GUserPartsData_pinnedItems_nodes__asRepository_stargazers.serializer)
+      ..add(GUserPartsData_pinnedItems_nodes__asRepository_primaryLanguage
+          .serializer)
+      ..add(
+          GUserPartsData_pinnedItems_nodes__asRepository_stargazers.serializer)
       ..add(GUserPartsData_pinnedItems_nodes__base.serializer)
       ..add(GUserPartsData_repositories.serializer)
       ..add(GUserPartsData_repositories_nodes.serializer)
@@ -1091,17 +1563,24 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GViewerData.serializer)
       ..add(GViewerData_viewer.serializer)
       ..add(GViewerData_viewer_contributionsCollection.serializer)
-      ..add(GViewerData_viewer_contributionsCollection_contributionCalendar.serializer)
-      ..add(GViewerData_viewer_contributionsCollection_contributionCalendar_weeks.serializer)
-      ..add(GViewerData_viewer_contributionsCollection_contributionCalendar_weeks_contributionDays.serializer)
+      ..add(GViewerData_viewer_contributionsCollection_contributionCalendar
+          .serializer)
+      ..add(
+          GViewerData_viewer_contributionsCollection_contributionCalendar_weeks
+              .serializer)
+      ..add(
+          GViewerData_viewer_contributionsCollection_contributionCalendar_weeks_contributionDays
+              .serializer)
       ..add(GViewerData_viewer_followers.serializer)
       ..add(GViewerData_viewer_following.serializer)
       ..add(GViewerData_viewer_pinnedItems.serializer)
       ..add(GViewerData_viewer_pinnedItems_nodes__asRepository.serializer)
       ..add(GViewerData_viewer_pinnedItems_nodes__asRepository_forks.serializer)
       ..add(GViewerData_viewer_pinnedItems_nodes__asRepository_owner.serializer)
-      ..add(GViewerData_viewer_pinnedItems_nodes__asRepository_primaryLanguage.serializer)
-      ..add(GViewerData_viewer_pinnedItems_nodes__asRepository_stargazers.serializer)
+      ..add(GViewerData_viewer_pinnedItems_nodes__asRepository_primaryLanguage
+          .serializer)
+      ..add(GViewerData_viewer_pinnedItems_nodes__asRepository_stargazers
+          .serializer)
       ..add(GViewerData_viewer_pinnedItems_nodes__base.serializer)
       ..add(GViewerData_viewer_repositories.serializer)
       ..add(GViewerData_viewer_repositories_nodes.serializer)
@@ -1120,134 +1599,345 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GWatchersReq.serializer)
       ..add(GWatchersVars.serializer)
       ..add(GX509Certificate.serializer)
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GCheckAnnotationData)]), () => new ListBuilder<GCheckAnnotationData>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GCheckRunOutputImage)]), () => new ListBuilder<GCheckRunOutputImage>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GCheckRunAction)]), () => new ListBuilder<GCheckRunAction>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GCheckRunAction)]), () => new ListBuilder<GCheckRunAction>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GCheckSuiteAutoTriggerPreference)]), () => new ListBuilder<GCheckSuiteAutoTriggerPreference>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(GCheckAnnotationData)]),
+          () => new ListBuilder<GCheckAnnotationData>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(GCheckRunOutputImage)]),
+          () => new ListBuilder<GCheckRunOutputImage>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(GCheckRunAction)]),
+          () => new ListBuilder<GCheckRunAction>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(GCheckRunAction)]),
+          () => new ListBuilder<GCheckRunAction>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GCheckSuiteAutoTriggerPreference)]),
+          () => new ListBuilder<GCheckSuiteAutoTriggerPreference>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(
                 GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes)
           ]),
-          () => new ListBuilder<GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GCommitsData_repository_ref_target__asCommit_history_nodes)]), () => new ListBuilder<GCommitsData_repository_ref_target__asCommit_history_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GCommitsRefCommitData_history_nodes)]), () => new ListBuilder<GCommitsRefCommitData_history_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GCommitsRefData_target__asCommit_history_nodes)]), () => new ListBuilder<GCommitsRefData_target__asCommit_history_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GDraftPullRequestReviewComment)]), () => new ListBuilder<GDraftPullRequestReviewComment>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GDraftPullRequestReviewThread)]), () => new ListBuilder<GDraftPullRequestReviewThread>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GFollowersData_user_followers_nodes)]), () => new ListBuilder<GFollowersData_user_followers_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GFollowingData_user_following_nodes)]), () => new ListBuilder<GFollowingData_user_following_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GGistData_user_gist_files)]), () => new ListBuilder<GGistData_user_gist_files>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GGistsData_user_gists_nodes)]), () => new ListBuilder<GGistsData_user_gists_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GGistsData_user_gists_nodes_files)]), () => new ListBuilder<GGistsData_user_gists_nodes_files>())
+          () => new ListBuilder<
+              GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GCommitsData_repository_ref_target__asCommit_history_nodes)
+          ]),
+          () => new ListBuilder<
+              GCommitsData_repository_ref_target__asCommit_history_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GCommitsRefCommitData_history_nodes)]),
+          () => new ListBuilder<GCommitsRefCommitData_history_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(GCommitsRefData_target__asCommit_history_nodes)
+          ]),
+          () =>
+              new ListBuilder<GCommitsRefData_target__asCommit_history_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GDraftPullRequestReviewComment)]),
+          () => new ListBuilder<GDraftPullRequestReviewComment>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(GDraftPullRequestReviewThread)]),
+          () => new ListBuilder<GDraftPullRequestReviewThread>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GFollowersData_user_followers_nodes)]),
+          () => new ListBuilder<GFollowersData_user_followers_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GFollowingData_user_following_nodes)]),
+          () => new ListBuilder<GFollowingData_user_following_nodes>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(GGistData_user_gist_files)]),
+          () => new ListBuilder<GGistData_user_gist_files>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(GGistsData_user_gists_nodes)]),
+          () => new ListBuilder<GGistsData_user_gists_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GGistsData_user_gists_nodes_files)]),
+          () => new ListBuilder<GGistsData_user_gists_nodes_files>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(
                 GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes)
           ]),
-          () => new ListBuilder<GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes>())
+          () => new ListBuilder<
+              GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(
                 GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes)
           ]),
-          () => new ListBuilder<GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes>())
+          () => new ListBuilder<
+              GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(
                 GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes)
           ]),
-          () => new ListBuilder<GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GIssuesData_repository_issues_nodes)]), () => new ListBuilder<GIssuesData_repository_issues_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GIssuesData_repository_issues_nodes_labels_nodes)]), () => new ListBuilder<GIssuesData_repository_issues_nodes_labels_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GMembersData_organization_membersWithRole_nodes)]), () => new ListBuilder<GMembersData_organization_membersWithRole_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GPullRequestReviewPartsData_comments_nodes)]), () => new ListBuilder<GPullRequestReviewPartsData_comments_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GPullsData_repository_pullRequests_nodes)]), () => new ListBuilder<GPullsData_repository_pullRequests_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GPullsData_repository_pullRequests_nodes_labels_nodes)]), () => new ListBuilder<GPullsData_repository_pullRequests_nodes_labels_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GReleasesData_repository_releases_nodes)]), () => new ListBuilder<GReleasesData_repository_releases_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GReleasesData_repository_releases_nodes_releaseAssets_nodes)]), () => new ListBuilder<GReleasesData_repository_releases_nodes_releaseAssets_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GRepoData_repository_languages_edges)]), () => new ListBuilder<GRepoData_repository_languages_edges>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GRepoData_repository_refs_nodes)]), () => new ListBuilder<GRepoData_repository_refs_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GRepoData_repository_repositoryTopics_nodes)]), () => new ListBuilder<GRepoData_repository_repositoryTopics_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GReposData_user_repositories_nodes)]), () => new ListBuilder<GReposData_user_repositories_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GStargazersData_repository_stargazers_nodes)]), () => new ListBuilder<GStargazersData_repository_stargazers_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GStarsData_user_starredRepositories_nodes)]), () => new ListBuilder<GStarsData_user_starredRepositories_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GUserData_repositoryOwner__asOrganization_pinnableItems_nodes)]), () => new ListBuilder<GUserData_repositoryOwner__asOrganization_pinnableItems_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GUserData_repositoryOwner__asOrganization_pinnedItems_nodes)]), () => new ListBuilder<GUserData_repositoryOwner__asOrganization_pinnedItems_nodes>())
+          () => new ListBuilder<
+              GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GIssuesData_repository_issues_nodes)]),
+          () => new ListBuilder<GIssuesData_repository_issues_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(GIssuesData_repository_issues_nodes_labels_nodes)
+          ]),
+          () => new ListBuilder<
+              GIssuesData_repository_issues_nodes_labels_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(GMembersData_organization_membersWithRole_nodes)
+          ]),
+          () => new ListBuilder<
+              GMembersData_organization_membersWithRole_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(GPullRequestReviewPartsData_comments_nodes)
+          ]),
+          () => new ListBuilder<GPullRequestReviewPartsData_comments_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GPullsData_repository_pullRequests_nodes)]),
+          () => new ListBuilder<GPullsData_repository_pullRequests_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GPullsData_repository_pullRequests_nodes_labels_nodes)
+          ]),
+          () => new ListBuilder<
+              GPullsData_repository_pullRequests_nodes_labels_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GReleasesData_repository_releases_nodes)]),
+          () => new ListBuilder<GReleasesData_repository_releases_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GReleasesData_repository_releases_nodes_releaseAssets_nodes)
+          ]),
+          () => new ListBuilder<
+              GReleasesData_repository_releases_nodes_releaseAssets_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GRepoData_repository_languages_edges)]),
+          () => new ListBuilder<GRepoData_repository_languages_edges>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GRepoData_repository_refs_nodes)]),
+          () => new ListBuilder<GRepoData_repository_refs_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(GRepoData_repository_repositoryTopics_nodes)
+          ]),
+          () => new ListBuilder<GRepoData_repository_repositoryTopics_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GReposData_user_repositories_nodes)]),
+          () => new ListBuilder<GReposData_user_repositories_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(GStargazersData_repository_stargazers_nodes)
+          ]),
+          () => new ListBuilder<GStargazersData_repository_stargazers_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(GStarsData_user_starredRepositories_nodes)
+          ]),
+          () => new ListBuilder<GStarsData_user_starredRepositories_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GUserData_repositoryOwner__asOrganization_pinnableItems_nodes)
+          ]),
+          () => new ListBuilder<
+              GUserData_repositoryOwner__asOrganization_pinnableItems_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GUserData_repositoryOwner__asOrganization_pinnedItems_nodes)
+          ]),
+          () => new ListBuilder<
+              GUserData_repositoryOwner__asOrganization_pinnedItems_nodes>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(
                 GUserData_repositoryOwner__asUser_contributionsCollection_contributionCalendar_weeks)
           ]),
-          () => new ListBuilder<GUserData_repositoryOwner__asUser_contributionsCollection_contributionCalendar_weeks>())
+          () => new ListBuilder<
+              GUserData_repositoryOwner__asUser_contributionsCollection_contributionCalendar_weeks>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(
                 GUserData_repositoryOwner__asUser_contributionsCollection_contributionCalendar_weeks_contributionDays)
           ]),
-          () => new ListBuilder<GUserData_repositoryOwner__asUser_contributionsCollection_contributionCalendar_weeks_contributionDays>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GUserData_repositoryOwner__asUser_pinnedItems_nodes)]), () => new ListBuilder<GUserData_repositoryOwner__asUser_pinnedItems_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GUserData_repositoryOwner__asUser_repositories_nodes)]), () => new ListBuilder<GUserData_repositoryOwner__asUser_repositories_nodes>())
+          () => new ListBuilder<
+              GUserData_repositoryOwner__asUser_contributionsCollection_contributionCalendar_weeks_contributionDays>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(GUserData_repositoryOwner__asUser_pinnedItems_nodes)
+          ]),
+          () => new ListBuilder<
+              GUserData_repositoryOwner__asUser_pinnedItems_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(GUserData_repositoryOwner__asUser_repositories_nodes)
+          ]),
+          () => new ListBuilder<
+              GUserData_repositoryOwner__asUser_repositories_nodes>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(
                 GUserPartsData_contributionsCollection_contributionCalendar_weeks)
           ]),
-          () => new ListBuilder<GUserPartsData_contributionsCollection_contributionCalendar_weeks>())
+          () => new ListBuilder<
+              GUserPartsData_contributionsCollection_contributionCalendar_weeks>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(
                 GUserPartsData_contributionsCollection_contributionCalendar_weeks_contributionDays)
           ]),
-          () => new ListBuilder<GUserPartsData_contributionsCollection_contributionCalendar_weeks_contributionDays>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GUserPartsData_pinnedItems_nodes)]), () => new ListBuilder<GUserPartsData_pinnedItems_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GUserPartsData_repositories_nodes)]), () => new ListBuilder<GUserPartsData_repositories_nodes>())
+          () => new ListBuilder<
+              GUserPartsData_contributionsCollection_contributionCalendar_weeks_contributionDays>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GUserPartsData_pinnedItems_nodes)]),
+          () => new ListBuilder<GUserPartsData_pinnedItems_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GUserPartsData_repositories_nodes)]),
+          () => new ListBuilder<GUserPartsData_repositories_nodes>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(
                 GViewerData_viewer_contributionsCollection_contributionCalendar_weeks)
           ]),
-          () => new ListBuilder<GViewerData_viewer_contributionsCollection_contributionCalendar_weeks>())
+          () => new ListBuilder<
+              GViewerData_viewer_contributionsCollection_contributionCalendar_weeks>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(
                 GViewerData_viewer_contributionsCollection_contributionCalendar_weeks_contributionDays)
           ]),
-          () => new ListBuilder<GViewerData_viewer_contributionsCollection_contributionCalendar_weeks_contributionDays>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GViewerData_viewer_pinnedItems_nodes)]), () => new ListBuilder<GViewerData_viewer_pinnedItems_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GViewerData_viewer_repositories_nodes)]), () => new ListBuilder<GViewerData_viewer_repositories_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GWatchersData_repository_watchers_nodes)]), () => new ListBuilder<GWatchersData_repository_watchers_nodes>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(GIssueState)]), () => new ListBuilder<GIssueState>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>()))
+          () => new ListBuilder<
+              GViewerData_viewer_contributionsCollection_contributionCalendar_weeks_contributionDays>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GViewerData_viewer_pinnedItems_nodes)]),
+          () => new ListBuilder<GViewerData_viewer_pinnedItems_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GViewerData_viewer_repositories_nodes)]),
+          () => new ListBuilder<GViewerData_viewer_repositories_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GWatchersData_repository_watchers_nodes)]),
+          () => new ListBuilder<GWatchersData_repository_watchers_nodes>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(GIssueState)]),
+          () => new ListBuilder<GIssueState>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>()))
     .build();
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new

@@ -204,7 +204,7 @@ class _$GGistsReqSerializer implements StructuredSerializer<GGistsReq> {
           break;
         case 'requestId':
           result.requestId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'optimisticResponse':
           result.optimisticResponse.replace(serializers.deserialize(value,
@@ -213,19 +213,19 @@ class _$GGistsReqSerializer implements StructuredSerializer<GGistsReq> {
           break;
         case 'updateCacheHandlerKey':
           result.updateCacheHandlerKey = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'updateCacheHandlerContext':
           result.updateCacheHandlerContext = serializers.deserialize(value,
               specifiedType: const FullType(Map, const [
                 const FullType(String),
                 const FullType(dynamic)
-              ])) as Map<String, dynamic>;
+              ])) as Map<String, dynamic>?;
           break;
         case 'fetchPolicy':
           result.fetchPolicy = serializers.deserialize(value,
                   specifiedType: const FullType(_i1.FetchPolicy))
-              as _i1.FetchPolicy;
+              as _i1.FetchPolicy?;
           break;
         case 'executeOnListen':
           result.executeOnListen = serializers.deserialize(value,
@@ -319,7 +319,7 @@ class _$GGistReqSerializer implements StructuredSerializer<GGistReq> {
           break;
         case 'requestId':
           result.requestId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'optimisticResponse':
           result.optimisticResponse.replace(serializers.deserialize(value,
@@ -327,19 +327,19 @@ class _$GGistReqSerializer implements StructuredSerializer<GGistReq> {
           break;
         case 'updateCacheHandlerKey':
           result.updateCacheHandlerKey = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'updateCacheHandlerContext':
           result.updateCacheHandlerContext = serializers.deserialize(value,
               specifiedType: const FullType(Map, const [
                 const FullType(String),
                 const FullType(dynamic)
-              ])) as Map<String, dynamic>;
+              ])) as Map<String, dynamic>?;
           break;
         case 'fetchPolicy':
           result.fetchPolicy = serializers.deserialize(value,
                   specifiedType: const FullType(_i1.FetchPolicy))
-              as _i1.FetchPolicy;
+              as _i1.FetchPolicy?;
           break;
         case 'executeOnListen':
           result.executeOnListen = serializers.deserialize(value,
@@ -435,7 +435,7 @@ class _$GFollowersReqSerializer implements StructuredSerializer<GFollowersReq> {
           break;
         case 'requestId':
           result.requestId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'optimisticResponse':
           result.optimisticResponse.replace(serializers.deserialize(value,
@@ -444,19 +444,19 @@ class _$GFollowersReqSerializer implements StructuredSerializer<GFollowersReq> {
           break;
         case 'updateCacheHandlerKey':
           result.updateCacheHandlerKey = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'updateCacheHandlerContext':
           result.updateCacheHandlerContext = serializers.deserialize(value,
               specifiedType: const FullType(Map, const [
                 const FullType(String),
                 const FullType(dynamic)
-              ])) as Map<String, dynamic>;
+              ])) as Map<String, dynamic>?;
           break;
         case 'fetchPolicy':
           result.fetchPolicy = serializers.deserialize(value,
                   specifiedType: const FullType(_i1.FetchPolicy))
-              as _i1.FetchPolicy;
+              as _i1.FetchPolicy?;
           break;
         case 'executeOnListen':
           result.executeOnListen = serializers.deserialize(value,
@@ -552,7 +552,7 @@ class _$GFollowingReqSerializer implements StructuredSerializer<GFollowingReq> {
           break;
         case 'requestId':
           result.requestId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'optimisticResponse':
           result.optimisticResponse.replace(serializers.deserialize(value,
@@ -561,19 +561,19 @@ class _$GFollowingReqSerializer implements StructuredSerializer<GFollowingReq> {
           break;
         case 'updateCacheHandlerKey':
           result.updateCacheHandlerKey = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'updateCacheHandlerContext':
           result.updateCacheHandlerContext = serializers.deserialize(value,
               specifiedType: const FullType(Map, const [
                 const FullType(String),
                 const FullType(dynamic)
-              ])) as Map<String, dynamic>;
+              ])) as Map<String, dynamic>?;
           break;
         case 'fetchPolicy':
           result.fetchPolicy = serializers.deserialize(value,
                   specifiedType: const FullType(_i1.FetchPolicy))
-              as _i1.FetchPolicy;
+              as _i1.FetchPolicy?;
           break;
         case 'executeOnListen':
           result.executeOnListen = serializers.deserialize(value,
@@ -668,7 +668,7 @@ class _$GMembersReqSerializer implements StructuredSerializer<GMembersReq> {
           break;
         case 'requestId':
           result.requestId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'optimisticResponse':
           result.optimisticResponse.replace(serializers.deserialize(value,
@@ -677,19 +677,19 @@ class _$GMembersReqSerializer implements StructuredSerializer<GMembersReq> {
           break;
         case 'updateCacheHandlerKey':
           result.updateCacheHandlerKey = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'updateCacheHandlerContext':
           result.updateCacheHandlerContext = serializers.deserialize(value,
               specifiedType: const FullType(Map, const [
                 const FullType(String),
                 const FullType(dynamic)
-              ])) as Map<String, dynamic>;
+              ])) as Map<String, dynamic>?;
           break;
         case 'fetchPolicy':
           result.fetchPolicy = serializers.deserialize(value,
                   specifiedType: const FullType(_i1.FetchPolicy))
-              as _i1.FetchPolicy;
+              as _i1.FetchPolicy?;
           break;
         case 'executeOnListen':
           result.executeOnListen = serializers.deserialize(value,
@@ -785,7 +785,7 @@ class _$GWatchersReqSerializer implements StructuredSerializer<GWatchersReq> {
           break;
         case 'requestId':
           result.requestId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'optimisticResponse':
           result.optimisticResponse.replace(serializers.deserialize(value,
@@ -794,19 +794,19 @@ class _$GWatchersReqSerializer implements StructuredSerializer<GWatchersReq> {
           break;
         case 'updateCacheHandlerKey':
           result.updateCacheHandlerKey = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'updateCacheHandlerContext':
           result.updateCacheHandlerContext = serializers.deserialize(value,
               specifiedType: const FullType(Map, const [
                 const FullType(String),
                 const FullType(dynamic)
-              ])) as Map<String, dynamic>;
+              ])) as Map<String, dynamic>?;
           break;
         case 'fetchPolicy':
           result.fetchPolicy = serializers.deserialize(value,
                   specifiedType: const FullType(_i1.FetchPolicy))
-              as _i1.FetchPolicy;
+              as _i1.FetchPolicy?;
           break;
         case 'executeOnListen':
           result.executeOnListen = serializers.deserialize(value,
@@ -903,7 +903,7 @@ class _$GStargazersReqSerializer
           break;
         case 'requestId':
           result.requestId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'optimisticResponse':
           result.optimisticResponse.replace(serializers.deserialize(value,
@@ -912,19 +912,19 @@ class _$GStargazersReqSerializer
           break;
         case 'updateCacheHandlerKey':
           result.updateCacheHandlerKey = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'updateCacheHandlerContext':
           result.updateCacheHandlerContext = serializers.deserialize(value,
               specifiedType: const FullType(Map, const [
                 const FullType(String),
                 const FullType(dynamic)
-              ])) as Map<String, dynamic>;
+              ])) as Map<String, dynamic>?;
           break;
         case 'fetchPolicy':
           result.fetchPolicy = serializers.deserialize(value,
                   specifiedType: const FullType(_i1.FetchPolicy))
-              as _i1.FetchPolicy;
+              as _i1.FetchPolicy?;
           break;
         case 'executeOnListen':
           result.executeOnListen = serializers.deserialize(value,
@@ -1019,7 +1019,7 @@ class _$GReposReqSerializer implements StructuredSerializer<GReposReq> {
           break;
         case 'requestId':
           result.requestId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'optimisticResponse':
           result.optimisticResponse.replace(serializers.deserialize(value,
@@ -1028,19 +1028,19 @@ class _$GReposReqSerializer implements StructuredSerializer<GReposReq> {
           break;
         case 'updateCacheHandlerKey':
           result.updateCacheHandlerKey = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'updateCacheHandlerContext':
           result.updateCacheHandlerContext = serializers.deserialize(value,
               specifiedType: const FullType(Map, const [
                 const FullType(String),
                 const FullType(dynamic)
-              ])) as Map<String, dynamic>;
+              ])) as Map<String, dynamic>?;
           break;
         case 'fetchPolicy':
           result.fetchPolicy = serializers.deserialize(value,
                   specifiedType: const FullType(_i1.FetchPolicy))
-              as _i1.FetchPolicy;
+              as _i1.FetchPolicy?;
           break;
         case 'executeOnListen':
           result.executeOnListen = serializers.deserialize(value,
@@ -1135,7 +1135,7 @@ class _$GStarsReqSerializer implements StructuredSerializer<GStarsReq> {
           break;
         case 'requestId':
           result.requestId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'optimisticResponse':
           result.optimisticResponse.replace(serializers.deserialize(value,
@@ -1144,19 +1144,19 @@ class _$GStarsReqSerializer implements StructuredSerializer<GStarsReq> {
           break;
         case 'updateCacheHandlerKey':
           result.updateCacheHandlerKey = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'updateCacheHandlerContext':
           result.updateCacheHandlerContext = serializers.deserialize(value,
               specifiedType: const FullType(Map, const [
                 const FullType(String),
                 const FullType(dynamic)
-              ])) as Map<String, dynamic>;
+              ])) as Map<String, dynamic>?;
           break;
         case 'fetchPolicy':
           result.fetchPolicy = serializers.deserialize(value,
                   specifiedType: const FullType(_i1.FetchPolicy))
-              as _i1.FetchPolicy;
+              as _i1.FetchPolicy?;
           break;
         case 'executeOnListen':
           result.executeOnListen = serializers.deserialize(value,
@@ -1251,7 +1251,7 @@ class _$GViewerReqSerializer implements StructuredSerializer<GViewerReq> {
           break;
         case 'requestId':
           result.requestId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'optimisticResponse':
           result.optimisticResponse.replace(serializers.deserialize(value,
@@ -1260,19 +1260,19 @@ class _$GViewerReqSerializer implements StructuredSerializer<GViewerReq> {
           break;
         case 'updateCacheHandlerKey':
           result.updateCacheHandlerKey = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'updateCacheHandlerContext':
           result.updateCacheHandlerContext = serializers.deserialize(value,
               specifiedType: const FullType(Map, const [
                 const FullType(String),
                 const FullType(dynamic)
-              ])) as Map<String, dynamic>;
+              ])) as Map<String, dynamic>?;
           break;
         case 'fetchPolicy':
           result.fetchPolicy = serializers.deserialize(value,
                   specifiedType: const FullType(_i1.FetchPolicy))
-              as _i1.FetchPolicy;
+              as _i1.FetchPolicy?;
           break;
         case 'executeOnListen':
           result.executeOnListen = serializers.deserialize(value,
@@ -1366,7 +1366,7 @@ class _$GUserReqSerializer implements StructuredSerializer<GUserReq> {
           break;
         case 'requestId':
           result.requestId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'optimisticResponse':
           result.optimisticResponse.replace(serializers.deserialize(value,
@@ -1374,19 +1374,19 @@ class _$GUserReqSerializer implements StructuredSerializer<GUserReq> {
           break;
         case 'updateCacheHandlerKey':
           result.updateCacheHandlerKey = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'updateCacheHandlerContext':
           result.updateCacheHandlerContext = serializers.deserialize(value,
               specifiedType: const FullType(Map, const [
                 const FullType(String),
                 const FullType(dynamic)
-              ])) as Map<String, dynamic>;
+              ])) as Map<String, dynamic>?;
           break;
         case 'fetchPolicy':
           result.fetchPolicy = serializers.deserialize(value,
                   specifiedType: const FullType(_i1.FetchPolicy))
-              as _i1.FetchPolicy;
+              as _i1.FetchPolicy?;
           break;
         case 'executeOnListen':
           result.executeOnListen = serializers.deserialize(value,
@@ -1480,7 +1480,7 @@ class _$GRepoReqSerializer implements StructuredSerializer<GRepoReq> {
           break;
         case 'requestId':
           result.requestId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'optimisticResponse':
           result.optimisticResponse.replace(serializers.deserialize(value,
@@ -1488,19 +1488,19 @@ class _$GRepoReqSerializer implements StructuredSerializer<GRepoReq> {
           break;
         case 'updateCacheHandlerKey':
           result.updateCacheHandlerKey = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'updateCacheHandlerContext':
           result.updateCacheHandlerContext = serializers.deserialize(value,
               specifiedType: const FullType(Map, const [
                 const FullType(String),
                 const FullType(dynamic)
-              ])) as Map<String, dynamic>;
+              ])) as Map<String, dynamic>?;
           break;
         case 'fetchPolicy':
           result.fetchPolicy = serializers.deserialize(value,
                   specifiedType: const FullType(_i1.FetchPolicy))
-              as _i1.FetchPolicy;
+              as _i1.FetchPolicy?;
           break;
         case 'executeOnListen':
           result.executeOnListen = serializers.deserialize(value,
@@ -1595,7 +1595,7 @@ class _$GCommitsReqSerializer implements StructuredSerializer<GCommitsReq> {
           break;
         case 'requestId':
           result.requestId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'optimisticResponse':
           result.optimisticResponse.replace(serializers.deserialize(value,
@@ -1604,19 +1604,19 @@ class _$GCommitsReqSerializer implements StructuredSerializer<GCommitsReq> {
           break;
         case 'updateCacheHandlerKey':
           result.updateCacheHandlerKey = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'updateCacheHandlerContext':
           result.updateCacheHandlerContext = serializers.deserialize(value,
               specifiedType: const FullType(Map, const [
                 const FullType(String),
                 const FullType(dynamic)
-              ])) as Map<String, dynamic>;
+              ])) as Map<String, dynamic>?;
           break;
         case 'fetchPolicy':
           result.fetchPolicy = serializers.deserialize(value,
                   specifiedType: const FullType(_i1.FetchPolicy))
-              as _i1.FetchPolicy;
+              as _i1.FetchPolicy?;
           break;
         case 'executeOnListen':
           result.executeOnListen = serializers.deserialize(value,
@@ -1711,7 +1711,7 @@ class _$GIssuesReqSerializer implements StructuredSerializer<GIssuesReq> {
           break;
         case 'requestId':
           result.requestId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'optimisticResponse':
           result.optimisticResponse.replace(serializers.deserialize(value,
@@ -1720,19 +1720,19 @@ class _$GIssuesReqSerializer implements StructuredSerializer<GIssuesReq> {
           break;
         case 'updateCacheHandlerKey':
           result.updateCacheHandlerKey = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'updateCacheHandlerContext':
           result.updateCacheHandlerContext = serializers.deserialize(value,
               specifiedType: const FullType(Map, const [
                 const FullType(String),
                 const FullType(dynamic)
-              ])) as Map<String, dynamic>;
+              ])) as Map<String, dynamic>?;
           break;
         case 'fetchPolicy':
           result.fetchPolicy = serializers.deserialize(value,
                   specifiedType: const FullType(_i1.FetchPolicy))
-              as _i1.FetchPolicy;
+              as _i1.FetchPolicy?;
           break;
         case 'executeOnListen':
           result.executeOnListen = serializers.deserialize(value,
@@ -1827,7 +1827,7 @@ class _$GPullsReqSerializer implements StructuredSerializer<GPullsReq> {
           break;
         case 'requestId':
           result.requestId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'optimisticResponse':
           result.optimisticResponse.replace(serializers.deserialize(value,
@@ -1836,19 +1836,19 @@ class _$GPullsReqSerializer implements StructuredSerializer<GPullsReq> {
           break;
         case 'updateCacheHandlerKey':
           result.updateCacheHandlerKey = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'updateCacheHandlerContext':
           result.updateCacheHandlerContext = serializers.deserialize(value,
               specifiedType: const FullType(Map, const [
                 const FullType(String),
                 const FullType(dynamic)
-              ])) as Map<String, dynamic>;
+              ])) as Map<String, dynamic>?;
           break;
         case 'fetchPolicy':
           result.fetchPolicy = serializers.deserialize(value,
                   specifiedType: const FullType(_i1.FetchPolicy))
-              as _i1.FetchPolicy;
+              as _i1.FetchPolicy?;
           break;
         case 'executeOnListen':
           result.executeOnListen = serializers.deserialize(value,
@@ -1943,7 +1943,7 @@ class _$GIssueReqSerializer implements StructuredSerializer<GIssueReq> {
           break;
         case 'requestId':
           result.requestId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'optimisticResponse':
           result.optimisticResponse.replace(serializers.deserialize(value,
@@ -1952,19 +1952,19 @@ class _$GIssueReqSerializer implements StructuredSerializer<GIssueReq> {
           break;
         case 'updateCacheHandlerKey':
           result.updateCacheHandlerKey = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'updateCacheHandlerContext':
           result.updateCacheHandlerContext = serializers.deserialize(value,
               specifiedType: const FullType(Map, const [
                 const FullType(String),
                 const FullType(dynamic)
-              ])) as Map<String, dynamic>;
+              ])) as Map<String, dynamic>?;
           break;
         case 'fetchPolicy':
           result.fetchPolicy = serializers.deserialize(value,
                   specifiedType: const FullType(_i1.FetchPolicy))
-              as _i1.FetchPolicy;
+              as _i1.FetchPolicy?;
           break;
         case 'executeOnListen':
           result.executeOnListen = serializers.deserialize(value,
@@ -2060,7 +2060,7 @@ class _$GReleasesReqSerializer implements StructuredSerializer<GReleasesReq> {
           break;
         case 'requestId':
           result.requestId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'optimisticResponse':
           result.optimisticResponse.replace(serializers.deserialize(value,
@@ -2069,19 +2069,19 @@ class _$GReleasesReqSerializer implements StructuredSerializer<GReleasesReq> {
           break;
         case 'updateCacheHandlerKey':
           result.updateCacheHandlerKey = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'updateCacheHandlerContext':
           result.updateCacheHandlerContext = serializers.deserialize(value,
               specifiedType: const FullType(Map, const [
                 const FullType(String),
                 const FullType(dynamic)
-              ])) as Map<String, dynamic>;
+              ])) as Map<String, dynamic>?;
           break;
         case 'fetchPolicy':
           result.fetchPolicy = serializers.deserialize(value,
                   specifiedType: const FullType(_i1.FetchPolicy))
-              as _i1.FetchPolicy;
+              as _i1.FetchPolicy?;
           break;
         case 'executeOnListen':
           result.executeOnListen = serializers.deserialize(value,
@@ -2151,7 +2151,7 @@ class _$GPageInfoPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -2223,7 +2223,7 @@ class _$GRepoItemReqSerializer implements StructuredSerializer<GRepoItemReq> {
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -2295,7 +2295,7 @@ class _$GUserItemReqSerializer implements StructuredSerializer<GUserItemReq> {
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -2368,7 +2368,7 @@ class _$GReposRepoItemReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -2440,7 +2440,7 @@ class _$GUserPartsReqSerializer implements StructuredSerializer<GUserPartsReq> {
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -2513,7 +2513,7 @@ class _$GRepoCommitReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -2584,7 +2584,7 @@ class _$GRepoRefReqSerializer implements StructuredSerializer<GRepoRefReq> {
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -2661,7 +2661,7 @@ class _$GCommitsRefCommitReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -2734,7 +2734,7 @@ class _$GCommitsRefReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -2807,7 +2807,7 @@ class _$GCommentPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -2885,7 +2885,7 @@ class _$GReactionConnectionPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -2959,7 +2959,7 @@ class _$GReactablePartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -3036,7 +3036,7 @@ class _$GReferencedEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -3114,7 +3114,7 @@ class _$GRenamedTitleEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -3191,7 +3191,7 @@ class _$GClosedEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -3268,7 +3268,7 @@ class _$GReopenedEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -3346,7 +3346,7 @@ class _$GCrossReferencedEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -3423,7 +3423,7 @@ class _$GLabeledEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -3500,7 +3500,7 @@ class _$GUnlabeledEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -3577,7 +3577,7 @@ class _$GMilestonedEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -3655,7 +3655,7 @@ class _$GDemilestonedEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -3732,7 +3732,7 @@ class _$GLockedEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -3809,7 +3809,7 @@ class _$GUnlockedEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -3886,7 +3886,7 @@ class _$GAssignedEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -3963,7 +3963,7 @@ class _$GUnassignedEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -4040,7 +4040,7 @@ class _$GSubscribedEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -4118,7 +4118,7 @@ class _$GUnsubscribedEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -4195,7 +4195,7 @@ class _$GMentionedEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -4272,7 +4272,7 @@ class _$GPinnedEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -4350,7 +4350,7 @@ class _$GTransferredEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -4428,7 +4428,7 @@ class _$GPullRequestCommitPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -4505,7 +4505,7 @@ class _$GDeployedEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -4585,7 +4585,7 @@ class _$GDeploymentEnvironmentChangedEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -4663,7 +4663,7 @@ class _$GHeadRefRestoredEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -4741,7 +4741,7 @@ class _$GBaseRefForcePushedEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -4819,7 +4819,7 @@ class _$GHeadRefForcePushedEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -4897,7 +4897,7 @@ class _$GReviewRequestedEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -4976,7 +4976,7 @@ class _$GReviewRequestRemovedEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -5054,7 +5054,7 @@ class _$GReviewDismissedEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -5132,7 +5132,7 @@ class _$GPullRequestReviewPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -5209,7 +5209,7 @@ class _$GMergedEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -5287,7 +5287,7 @@ class _$GHeadRefDeletedEventPartsReqSerializer
           break;
         case 'fragmentName':
           result.fragmentName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'idFields':
           result.idFields = serializers.deserialize(value,
@@ -15007,4 +15007,4 @@ class GHeadRefDeletedEventPartsReqBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new

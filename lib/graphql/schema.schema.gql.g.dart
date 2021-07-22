@@ -5783,7 +5783,7 @@ class _$GAcceptEnterpriseAdministratorInvitationInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'invitationId':
           result.invitationId = serializers.deserialize(value,
@@ -5842,7 +5842,7 @@ class _$GAcceptTopicSuggestionInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'name':
           result.name = serializers.deserialize(value,
@@ -5913,11 +5913,11 @@ class _$GAddAssigneesToAssignableInputSerializer
           result.assigneeIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
       }
     }
@@ -5972,7 +5972,7 @@ class _$GAddCommentInputSerializer
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'subjectId':
           result.subjectId = serializers.deserialize(value,
@@ -6042,7 +6042,7 @@ class _$GAddDiscussionCommentInputSerializer
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'discussionId':
           result.discussionId = serializers.deserialize(value,
@@ -6050,7 +6050,7 @@ class _$GAddDiscussionCommentInputSerializer
           break;
         case 'replyToId':
           result.replyToId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
       }
     }
@@ -6106,7 +6106,7 @@ class _$GAddEnterpriseSupportEntitlementInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'enterpriseId':
           result.enterpriseId = serializers.deserialize(value,
@@ -6171,13 +6171,13 @@ class _$GAddLabelsToLabelableInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'labelIds':
           result.labelIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'labelableId':
           result.labelableId = serializers.deserialize(value,
@@ -6248,15 +6248,15 @@ class _$GAddProjectCardInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'contentId':
           result.contentId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'note':
           result.note = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'projectColumnId':
           result.projectColumnId = serializers.deserialize(value,
@@ -6315,7 +6315,7 @@ class _$GAddProjectColumnInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'name':
           result.name = serializers.deserialize(value,
@@ -6420,31 +6420,31 @@ class _$GAddPullRequestReviewCommentInputSerializer
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'commitOID':
           result.commitOID = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'inReplyTo':
           result.inReplyTo = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'path':
           result.path = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'position':
           result.position = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(int)) as int?;
           break;
         case 'pullRequestId':
           result.pullRequestId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'pullRequestReviewId':
           result.pullRequestReviewId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
       }
     }
@@ -6534,26 +6534,26 @@ class _$GAddPullRequestReviewInputSerializer
       switch (key) {
         case 'body':
           result.body = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'comments':
           result.comments.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
                 const FullType(GDraftPullRequestReviewComment)
-              ]))! as BuiltList<Object>);
+              ]))! as BuiltList<Object?>);
           break;
         case 'commitOID':
           result.commitOID = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'event':
           result.event = serializers.deserialize(value,
                   specifiedType: const FullType(GPullRequestReviewEvent))
-              as GPullRequestReviewEvent;
+              as GPullRequestReviewEvent?;
           break;
         case 'pullRequestId':
           result.pullRequestId = serializers.deserialize(value,
@@ -6563,7 +6563,7 @@ class _$GAddPullRequestReviewInputSerializer
           result.threads.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
                 const FullType(GDraftPullRequestReviewThread)
-              ]))! as BuiltList<Object>);
+              ]))! as BuiltList<Object?>);
           break;
       }
     }
@@ -6657,7 +6657,7 @@ class _$GAddPullRequestReviewThreadInputSerializer
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'line':
           result.line = serializers.deserialize(value,
@@ -6669,23 +6669,23 @@ class _$GAddPullRequestReviewThreadInputSerializer
           break;
         case 'pullRequestId':
           result.pullRequestId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'pullRequestReviewId':
           result.pullRequestReviewId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'side':
           result.side = serializers.deserialize(value,
-              specifiedType: const FullType(GDiffSide)) as GDiffSide;
+              specifiedType: const FullType(GDiffSide)) as GDiffSide?;
           break;
         case 'startLine':
           result.startLine = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(int)) as int?;
           break;
         case 'startSide':
           result.startSide = serializers.deserialize(value,
-              specifiedType: const FullType(GDiffSide)) as GDiffSide;
+              specifiedType: const FullType(GDiffSide)) as GDiffSide?;
           break;
       }
     }
@@ -6737,7 +6737,7 @@ class _$GAddReactionInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'content':
           result.content = serializers.deserialize(value,
@@ -6794,7 +6794,7 @@ class _$GAddStarInputSerializer implements StructuredSerializer<GAddStarInput> {
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'starrableId':
           result.starrableId = serializers.deserialize(value,
@@ -6847,7 +6847,7 @@ class _$GAddUpvoteInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'subjectId':
           result.subjectId = serializers.deserialize(value,
@@ -6907,7 +6907,7 @@ class _$GAddVerifiableDomainInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'domain':
           result.domain = serializers.deserialize(value,
@@ -6979,17 +6979,17 @@ class _$GApproveDeploymentsInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'environmentIds':
           result.environmentIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'workflowRunId':
           result.workflowRunId = serializers.deserialize(value,
@@ -7045,7 +7045,7 @@ class _$GApproveVerifiableDomainInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -7102,7 +7102,7 @@ class _$GArchiveRepositoryInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'repositoryId':
           result.repositoryId = serializers.deserialize(value,
@@ -7159,12 +7159,12 @@ class _$GAuditLogOrderSerializer
         case 'direction':
           result.direction = serializers.deserialize(value,
                   specifiedType: const FullType(GOrderDirection))
-              as GOrderDirection;
+              as GOrderDirection?;
           break;
         case 'field':
           result.field = serializers.deserialize(value,
                   specifiedType: const FullType(GAuditLogOrderField))
-              as GAuditLogOrderField;
+              as GAuditLogOrderField?;
           break;
       }
     }
@@ -7235,7 +7235,7 @@ class _$GCancelEnterpriseAdminInvitationInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'invitationId':
           result.invitationId = serializers.deserialize(value,
@@ -7323,27 +7323,27 @@ class _$GChangeUserStatusInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'emoji':
           result.emoji = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'expiresAt':
           result.expiresAt = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
+              specifiedType: const FullType(DateTime)) as DateTime?;
           break;
         case 'limitedAvailability':
           result.limitedAvailability = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'message':
           result.message = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'organizationId':
           result.organizationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
       }
     }
@@ -7429,11 +7429,11 @@ class _$GCheckAnnotationDataSerializer
           break;
         case 'rawDetails':
           result.rawDetails = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'title':
           result.title = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
       }
     }
@@ -7511,7 +7511,7 @@ class _$GCheckAnnotationRangeSerializer
       switch (key) {
         case 'endColumn':
           result.endColumn = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(int)) as int?;
           break;
         case 'endLine':
           result.endLine = serializers.deserialize(value,
@@ -7519,7 +7519,7 @@ class _$GCheckAnnotationRangeSerializer
           break;
         case 'startColumn':
           result.startColumn = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(int)) as int?;
           break;
         case 'startLine':
           result.startLine = serializers.deserialize(value,
@@ -7662,20 +7662,20 @@ class _$GCheckRunFilterSerializer
       switch (key) {
         case 'appId':
           result.appId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(int)) as int?;
           break;
         case 'checkName':
           result.checkName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'checkType':
           result.checkType = serializers.deserialize(value,
-              specifiedType: const FullType(GCheckRunType)) as GCheckRunType;
+              specifiedType: const FullType(GCheckRunType)) as GCheckRunType?;
           break;
         case 'status':
           result.status = serializers.deserialize(value,
                   specifiedType: const FullType(GCheckStatusState))
-              as GCheckStatusState;
+              as GCheckStatusState?;
           break;
       }
     }
@@ -7745,13 +7745,13 @@ class _$GCheckRunOutputSerializer
           result.annotations.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(GCheckAnnotationData)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'images':
           result.images.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(GCheckRunOutputImage)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'summary':
           result.summary = serializers.deserialize(value,
@@ -7759,7 +7759,7 @@ class _$GCheckRunOutputSerializer
           break;
         case 'text':
           result.text = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'title':
           result.title = serializers.deserialize(value,
@@ -7822,7 +7822,7 @@ class _$GCheckRunOutputImageSerializer
           break;
         case 'caption':
           result.caption = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'imageUrl':
           result.imageUrl = serializers.deserialize(value,
@@ -7965,11 +7965,11 @@ class _$GCheckSuiteFilterSerializer
       switch (key) {
         case 'appId':
           result.appId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(int)) as int?;
           break;
         case 'checkName':
           result.checkName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
       }
     }
@@ -8022,7 +8022,7 @@ class _$GClearLabelsFromLabelableInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'labelableId':
           result.labelableId = serializers.deserialize(value,
@@ -8098,11 +8098,11 @@ class _$GCloneProjectInputSerializer
       switch (key) {
         case 'body':
           result.body = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'includeWorkflows':
           result.includeWorkflows = serializers.deserialize(value,
@@ -8114,7 +8114,7 @@ class _$GCloneProjectInputSerializer
           break;
         case 'public':
           result.public = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'sourceId':
           result.sourceId = serializers.deserialize(value,
@@ -8197,15 +8197,15 @@ class _$GCloneTemplateRepositoryInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'description':
           result.description = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'includeAllBranches':
           result.includeAllBranches = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'name':
           result.name = serializers.deserialize(value,
@@ -8271,7 +8271,7 @@ class _$GCloseIssueInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'issueId':
           result.issueId = serializers.deserialize(value,
@@ -8328,7 +8328,7 @@ class _$GClosePullRequestInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'pullRequestId':
           result.pullRequestId = serializers.deserialize(value,
@@ -8443,11 +8443,11 @@ class _$GCommitAuthorSerializer implements StructuredSerializer<GCommitAuthor> {
           result.emails.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'id':
           result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
       }
     }
@@ -8654,11 +8654,11 @@ class _$GConvertProjectCardNoteToIssueInputSerializer
       switch (key) {
         case 'body':
           result.body = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'projectCardId':
           result.projectCardId = serializers.deserialize(value,
@@ -8670,7 +8670,7 @@ class _$GConvertProjectCardNoteToIssueInputSerializer
           break;
         case 'title':
           result.title = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
       }
     }
@@ -8723,7 +8723,7 @@ class _$GConvertPullRequestToDraftInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'pullRequestId':
           result.pullRequestId = serializers.deserialize(value,
@@ -8897,23 +8897,23 @@ class _$GCreateBranchProtectionRuleInputSerializer
       switch (key) {
         case 'allowsDeletions':
           result.allowsDeletions = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'allowsForcePushes':
           result.allowsForcePushes = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'dismissesStaleReviews':
           result.dismissesStaleReviews = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'isAdminEnforced':
           result.isAdminEnforced = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'pattern':
           result.pattern = serializers.deserialize(value,
@@ -8923,7 +8923,7 @@ class _$GCreateBranchProtectionRuleInputSerializer
           result.pushActorIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'repositoryId':
           result.repositoryId = serializers.deserialize(value,
@@ -8931,52 +8931,52 @@ class _$GCreateBranchProtectionRuleInputSerializer
           break;
         case 'requiredApprovingReviewCount':
           result.requiredApprovingReviewCount = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(int)) as int?;
           break;
         case 'requiredStatusCheckContexts':
           result.requiredStatusCheckContexts.replace(serializers.deserialize(
                   value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'requiresApprovingReviews':
           result.requiresApprovingReviews = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'requiresCodeOwnerReviews':
           result.requiresCodeOwnerReviews = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'requiresCommitSignatures':
           result.requiresCommitSignatures = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'requiresLinearHistory':
           result.requiresLinearHistory = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'requiresStatusChecks':
           result.requiresStatusChecks = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'requiresStrictStatusChecks':
           result.requiresStrictStatusChecks = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'restrictsPushes':
           result.restrictsPushes = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'restrictsReviewDismissals':
           result.restrictsReviewDismissals = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'reviewDismissalActorIds':
           result.reviewDismissalActorIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
       }
     }
@@ -9093,28 +9093,28 @@ class _$GCreateCheckRunInputSerializer
           result.actions.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(GCheckRunAction)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'completedAt':
           result.completedAt = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
+              specifiedType: const FullType(DateTime)) as DateTime?;
           break;
         case 'conclusion':
           result.conclusion = serializers.deserialize(value,
                   specifiedType: const FullType(GCheckConclusionState))
-              as GCheckConclusionState;
+              as GCheckConclusionState?;
           break;
         case 'detailsUrl':
           result.detailsUrl = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'externalId':
           result.externalId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'headSha':
           result.headSha = serializers.deserialize(value,
@@ -9135,12 +9135,12 @@ class _$GCreateCheckRunInputSerializer
           break;
         case 'startedAt':
           result.startedAt = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
+              specifiedType: const FullType(DateTime)) as DateTime?;
           break;
         case 'status':
           result.status = serializers.deserialize(value,
                   specifiedType: const FullType(GRequestableCheckStatusState))
-              as GRequestableCheckStatusState;
+              as GRequestableCheckStatusState?;
           break;
       }
     }
@@ -9196,7 +9196,7 @@ class _$GCreateCheckSuiteInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'headSha':
           result.headSha = serializers.deserialize(value,
@@ -9273,7 +9273,7 @@ class _$GCreateDiscussionInputSerializer
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'repositoryId':
           result.repositoryId = serializers.deserialize(value,
@@ -9349,7 +9349,7 @@ class _$GCreateEnterpriseOrganizationInputSerializer
           result.adminLogins.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'billingEmail':
           result.billingEmail = serializers.deserialize(value,
@@ -9357,7 +9357,7 @@ class _$GCreateEnterpriseOrganizationInputSerializer
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'enterpriseId':
           result.enterpriseId = serializers.deserialize(value,
@@ -9424,7 +9424,7 @@ class _$GCreateEnvironmentInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'name':
           result.name = serializers.deserialize(value,
@@ -9502,7 +9502,7 @@ class _$GCreateIpAllowListEntryInputSerializer
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'isActive':
           result.isActive = serializers.deserialize(value,
@@ -9510,7 +9510,7 @@ class _$GCreateIpAllowListEntryInputSerializer
           break;
         case 'name':
           result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'ownerId':
           result.ownerId = serializers.deserialize(value,
@@ -9613,35 +9613,35 @@ class _$GCreateIssueInputSerializer
           result.assigneeIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'body':
           result.body = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'issueTemplate':
           result.issueTemplate = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'labelIds':
           result.labelIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'milestoneId':
           result.milestoneId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'projectIds':
           result.projectIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'repositoryId':
           result.repositoryId = serializers.deserialize(value,
@@ -9726,11 +9726,11 @@ class _$GCreateProjectInputSerializer
       switch (key) {
         case 'body':
           result.body = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'name':
           result.name = serializers.deserialize(value,
@@ -9744,12 +9744,12 @@ class _$GCreateProjectInputSerializer
           result.repositoryIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'template':
           result.template = serializers.deserialize(value,
                   specifiedType: const FullType(GProjectTemplate))
-              as GProjectTemplate;
+              as GProjectTemplate?;
           break;
       }
     }
@@ -9836,15 +9836,15 @@ class _$GCreatePullRequestInputSerializer
           break;
         case 'body':
           result.body = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'draft':
           result.draft = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'headRefName':
           result.headRefName = serializers.deserialize(value,
@@ -9852,7 +9852,7 @@ class _$GCreatePullRequestInputSerializer
           break;
         case 'maintainerCanModify':
           result.maintainerCanModify = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'repositoryId':
           result.repositoryId = serializers.deserialize(value,
@@ -9913,7 +9913,7 @@ class _$GCreateRefInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'name':
           result.name = serializers.deserialize(value,
@@ -10029,23 +10029,23 @@ class _$GCreateRepositoryInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'description':
           result.description = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'hasIssuesEnabled':
           result.hasIssuesEnabled = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'hasWikiEnabled':
           result.hasWikiEnabled = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'homepageUrl':
           result.homepageUrl = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'name':
           result.name = serializers.deserialize(value,
@@ -10053,15 +10053,15 @@ class _$GCreateRepositoryInputSerializer
           break;
         case 'ownerId':
           result.ownerId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'teamId':
           result.teamId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'template':
           result.template = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'visibility':
           result.visibility = serializers.deserialize(value,
@@ -10125,7 +10125,7 @@ class _$GCreateTeamDiscussionCommentInputSerializer
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'discussionId':
           result.discussionId = serializers.deserialize(value,
@@ -10198,11 +10198,11 @@ class _$GCreateTeamDiscussionInputSerializer
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'private':
           result.private = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'teamId':
           result.teamId = serializers.deserialize(value,
@@ -10268,7 +10268,7 @@ class _$GDeclineTopicSuggestionInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'name':
           result.name = serializers.deserialize(value,
@@ -10358,7 +10358,7 @@ class _$GDeleteBranchProtectionRuleInputSerializer
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
       }
     }
@@ -10410,7 +10410,7 @@ class _$GDeleteDeploymentInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -10466,7 +10466,7 @@ class _$GDeleteDiscussionCommentInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -10522,7 +10522,7 @@ class _$GDeleteDiscussionInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -10578,7 +10578,7 @@ class _$GDeleteEnvironmentInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -10635,7 +10635,7 @@ class _$GDeleteIpAllowListEntryInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'ipAllowListEntryId':
           result.ipAllowListEntryId = serializers.deserialize(value,
@@ -10691,7 +10691,7 @@ class _$GDeleteIssueCommentInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -10744,7 +10744,7 @@ class _$GDeleteIssueInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'issueId':
           result.issueId = serializers.deserialize(value,
@@ -10805,7 +10805,7 @@ class _$GDeleteProjectCardInputSerializer
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
       }
     }
@@ -10858,7 +10858,7 @@ class _$GDeleteProjectColumnInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'columnId':
           result.columnId = serializers.deserialize(value,
@@ -10915,7 +10915,7 @@ class _$GDeleteProjectInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'projectId':
           result.projectId = serializers.deserialize(value,
@@ -10971,7 +10971,7 @@ class _$GDeletePullRequestReviewCommentInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -11028,7 +11028,7 @@ class _$GDeletePullRequestReviewInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'pullRequestReviewId':
           result.pullRequestReviewId = serializers.deserialize(value,
@@ -11081,7 +11081,7 @@ class _$GDeleteRefInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'refId':
           result.refId = serializers.deserialize(value,
@@ -11137,7 +11137,7 @@ class _$GDeleteTeamDiscussionCommentInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -11193,7 +11193,7 @@ class _$GDeleteTeamDiscussionInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -11249,7 +11249,7 @@ class _$GDeleteVerifiableDomainInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -11466,7 +11466,7 @@ class _$GDisablePullRequestAutoMergeInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'pullRequestId':
           result.pullRequestId = serializers.deserialize(value,
@@ -11595,7 +11595,7 @@ class _$GDismissPullRequestReviewInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'message':
           result.message = serializers.deserialize(value,
@@ -11742,15 +11742,15 @@ class _$GDraftPullRequestReviewThreadSerializer
           break;
         case 'side':
           result.side = serializers.deserialize(value,
-              specifiedType: const FullType(GDiffSide)) as GDiffSide;
+              specifiedType: const FullType(GDiffSide)) as GDiffSide?;
           break;
         case 'startLine':
           result.startLine = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(int)) as int?;
           break;
         case 'startSide':
           result.startSide = serializers.deserialize(value,
-              specifiedType: const FullType(GDiffSide)) as GDiffSide;
+              specifiedType: const FullType(GDiffSide)) as GDiffSide?;
           break;
       }
     }
@@ -11831,24 +11831,24 @@ class _$GEnablePullRequestAutoMergeInputSerializer
       switch (key) {
         case 'authorEmail':
           result.authorEmail = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'commitBody':
           result.commitBody = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'commitHeadline':
           result.commitHeadline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'mergeMethod':
           result.mergeMethod = serializers.deserialize(value,
                   specifiedType: const FullType(GPullRequestMergeMethod))
-              as GPullRequestMergeMethod;
+              as GPullRequestMergeMethod?;
           break;
         case 'pullRequestId':
           result.pullRequestId = serializers.deserialize(value,
@@ -12593,7 +12593,7 @@ class _$GFollowUserInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'userId':
           result.userId = serializers.deserialize(value,
@@ -12813,11 +12813,11 @@ class _$GInviteEnterpriseAdminInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'email':
           result.email = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'enterpriseId':
           result.enterpriseId = serializers.deserialize(value,
@@ -12825,12 +12825,12 @@ class _$GInviteEnterpriseAdminInputSerializer
           break;
         case 'invitee':
           result.invitee = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'role':
           result.role = serializers.deserialize(value,
                   specifiedType: const FullType(GEnterpriseAdministratorRole))
-              as GEnterpriseAdministratorRole;
+              as GEnterpriseAdministratorRole?;
           break;
       }
     }
@@ -13090,39 +13090,39 @@ class _$GIssueFiltersSerializer implements StructuredSerializer<GIssueFilters> {
       switch (key) {
         case 'assignee':
           result.assignee = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'createdBy':
           result.createdBy = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'labels':
           result.labels.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'mentioned':
           result.mentioned = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'milestone':
           result.milestone = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'since':
           result.since = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
+              specifiedType: const FullType(DateTime)) as DateTime?;
           break;
         case 'states':
           result.states.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(GIssueState)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'viewerSubscribed':
           result.viewerSubscribed = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
       }
     }
@@ -13417,7 +13417,7 @@ class _$GLinkRepositoryToProjectInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'projectId':
           result.projectId = serializers.deserialize(value,
@@ -13482,11 +13482,11 @@ class _$GLockLockableInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'lockReason':
           result.lockReason = serializers.deserialize(value,
-              specifiedType: const FullType(GLockReason)) as GLockReason;
+              specifiedType: const FullType(GLockReason)) as GLockReason?;
           break;
         case 'lockableId':
           result.lockableId = serializers.deserialize(value,
@@ -13559,7 +13559,7 @@ class _$GMarkDiscussionCommentAsAnswerInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -13618,7 +13618,7 @@ class _$GMarkFileAsViewedInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'path':
           result.path = serializers.deserialize(value,
@@ -13679,7 +13679,7 @@ class _$GMarkPullRequestReadyForReviewInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'pullRequestId':
           result.pullRequestId = serializers.deserialize(value,
@@ -13750,7 +13750,7 @@ class _$GMergeBranchInputSerializer
       switch (key) {
         case 'authorEmail':
           result.authorEmail = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'base':
           result.base = serializers.deserialize(value,
@@ -13758,11 +13758,11 @@ class _$GMergeBranchInputSerializer
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'commitMessage':
           result.commitMessage = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'head':
           result.head = serializers.deserialize(value,
@@ -13858,28 +13858,28 @@ class _$GMergePullRequestInputSerializer
       switch (key) {
         case 'authorEmail':
           result.authorEmail = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'commitBody':
           result.commitBody = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'commitHeadline':
           result.commitHeadline = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'expectedHeadOid':
           result.expectedHeadOid = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'mergeMethod':
           result.mergeMethod = serializers.deserialize(value,
                   specifiedType: const FullType(GPullRequestMergeMethod))
-              as GPullRequestMergeMethod;
+              as GPullRequestMergeMethod?;
           break;
         case 'pullRequestId':
           result.pullRequestId = serializers.deserialize(value,
@@ -14049,7 +14049,7 @@ class _$GMinimizeCommentInputSerializer
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'subjectId':
           result.subjectId = serializers.deserialize(value,
@@ -14116,7 +14116,7 @@ class _$GMoveProjectCardInputSerializer
       switch (key) {
         case 'afterCardId':
           result.afterCardId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'cardId':
           result.cardId = serializers.deserialize(value,
@@ -14124,7 +14124,7 @@ class _$GMoveProjectCardInputSerializer
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'columnId':
           result.columnId = serializers.deserialize(value,
@@ -14188,11 +14188,11 @@ class _$GMoveProjectColumnInputSerializer
       switch (key) {
         case 'afterColumnId':
           result.afterColumnId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'columnId':
           result.columnId = serializers.deserialize(value,
@@ -14713,12 +14713,12 @@ class _$GPackageFileOrderSerializer
         case 'direction':
           result.direction = serializers.deserialize(value,
                   specifiedType: const FullType(GOrderDirection))
-              as GOrderDirection;
+              as GOrderDirection?;
           break;
         case 'field':
           result.field = serializers.deserialize(value,
                   specifiedType: const FullType(GPackageFileOrderField))
-              as GPackageFileOrderField;
+              as GPackageFileOrderField?;
           break;
       }
     }
@@ -14788,12 +14788,12 @@ class _$GPackageOrderSerializer implements StructuredSerializer<GPackageOrder> {
         case 'direction':
           result.direction = serializers.deserialize(value,
                   specifiedType: const FullType(GOrderDirection))
-              as GOrderDirection;
+              as GOrderDirection?;
           break;
         case 'field':
           result.field = serializers.deserialize(value,
                   specifiedType: const FullType(GPackageOrderField))
-              as GPackageOrderField;
+              as GPackageOrderField?;
           break;
       }
     }
@@ -14885,12 +14885,12 @@ class _$GPackageVersionOrderSerializer
         case 'direction':
           result.direction = serializers.deserialize(value,
                   specifiedType: const FullType(GOrderDirection))
-              as GOrderDirection;
+              as GOrderDirection?;
           break;
         case 'field':
           result.field = serializers.deserialize(value,
                   specifiedType: const FullType(GPackageVersionOrderField))
-              as GPackageVersionOrderField;
+              as GPackageVersionOrderField?;
           break;
       }
     }
@@ -14958,7 +14958,7 @@ class _$GPinIssueInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'issueId':
           result.issueId = serializers.deserialize(value,
@@ -15608,7 +15608,7 @@ class _$GRegenerateEnterpriseIdentityProviderRecoveryCodesInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'enterpriseId':
           result.enterpriseId = serializers.deserialize(value,
@@ -15664,7 +15664,7 @@ class _$GRegenerateVerifiableDomainTokenInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -15732,17 +15732,17 @@ class _$GRejectDeploymentsInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'comment':
           result.comment = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'environmentIds':
           result.environmentIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'workflowRunId':
           result.workflowRunId = serializers.deserialize(value,
@@ -15877,11 +15877,11 @@ class _$GRemoveAssigneesFromAssignableInputSerializer
           result.assigneeIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
       }
     }
@@ -15937,7 +15937,7 @@ class _$GRemoveEnterpriseAdminInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'enterpriseId':
           result.enterpriseId = serializers.deserialize(value,
@@ -15998,7 +15998,7 @@ class _$GRemoveEnterpriseIdentityProviderInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'enterpriseId':
           result.enterpriseId = serializers.deserialize(value,
@@ -16058,7 +16058,7 @@ class _$GRemoveEnterpriseOrganizationInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'enterpriseId':
           result.enterpriseId = serializers.deserialize(value,
@@ -16122,7 +16122,7 @@ class _$GRemoveEnterpriseSupportEntitlementInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'enterpriseId':
           result.enterpriseId = serializers.deserialize(value,
@@ -16187,13 +16187,13 @@ class _$GRemoveLabelsFromLabelableInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'labelIds':
           result.labelIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'labelableId':
           result.labelableId = serializers.deserialize(value,
@@ -16253,7 +16253,7 @@ class _$GRemoveOutsideCollaboratorInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'organizationId':
           result.organizationId = serializers.deserialize(value,
@@ -16317,7 +16317,7 @@ class _$GRemoveReactionInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'content':
           result.content = serializers.deserialize(value,
@@ -16375,7 +16375,7 @@ class _$GRemoveStarInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'starrableId':
           result.starrableId = serializers.deserialize(value,
@@ -16429,7 +16429,7 @@ class _$GRemoveUpvoteInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'subjectId':
           result.subjectId = serializers.deserialize(value,
@@ -16482,7 +16482,7 @@ class _$GReopenIssueInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'issueId':
           result.issueId = serializers.deserialize(value,
@@ -16539,7 +16539,7 @@ class _$GReopenPullRequestInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'pullRequestId':
           result.pullRequestId = serializers.deserialize(value,
@@ -17095,7 +17095,7 @@ class _$GRequestReviewsInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'pullRequestId':
           result.pullRequestId = serializers.deserialize(value,
@@ -17105,17 +17105,17 @@ class _$GRequestReviewsInputSerializer
           result.teamIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'union':
           result.union = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'userIds':
           result.userIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
       }
     }
@@ -17194,7 +17194,7 @@ class _$GRerequestCheckSuiteInputSerializer
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'repositoryId':
           result.repositoryId = serializers.deserialize(value,
@@ -17251,7 +17251,7 @@ class _$GResolveReviewThreadInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'threadId':
           result.threadId = serializers.deserialize(value,
@@ -17713,7 +17713,7 @@ class _$GSetEnterpriseIdentityProviderInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'digestMethod':
           result.digestMethod = serializers.deserialize(value,
@@ -17730,7 +17730,7 @@ class _$GSetEnterpriseIdentityProviderInputSerializer
           break;
         case 'issuer':
           result.issuer = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'signatureMethod':
           result.signatureMethod = serializers.deserialize(value,
@@ -17802,13 +17802,13 @@ class _$GSetOrganizationInteractionLimitInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'expiry':
           result.expiry = serializers.deserialize(value,
                   specifiedType:
                       const FullType(GRepositoryInteractionLimitExpiry))
-              as GRepositoryInteractionLimitExpiry;
+              as GRepositoryInteractionLimitExpiry?;
           break;
         case 'limit':
           result.limit = serializers.deserialize(value,
@@ -17880,13 +17880,13 @@ class _$GSetRepositoryInteractionLimitInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'expiry':
           result.expiry = serializers.deserialize(value,
                   specifiedType:
                       const FullType(GRepositoryInteractionLimitExpiry))
-              as GRepositoryInteractionLimitExpiry;
+              as GRepositoryInteractionLimitExpiry?;
           break;
         case 'limit':
           result.limit = serializers.deserialize(value,
@@ -17958,13 +17958,13 @@ class _$GSetUserInteractionLimitInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'expiry':
           result.expiry = serializers.deserialize(value,
                   specifiedType:
                       const FullType(GRepositoryInteractionLimitExpiry))
-              as GRepositoryInteractionLimitExpiry;
+              as GRepositoryInteractionLimitExpiry?;
           break;
         case 'limit':
           result.limit = serializers.deserialize(value,
@@ -18376,11 +18376,11 @@ class _$GSubmitPullRequestReviewInputSerializer
       switch (key) {
         case 'body':
           result.body = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'event':
           result.event = serializers.deserialize(value,
@@ -18389,11 +18389,11 @@ class _$GSubmitPullRequestReviewInputSerializer
           break;
         case 'pullRequestId':
           result.pullRequestId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'pullRequestReviewId':
           result.pullRequestReviewId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
       }
     }
@@ -18917,7 +18917,7 @@ class _$GTransferIssueInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'issueId':
           result.issueId = serializers.deserialize(value,
@@ -18978,7 +18978,7 @@ class _$GUnarchiveRepositoryInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'repositoryId':
           result.repositoryId = serializers.deserialize(value,
@@ -19032,7 +19032,7 @@ class _$GUnfollowUserInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'userId':
           result.userId = serializers.deserialize(value,
@@ -19092,7 +19092,7 @@ class _$GUnlinkRepositoryFromProjectInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'projectId':
           result.projectId = serializers.deserialize(value,
@@ -19153,7 +19153,7 @@ class _$GUnlockLockableInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'lockableId':
           result.lockableId = serializers.deserialize(value,
@@ -19209,7 +19209,7 @@ class _$GUnmarkDiscussionCommentAsAnswerInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -19268,7 +19268,7 @@ class _$GUnmarkFileAsViewedInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'path':
           result.path = serializers.deserialize(value,
@@ -19336,7 +19336,7 @@ class _$GUnmarkIssueAsDuplicateInputSerializer
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'duplicateId':
           result.duplicateId = serializers.deserialize(value,
@@ -19393,7 +19393,7 @@ class _$GUnminimizeCommentInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'subjectId':
           result.subjectId = serializers.deserialize(value,
@@ -19446,7 +19446,7 @@ class _$GUnpinIssueInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'issueId':
           result.issueId = serializers.deserialize(value,
@@ -19503,7 +19503,7 @@ class _$GUnresolveReviewThreadInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'threadId':
           result.threadId = serializers.deserialize(value,
@@ -19681,11 +19681,11 @@ class _$GUpdateBranchProtectionRuleInputSerializer
       switch (key) {
         case 'allowsDeletions':
           result.allowsDeletions = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'allowsForcePushes':
           result.allowsForcePushes = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'branchProtectionRuleId':
           result.branchProtectionRuleId = serializers.deserialize(value,
@@ -19693,74 +19693,74 @@ class _$GUpdateBranchProtectionRuleInputSerializer
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'dismissesStaleReviews':
           result.dismissesStaleReviews = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'isAdminEnforced':
           result.isAdminEnforced = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'pattern':
           result.pattern = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'pushActorIds':
           result.pushActorIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'requiredApprovingReviewCount':
           result.requiredApprovingReviewCount = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(int)) as int?;
           break;
         case 'requiredStatusCheckContexts':
           result.requiredStatusCheckContexts.replace(serializers.deserialize(
                   value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'requiresApprovingReviews':
           result.requiresApprovingReviews = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'requiresCodeOwnerReviews':
           result.requiresCodeOwnerReviews = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'requiresCommitSignatures':
           result.requiresCommitSignatures = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'requiresLinearHistory':
           result.requiresLinearHistory = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'requiresStatusChecks':
           result.requiresStatusChecks = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'requiresStrictStatusChecks':
           result.requiresStrictStatusChecks = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'restrictsPushes':
           result.restrictsPushes = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'restrictsReviewDismissals':
           result.restrictsReviewDismissals = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'reviewDismissalActorIds':
           result.reviewDismissalActorIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
       }
     }
@@ -19882,7 +19882,7 @@ class _$GUpdateCheckRunInputSerializer
           result.actions.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(GCheckRunAction)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'checkRunId':
           result.checkRunId = serializers.deserialize(value,
@@ -19890,28 +19890,28 @@ class _$GUpdateCheckRunInputSerializer
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'completedAt':
           result.completedAt = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
+              specifiedType: const FullType(DateTime)) as DateTime?;
           break;
         case 'conclusion':
           result.conclusion = serializers.deserialize(value,
                   specifiedType: const FullType(GCheckConclusionState))
-              as GCheckConclusionState;
+              as GCheckConclusionState?;
           break;
         case 'detailsUrl':
           result.detailsUrl = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'externalId':
           result.externalId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'name':
           result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'output':
           result.output.replace(serializers.deserialize(value,
@@ -19924,12 +19924,12 @@ class _$GUpdateCheckRunInputSerializer
           break;
         case 'startedAt':
           result.startedAt = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
+              specifiedType: const FullType(DateTime)) as DateTime?;
           break;
         case 'status':
           result.status = serializers.deserialize(value,
                   specifiedType: const FullType(GRequestableCheckStatusState))
-              as GRequestableCheckStatusState;
+              as GRequestableCheckStatusState?;
           break;
       }
     }
@@ -19988,11 +19988,11 @@ class _$GUpdateCheckSuitePreferencesInputSerializer
           result.autoTriggerPreferences.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
                 const FullType(GCheckSuiteAutoTriggerPreference)
-              ]))! as BuiltList<Object>);
+              ]))! as BuiltList<Object?>);
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'repositoryId':
           result.repositoryId = serializers.deserialize(value,
@@ -20055,7 +20055,7 @@ class _$GUpdateDiscussionCommentInputSerializer
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'commentId':
           result.commentId = serializers.deserialize(value,
@@ -20133,15 +20133,15 @@ class _$GUpdateDiscussionInputSerializer
       switch (key) {
         case 'body':
           result.body = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'categoryId':
           result.categoryId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'discussionId':
           result.discussionId = serializers.deserialize(value,
@@ -20149,7 +20149,7 @@ class _$GUpdateDiscussionInputSerializer
           break;
         case 'title':
           result.title = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
       }
     }
@@ -20208,7 +20208,7 @@ class _$GUpdateEnterpriseAdministratorRoleInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'enterpriseId':
           result.enterpriseId = serializers.deserialize(value,
@@ -20282,7 +20282,7 @@ class _$GUpdateEnterpriseAllowPrivateRepositoryForkingSettingInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'enterpriseId':
           result.enterpriseId = serializers.deserialize(value,
@@ -20353,7 +20353,7 @@ class _$GUpdateEnterpriseDefaultRepositoryPermissionSettingInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'enterpriseId':
           result.enterpriseId = serializers.deserialize(value,
@@ -20424,7 +20424,7 @@ class _$GUpdateEnterpriseMembersCanChangeRepositoryVisibilitySettingInputSeriali
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'enterpriseId':
           result.enterpriseId = serializers.deserialize(value,
@@ -20527,7 +20527,7 @@ class _$GUpdateEnterpriseMembersCanCreateRepositoriesSettingInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'enterpriseId':
           result.enterpriseId = serializers.deserialize(value,
@@ -20535,25 +20535,25 @@ class _$GUpdateEnterpriseMembersCanCreateRepositoriesSettingInputSerializer
           break;
         case 'membersCanCreateInternalRepositories':
           result.membersCanCreateInternalRepositories = serializers
-              .deserialize(value, specifiedType: const FullType(bool)) as bool;
+              .deserialize(value, specifiedType: const FullType(bool)) as bool?;
           break;
         case 'membersCanCreatePrivateRepositories':
           result.membersCanCreatePrivateRepositories = serializers
-              .deserialize(value, specifiedType: const FullType(bool)) as bool;
+              .deserialize(value, specifiedType: const FullType(bool)) as bool?;
           break;
         case 'membersCanCreatePublicRepositories':
           result.membersCanCreatePublicRepositories = serializers
-              .deserialize(value, specifiedType: const FullType(bool)) as bool;
+              .deserialize(value, specifiedType: const FullType(bool)) as bool?;
           break;
         case 'membersCanCreateRepositoriesPolicyEnabled':
           result.membersCanCreateRepositoriesPolicyEnabled = serializers
-              .deserialize(value, specifiedType: const FullType(bool)) as bool;
+              .deserialize(value, specifiedType: const FullType(bool)) as bool?;
           break;
         case 'settingValue':
           result.settingValue = serializers.deserialize(value,
                   specifiedType: const FullType(
                       GEnterpriseMembersCanCreateRepositoriesSettingValue))
-              as GEnterpriseMembersCanCreateRepositoriesSettingValue;
+              as GEnterpriseMembersCanCreateRepositoriesSettingValue?;
           break;
       }
     }
@@ -20613,7 +20613,7 @@ class _$GUpdateEnterpriseMembersCanDeleteIssuesSettingInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'enterpriseId':
           result.enterpriseId = serializers.deserialize(value,
@@ -20684,7 +20684,7 @@ class _$GUpdateEnterpriseMembersCanDeleteRepositoriesSettingInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'enterpriseId':
           result.enterpriseId = serializers.deserialize(value,
@@ -20755,7 +20755,7 @@ class _$GUpdateEnterpriseMembersCanInviteCollaboratorsSettingInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'enterpriseId':
           result.enterpriseId = serializers.deserialize(value,
@@ -20826,7 +20826,7 @@ class _$GUpdateEnterpriseMembersCanMakePurchasesSettingInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'enterpriseId':
           result.enterpriseId = serializers.deserialize(value,
@@ -20897,7 +20897,7 @@ class _$GUpdateEnterpriseMembersCanUpdateProtectedBranchesSettingInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'enterpriseId':
           result.enterpriseId = serializers.deserialize(value,
@@ -20968,7 +20968,7 @@ class _$GUpdateEnterpriseMembersCanViewDependencyInsightsSettingInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'enterpriseId':
           result.enterpriseId = serializers.deserialize(value,
@@ -21038,7 +21038,7 @@ class _$GUpdateEnterpriseOrganizationProjectsSettingInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'enterpriseId':
           result.enterpriseId = serializers.deserialize(value,
@@ -21129,11 +21129,11 @@ class _$GUpdateEnterpriseProfileInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'description':
           result.description = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'enterpriseId':
           result.enterpriseId = serializers.deserialize(value,
@@ -21141,15 +21141,15 @@ class _$GUpdateEnterpriseProfileInputSerializer
           break;
         case 'location':
           result.location = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'name':
           result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'websiteUrl':
           result.websiteUrl = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
       }
     }
@@ -21207,7 +21207,7 @@ class _$GUpdateEnterpriseRepositoryProjectsSettingInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'enterpriseId':
           result.enterpriseId = serializers.deserialize(value,
@@ -21275,7 +21275,7 @@ class _$GUpdateEnterpriseTeamDiscussionsSettingInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'enterpriseId':
           result.enterpriseId = serializers.deserialize(value,
@@ -21345,7 +21345,7 @@ class _$GUpdateEnterpriseTwoFactorAuthenticationRequiredSettingInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'enterpriseId':
           result.enterpriseId = serializers.deserialize(value,
@@ -21421,7 +21421,7 @@ class _$GUpdateEnvironmentInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'environmentId':
           result.environmentId = serializers.deserialize(value,
@@ -21431,11 +21431,11 @@ class _$GUpdateEnvironmentInputSerializer
           result.reviewers.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'waitTimer':
           result.waitTimer = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(int)) as int?;
           break;
       }
     }
@@ -21491,7 +21491,7 @@ class _$GUpdateIpAllowListEnabledSettingInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'ownerId':
           result.ownerId = serializers.deserialize(value,
@@ -21571,7 +21571,7 @@ class _$GUpdateIpAllowListEntryInputSerializer
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'ipAllowListEntryId':
           result.ipAllowListEntryId = serializers.deserialize(value,
@@ -21583,7 +21583,7 @@ class _$GUpdateIpAllowListEntryInputSerializer
           break;
         case 'name':
           result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
       }
     }
@@ -21641,7 +21641,7 @@ class _$GUpdateIssueCommentInputSerializer
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -21747,15 +21747,15 @@ class _$GUpdateIssueInputSerializer
           result.assigneeIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'body':
           result.body = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -21765,25 +21765,25 @@ class _$GUpdateIssueInputSerializer
           result.labelIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'milestoneId':
           result.milestoneId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'projectIds':
           result.projectIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'state':
           result.state = serializers.deserialize(value,
-              specifiedType: const FullType(GIssueState)) as GIssueState;
+              specifiedType: const FullType(GIssueState)) as GIssueState?;
           break;
         case 'title':
           result.title = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
       }
     }
@@ -21840,7 +21840,7 @@ class _$GUpdateNotificationRestrictionSettingInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'ownerId':
           result.ownerId = serializers.deserialize(value,
@@ -21917,15 +21917,15 @@ class _$GUpdateProjectCardInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'isArchived':
           result.isArchived = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'note':
           result.note = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'projectCardId':
           result.projectCardId = serializers.deserialize(value,
@@ -21984,7 +21984,7 @@ class _$GUpdateProjectColumnInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'name':
           result.name = serializers.deserialize(value,
@@ -22073,15 +22073,15 @@ class _$GUpdateProjectInputSerializer
       switch (key) {
         case 'body':
           result.body = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'name':
           result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'projectId':
           result.projectId = serializers.deserialize(value,
@@ -22089,11 +22089,11 @@ class _$GUpdateProjectInputSerializer
           break;
         case 'public':
           result.public = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'state':
           result.state = serializers.deserialize(value,
-              specifiedType: const FullType(GProjectState)) as GProjectState;
+              specifiedType: const FullType(GProjectState)) as GProjectState?;
           break;
       }
     }
@@ -22214,39 +22214,39 @@ class _$GUpdatePullRequestInputSerializer
           result.assigneeIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'baseRefName':
           result.baseRefName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'body':
           result.body = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'labelIds':
           result.labelIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'maintainerCanModify':
           result.maintainerCanModify = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'milestoneId':
           result.milestoneId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'projectIds':
           result.projectIds.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
         case 'pullRequestId':
           result.pullRequestId = serializers.deserialize(value,
@@ -22255,11 +22255,11 @@ class _$GUpdatePullRequestInputSerializer
         case 'state':
           result.state = serializers.deserialize(value,
                   specifiedType: const FullType(GPullRequestUpdateState))
-              as GPullRequestUpdateState;
+              as GPullRequestUpdateState?;
           break;
         case 'title':
           result.title = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
       }
     }
@@ -22318,7 +22318,7 @@ class _$GUpdatePullRequestReviewCommentInputSerializer
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'pullRequestReviewCommentId':
           result.pullRequestReviewCommentId = serializers.deserialize(value,
@@ -22381,7 +22381,7 @@ class _$GUpdatePullRequestReviewInputSerializer
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'pullRequestReviewId':
           result.pullRequestReviewId = serializers.deserialize(value,
@@ -22443,11 +22443,11 @@ class _$GUpdateRefInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'force':
           result.force = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'oid':
           result.oid = serializers.deserialize(value,
@@ -22557,31 +22557,31 @@ class _$GUpdateRepositoryInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'description':
           result.description = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'hasIssuesEnabled':
           result.hasIssuesEnabled = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'hasProjectsEnabled':
           result.hasProjectsEnabled = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'hasWikiEnabled':
           result.hasWikiEnabled = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'homepageUrl':
           result.homepageUrl = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'name':
           result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'repositoryId':
           result.repositoryId = serializers.deserialize(value,
@@ -22589,7 +22589,7 @@ class _$GUpdateRepositoryInputSerializer
           break;
         case 'template':
           result.template = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
       }
     }
@@ -22645,7 +22645,7 @@ class _$GUpdateSubscriptionInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'state':
           result.state = serializers.deserialize(value,
@@ -22719,11 +22719,11 @@ class _$GUpdateTeamDiscussionCommentInputSerializer
           break;
         case 'bodyVersion':
           result.bodyVersion = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -22807,15 +22807,15 @@ class _$GUpdateTeamDiscussionInputSerializer
       switch (key) {
         case 'body':
           result.body = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'bodyVersion':
           result.bodyVersion = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -22823,11 +22823,11 @@ class _$GUpdateTeamDiscussionInputSerializer
           break;
         case 'pinned':
           result.pinned = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+              specifiedType: const FullType(bool)) as bool?;
           break;
         case 'title':
           result.title = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
       }
     }
@@ -22881,7 +22881,7 @@ class _$GUpdateTopicsInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'repositoryId':
           result.repositoryId = serializers.deserialize(value,
@@ -22891,7 +22891,7 @@ class _$GUpdateTopicsInputSerializer
           result.topicNames.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
-              as BuiltList<Object>);
+              as BuiltList<Object?>);
           break;
       }
     }
@@ -23104,7 +23104,7 @@ class _$GVerifyVerifiableDomainInputSerializer
       switch (key) {
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -48780,4 +48780,4 @@ class GX509CertificateBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
