@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'dart:async';
 import 'package:ferry/ferry.dart';
-import 'package:git_touch/utils/nil_store.dart';
 // import 'package:in_app_review/in_app_review.dart';
 import 'package:universal_io/io.dart';
 import 'package:git_touch/models/bitbucket.dart';
@@ -703,7 +702,10 @@ class AuthModel with ChangeNotifier {
           _apiPrefix + '/graphql',
           defaultHeaders: {HttpHeaders.authorizationHeader: 'token $token'},
         ),
-        cache: Cache(store: NilStore()),
+        // https://ferrygraphql.com/docs/fetch-policies#default-fetchpolicies
+        defaultFetchPolicies: {
+          OperationType.query: FetchPolicy.NetworkOnly,
+        },
       );
     }
 
