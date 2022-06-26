@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:provider/provider.dart';
 import 'package:git_touch/models/theme.dart';
-import 'package:share/share.dart';
+import 'package:share_plus/share_plus.dart';
 
 class ActionItem {
   String? text;

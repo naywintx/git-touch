@@ -55,7 +55,7 @@ dependencies:
   package_info_plus:
   primer:
   provider:
-  share:
+  share_plus:
   shared_preferences:
   timeago:
   tuple:
