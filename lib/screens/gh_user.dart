@@ -149,7 +149,7 @@ class _User extends StatelessWidget {
                 leftIconData: Octicons.location,
                 text: Text(p!.location!),
                 onTap: () {
-                  launchUrl('https://www.google.com/maps/place/' +
+                  launchStringUrl('https://www.google.com/maps/place/' +
                       p!.location!.replaceAll(RegExp(r'\s+'), ''));
                 },
               ),
@@ -158,7 +158,7 @@ class _User extends StatelessWidget {
                 leftIconData: Octicons.mail,
                 text: Text(p!.email),
                 onTap: () {
-                  launchUrl('mailto:' + p!.email);
+                  launchStringUrl('mailto:' + p!.email);
                 },
               ),
             if (isNotNullOrEmpty(p!.websiteUrl))
@@ -170,7 +170,7 @@ class _User extends StatelessWidget {
                   if (!url.startsWith('http')) {
                     url = 'http://$url';
                   }
-                  launchUrl(url);
+                  launchStringUrl(url);
                 },
               ),
           ],
@@ -227,7 +227,7 @@ class _Org extends StatelessWidget {
                 leftIconData: Octicons.location,
                 text: Text(p!.location!),
                 onTap: () {
-                  launchUrl('https://www.google.com/maps/place/' +
+                  launchStringUrl('https://www.google.com/maps/place/' +
                       p!.location!.replaceAll(RegExp(r'\s+'), ''));
                 },
               ),
@@ -236,7 +236,7 @@ class _Org extends StatelessWidget {
                 leftIconData: Octicons.mail,
                 text: Text(p!.email!),
                 onTap: () {
-                  launchUrl('mailto:' + p!.email!);
+                  launchStringUrl('mailto:' + p!.email!);
                 },
               ),
             if (isNotNullOrEmpty(p!.websiteUrl))
@@ -248,7 +248,7 @@ class _Org extends StatelessWidget {
                   if (!url.startsWith('http')) {
                     url = 'http://$url';
                   }
-                  launchUrl(url);
+                  launchStringUrl(url);
                 },
               ),
           ],

@@ -742,7 +742,7 @@ class AuthModel with ChangeNotifier {
     final repoScope = publicOnly ? 'public_repo' : 'repo';
     final scope = Uri.encodeComponent(
         ['user', repoScope, 'read:org', 'notifications'].join(','));
-    launchUrl(
+    launchStringUrl(
       'https://github.com/login/oauth/authorize?client_id=$clientId&redirect_uri=gittouch://login&scope=$scope&state=$_oauthState',
     );
   }

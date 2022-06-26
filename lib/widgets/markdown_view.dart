@@ -155,7 +155,7 @@ class MarkdownFlutterView extends StatelessWidget {
             }
           }
 
-          launchUrl(url);
+          launchStringUrl(url);
         },
         styleSheet: MarkdownStyleSheet(
           a: _basicStyle.copyWith(color: theme.palette.primary),

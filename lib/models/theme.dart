@@ -259,7 +259,7 @@ class ThemeModel with ChangeNotifier {
         replace: replace,
       );
     } else {
-      launchUrl(url);
+      launchStringUrl(url);
     }
   }
 

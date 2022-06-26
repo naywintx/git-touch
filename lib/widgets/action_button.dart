@@ -33,7 +33,7 @@ class ActionItem {
         text: 'Open in Browser',
         iconData: Octicons.globe,
         onTap: (_) {
-          launchUrl(url);
+          launchStringUrl(url);
         },
       ),
     ];

@@ -167,7 +167,7 @@ class PrimerBranchName extends StatelessWidget {
   }
 }
 
-launchUrl(String? url) async {
+launchStringUrl(String? url) async {
   if (url == null) return;
 
   if (await canLaunch(url)) {
