@@ -2,6 +2,31 @@
 
 import 'package:gql/ast.dart' as _i1;
 
+const requiredCapabilities = _i1.DirectiveDefinitionNode(
+    name: _i1.NameNode(value: 'requiredCapabilities'),
+    args: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'requiredCapabilities'),
+          directives: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'String'), isNonNull: true),
+              isNonNull: false),
+          defaultValue: null)
+    ],
+    locations: [
+      _i1.DirectiveLocation.argumentDefinition,
+      _i1.DirectiveLocation.enumDefinition,
+      _i1.DirectiveLocation.enumValue,
+      _i1.DirectiveLocation.fieldDefinition,
+      _i1.DirectiveLocation.inputFieldDefinition,
+      _i1.DirectiveLocation.inputObject,
+      _i1.DirectiveLocation.interface,
+      _i1.DirectiveLocation.object,
+      _i1.DirectiveLocation.scalar,
+      _i1.DirectiveLocation.union
+    ],
+    repeatable: false);
 const preview = _i1.DirectiveDefinitionNode(
     name: _i1.NameNode(value: 'preview'),
     args: [
@@ -13,16 +38,16 @@ const preview = _i1.DirectiveDefinitionNode(
           defaultValue: null)
     ],
     locations: [
-      _i1.DirectiveLocation.scalar,
-      _i1.DirectiveLocation.object,
-      _i1.DirectiveLocation.fieldDefinition,
       _i1.DirectiveLocation.argumentDefinition,
-      _i1.DirectiveLocation.interface,
-      _i1.DirectiveLocation.union,
       _i1.DirectiveLocation.enumDefinition,
       _i1.DirectiveLocation.enumValue,
+      _i1.DirectiveLocation.fieldDefinition,
+      _i1.DirectiveLocation.inputFieldDefinition,
       _i1.DirectiveLocation.inputObject,
-      _i1.DirectiveLocation.inputFieldDefinition
+      _i1.DirectiveLocation.interface,
+      _i1.DirectiveLocation.object,
+      _i1.DirectiveLocation.scalar,
+      _i1.DirectiveLocation.union
     ],
     repeatable: false);
 const possibleTypes = _i1.DirectiveDefinitionNode(
@@ -45,6 +70,52 @@ const possibleTypes = _i1.DirectiveDefinitionNode(
     ],
     locations: [_i1.DirectiveLocation.inputFieldDefinition],
     repeatable: false);
+const AbortQueuedMigrationsInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'AbortQueuedMigrationsInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'ownerId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'Organization', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null)
+    ]);
+const AbortQueuedMigrationsPayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'AbortQueuedMigrationsPayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'success'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: false))
+    ]);
 const AcceptEnterpriseAdministratorInvitationInput =
     _i1.InputObjectTypeDefinitionNode(
         name:
@@ -225,6 +296,15 @@ const ActorLocation = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'String'), isNonNull: false))
+    ]);
+const ActorType = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ActorType'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'TEAM'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'USER'), directives: [])
     ]);
 const AddAssigneesToAssignableInput = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'AddAssigneesToAssignableInput'),
@@ -432,6 +512,53 @@ const AddDiscussionCommentPayload = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'DiscussionComment'), isNonNull: false))
+    ]);
+const AddDiscussionPollVoteInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'AddDiscussionPollVoteInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'pollOptionId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'DiscussionPollOption', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null)
+    ]);
+const AddDiscussionPollVotePayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'AddDiscussionPollVotePayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'pollOption'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DiscussionPollOption'),
+              isNonNull: false))
     ]);
 const AddEnterpriseSupportEntitlementInput = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'AddEnterpriseSupportEntitlementInput'),
@@ -692,6 +819,318 @@ const AddProjectColumnPayload = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Project'), isNonNull: false))
+    ]);
+const AddProjectDraftIssueInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'AddProjectDraftIssueInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'assigneeIds'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(value: 'User', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ID'), isNonNull: true),
+              isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'body'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'projectId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'ProjectNext', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'title'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null)
+    ]);
+const AddProjectDraftIssuePayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'AddProjectDraftIssuePayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectNextItem'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNextItem'), isNonNull: false))
+    ]);
+const AddProjectNextItemInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'AddProjectNextItemInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'contentId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'DraftIssue', isBlock: false),
+                        _i1.StringValueNode(value: 'Issue', isBlock: false),
+                        _i1.StringValueNode(
+                            value: 'PullRequest', isBlock: false)
+                      ])),
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'abstractType'),
+                      value: _i1.StringValueNode(
+                          value: 'ProjectNextItemContent', isBlock: false))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'projectId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'ProjectNext', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: false),
+          defaultValue: null)
+    ]);
+const AddProjectNextItemPayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'AddProjectNextItemPayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectNextItem'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNextItem'), isNonNull: false))
+    ]);
+const AddProjectV2DraftIssueInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'AddProjectV2DraftIssueInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'assigneeIds'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(value: 'User', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ID'), isNonNull: true),
+              isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'body'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'projectId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(value: 'ProjectV2', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'title'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true),
+          defaultValue: null)
+    ]);
+const AddProjectV2DraftIssuePayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'AddProjectV2DraftIssuePayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectItem'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2Item'), isNonNull: false))
+    ]);
+const AddProjectV2ItemByIdInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'AddProjectV2ItemByIdInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'contentId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'DraftIssue', isBlock: false),
+                        _i1.StringValueNode(value: 'Issue', isBlock: false),
+                        _i1.StringValueNode(
+                            value: 'PullRequest', isBlock: false)
+                      ])),
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'abstractType'),
+                      value: _i1.StringValueNode(
+                          value: 'ProjectV2ItemContent', isBlock: false))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'projectId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(value: 'ProjectV2', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null)
+    ]);
+const AddProjectV2ItemByIdPayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'AddProjectV2ItemByIdPayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'item'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2Item'), isNonNull: false))
     ]);
 const AddPullRequestReviewCommentInput = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'AddPullRequestReviewCommentInput'),
@@ -2105,6 +2544,8 @@ const AutomaticBaseChangeSucceededEvent = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'PullRequest'), isNonNull: true))
     ]);
+const Base64String = _i1.ScalarTypeDefinitionNode(
+    name: _i1.NameNode(value: 'Base64String'), directives: []);
 const BaseRefChangedEvent = _i1.ObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'BaseRefChangedEvent'),
     directives: [],
@@ -2424,6 +2865,14 @@ const Bot = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'URI'), isNonNull: true))
     ]);
+const BranchActorAllowanceActor = _i1.UnionTypeDefinitionNode(
+    name: _i1.NameNode(value: 'BranchActorAllowanceActor'),
+    directives: [],
+    types: [
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'App'), isNonNull: false),
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Team'), isNonNull: false),
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'User'), isNonNull: false)
+    ]);
 const BranchProtectionRule = _i1.ObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'BranchProtectionRule'),
     directives: [],
@@ -2439,6 +2888,12 @@ const BranchProtectionRule = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'allowsForcePushes'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'blocksCreations'),
           directives: [],
           args: [],
           type: _i1.NamedTypeNode(
@@ -2475,6 +2930,70 @@ const BranchProtectionRule = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name:
                   _i1.NameNode(value: 'BranchProtectionRuleConflictConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'bypassForcePushAllowances'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'BypassForcePushAllowanceConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'bypassPullRequestAllowances'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'BypassPullRequestAllowanceConnection'),
               isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'creator'),
@@ -2600,6 +3119,15 @@ const BranchProtectionRule = _i1.ObjectTypeDefinitionNode(
           type: _i1.ListTypeNode(
               type: _i1.NamedTypeNode(
                   name: _i1.NameNode(value: 'String'), isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'requiredStatusChecks'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'RequiredStatusCheckDescription'),
+                  isNonNull: true),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'requiresApprovingReviews'),
@@ -2824,6 +3352,172 @@ const BranchProtectionRuleEdge = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'BranchProtectionRule'),
               isNonNull: false))
     ]);
+const BypassForcePushAllowance = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'BypassForcePushAllowance'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'actor'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'BranchActorAllowanceActor'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'branchProtectionRule'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'BranchProtectionRule'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true))
+    ]);
+const BypassForcePushAllowanceConnection = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'BypassForcePushAllowanceConnection'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'edges'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'BypassForcePushAllowanceEdge'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'nodes'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'BypassForcePushAllowance'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'pageInfo'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'PageInfo'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'totalCount'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true))
+    ]);
+const BypassForcePushAllowanceEdge = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'BypassForcePushAllowanceEdge'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'cursor'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'node'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'BypassForcePushAllowance'),
+              isNonNull: false))
+    ]);
+const BypassPullRequestAllowance = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'BypassPullRequestAllowance'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'actor'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'BranchActorAllowanceActor'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'branchProtectionRule'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'BranchProtectionRule'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true))
+    ]);
+const BypassPullRequestAllowanceConnection = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'BypassPullRequestAllowanceConnection'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'edges'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'BypassPullRequestAllowanceEdge'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'nodes'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'BypassPullRequestAllowance'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'pageInfo'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'PageInfo'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'totalCount'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true))
+    ]);
+const BypassPullRequestAllowanceEdge = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'BypassPullRequestAllowanceEdge'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'cursor'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'node'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'BypassPullRequestAllowance'),
+              isNonNull: false))
+    ]);
 const CVSS = _i1.ObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'CVSS'),
     directives: [],
@@ -2979,6 +3673,91 @@ const CancelEnterpriseAdminInvitationPayload = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'String'), isNonNull: false))
+    ]);
+const CancelSponsorshipInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'CancelSponsorshipInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'Organization', isBlock: false),
+                        _i1.StringValueNode(value: 'User', isBlock: false)
+                      ])),
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'abstractType'),
+                      value:
+                          _i1.StringValueNode(value: 'Sponsor', isBlock: false))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorLogin'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorableId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'Organization', isBlock: false),
+                        _i1.StringValueNode(value: 'User', isBlock: false)
+                      ])),
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'abstractType'),
+                      value: _i1.StringValueNode(
+                          value: 'Sponsorable', isBlock: false))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorableLogin'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null)
+    ]);
+const CancelSponsorshipPayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'CancelSponsorshipPayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorsTier'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'SponsorsTier'), isNonNull: false))
     ]);
 const ChangeUserStatusInput = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'ChangeUserStatusInput'),
@@ -4402,6 +5181,13 @@ const CloseIssueInput = _i1.InputObjectTypeDefinitionNode(
           ],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'stateReason'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'IssueClosedStateReason'),
+              isNonNull: false),
           defaultValue: null)
     ]);
 const CloseIssuePayload = _i1.ObjectTypeDefinitionNode(
@@ -4514,6 +5300,12 @@ const ClosedEvent = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'URI'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'stateReason'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'IssueStateReason'), isNonNull: false)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'url'),
           directives: [],
@@ -5968,6 +6760,46 @@ const CommitHistoryConnection = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Int'), isNonNull: true))
     ]);
+const CommitMessage = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'CommitMessage'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'body'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'headline'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true),
+          defaultValue: null)
+    ]);
+const CommittableBranch = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'CommittableBranch'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'branchName'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'repositoryNameWithOwner'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null)
+    ]);
 const ConnectedEvent = _i1.ObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'ConnectedEvent'),
     directives: [],
@@ -6011,66 +6843,6 @@ const ConnectedEvent = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'ReferencedSubject'), isNonNull: true))
-    ]);
-const ContentAttachment = _i1.ObjectTypeDefinitionNode(
-    name: _i1.NameNode(value: 'ContentAttachment'),
-    directives: [],
-    interfaces: [],
-    fields: [
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'body'),
-          directives: [],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'String'), isNonNull: true)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'contentReference'),
-          directives: [],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'ContentReference'), isNonNull: true)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'databaseId'),
-          directives: [],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Int'), isNonNull: true)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'id'),
-          directives: [],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'title'),
-          directives: [],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'String'), isNonNull: true))
-    ]);
-const ContentReference = _i1.ObjectTypeDefinitionNode(
-    name: _i1.NameNode(value: 'ContentReference'),
-    directives: [],
-    interfaces: [],
-    fields: [
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'databaseId'),
-          directives: [],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Int'), isNonNull: true)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'id'),
-          directives: [],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'reference'),
-          directives: [],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'String'), isNonNull: true))
     ]);
 const Contribution = _i1.InterfaceTypeDefinitionNode(
     name: _i1.NameNode(value: 'Contribution'),
@@ -7062,6 +7834,38 @@ const ConvertedNoteToIssueEvent = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'String'), isNonNull: true))
     ]);
+const ConvertedToDiscussionEvent = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ConvertedToDiscussionEvent'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'actor'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Actor'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'discussion'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Discussion'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true))
+    ]);
 const CreateBranchProtectionRuleInput = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'CreateBranchProtectionRuleInput'),
     directives: [],
@@ -7077,6 +7881,28 @@ const CreateBranchProtectionRuleInput = _i1.InputObjectTypeDefinitionNode(
           directives: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'blocksCreations'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'bypassForcePushActorIds'),
+          directives: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ID'), isNonNull: true),
+              isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'bypassPullRequestActorIds'),
+          directives: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ID'), isNonNull: true),
+              isNonNull: false),
           defaultValue: null),
       _i1.InputValueDefinitionNode(
           name: _i1.NameNode(value: 'clientMutationId'),
@@ -7138,6 +7964,15 @@ const CreateBranchProtectionRuleInput = _i1.InputObjectTypeDefinitionNode(
           type: _i1.ListTypeNode(
               type: _i1.NamedTypeNode(
                   name: _i1.NameNode(value: 'String'), isNonNull: true),
+              isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'requiredStatusChecks'),
+          directives: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'RequiredStatusCheckInput'),
+                  isNonNull: true),
               isNonNull: false),
           defaultValue: null),
       _i1.InputValueDefinitionNode(
@@ -7382,15 +8217,15 @@ const CreateCheckSuitePayload = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'String'), isNonNull: false))
     ]);
-const CreateContentAttachmentInput = _i1.InputObjectTypeDefinitionNode(
-    name: _i1.NameNode(value: 'CreateContentAttachmentInput'),
+const CreateCommitOnBranchInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'CreateCommitOnBranchInput'),
     directives: [],
     fields: [
       _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'body'),
+          name: _i1.NameNode(value: 'branch'),
           directives: [],
           type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'String'), isNonNull: true),
+              name: _i1.NameNode(value: 'CommittableBranch'), isNonNull: true),
           defaultValue: null),
       _i1.InputValueDefinitionNode(
           name: _i1.NameNode(value: 'clientMutationId'),
@@ -7399,31 +8234,26 @@ const CreateContentAttachmentInput = _i1.InputObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'String'), isNonNull: false),
           defaultValue: null),
       _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'contentReferenceId'),
-          directives: [
-            _i1.DirectiveNode(
-                name: _i1.NameNode(value: 'possibleTypes'),
-                arguments: [
-                  _i1.ArgumentNode(
-                      name: _i1.NameNode(value: 'concreteTypes'),
-                      value: _i1.ListValueNode(values: [
-                        _i1.StringValueNode(
-                            value: 'ContentReference', isBlock: false)
-                      ]))
-                ])
-          ],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'ID'), isNonNull: true),
-          defaultValue: null),
-      _i1.InputValueDefinitionNode(
-          name: _i1.NameNode(value: 'title'),
+          name: _i1.NameNode(value: 'expectedHeadOid'),
           directives: [],
           type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'String'), isNonNull: true),
+              name: _i1.NameNode(value: 'GitObjectID'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'fileChanges'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'FileChanges'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'message'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'CommitMessage'), isNonNull: true),
           defaultValue: null)
     ]);
-const CreateContentAttachmentPayload = _i1.ObjectTypeDefinitionNode(
-    name: _i1.NameNode(value: 'CreateContentAttachmentPayload'),
+const CreateCommitOnBranchPayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'CreateCommitOnBranchPayload'),
     directives: [],
     interfaces: [],
     fields: [
@@ -7434,11 +8264,17 @@ const CreateContentAttachmentPayload = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'String'), isNonNull: false)),
       _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'contentAttachment'),
+          name: _i1.NameNode(value: 'commit'),
           directives: [],
           args: [],
           type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'ContentAttachment'), isNonNull: false))
+              name: _i1.NameNode(value: 'Commit'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'ref'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Ref'), isNonNull: false))
     ]);
 const CreateDeploymentInput = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'CreateDeploymentInput'),
@@ -8133,6 +8969,83 @@ const CreateLabelPayload = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Label'), isNonNull: false))
     ]);
+const CreateMigrationSourceInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'CreateMigrationSourceInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'accessToken'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'githubPat'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'name'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'ownerId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'Organization', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'type'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'MigrationSourceType'),
+              isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'url'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true),
+          defaultValue: null)
+    ]);
+const CreateMigrationSourcePayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'CreateMigrationSourcePayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'migrationSource'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'MigrationSource'), isNonNull: false))
+    ]);
 const CreateProjectInput = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'CreateProjectInput'),
     directives: [],
@@ -8221,6 +9134,63 @@ const CreateProjectPayload = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Project'), isNonNull: false))
+    ]);
+const CreateProjectV2Input = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'CreateProjectV2Input'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'ownerId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'Organization', isBlock: false),
+                        _i1.StringValueNode(value: 'User', isBlock: false)
+                      ])),
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'abstractType'),
+                      value: _i1.StringValueNode(
+                          value: 'OrganizationOrUser', isBlock: false))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'title'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true),
+          defaultValue: null)
+    ]);
+const CreateProjectV2Payload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'CreateProjectV2Payload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectV2'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2'), isNonNull: false))
     ]);
 const CreatePullRequestInput = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'CreatePullRequestInput'),
@@ -8469,6 +9439,248 @@ const CreateRepositoryPayload = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Repository'), isNonNull: false))
+    ]);
+const CreateSponsorsTierInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'CreateSponsorsTierInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'amount'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'description'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'isRecurring'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+          defaultValue: _i1.BooleanValueNode(value: true)),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'publish'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+          defaultValue: _i1.BooleanValueNode(value: false)),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'repositoryId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(value: 'Repository', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'repositoryName'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'repositoryOwnerLogin'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorableId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'Organization', isBlock: false),
+                        _i1.StringValueNode(value: 'User', isBlock: false)
+                      ])),
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'abstractType'),
+                      value: _i1.StringValueNode(
+                          value: 'Sponsorable', isBlock: false))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorableLogin'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'welcomeMessage'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null)
+    ]);
+const CreateSponsorsTierPayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'CreateSponsorsTierPayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorsTier'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'SponsorsTier'), isNonNull: false))
+    ]);
+const CreateSponsorshipInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'CreateSponsorshipInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'amount'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'isRecurring'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'privacyLevel'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'SponsorshipPrivacy'),
+              isNonNull: false),
+          defaultValue: _i1.EnumValueNode(name: _i1.NameNode(value: 'PUBLIC'))),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'receiveEmails'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+          defaultValue: _i1.BooleanValueNode(value: true)),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'Organization', isBlock: false),
+                        _i1.StringValueNode(value: 'User', isBlock: false)
+                      ])),
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'abstractType'),
+                      value:
+                          _i1.StringValueNode(value: 'Sponsor', isBlock: false))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorLogin'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorableId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'Organization', isBlock: false),
+                        _i1.StringValueNode(value: 'User', isBlock: false)
+                      ])),
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'abstractType'),
+                      value: _i1.StringValueNode(
+                          value: 'Sponsorable', isBlock: false))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorableLogin'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'tierId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'SponsorsTier', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: false),
+          defaultValue: null)
+    ]);
+const CreateSponsorshipPayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'CreateSponsorshipPayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorship'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Sponsorship'), isNonNull: false))
     ]);
 const CreateTeamDiscussionCommentInput = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'CreateTeamDiscussionCommentInput'),
@@ -9866,6 +11078,80 @@ const DeleteProjectInput = _i1.InputObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'ID'), isNonNull: true),
           defaultValue: null)
     ]);
+const DeleteProjectNextItemInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'DeleteProjectNextItemInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'itemId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'ProjectNextItem', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'projectId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'ProjectNext', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: false),
+          defaultValue: null)
+    ]);
+const DeleteProjectNextItemPayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'DeleteProjectNextItemPayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'deletedItemId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: false))
+    ]);
 const DeleteProjectPayload = _i1.ObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'DeleteProjectPayload'),
     directives: [],
@@ -9883,6 +11169,68 @@ const DeleteProjectPayload = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'ProjectOwner'), isNonNull: false))
+    ]);
+const DeleteProjectV2ItemInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'DeleteProjectV2ItemInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'itemId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'ProjectV2Item', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'projectId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(value: 'ProjectV2', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null)
+    ]);
+const DeleteProjectV2ItemPayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'DeleteProjectV2ItemPayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'deletedItemId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: false))
     ]);
 const DeletePullRequestReviewCommentInput = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'DeletePullRequestReviewCommentInput'),
@@ -10180,6 +11528,58 @@ const DemilestonedEvent = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'MilestoneItem'), isNonNull: true))
     ]);
+const DependabotUpdate = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'DependabotUpdate'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'RepositoryNode'), isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'error'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DependabotUpdateError'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'pullRequest'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'PullRequest'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'repository'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Repository'), isNonNull: true))
+    ]);
+const DependabotUpdateError = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'DependabotUpdateError'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'body'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'errorType'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'title'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true))
+    ]);
 const DependencyGraphDependency = _i1.ObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'DependencyGraphDependency'),
     directives: [
@@ -10200,7 +11600,18 @@ const DependencyGraphDependency = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'packageLabel'),
-          directives: [],
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              '`packageLabel` will be removed. Use normalized `packageName` field instead. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'String'), isNonNull: true)),
@@ -10297,6 +11708,29 @@ const DependencyGraphDependencyEdge = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'DependencyGraphDependency'),
               isNonNull: false))
+    ]);
+const DependencyGraphEcosystem = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'DependencyGraphEcosystem'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'ACTIONS'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'COMPOSER'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'GO'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'MAVEN'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'NPM'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'NUGET'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'PIP'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'RUBYGEMS'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'RUST'), directives: [])
     ]);
 const DependencyGraphManifest = _i1.ObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'DependencyGraphManifest'),
@@ -10863,9 +12297,7 @@ const DeploymentOrderField = _i1.EnumTypeDefinitionNode(
 const DeploymentProtectionRule = _i1.ObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'DeploymentProtectionRule'),
     directives: [],
-    interfaces: [
-      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false)
-    ],
+    interfaces: [],
     fields: [
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'databaseId'),
@@ -10873,12 +12305,6 @@ const DeploymentProtectionRule = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Int'), isNonNull: false)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'id'),
-          directives: [],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'reviewers'),
           directives: [],
@@ -11801,6 +13227,12 @@ const Discussion = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Int'), isNonNull: true)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'poll'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DiscussionPoll'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'publishedAt'),
           directives: [],
           args: [],
@@ -12571,6 +14003,218 @@ const DiscussionOrderField = _i1.EnumTypeDefinitionNode(
       _i1.EnumValueDefinitionNode(
           name: _i1.NameNode(value: 'UPDATED_AT'), directives: [])
     ]);
+const DiscussionPoll = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'DiscussionPoll'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'discussion'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Discussion'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'options'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'orderBy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'DiscussionPollOptionOrder'),
+                    isNonNull: false),
+                defaultValue: _i1.ObjectValueNode(fields: [
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'field'),
+                      value: _i1.EnumValueNode(
+                          name: _i1.NameNode(value: 'AUTHORED_ORDER'))),
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'direction'),
+                      value:
+                          _i1.EnumValueNode(name: _i1.NameNode(value: 'ASC')))
+                ]))
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DiscussionPollOptionConnection'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'question'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'totalVoteCount'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'viewerCanVote'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'viewerHasVoted'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true))
+    ]);
+const DiscussionPollOption = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'DiscussionPollOption'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'option'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'poll'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DiscussionPoll'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'totalVoteCount'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'viewerHasVoted'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true))
+    ]);
+const DiscussionPollOptionConnection = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'DiscussionPollOptionConnection'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'edges'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'DiscussionPollOptionEdge'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'nodes'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'DiscussionPollOption'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'pageInfo'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'PageInfo'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'totalCount'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true))
+    ]);
+const DiscussionPollOptionEdge = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'DiscussionPollOptionEdge'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'cursor'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'node'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DiscussionPollOption'),
+              isNonNull: false))
+    ]);
+const DiscussionPollOptionOrder = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'DiscussionPollOptionOrder'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'direction'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'OrderDirection'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'field'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DiscussionPollOptionOrderField'),
+              isNonNull: true),
+          defaultValue: null)
+    ]);
+const DiscussionPollOptionOrderField = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'DiscussionPollOptionOrderField'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'AUTHORED_ORDER'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'VOTE_COUNT'), directives: [])
+    ]);
 const DismissPullRequestReviewInput = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'DismissPullRequestReviewInput'),
     directives: [],
@@ -12622,6 +14266,239 @@ const DismissPullRequestReviewPayload = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'PullRequestReview'), isNonNull: false))
+    ]);
+const DismissReason = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'DismissReason'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'FIX_STARTED'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'INACCURATE'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'NOT_USED'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'NO_BANDWIDTH'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'TOLERABLE_RISK'), directives: [])
+    ]);
+const DismissRepositoryVulnerabilityAlertInput =
+    _i1.InputObjectTypeDefinitionNode(
+        name: _i1.NameNode(value: 'DismissRepositoryVulnerabilityAlertInput'),
+        directives: [],
+        fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'dismissReason'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DismissReason'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'repositoryVulnerabilityAlertId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'RepositoryVulnerabilityAlert',
+                            isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null)
+    ]);
+const DismissRepositoryVulnerabilityAlertPayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'DismissRepositoryVulnerabilityAlertPayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'repositoryVulnerabilityAlert'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'RepositoryVulnerabilityAlert'),
+              isNonNull: false))
+    ]);
+const DraftIssue = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'DraftIssue'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'assignees'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'UserConnection'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'body'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'bodyHTML'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'HTML'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'bodyText'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'creator'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Actor'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'project'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNext'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectItem'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNextItem'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectV2Items'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2ItemConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectsV2'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2Connection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'title'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updatedAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true))
     ]);
 const DraftPullRequestReviewComment = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'DraftPullRequestReviewComment'),
@@ -12959,6 +14836,13 @@ const Enterprise = _i1.ObjectTypeDefinitionNode(
                 directives: [],
                 type: _i1.NamedTypeNode(
                     name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'viewerOrganizationRole'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'RoleInOrganization'),
+                    isNonNull: false),
                 defaultValue: null)
           ],
           type: _i1.NamedTypeNode(
@@ -12991,7 +14875,18 @@ const Enterprise = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'URI'), isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'userAccounts'),
-          directives: [],
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `Enterprise.userAccounts` field is being removed. Use the `Enterprise.members` field instead. Removal on 2022-07-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
           args: [
             _i1.InputValueDefinitionNode(
                 name: _i1.NameNode(value: 'after'),
@@ -13281,23 +15176,6 @@ const EnterpriseBillingInfo = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Int'), isNonNull: true)),
       _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'availableSeats'),
-          directives: [
-            _i1.DirectiveNode(
-                name: _i1.NameNode(value: 'deprecated'),
-                arguments: [
-                  _i1.ArgumentNode(
-                      name: _i1.NameNode(value: 'reason'),
-                      value: _i1.StringValueNode(
-                          value:
-                              '`availableSeats` will be replaced with `totalAvailableLicenses` to provide more clarity on the value being returned Use EnterpriseBillingInfo.totalAvailableLicenses instead. Removal on 2020-01-01 UTC.',
-                          isBlock: false))
-                ])
-          ],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Int'), isNonNull: true)),
-      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'bandwidthQuota'),
           directives: [],
           args: [],
@@ -13312,23 +15190,6 @@ const EnterpriseBillingInfo = _i1.ObjectTypeDefinitionNode(
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'bandwidthUsagePercentage'),
           directives: [],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Int'), isNonNull: true)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'seats'),
-          directives: [
-            _i1.DirectiveNode(
-                name: _i1.NameNode(value: 'deprecated'),
-                arguments: [
-                  _i1.ArgumentNode(
-                      name: _i1.NameNode(value: 'reason'),
-                      value: _i1.StringValueNode(
-                          value:
-                              '`seats` will be replaced with `totalLicenses` to provide more clarity on the value being returned Use EnterpriseBillingInfo.totalLicenses instead. Removal on 2020-01-01 UTC.',
-                          isBlock: false))
-                ])
-          ],
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Int'), isNonNull: true)),
@@ -13447,6 +15308,24 @@ const EnterpriseIdentityProvider = _i1.ObjectTypeDefinitionNode(
                 directives: [],
                 type: _i1.NamedTypeNode(
                     name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'login'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'membersOnly'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'userName'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
                 defaultValue: null)
           ],
           type: _i1.NamedTypeNode(
@@ -13547,23 +15426,6 @@ const EnterpriseMemberEdge = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'String'), isNonNull: true)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'isUnlicensed'),
-          directives: [
-            _i1.DirectiveNode(
-                name: _i1.NameNode(value: 'deprecated'),
-                arguments: [
-                  _i1.ArgumentNode(
-                      name: _i1.NameNode(value: 'reason'),
-                      value: _i1.StringValueNode(
-                          value:
-                              'All members consume a license Removal on 2021-01-01 UTC.',
-                          isBlock: false))
-                ])
-          ],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'node'),
           directives: [],
@@ -13735,23 +15597,6 @@ const EnterpriseOutsideCollaboratorEdge = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'String'), isNonNull: true)),
       _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'isUnlicensed'),
-          directives: [
-            _i1.DirectiveNode(
-                name: _i1.NameNode(value: 'deprecated'),
-                arguments: [
-                  _i1.ArgumentNode(
-                      name: _i1.NameNode(value: 'reason'),
-                      value: _i1.StringValueNode(
-                          value:
-                              'All outside collaborators consume a license Removal on 2021-01-01 UTC.',
-                          isBlock: false))
-                ])
-          ],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
-      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'node'),
           directives: [],
           args: [],
@@ -13855,6 +15700,14 @@ const EnterpriseOwnerInfo = _i1.ObjectTypeDefinitionNode(
                       value:
                           _i1.EnumValueNode(name: _i1.NameNode(value: 'ASC')))
                 ])),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'organizationLogins'),
+                directives: [],
+                type: _i1.ListTypeNode(
+                    type: _i1.NamedTypeNode(
+                        name: _i1.NameNode(value: 'String'), isNonNull: true),
+                    isNonNull: false),
+                defaultValue: null),
             _i1.InputValueDefinitionNode(
                 name: _i1.NameNode(value: 'query'),
                 directives: [],
@@ -14714,6 +16567,12 @@ const EnterpriseOwnerInfo = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'NotificationRestrictionSettingValue'),
               isNonNull: true)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'oidcProvider'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'OIDCProvider'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'organizationProjectsSetting'),
           directives: [],
           args: [],
@@ -14798,6 +16657,12 @@ const EnterpriseOwnerInfo = _i1.ObjectTypeDefinitionNode(
                     name: _i1.NameNode(value: 'Int'), isNonNull: false),
                 defaultValue: null),
             _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'hasTwoFactorEnabled'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+                defaultValue: _i1.NullValueNode()),
+            _i1.InputValueDefinitionNode(
                 name: _i1.NameNode(value: 'last'),
                 directives: [],
                 type: _i1.NamedTypeNode(
@@ -14825,6 +16690,14 @@ const EnterpriseOwnerInfo = _i1.ObjectTypeDefinitionNode(
                       value:
                           _i1.EnumValueNode(name: _i1.NameNode(value: 'ASC')))
                 ])),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'organizationLogins'),
+                directives: [],
+                type: _i1.ListTypeNode(
+                    type: _i1.NamedTypeNode(
+                        name: _i1.NameNode(value: 'String'), isNonNull: true),
+                    isNonNull: false),
+                defaultValue: null),
             _i1.InputValueDefinitionNode(
                 name: _i1.NameNode(value: 'query'),
                 directives: [],
@@ -14961,72 +16834,6 @@ const EnterpriseOwnerInfo = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'RepositoryInvitationConnection'),
               isNonNull: true)),
       _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'pendingCollaborators'),
-          directives: [
-            _i1.DirectiveNode(
-                name: _i1.NameNode(value: 'deprecated'),
-                arguments: [
-                  _i1.ArgumentNode(
-                      name: _i1.NameNode(value: 'reason'),
-                      value: _i1.StringValueNode(
-                          value:
-                              'Repository invitations can now be associated with an email, not only an invitee. Use the `pendingCollaboratorInvitations` field instead. Removal on 2020-10-01 UTC.',
-                          isBlock: false))
-                ])
-          ],
-          args: [
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'after'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'String'), isNonNull: false),
-                defaultValue: null),
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'before'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'String'), isNonNull: false),
-                defaultValue: null),
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'first'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
-                defaultValue: null),
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'last'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
-                defaultValue: null),
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'orderBy'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'RepositoryInvitationOrder'),
-                    isNonNull: false),
-                defaultValue: _i1.ObjectValueNode(fields: [
-                  _i1.ObjectFieldNode(
-                      name: _i1.NameNode(value: 'field'),
-                      value: _i1.EnumValueNode(
-                          name: _i1.NameNode(value: 'CREATED_AT'))),
-                  _i1.ObjectFieldNode(
-                      name: _i1.NameNode(value: 'direction'),
-                      value:
-                          _i1.EnumValueNode(name: _i1.NameNode(value: 'DESC')))
-                ])),
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'query'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'String'), isNonNull: false),
-                defaultValue: null)
-          ],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(
-                  value: 'EnterprisePendingCollaboratorConnection'),
-              isNonNull: true)),
-      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'pendingMemberInvitations'),
           directives: [],
           args: [
@@ -15053,6 +16860,14 @@ const EnterpriseOwnerInfo = _i1.ObjectTypeDefinitionNode(
                 directives: [],
                 type: _i1.NamedTypeNode(
                     name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'organizationLogins'),
+                directives: [],
+                type: _i1.ListTypeNode(
+                    type: _i1.NamedTypeNode(
+                        name: _i1.NameNode(value: 'String'), isNonNull: true),
+                    isNonNull: false),
                 defaultValue: null),
             _i1.InputValueDefinitionNode(
                 name: _i1.NameNode(value: 'query'),
@@ -15362,125 +17177,6 @@ const EnterpriseOwnerInfo = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'OrganizationConnection'),
               isNonNull: true))
     ]);
-const EnterprisePendingCollaboratorConnection = _i1.ObjectTypeDefinitionNode(
-    name: _i1.NameNode(value: 'EnterprisePendingCollaboratorConnection'),
-    directives: [],
-    interfaces: [],
-    fields: [
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'edges'),
-          directives: [],
-          args: [],
-          type: _i1.ListTypeNode(
-              type: _i1.NamedTypeNode(
-                  name:
-                      _i1.NameNode(value: 'EnterprisePendingCollaboratorEdge'),
-                  isNonNull: false),
-              isNonNull: false)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'nodes'),
-          directives: [],
-          args: [],
-          type: _i1.ListTypeNode(
-              type: _i1.NamedTypeNode(
-                  name: _i1.NameNode(value: 'User'), isNonNull: false),
-              isNonNull: false)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'pageInfo'),
-          directives: [],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'PageInfo'), isNonNull: true)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'totalCount'),
-          directives: [],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Int'), isNonNull: true))
-    ]);
-const EnterprisePendingCollaboratorEdge = _i1.ObjectTypeDefinitionNode(
-    name: _i1.NameNode(value: 'EnterprisePendingCollaboratorEdge'),
-    directives: [],
-    interfaces: [],
-    fields: [
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'cursor'),
-          directives: [],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'String'), isNonNull: true)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'isUnlicensed'),
-          directives: [
-            _i1.DirectiveNode(
-                name: _i1.NameNode(value: 'deprecated'),
-                arguments: [
-                  _i1.ArgumentNode(
-                      name: _i1.NameNode(value: 'reason'),
-                      value: _i1.StringValueNode(
-                          value:
-                              'All pending collaborators consume a license Removal on 2021-01-01 UTC.',
-                          isBlock: false))
-                ])
-          ],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'node'),
-          directives: [],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'User'), isNonNull: false)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'repositories'),
-          directives: [],
-          args: [
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'after'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'String'), isNonNull: false),
-                defaultValue: null),
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'before'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'String'), isNonNull: false),
-                defaultValue: null),
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'first'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
-                defaultValue: null),
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'last'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
-                defaultValue: null),
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'orderBy'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'RepositoryOrder'),
-                    isNonNull: false),
-                defaultValue: _i1.ObjectValueNode(fields: [
-                  _i1.ObjectFieldNode(
-                      name: _i1.NameNode(value: 'field'),
-                      value:
-                          _i1.EnumValueNode(name: _i1.NameNode(value: 'NAME'))),
-                  _i1.ObjectFieldNode(
-                      name: _i1.NameNode(value: 'direction'),
-                      value:
-                          _i1.EnumValueNode(name: _i1.NameNode(value: 'ASC')))
-                ]))
-          ],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'EnterpriseRepositoryInfoConnection'),
-              isNonNull: true))
-    ]);
 const EnterprisePendingMemberInvitationConnection =
     _i1.ObjectTypeDefinitionNode(
         name:
@@ -15537,23 +17233,6 @@ const EnterprisePendingMemberInvitationEdge = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'String'), isNonNull: true)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'isUnlicensed'),
-          directives: [
-            _i1.DirectiveNode(
-                name: _i1.NameNode(value: 'deprecated'),
-                arguments: [
-                  _i1.ArgumentNode(
-                      name: _i1.NameNode(value: 'reason'),
-                      value: _i1.StringValueNode(
-                          value:
-                              'All pending members consume a license Removal on 2020-07-01 UTC.',
-                          isBlock: false))
-                ])
-          ],
-          args: [],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'node'),
           directives: [],
@@ -16721,6 +18400,30 @@ const ExternalIdentity = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'User'), isNonNull: false))
     ]);
+const ExternalIdentityAttribute = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ExternalIdentityAttribute'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'metadata'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'name'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'value'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true))
+    ]);
 const ExternalIdentityConnection = _i1.ObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'ExternalIdentityConnection'),
     directives: [],
@@ -16780,6 +18483,15 @@ const ExternalIdentitySamlAttributes = _i1.ObjectTypeDefinitionNode(
     directives: [],
     interfaces: [],
     fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'attributes'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ExternalIdentityAttribute'),
+                  isNonNull: true),
+              isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'emails'),
           directives: [],
@@ -16863,6 +18575,55 @@ const ExternalIdentityScimAttributes = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'String'), isNonNull: false))
     ]);
+const FileAddition = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'FileAddition'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'contents'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Base64String'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'path'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true),
+          defaultValue: null)
+    ]);
+const FileChanges = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'FileChanges'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'additions'),
+          directives: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'FileAddition'), isNonNull: true),
+              isNonNull: false),
+          defaultValue: _i1.ListValueNode(values: [])),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'deletions'),
+          directives: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'FileDeletion'), isNonNull: true),
+              isNonNull: false),
+          defaultValue: _i1.ListValueNode(values: []))
+    ]);
+const FileDeletion = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'FileDeletion'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'path'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true),
+          defaultValue: null)
+    ]);
 const FileViewedState = _i1.EnumTypeDefinitionNode(
     name: _i1.NameNode(value: 'FileViewedState'),
     directives: [],
@@ -16873,6 +18634,52 @@ const FileViewedState = _i1.EnumTypeDefinitionNode(
           name: _i1.NameNode(value: 'UNVIEWED'), directives: []),
       _i1.EnumValueDefinitionNode(
           name: _i1.NameNode(value: 'VIEWED'), directives: [])
+    ]);
+const FollowOrganizationInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'FollowOrganizationInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'organizationId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'Organization', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null)
+    ]);
+const FollowOrganizationPayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'FollowOrganizationPayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'organization'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Organization'), isNonNull: false))
     ]);
 const FollowUserInput = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'FollowUserInput'),
@@ -17019,6 +18826,8 @@ const FundingPlatform = _i1.EnumTypeDefinitionNode(
           name: _i1.NameNode(value: 'ISSUEHUNT'), directives: []),
       _i1.EnumValueDefinitionNode(
           name: _i1.NameNode(value: 'KO_FI'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'LFX_CROWDFUNDING'), directives: []),
       _i1.EnumValueDefinitionNode(
           name: _i1.NameNode(value: 'LIBERAPAY'), directives: []),
       _i1.EnumValueDefinitionNode(
@@ -18011,6 +19820,145 @@ const GpgSignature = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Boolean'), isNonNull: true))
     ]);
+const GrantEnterpriseOrganizationsMigratorRoleInput =
+    _i1.InputObjectTypeDefinitionNode(
+        name: _i1.NameNode(
+            value: 'GrantEnterpriseOrganizationsMigratorRoleInput'),
+        directives: [],
+        fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'enterpriseId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(value: 'Enterprise', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'login'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true),
+          defaultValue: null)
+    ]);
+const GrantEnterpriseOrganizationsMigratorRolePayload =
+    _i1.ObjectTypeDefinitionNode(
+        name: _i1.NameNode(
+            value: 'GrantEnterpriseOrganizationsMigratorRolePayload'),
+        directives: [],
+        interfaces: [],
+        fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'organizations'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'OrganizationConnection'),
+              isNonNull: false))
+    ]);
+const GrantMigratorRoleInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'GrantMigratorRoleInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'actor'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'actorType'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ActorType'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'organizationId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'Organization', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null)
+    ]);
+const GrantMigratorRolePayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'GrantMigratorRolePayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'success'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: false))
+    ]);
 const HTML = _i1.ScalarTypeDefinitionNode(
     name: _i1.NameNode(value: 'HTML'), directives: []);
 const HeadRefDeletedEvent = _i1.ObjectTypeDefinitionNode(
@@ -18485,6 +20433,10 @@ const Issue = _i1.ObjectTypeDefinitionNode(
           name: _i1.NameNode(value: 'Lockable'), isNonNull: false),
       _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false),
       _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectNextOwner'), isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2Owner'), isNonNull: false),
+      _i1.NamedTypeNode(
           name: _i1.NameNode(value: 'Reactable'), isNonNull: false),
       _i1.NamedTypeNode(
           name: _i1.NameNode(value: 'RepositoryNode'), isNonNull: false),
@@ -18837,6 +20789,230 @@ const Issue = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'ProjectCardConnection'),
               isNonNull: true)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectItems'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'includeArchived'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+                defaultValue: _i1.BooleanValueNode(value: true)),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2ItemConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectNext'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'number'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNext'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectNextItems'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'includeArchived'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+                defaultValue: _i1.BooleanValueNode(value: true)),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNextItemConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectV2'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'number'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectsNext'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'query'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'sortBy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'ProjectNextOrderField'),
+                    isNonNull: false),
+                defaultValue:
+                    _i1.EnumValueNode(name: _i1.NameNode(value: 'TITLE')))
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNextConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectsV2'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'orderBy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'ProjectV2Order'),
+                    isNonNull: false),
+                defaultValue: _i1.ObjectValueNode(fields: [
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'field'),
+                      value: _i1.EnumValueNode(
+                          name: _i1.NameNode(value: 'NUMBER'))),
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'direction'),
+                      value:
+                          _i1.EnumValueNode(name: _i1.NameNode(value: 'DESC')))
+                ])),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'query'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2Connection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'publishedAt'),
           directives: [],
           args: [],
@@ -18914,6 +21090,12 @@ const Issue = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'IssueState'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'stateReason'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'IssueStateReason'), isNonNull: false)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'timeline'),
           directives: [
@@ -19029,6 +21211,84 @@ const Issue = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'String'), isNonNull: true)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'trackedInIssues'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'IssueConnection'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'trackedIssues'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'IssueConnection'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'trackedIssuesCount'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'states'),
+                directives: [],
+                type: _i1.ListTypeNode(
+                    type: _i1.NamedTypeNode(
+                        name: _i1.NameNode(value: 'TrackedIssueStates'),
+                        isNonNull: false),
+                    isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'updatedAt'),
           directives: [],
           args: [],
@@ -19111,6 +21371,15 @@ const Issue = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'SubscriptionState'), isNonNull: false))
+    ]);
+const IssueClosedStateReason = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'IssueClosedStateReason'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'COMPLETED'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'NOT_PLANNED'), directives: [])
     ]);
 const IssueComment = _i1.ObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'IssueComment'),
@@ -19608,6 +21877,12 @@ const IssueFilters = _i1.InputObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'String'), isNonNull: false),
           defaultValue: null),
       _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'milestoneNumber'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
           name: _i1.NameNode(value: 'since'),
           directives: [],
           type: _i1.NamedTypeNode(
@@ -19672,6 +21947,17 @@ const IssueState = _i1.EnumTypeDefinitionNode(
           name: _i1.NameNode(value: 'CLOSED'), directives: []),
       _i1.EnumValueDefinitionNode(
           name: _i1.NameNode(value: 'OPEN'), directives: [])
+    ]);
+const IssueStateReason = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'IssueStateReason'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'COMPLETED'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'NOT_PLANNED'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'REOPENED'), directives: [])
     ]);
 const IssueTemplate = _i1.ObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'IssueTemplate'),
@@ -19817,6 +22103,9 @@ const IssueTimelineItems = _i1.UnionTypeDefinitionNode(
           name: _i1.NameNode(value: 'ConvertedNoteToIssueEvent'),
           isNonNull: false),
       _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ConvertedToDiscussionEvent'),
+          isNonNull: false),
+      _i1.NamedTypeNode(
           name: _i1.NameNode(value: 'CrossReferencedEvent'), isNonNull: false),
       _i1.NamedTypeNode(
           name: _i1.NameNode(value: 'DemilestonedEvent'), isNonNull: false),
@@ -19958,6 +22247,9 @@ const IssueTimelineItemsItemType = _i1.EnumTypeDefinitionNode(
           name: _i1.NameNode(value: 'CONNECTED_EVENT'), directives: []),
       _i1.EnumValueDefinitionNode(
           name: _i1.NameNode(value: 'CONVERTED_NOTE_TO_ISSUE_EVENT'),
+          directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'CONVERTED_TO_DISCUSSION_EVENT'),
           directives: []),
       _i1.EnumValueDefinitionNode(
           name: _i1.NameNode(value: 'CROSS_REFERENCED_EVENT'), directives: []),
@@ -22369,6 +24661,132 @@ const MergedEvent = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'URI'), isNonNull: true))
     ]);
+const Migration = _i1.InterfaceTypeDefinitionNode(
+    name: _i1.NameNode(value: 'Migration'),
+    directives: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'continueOnError'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'failureReason'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'migrationLogUrl'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'URI'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'migrationSource'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'MigrationSource'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'repositoryName'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'sourceUrl'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'URI'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'state'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'MigrationState'), isNonNull: true))
+    ]);
+const MigrationSource = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'MigrationSource'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'name'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'type'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'MigrationSourceType'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'url'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'URI'), isNonNull: true))
+    ]);
+const MigrationSourceType = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'MigrationSourceType'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'AZURE_DEVOPS'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'BITBUCKET_SERVER'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'GITHUB'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'GITHUB_ARCHIVE'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'GITLAB'), directives: [])
+    ]);
+const MigrationState = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'MigrationState'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'FAILED'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'FAILED_VALIDATION'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'IN_PROGRESS'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'NOT_STARTED'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'PENDING_VALIDATION'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'QUEUED'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'SUCCEEDED'), directives: [])
+    ]);
 const Milestone = _i1.ObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'Milestone'),
     directives: [],
@@ -23059,6 +25477,21 @@ const Mutation = _i1.ObjectTypeDefinitionNode(
     interfaces: [],
     fields: [
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'abortQueuedMigrations'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'AbortQueuedMigrationsInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'AbortQueuedMigrationsPayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'acceptEnterpriseAdministratorInvitation'),
           directives: [],
           args: [
@@ -23136,6 +25569,21 @@ const Mutation = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'AddDiscussionCommentPayload'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'addDiscussionPollVote'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'AddDiscussionPollVoteInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'AddDiscussionPollVotePayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'addEnterpriseSupportEntitlement'),
           directives: [],
           args: [
@@ -23196,6 +25644,88 @@ const Mutation = _i1.ObjectTypeDefinitionNode(
           ],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'AddProjectColumnPayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'addProjectDraftIssue'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'AddProjectDraftIssueInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'AddProjectDraftIssuePayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'addProjectNextItem'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'AddProjectNextItemInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'AddProjectNextItemPayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'addProjectV2DraftIssue'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'AddProjectV2DraftIssueInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'AddProjectV2DraftIssuePayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'addProjectV2ItemById'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'AddProjectV2ItemByIdInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'AddProjectV2ItemByIdPayload'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'addPullRequestReview'),
@@ -23362,6 +25892,21 @@ const Mutation = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name:
                   _i1.NameNode(value: 'CancelEnterpriseAdminInvitationPayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'cancelSponsorship'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'CancelSponsorshipInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'CancelSponsorshipPayload'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'changeUserStatus'),
@@ -23531,26 +26076,19 @@ const Mutation = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'CreateCheckSuitePayload'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'createContentAttachment'),
-          directives: [
-            _i1.DirectiveNode(name: _i1.NameNode(value: 'preview'), arguments: [
-              _i1.ArgumentNode(
-                  name: _i1.NameNode(value: 'toggledBy'),
-                  value: _i1.StringValueNode(
-                      value: 'corsair-preview', isBlock: false))
-            ])
-          ],
+          name: _i1.NameNode(value: 'createCommitOnBranch'),
+          directives: [],
           args: [
             _i1.InputValueDefinitionNode(
                 name: _i1.NameNode(value: 'input'),
                 directives: [],
                 type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'CreateContentAttachmentInput'),
+                    name: _i1.NameNode(value: 'CreateCommitOnBranchInput'),
                     isNonNull: true),
                 defaultValue: null)
           ],
           type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'CreateContentAttachmentPayload'),
+              name: _i1.NameNode(value: 'CreateCommitOnBranchPayload'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'createDeployment'),
@@ -23695,6 +26233,21 @@ const Mutation = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'CreateLabelPayload'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createMigrationSource'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'CreateMigrationSourceInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'CreateMigrationSourcePayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'createProject'),
           directives: [],
           args: [
@@ -23708,6 +26261,21 @@ const Mutation = _i1.ObjectTypeDefinitionNode(
           ],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'CreateProjectPayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createProjectV2'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'CreateProjectV2Input'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'CreateProjectV2Payload'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'createPullRequest'),
@@ -23752,6 +26320,36 @@ const Mutation = _i1.ObjectTypeDefinitionNode(
           ],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'CreateRepositoryPayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createSponsorsTier'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'CreateSponsorsTierInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'CreateSponsorsTierPayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createSponsorship'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'CreateSponsorshipInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'CreateSponsorshipPayload'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'createTeamDiscussion'),
@@ -24010,6 +26608,47 @@ const Mutation = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'DeleteProjectColumnPayload'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'deleteProjectNextItem'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'DeleteProjectNextItemInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DeleteProjectNextItemPayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'deleteProjectV2Item'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'DeleteProjectV2ItemInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DeleteProjectV2ItemPayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'deletePullRequestReview'),
           directives: [],
           args: [
@@ -24133,6 +26772,23 @@ const Mutation = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'DismissPullRequestReviewPayload'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'dismissRepositoryVulnerabilityAlert'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(
+                        value: 'DismissRepositoryVulnerabilityAlertInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(
+                  value: 'DismissRepositoryVulnerabilityAlertPayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'enablePullRequestAutoMerge'),
           directives: [],
           args: [
@@ -24149,6 +26805,21 @@ const Mutation = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'EnablePullRequestAutoMergePayload'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'followOrganization'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'FollowOrganizationInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'FollowOrganizationPayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'followUser'),
           directives: [],
           args: [
@@ -24162,6 +26833,38 @@ const Mutation = _i1.ObjectTypeDefinitionNode(
           ],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'FollowUserPayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'grantEnterpriseOrganizationsMigratorRole'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(
+                        value: 'GrantEnterpriseOrganizationsMigratorRoleInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(
+                  value: 'GrantEnterpriseOrganizationsMigratorRolePayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'grantMigratorRole'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'GrantMigratorRoleInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'GrantMigratorRolePayload'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'importProject'),
@@ -24650,6 +27353,40 @@ const Mutation = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'ResolveReviewThreadPayload'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
+          name:
+              _i1.NameNode(value: 'revokeEnterpriseOrganizationsMigratorRole'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(
+                        value:
+                            'RevokeEnterpriseOrganizationsMigratorRoleInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(
+                  value: 'RevokeEnterpriseOrganizationsMigratorRolePayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'revokeMigratorRole'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'RevokeMigratorRoleInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'RevokeMigratorRolePayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'setEnterpriseIdentityProvider'),
           directives: [],
           args: [
@@ -24714,6 +27451,21 @@ const Mutation = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'SetUserInteractionLimitPayload'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'startRepositoryMigration'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'StartRepositoryMigrationInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'StartRepositoryMigrationPayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'submitPullRequestReview'),
           directives: [],
           args: [
@@ -24757,6 +27509,21 @@ const Mutation = _i1.ObjectTypeDefinitionNode(
           ],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'UnarchiveRepositoryPayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'unfollowOrganization'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'UnfollowOrganizationInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'UnfollowOrganizationPayload'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'unfollowUser'),
@@ -25212,6 +27979,23 @@ const Mutation = _i1.ObjectTypeDefinitionNode(
                   value: 'UpdateEnterpriseOrganizationProjectsSettingPayload'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updateEnterpriseOwnerOrganizationRole'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(
+                        value: 'UpdateEnterpriseOwnerOrganizationRoleInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(
+                  value: 'UpdateEnterpriseOwnerOrganizationRolePayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'updateEnterpriseProfile'),
           directives: [],
           args: [
@@ -25419,6 +28203,26 @@ const Mutation = _i1.ObjectTypeDefinitionNode(
                   value: 'UpdateNotificationRestrictionSettingPayload'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(
+              value: 'updateOrganizationAllowPrivateRepositoryForkingSetting'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(
+                        value:
+                            'UpdateOrganizationAllowPrivateRepositoryForkingSettingInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(
+                  value:
+                      'UpdateOrganizationAllowPrivateRepositoryForkingSettingPayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'updateProject'),
           directives: [],
           args: [
@@ -25464,6 +28268,147 @@ const Mutation = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'UpdateProjectColumnPayload'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updateProjectDraftIssue'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'UpdateProjectDraftIssueInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'UpdateProjectDraftIssuePayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updateProjectNext'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'UpdateProjectNextInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'UpdateProjectNextPayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updateProjectNextItemField'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name:
+                        _i1.NameNode(value: 'UpdateProjectNextItemFieldInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'UpdateProjectNextItemFieldPayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updateProjectV2'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'UpdateProjectV2Input'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'UpdateProjectV2Payload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updateProjectV2DraftIssue'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'UpdateProjectV2DraftIssueInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'UpdateProjectV2DraftIssuePayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updateProjectV2ItemFieldValue'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(
+                        value: 'UpdateProjectV2ItemFieldValueInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'UpdateProjectV2ItemFieldValuePayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updateProjectV2ItemPosition'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name:
+                        _i1.NameNode(value: 'UpdateProjectV2ItemPositionInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'UpdateProjectV2ItemPositionPayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'updatePullRequest'),
           directives: [],
           args: [
@@ -25477,6 +28422,21 @@ const Mutation = _i1.ObjectTypeDefinitionNode(
           ],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'UpdatePullRequestPayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updatePullRequestBranch'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'UpdatePullRequestBranchInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'UpdatePullRequestBranchPayload'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'updatePullRequestReview'),
@@ -25562,6 +28522,22 @@ const Mutation = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'UpdateRepositoryPayload'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updateSponsorshipPreferences'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(
+                        value: 'UpdateSponsorshipPreferencesInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'UpdateSponsorshipPreferencesPayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'updateSubscription'),
           directives: [],
           args: [
@@ -25631,6 +28607,21 @@ const Mutation = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'UpdateTeamReviewAssignmentPayload'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updateTeamsRepository'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'input'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'UpdateTeamsRepositoryInput'),
+                    isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'UpdateTeamsRepositoryPayload'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'updateTopics'),
           directives: [],
           args: [
@@ -25680,6 +28671,95 @@ const NotificationRestrictionSettingValue = _i1.EnumTypeDefinitionNode(
           name: _i1.NameNode(value: 'DISABLED'), directives: []),
       _i1.EnumValueDefinitionNode(
           name: _i1.NameNode(value: 'ENABLED'), directives: [])
+    ]);
+const OIDCProvider = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'OIDCProvider'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'enterprise'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Enterprise'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'externalIdentities'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'login'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'membersOnly'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'userName'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ExternalIdentityConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'providerType'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'OIDCProviderType'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'tenantId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true))
+    ]);
+const OIDCProviderType = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'OIDCProviderType'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'AAD'), directives: [])
     ]);
 const OauthApplicationAuditEntryData = _i1.InterfaceTypeDefinitionNode(
     name: _i1.NameNode(value: 'OauthApplicationAuditEntryData'),
@@ -27481,6 +30561,31 @@ const OrgEnableTwoFactorRequirementAuditEntry = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'URI'), isNonNull: false))
     ]);
+const OrgEnterpriseOwnerOrder = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'OrgEnterpriseOwnerOrder'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'direction'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'OrderDirection'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'field'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'OrgEnterpriseOwnerOrderField'),
+              isNonNull: true),
+          defaultValue: null)
+    ]);
+const OrgEnterpriseOwnerOrderField = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'OrgEnterpriseOwnerOrderField'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'LOGIN'), directives: [])
+    ]);
 const OrgInviteMemberAuditEntry = _i1.ObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'OrgInviteMemberAuditEntry'),
     directives: [],
@@ -28477,6 +31582,8 @@ const OrgRemoveMemberAuditEntryMembershipType = _i1.EnumTypeDefinitionNode(
           name: _i1.NameNode(value: 'DIRECT_MEMBER'), directives: []),
       _i1.EnumValueDefinitionNode(
           name: _i1.NameNode(value: 'OUTSIDE_COLLABORATOR'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'SUSPENDED'), directives: []),
       _i1.EnumValueDefinitionNode(
           name: _i1.NameNode(value: 'UNAFFILIATED'), directives: [])
     ]);
@@ -29705,7 +32812,13 @@ const Organization = _i1.ObjectTypeDefinitionNode(
       _i1.NamedTypeNode(
           name: _i1.NameNode(value: 'ProfileOwner'), isNonNull: false),
       _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectNextOwner'), isNonNull: false),
+      _i1.NamedTypeNode(
           name: _i1.NameNode(value: 'ProjectOwner'), isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2Owner'), isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2Recent'), isNonNull: false),
       _i1.NamedTypeNode(
           name: _i1.NameNode(value: 'RepositoryDiscussionAuthor'),
           isNonNull: false),
@@ -29893,6 +33006,74 @@ const Organization = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'String'), isNonNull: false)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'enterpriseOwners'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'orderBy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'OrgEnterpriseOwnerOrder'),
+                    isNonNull: false),
+                defaultValue: _i1.ObjectValueNode(fields: [
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'field'),
+                      value: _i1.EnumValueNode(
+                          name: _i1.NameNode(value: 'LOGIN'))),
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'direction'),
+                      value:
+                          _i1.EnumValueNode(name: _i1.NameNode(value: 'ASC')))
+                ])),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'organizationRole'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'RoleInOrganization'),
+                    isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'query'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name:
+                  _i1.NameNode(value: 'OrganizationEnterpriseOwnerConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'estimatedNextSponsorsPayoutInCents'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'hasSponsorsListing'),
           directives: [],
           args: [],
@@ -30068,6 +33249,12 @@ const Organization = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'UserStatusConnection'),
               isNonNull: true)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'membersCanForkPrivateRepositories'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'membersWithRole'),
           directives: [],
           args: [
@@ -30099,6 +33286,12 @@ const Organization = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'OrganizationMemberConnection'),
               isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'monthlyEstimatedSponsorsIncomeInCents'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'name'),
           directives: [],
@@ -30331,6 +33524,43 @@ const Organization = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Project'), isNonNull: false)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectNext'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'number'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNext'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectV2'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'number'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'projects'),
           directives: [],
           args: [
@@ -30384,6 +33614,63 @@ const Organization = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'ProjectConnection'), isNonNull: true)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectsNext'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'query'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'sortBy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'ProjectNextOrderField'),
+                    isNonNull: false),
+                defaultValue:
+                    _i1.EnumValueNode(name: _i1.NameNode(value: 'TITLE')))
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNextConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'projectsResourcePath'),
           directives: [],
           args: [],
@@ -30395,6 +33682,92 @@ const Organization = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'URI'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectsV2'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'orderBy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'ProjectV2Order'),
+                    isNonNull: false),
+                defaultValue: _i1.ObjectValueNode(fields: [
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'field'),
+                      value: _i1.EnumValueNode(
+                          name: _i1.NameNode(value: 'NUMBER'))),
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'direction'),
+                      value:
+                          _i1.EnumValueNode(name: _i1.NameNode(value: 'DESC')))
+                ])),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'query'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2Connection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'recentProjects'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2Connection'),
+              isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'repositories'),
           directives: [],
@@ -30478,6 +33851,12 @@ const Organization = _i1.ObjectTypeDefinitionNode(
           name: _i1.NameNode(value: 'repository'),
           directives: [],
           args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'followRenames'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+                defaultValue: _i1.BooleanValueNode(value: true)),
             _i1.InputValueDefinitionNode(
                 name: _i1.NameNode(value: 'name'),
                 directives: [],
@@ -30592,6 +33971,67 @@ const Organization = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'DiscussionConnection'),
               isNonNull: true)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'repositoryMigrations'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'orderBy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'RepositoryMigrationOrder'),
+                    isNonNull: false),
+                defaultValue: _i1.ObjectValueNode(fields: [
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'field'),
+                      value: _i1.EnumValueNode(
+                          name: _i1.NameNode(value: 'CREATED_AT'))),
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'direction'),
+                      value:
+                          _i1.EnumValueNode(name: _i1.NameNode(value: 'ASC')))
+                ])),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'repositoryName'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'state'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'MigrationState'),
+                    isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'RepositoryMigrationConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'requiresTwoFactorAuthentication'),
           directives: [],
           args: [],
@@ -30610,6 +34050,106 @@ const Organization = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'OrganizationIdentityProvider'),
               isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'sponsoring'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'orderBy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'SponsorOrder'),
+                    isNonNull: false),
+                defaultValue: _i1.ObjectValueNode(fields: [
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'field'),
+                      value: _i1.EnumValueNode(
+                          name: _i1.NameNode(value: 'RELEVANCE'))),
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'direction'),
+                      value:
+                          _i1.EnumValueNode(name: _i1.NameNode(value: 'DESC')))
+                ]))
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'SponsorConnection'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'sponsors'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'orderBy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'SponsorOrder'),
+                    isNonNull: false),
+                defaultValue: _i1.ObjectValueNode(fields: [
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'field'),
+                      value: _i1.EnumValueNode(
+                          name: _i1.NameNode(value: 'RELEVANCE'))),
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'direction'),
+                      value:
+                          _i1.EnumValueNode(name: _i1.NameNode(value: 'DESC')))
+                ])),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'tierId'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'ID'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'SponsorConnection'), isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'sponsorsActivities'),
           directives: [],
@@ -30678,6 +34218,60 @@ const Organization = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Sponsorship'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorshipForViewerAsSponsorable'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Sponsorship'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorshipNewsletters'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'orderBy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'SponsorshipNewsletterOrder'),
+                    isNonNull: false),
+                defaultValue: _i1.ObjectValueNode(fields: [
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'field'),
+                      value: _i1.EnumValueNode(
+                          name: _i1.NameNode(value: 'CREATED_AT'))),
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'direction'),
+                      value:
+                          _i1.EnumValueNode(name: _i1.NameNode(value: 'DESC')))
+                ]))
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'SponsorshipNewsletterConnection'),
+              isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'sponsorshipsAsMaintainer'),
           directives: [],
@@ -30918,6 +34512,12 @@ const Organization = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'viewerIsAMember'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'viewerIsFollowing'),
           directives: [],
           args: [],
           type: _i1.NamedTypeNode(
@@ -31265,6 +34865,65 @@ const OrganizationEdge = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Organization'), isNonNull: false))
     ]);
+const OrganizationEnterpriseOwnerConnection = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'OrganizationEnterpriseOwnerConnection'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'edges'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'OrganizationEnterpriseOwnerEdge'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'nodes'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'User'), isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'pageInfo'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'PageInfo'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'totalCount'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true))
+    ]);
+const OrganizationEnterpriseOwnerEdge = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'OrganizationEnterpriseOwnerEdge'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'cursor'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'node'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'User'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'organizationRole'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'RoleInOrganization'), isNonNull: true))
+    ]);
 const OrganizationIdentityProvider = _i1.ObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'OrganizationIdentityProvider'),
     directives: [],
@@ -31305,6 +34964,24 @@ const OrganizationIdentityProvider = _i1.ObjectTypeDefinitionNode(
                 directives: [],
                 type: _i1.NamedTypeNode(
                     name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'login'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'membersOnly'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'userName'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
                 defaultValue: null)
           ],
           type: _i1.NamedTypeNode(
@@ -31568,7 +35245,17 @@ const OrganizationMembersCanCreateRepositoriesSettingValue =
       _i1.EnumValueDefinitionNode(
           name: _i1.NameNode(value: 'DISABLED'), directives: []),
       _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'INTERNAL'), directives: []),
+      _i1.EnumValueDefinitionNode(
           name: _i1.NameNode(value: 'PRIVATE'), directives: [])
+    ]);
+const OrganizationOrUser = _i1.UnionTypeDefinitionNode(
+    name: _i1.NameNode(value: 'OrganizationOrUser'),
+    directives: [],
+    types: [
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'Organization'), isNonNull: false),
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'User'), isNonNull: false)
     ]);
 const OrganizationOrder = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'OrganizationOrder'),
@@ -32426,6 +36113,23 @@ const PageInfo = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'String'), isNonNull: false))
+    ]);
+const PatchStatus = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'PatchStatus'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'ADDED'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'CHANGED'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'COPIED'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'DELETED'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'MODIFIED'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'RENAMED'), directives: [])
     ]);
 const PermissionGranter = _i1.UnionTypeDefinitionNode(
     name: _i1.NameNode(value: 'PermissionGranter'),
@@ -34035,6 +37739,1630 @@ const ProjectEdge = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Project'), isNonNull: false))
     ]);
+const ProjectItemType = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectItemType'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'DRAFT_ISSUE'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'ISSUE'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'PULL_REQUEST'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'REDACTED'), directives: [])
+    ]);
+const ProjectNext = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectNext'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'Closable'), isNonNull: false),
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'Updatable'), isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'closed'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'closedAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'creator'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Actor'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'databaseId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'description'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'fields'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNextFieldConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'items'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNextItemConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'number'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'owner'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNextOwner'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'public'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'repositories'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'RepositoryConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'resourcePath'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'URI'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'shortDescription'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'title'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updatedAt'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'url'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'URI'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'viewerCanUpdate'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'views'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectViewConnection'),
+              isNonNull: true))
+    ]);
+const ProjectNextConnection = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectNextConnection'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'edges'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectNextEdge'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'nodes'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectNext'), isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'pageInfo'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'PageInfo'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'totalCount'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true))
+    ]);
+const ProjectNextEdge = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectNextEdge'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'cursor'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'node'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNext'), isNonNull: false))
+    ]);
+const ProjectNextField = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectNextField'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectNextFieldCommon'), isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'dataType'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNextFieldType'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'databaseId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'name'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'project'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNext'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'settings'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updatedAt'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true))
+    ]);
+const ProjectNextFieldCommon = _i1.InterfaceTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectNextFieldCommon'),
+    directives: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'dataType'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNextFieldType'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'databaseId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'name'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'project'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNext'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'settings'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updatedAt'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true))
+    ]);
+const ProjectNextFieldConnection = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectNextFieldConnection'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'edges'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectNextFieldEdge'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'nodes'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectNextField'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'pageInfo'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'PageInfo'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'totalCount'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true))
+    ]);
+const ProjectNextFieldEdge = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectNextFieldEdge'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'cursor'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'node'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNextField'), isNonNull: false))
+    ]);
+const ProjectNextFieldType = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectNextFieldType'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'ASSIGNEES'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ]),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'DATE'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ]),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'ITERATION'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ]),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'LABELS'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ]),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'LINKED_PULL_REQUESTS'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ]),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'MILESTONE'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ]),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'NUMBER'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ]),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'REPOSITORY'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ]),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'REVIEWERS'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ]),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'SINGLE_SELECT'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ]),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'TEXT'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ]),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'TITLE'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ]),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'TRACKS'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ])
+    ]);
+const ProjectNextItem = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectNextItem'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'content'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNextItemContent'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'creator'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Actor'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'databaseId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'fieldValues'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNextItemFieldValueConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'isArchived'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'project'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNext'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'title'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'type'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectItemType'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updatedAt'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true))
+    ]);
+const ProjectNextItemConnection = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectNextItemConnection'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'edges'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectNextItemEdge'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'nodes'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectNextItem'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'pageInfo'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'PageInfo'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'totalCount'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true))
+    ]);
+const ProjectNextItemContent = _i1.UnionTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectNextItemContent'),
+    directives: [],
+    types: [
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'DraftIssue'), isNonNull: false),
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Issue'), isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'PullRequest'), isNonNull: false)
+    ]);
+const ProjectNextItemEdge = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectNextItemEdge'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'cursor'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'node'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNextItem'), isNonNull: false))
+    ]);
+const ProjectNextItemFieldValue = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectNextItemFieldValue'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'creator'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Actor'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'databaseId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectField'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNextField'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectItem'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNextItem'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updatedAt'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'value'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false))
+    ]);
+const ProjectNextItemFieldValueConnection = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectNextItemFieldValueConnection'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'edges'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectNextItemFieldValueEdge'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'nodes'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectNextItemFieldValue'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'pageInfo'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'PageInfo'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'totalCount'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true))
+    ]);
+const ProjectNextItemFieldValueEdge = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectNextItemFieldValueEdge'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'cursor'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'node'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNextItemFieldValue'),
+              isNonNull: false))
+    ]);
+const ProjectNextOrderField = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectNextOrderField'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'CREATED_AT'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ]),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'NUMBER'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ]),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'TITLE'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ]),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'UPDATED_AT'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ])
+    ]);
+const ProjectNextOwner = _i1.InterfaceTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectNextOwner'),
+    directives: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectNext'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'number'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNext'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectsNext'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'query'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'sortBy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'ProjectNextOrderField'),
+                    isNonNull: false),
+                defaultValue:
+                    _i1.EnumValueNode(name: _i1.NameNode(value: 'TITLE')))
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNextConnection'),
+              isNonNull: true))
+    ]);
 const ProjectOrder = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'ProjectOrder'),
     directives: [],
@@ -34229,6 +39557,2514 @@ const ProjectTemplate = _i1.EnumTypeDefinitionNode(
       _i1.EnumValueDefinitionNode(
           name: _i1.NameNode(value: 'BUG_TRIAGE'), directives: [])
     ]);
+const ProjectV2 = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'Closable'), isNonNull: false),
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'Updatable'), isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'closed'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'closedAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'creator'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Actor'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'databaseId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'field'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'name'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2FieldConfiguration'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'fields'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name:
+                  _i1.NameNode(value: 'ProjectV2FieldConfigurationConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'items'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2ItemConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'number'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'owner'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2Owner'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'public'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'readme'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'repositories'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'RepositoryConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'resourcePath'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'URI'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'shortDescription'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'title'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updatedAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'url'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'URI'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'viewerCanUpdate'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'views'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2ViewConnection'),
+              isNonNull: true))
+    ]);
+const ProjectV2Connection = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2Connection'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'edges'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectV2Edge'), isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'nodes'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectV2'), isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'pageInfo'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'PageInfo'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'totalCount'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true))
+    ]);
+const ProjectV2Edge = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2Edge'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'cursor'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'node'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2'), isNonNull: false))
+    ]);
+const ProjectV2Field = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2Field'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2FieldCommon'), isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'dataType'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2FieldType'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'databaseId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'name'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'project'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updatedAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true))
+    ]);
+const ProjectV2FieldCommon = _i1.InterfaceTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2FieldCommon'),
+    directives: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'dataType'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2FieldType'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'databaseId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'name'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'project'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updatedAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true))
+    ]);
+const ProjectV2FieldConfiguration = _i1.UnionTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2FieldConfiguration'),
+    directives: [],
+    types: [
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2Field'), isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2IterationField'),
+          isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2SingleSelectField'),
+          isNonNull: false)
+    ]);
+const ProjectV2FieldConfigurationConnection = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2FieldConfigurationConnection'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'edges'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectV2FieldConfigurationEdge'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'nodes'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectV2FieldConfiguration'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'pageInfo'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'PageInfo'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'totalCount'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true))
+    ]);
+const ProjectV2FieldConfigurationEdge = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2FieldConfigurationEdge'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'cursor'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'node'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2FieldConfiguration'),
+              isNonNull: false))
+    ]);
+const ProjectV2FieldConnection = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2FieldConnection'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'edges'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectV2FieldEdge'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'nodes'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectV2Field'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'pageInfo'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'PageInfo'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'totalCount'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true))
+    ]);
+const ProjectV2FieldEdge = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2FieldEdge'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'cursor'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'node'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2Field'), isNonNull: false))
+    ]);
+const ProjectV2FieldType = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2FieldType'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'ASSIGNEES'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'DATE'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'ITERATION'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'LABELS'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'LINKED_PULL_REQUESTS'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'MILESTONE'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'NUMBER'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'REPOSITORY'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'REVIEWERS'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'SINGLE_SELECT'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'TEXT'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'TITLE'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'TRACKS'), directives: [])
+    ]);
+const ProjectV2FieldValue = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2FieldValue'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'date'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Date'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'iterationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'number'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Float'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'singleSelectOptionId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'text'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null)
+    ]);
+const ProjectV2Item = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2Item'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'content'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2ItemContent'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'creator'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Actor'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'databaseId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'fieldValues'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2ItemFieldValueConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'isArchived'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'project'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'type'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2ItemType'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updatedAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true))
+    ]);
+const ProjectV2ItemConnection = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2ItemConnection'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'edges'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectV2ItemEdge'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'nodes'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectV2Item'), isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'pageInfo'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'PageInfo'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'totalCount'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true))
+    ]);
+const ProjectV2ItemContent = _i1.UnionTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2ItemContent'),
+    directives: [],
+    types: [
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'DraftIssue'), isNonNull: false),
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Issue'), isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'PullRequest'), isNonNull: false)
+    ]);
+const ProjectV2ItemEdge = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2ItemEdge'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'cursor'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'node'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2Item'), isNonNull: false))
+    ]);
+const ProjectV2ItemFieldDateValue = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2ItemFieldDateValue'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2ItemFieldValueCommon'),
+          isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'creator'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Actor'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'databaseId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'date'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Date'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'field'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2FieldConfiguration'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'item'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2Item'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updatedAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true))
+    ]);
+const ProjectV2ItemFieldIterationValue = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2ItemFieldIterationValue'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2ItemFieldValueCommon'),
+          isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'creator'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Actor'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'databaseId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'duration'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'field'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2FieldConfiguration'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'item'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2Item'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'iterationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'startDate'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Date'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'title'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'titleHTML'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updatedAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true))
+    ]);
+const ProjectV2ItemFieldLabelValue = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2ItemFieldLabelValue'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'field'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2FieldConfiguration'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'labels'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'LabelConnection'), isNonNull: false))
+    ]);
+const ProjectV2ItemFieldMilestoneValue = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2ItemFieldMilestoneValue'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'field'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2FieldConfiguration'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'milestone'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Milestone'), isNonNull: false))
+    ]);
+const ProjectV2ItemFieldNumberValue = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2ItemFieldNumberValue'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2ItemFieldValueCommon'),
+          isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'creator'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Actor'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'databaseId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'field'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2FieldConfiguration'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'item'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2Item'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'number'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Float'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updatedAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true))
+    ]);
+const ProjectV2ItemFieldPullRequestValue = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2ItemFieldPullRequestValue'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'field'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2FieldConfiguration'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'pullRequests'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'PullRequestConnection'),
+              isNonNull: false))
+    ]);
+const ProjectV2ItemFieldRepositoryValue = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2ItemFieldRepositoryValue'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'field'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2FieldConfiguration'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'repository'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Repository'), isNonNull: false))
+    ]);
+const ProjectV2ItemFieldReviewerValue = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2ItemFieldReviewerValue'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'field'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2FieldConfiguration'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'reviewers'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'RequestedReviewerConnection'),
+              isNonNull: false))
+    ]);
+const ProjectV2ItemFieldSingleSelectValue = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2ItemFieldSingleSelectValue'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2ItemFieldValueCommon'),
+          isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'creator'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Actor'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'databaseId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'field'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2FieldConfiguration'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'item'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2Item'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'name'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'nameHTML'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'optionId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updatedAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true))
+    ]);
+const ProjectV2ItemFieldTextValue = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2ItemFieldTextValue'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2ItemFieldValueCommon'),
+          isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'creator'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Actor'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'databaseId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'field'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2FieldConfiguration'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'item'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2Item'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'text'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updatedAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true))
+    ]);
+const ProjectV2ItemFieldUserValue = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2ItemFieldUserValue'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'field'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2FieldConfiguration'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'users'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'UserConnection'), isNonNull: false))
+    ]);
+const ProjectV2ItemFieldValue = _i1.UnionTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2ItemFieldValue'),
+    directives: [],
+    types: [
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2ItemFieldDateValue'),
+          isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2ItemFieldIterationValue'),
+          isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2ItemFieldLabelValue'),
+          isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2ItemFieldMilestoneValue'),
+          isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2ItemFieldNumberValue'),
+          isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2ItemFieldPullRequestValue'),
+          isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2ItemFieldRepositoryValue'),
+          isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2ItemFieldReviewerValue'),
+          isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2ItemFieldSingleSelectValue'),
+          isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2ItemFieldTextValue'),
+          isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2ItemFieldUserValue'),
+          isNonNull: false)
+    ]);
+const ProjectV2ItemFieldValueCommon = _i1.InterfaceTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2ItemFieldValueCommon'),
+    directives: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'creator'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Actor'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'databaseId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'field'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2FieldConfiguration'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'item'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2Item'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updatedAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true))
+    ]);
+const ProjectV2ItemFieldValueConnection = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2ItemFieldValueConnection'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'edges'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectV2ItemFieldValueEdge'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'nodes'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectV2ItemFieldValue'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'pageInfo'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'PageInfo'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'totalCount'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true))
+    ]);
+const ProjectV2ItemFieldValueEdge = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2ItemFieldValueEdge'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'cursor'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'node'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2ItemFieldValue'),
+              isNonNull: false))
+    ]);
+const ProjectV2ItemType = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2ItemType'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'DRAFT_ISSUE'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'ISSUE'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'PULL_REQUEST'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'REDACTED'), directives: [])
+    ]);
+const ProjectV2IterationField = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2IterationField'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2FieldCommon'), isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'configuration'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2IterationFieldConfiguration'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'dataType'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2FieldType'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'databaseId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'name'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'project'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updatedAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true))
+    ]);
+const ProjectV2IterationFieldConfiguration = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2IterationFieldConfiguration'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'completedIterations'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectV2IterationFieldIteration'),
+                  isNonNull: true),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'duration'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'iterations'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectV2IterationFieldIteration'),
+                  isNonNull: true),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'startDay'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true))
+    ]);
+const ProjectV2IterationFieldIteration = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2IterationFieldIteration'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'duration'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'startDate'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Date'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'title'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'titleHTML'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true))
+    ]);
+const ProjectV2Order = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2Order'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'direction'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'OrderDirection'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'field'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2OrderField'),
+              isNonNull: true),
+          defaultValue: null)
+    ]);
+const ProjectV2OrderField = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2OrderField'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'CREATED_AT'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'NUMBER'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'TITLE'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'UPDATED_AT'), directives: [])
+    ]);
+const ProjectV2Owner = _i1.InterfaceTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2Owner'),
+    directives: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectV2'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'number'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectsV2'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'orderBy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'ProjectV2Order'),
+                    isNonNull: false),
+                defaultValue: _i1.ObjectValueNode(fields: [
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'field'),
+                      value: _i1.EnumValueNode(
+                          name: _i1.NameNode(value: 'NUMBER'))),
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'direction'),
+                      value:
+                          _i1.EnumValueNode(name: _i1.NameNode(value: 'DESC')))
+                ])),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'query'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2Connection'),
+              isNonNull: true))
+    ]);
+const ProjectV2Recent = _i1.InterfaceTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2Recent'),
+    directives: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'recentProjects'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2Connection'),
+              isNonNull: true))
+    ]);
+const ProjectV2SingleSelectField = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2SingleSelectField'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2FieldCommon'), isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'dataType'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2FieldType'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'databaseId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'name'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'options'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectV2SingleSelectFieldOption'),
+                  isNonNull: true),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'project'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updatedAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true))
+    ]);
+const ProjectV2SingleSelectFieldOption = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2SingleSelectFieldOption'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'name'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'nameHTML'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true))
+    ]);
+const ProjectV2SortBy = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2SortBy'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'direction'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'OrderDirection'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'field'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2Field'), isNonNull: true))
+    ]);
+const ProjectV2SortByConnection = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2SortByConnection'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'edges'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectV2SortByEdge'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'nodes'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectV2SortBy'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'pageInfo'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'PageInfo'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'totalCount'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true))
+    ]);
+const ProjectV2SortByEdge = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2SortByEdge'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'cursor'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'node'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2SortBy'), isNonNull: false))
+    ]);
+const ProjectV2View = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2View'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'databaseId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'filter'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'groupBy'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2FieldConnection'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'items'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2ItemConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'layout'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2ViewLayout'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'name'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'number'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'project'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'sortBy'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2SortByConnection'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updatedAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'verticalGroupBy'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2FieldConnection'),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'visibleFields'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2FieldConnection'),
+              isNonNull: false))
+    ]);
+const ProjectV2ViewConnection = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2ViewConnection'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'edges'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectV2ViewEdge'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'nodes'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectV2View'), isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'pageInfo'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'PageInfo'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'totalCount'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true))
+    ]);
+const ProjectV2ViewEdge = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2ViewEdge'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'cursor'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'node'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2View'), isNonNull: false))
+    ]);
+const ProjectV2ViewLayout = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectV2ViewLayout'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'BOARD_LAYOUT'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'TABLE_LAYOUT'), directives: [])
+    ]);
+const ProjectView = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectView'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'databaseId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'filter'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'groupBy'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'Int'), isNonNull: true),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'items'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNextItemConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'layout'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectViewLayout'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'name'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'number'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'project'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNext'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'sortBy'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'SortBy'), isNonNull: true),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updatedAt'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'verticalGroupBy'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'Int'), isNonNull: true),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'visibleFields'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'Int'), isNonNull: true),
+              isNonNull: false))
+    ]);
+const ProjectViewConnection = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectViewConnection'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'edges'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectViewEdge'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'nodes'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ProjectView'), isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'pageInfo'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'PageInfo'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'totalCount'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true))
+    ]);
+const ProjectViewEdge = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectViewEdge'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'cursor'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'node'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectView'), isNonNull: false))
+    ]);
+const ProjectViewLayout = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'ProjectViewLayout'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'BOARD_LAYOUT'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'TABLE_LAYOUT'), directives: [])
+    ]);
 const PublicKey = _i1.ObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'PublicKey'),
     directives: [],
@@ -34345,6 +42181,10 @@ const PullRequest = _i1.ObjectTypeDefinitionNode(
       _i1.NamedTypeNode(
           name: _i1.NameNode(value: 'Lockable'), isNonNull: false),
       _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectNextOwner'), isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2Owner'), isNonNull: false),
       _i1.NamedTypeNode(
           name: _i1.NameNode(value: 'Reactable'), isNonNull: false),
       _i1.NamedTypeNode(
@@ -34540,7 +42380,13 @@ const PullRequest = _i1.ObjectTypeDefinitionNode(
                 directives: [],
                 type: _i1.NamedTypeNode(
                     name: _i1.NameNode(value: 'IssueOrder'), isNonNull: false),
-                defaultValue: null)
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'userLinkedOnly'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+                defaultValue: _i1.BooleanValueNode(value: false))
           ],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'IssueConnection'), isNonNull: false)),
@@ -35027,6 +42873,241 @@ const PullRequest = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'ProjectCardConnection'),
               isNonNull: true)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectItems'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'includeArchived'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+                defaultValue: _i1.BooleanValueNode(value: true)),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2ItemConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectNext'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'number'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNext'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectNextItems'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'includeArchived'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+                defaultValue: _i1.BooleanValueNode(value: true)),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNextItemConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectV2'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'number'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectsNext'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'query'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'sortBy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'ProjectNextOrderField'),
+                    isNonNull: false),
+                defaultValue:
+                    _i1.EnumValueNode(name: _i1.NameNode(value: 'TITLE')))
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNextConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectsV2'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'orderBy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'ProjectV2Order'),
+                    isNonNull: false),
+                defaultValue: _i1.ObjectValueNode(fields: [
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'field'),
+                      value: _i1.EnumValueNode(
+                          name: _i1.NameNode(value: 'NUMBER'))),
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'direction'),
+                      value:
+                          _i1.EnumValueNode(name: _i1.NameNode(value: 'DESC')))
+                ])),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'query'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2Connection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'publishedAt'),
           directives: [],
           args: [],
@@ -35421,7 +43502,19 @@ const PullRequest = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'viewerCanEditFiles'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'viewerCanEnableAutoMerge'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'viewerCanMergeAsAdmin'),
           directives: [],
           args: [],
           type: _i1.NamedTypeNode(
@@ -35518,6 +43611,12 @@ const PullRequestChangedFile = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Int'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'changeType'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'PatchStatus'), isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'deletions'),
           directives: [],
@@ -37235,6 +45334,9 @@ const PullRequestTimelineItems = _i1.UnionTypeDefinitionNode(
           name: _i1.NameNode(value: 'ConvertedNoteToIssueEvent'),
           isNonNull: false),
       _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ConvertedToDiscussionEvent'),
+          isNonNull: false),
+      _i1.NamedTypeNode(
           name: _i1.NameNode(value: 'CrossReferencedEvent'), isNonNull: false),
       _i1.NamedTypeNode(
           name: _i1.NameNode(value: 'DemilestonedEvent'), isNonNull: false),
@@ -37401,6 +45503,9 @@ const PullRequestTimelineItemsItemType = _i1.EnumTypeDefinitionNode(
     directives: [],
     values: [
       _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'ADDED_TO_MERGE_QUEUE_EVENT'),
+          directives: []),
+      _i1.EnumValueDefinitionNode(
           name: _i1.NameNode(value: 'ADDED_TO_PROJECT_EVENT'), directives: []),
       _i1.EnumValueDefinitionNode(
           name: _i1.NameNode(value: 'ASSIGNED_EVENT'), directives: []),
@@ -37437,6 +45542,9 @@ const PullRequestTimelineItemsItemType = _i1.EnumTypeDefinitionNode(
           name: _i1.NameNode(value: 'CONNECTED_EVENT'), directives: []),
       _i1.EnumValueDefinitionNode(
           name: _i1.NameNode(value: 'CONVERTED_NOTE_TO_ISSUE_EVENT'),
+          directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'CONVERTED_TO_DISCUSSION_EVENT'),
           directives: []),
       _i1.EnumValueDefinitionNode(
           name: _i1.NameNode(value: 'CONVERT_TO_DRAFT_EVENT'), directives: []),
@@ -37495,6 +45603,9 @@ const PullRequestTimelineItemsItemType = _i1.EnumTypeDefinitionNode(
           name: _i1.NameNode(value: 'READY_FOR_REVIEW_EVENT'), directives: []),
       _i1.EnumValueDefinitionNode(
           name: _i1.NameNode(value: 'REFERENCED_EVENT'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'REMOVED_FROM_MERGE_QUEUE_EVENT'),
+          directives: []),
       _i1.EnumValueDefinitionNode(
           name: _i1.NameNode(value: 'REMOVED_FROM_PROJECT_EVENT'),
           directives: []),
@@ -37574,7 +45685,7 @@ const Push = _i1.ObjectTypeDefinitionNode(
           directives: [],
           args: [],
           type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'User'), isNonNull: true)),
+              name: _i1.NameNode(value: 'Actor'), isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'repository'),
           directives: [],
@@ -38003,6 +46114,12 @@ const Query = _i1.ObjectTypeDefinitionNode(
           directives: [],
           args: [
             _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'followRenames'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+                defaultValue: _i1.BooleanValueNode(value: true)),
+            _i1.InputValueDefinitionNode(
                 name: _i1.NameNode(value: 'name'),
                 directives: [],
                 type: _i1.NamedTypeNode(
@@ -38105,6 +46222,16 @@ const Query = _i1.ObjectTypeDefinitionNode(
                     name: _i1.NameNode(value: 'String'), isNonNull: false),
                 defaultValue: null),
             _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'classifications'),
+                directives: [],
+                type: _i1.ListTypeNode(
+                    type: _i1.NamedTypeNode(
+                        name: _i1.NameNode(
+                            value: 'SecurityAdvisoryClassification'),
+                        isNonNull: true),
+                    isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
                 name: _i1.NameNode(value: 'first'),
                 directives: [],
                 type: _i1.NamedTypeNode(
@@ -38186,6 +46313,16 @@ const Query = _i1.ObjectTypeDefinitionNode(
                     name: _i1.NameNode(value: 'String'), isNonNull: false),
                 defaultValue: null),
             _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'classifications'),
+                directives: [],
+                type: _i1.ListTypeNode(
+                    type: _i1.NamedTypeNode(
+                        name: _i1.NameNode(
+                            value: 'SecurityAdvisoryClassification'),
+                        isNonNull: true),
+                    isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
                 name: _i1.NameNode(value: 'ecosystem'),
                 directives: [],
                 type: _i1.NamedTypeNode(
@@ -38263,6 +46400,13 @@ const Query = _i1.ObjectTypeDefinitionNode(
                     isNonNull: false),
                 defaultValue: null),
             _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'ecosystem'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'DependencyGraphEcosystem'),
+                    isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
                 name: _i1.NameNode(value: 'first'),
                 directives: [],
                 type: _i1.NamedTypeNode(
@@ -38306,30 +46450,6 @@ const Query = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'SponsorableItemConnection'),
               isNonNull: true)),
-      _i1.FieldDefinitionNode(
-          name: _i1.NameNode(value: 'sponsorsListing'),
-          directives: [
-            _i1.DirectiveNode(
-                name: _i1.NameNode(value: 'deprecated'),
-                arguments: [
-                  _i1.ArgumentNode(
-                      name: _i1.NameNode(value: 'reason'),
-                      value: _i1.StringValueNode(
-                          value:
-                              '`Query.sponsorsListing` will be removed. Use `Sponsorable.sponsorsListing` instead. Removal on 2020-04-01 UTC.',
-                          isBlock: false))
-                ])
-          ],
-          args: [
-            _i1.InputValueDefinitionNode(
-                name: _i1.NameNode(value: 'slug'),
-                directives: [],
-                type: _i1.NamedTypeNode(
-                    name: _i1.NameNode(value: 'String'), isNonNull: true),
-                defaultValue: null)
-          ],
-          type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'SponsorsListing'), isNonNull: false)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'topic'),
           directives: [],
@@ -39158,6 +47278,12 @@ const RefUpdateRule = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'blocksCreations'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'pattern'),
           directives: [],
           args: [],
@@ -39502,6 +47628,37 @@ const Release = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'mentions'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'UserConnection'), isNonNull: false)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'name'),
           directives: [],
@@ -40732,7 +48889,13 @@ const ReopenedEvent = _i1.ObjectTypeDefinitionNode(
           directives: [],
           args: [],
           type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'ID'), isNonNull: true))
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'stateReason'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'IssueStateReason'), isNonNull: false))
     ]);
 const RepoAccessAuditEntry = _i1.ObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'RepoAccessAuditEntry'),
@@ -43762,6 +51925,8 @@ const Repository = _i1.ObjectTypeDefinitionNode(
       _i1.NamedTypeNode(
           name: _i1.NameNode(value: 'ProjectOwner'), isNonNull: false),
       _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2Recent'), isNonNull: false),
+      _i1.NamedTypeNode(
           name: _i1.NameNode(value: 'RepositoryInfo'), isNonNull: false),
       _i1.NamedTypeNode(
           name: _i1.NameNode(value: 'Starrable'), isNonNull: false),
@@ -43772,6 +51937,12 @@ const Repository = _i1.ObjectTypeDefinitionNode(
           isNonNull: false)
     ],
     fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'allowUpdateBranch'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'assignableUsers'),
           directives: [],
@@ -43810,6 +51981,12 @@ const Repository = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'UserConnection'), isNonNull: true)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'autoMergeAllowed'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'branchProtectionRules'),
           directives: [],
           args: [
@@ -43847,6 +52024,20 @@ const Repository = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'CodeOfConduct'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'codeowners'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'refName'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'RepositoryCodeowners'),
+              isNonNull: false)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'collaborators'),
           directives: [],
@@ -44144,6 +52335,12 @@ const Repository = _i1.ObjectTypeDefinitionNode(
                     name: _i1.NameNode(value: 'String'), isNonNull: false),
                 defaultValue: null),
             _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'filterByAssignable'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+                defaultValue: _i1.BooleanValueNode(value: false)),
+            _i1.InputValueDefinitionNode(
                 name: _i1.NameNode(value: 'first'),
                 directives: [],
                 type: _i1.NamedTypeNode(
@@ -44270,6 +52467,12 @@ const Repository = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Int'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'forkingAllowed'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'forks'),
           directives: [],
@@ -44995,6 +53198,43 @@ const Repository = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Project'), isNonNull: false)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectNext'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'number'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNext'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectV2'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'number'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'projects'),
           directives: [],
           args: [
@@ -45048,6 +53288,63 @@ const Repository = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'ProjectConnection'), isNonNull: true)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectsNext'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'query'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'sortBy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'ProjectNextOrderField'),
+                    isNonNull: false),
+                defaultValue:
+                    _i1.EnumValueNode(name: _i1.NameNode(value: 'TITLE')))
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNextConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'projectsResourcePath'),
           directives: [],
           args: [],
@@ -45059,6 +53356,60 @@ const Repository = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'URI'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectsV2'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'orderBy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'ProjectV2Order'),
+                    isNonNull: false),
+                defaultValue: _i1.ObjectValueNode(fields: [
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'field'),
+                      value: _i1.EnumValueNode(
+                          name: _i1.NameNode(value: 'NUMBER'))),
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'direction'),
+                      value:
+                          _i1.EnumValueNode(name: _i1.NameNode(value: 'DESC')))
+                ])),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'query'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2Connection'),
+              isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'pullRequest'),
           directives: [],
@@ -45160,6 +53511,38 @@ const Repository = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'recentProjects'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2Connection'),
+              isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'ref'),
           directives: [],
@@ -45344,6 +53727,12 @@ const Repository = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'squashPrTitleUsedAsDefault'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'sshUrl'),
           directives: [],
           args: [],
@@ -45521,6 +53910,13 @@ const Repository = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'SubscriptionState'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'visibility'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'RepositoryVisibility'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'vulnerabilityAlerts'),
           directives: [],
           args: [
@@ -45547,6 +53943,16 @@ const Repository = _i1.ObjectTypeDefinitionNode(
                 directives: [],
                 type: _i1.NamedTypeNode(
                     name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'states'),
+                directives: [],
+                type: _i1.ListTypeNode(
+                    type: _i1.NamedTypeNode(
+                        name: _i1.NameNode(
+                            value: 'RepositoryVulnerabilityAlertState'),
+                        isNonNull: true),
+                    isNonNull: false),
                 defaultValue: null)
           ],
           type: _i1.NamedTypeNode(
@@ -45624,6 +54030,69 @@ const RepositoryAuditEntryData = _i1.InterfaceTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'URI'), isNonNull: false))
+    ]);
+const RepositoryCodeowners = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'RepositoryCodeowners'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'errors'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'RepositoryCodeownersError'),
+                  isNonNull: true),
+              isNonNull: true))
+    ]);
+const RepositoryCodeownersError = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'RepositoryCodeownersError'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'column'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'kind'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'line'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'message'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'path'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'source'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'suggestion'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false))
     ]);
 const RepositoryCollaboratorConnection = _i1.ObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'RepositoryCollaboratorConnection'),
@@ -46085,7 +54554,14 @@ const RepositoryInfo = _i1.InterfaceTypeDefinitionNode(
           directives: [],
           args: [],
           type: _i1.NamedTypeNode(
-              name: _i1.NameNode(value: 'Boolean'), isNonNull: true))
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'visibility'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'RepositoryVisibility'),
+              isNonNull: true))
     ]);
 const RepositoryInteractionAbility = _i1.ObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'RepositoryInteractionAbility'),
@@ -46281,21 +54757,7 @@ const RepositoryInvitationOrderField = _i1.EnumTypeDefinitionNode(
     directives: [],
     values: [
       _i1.EnumValueDefinitionNode(
-          name: _i1.NameNode(value: 'CREATED_AT'), directives: []),
-      _i1.EnumValueDefinitionNode(
-          name: _i1.NameNode(value: 'INVITEE_LOGIN'),
-          directives: [
-            _i1.DirectiveNode(
-                name: _i1.NameNode(value: 'deprecated'),
-                arguments: [
-                  _i1.ArgumentNode(
-                      name: _i1.NameNode(value: 'reason'),
-                      value: _i1.StringValueNode(
-                          value:
-                              '`INVITEE_LOGIN` is no longer a valid field value. Repository invitations can now be associated with an email, not only an invitee. Removal on 2020-10-01 UTC.',
-                          isBlock: false))
-                ])
-          ])
+          name: _i1.NameNode(value: 'CREATED_AT'), directives: [])
     ]);
 const RepositoryLockReason = _i1.EnumTypeDefinitionNode(
     name: _i1.NameNode(value: 'RepositoryLockReason'),
@@ -46309,6 +54771,160 @@ const RepositoryLockReason = _i1.EnumTypeDefinitionNode(
           name: _i1.NameNode(value: 'MOVING'), directives: []),
       _i1.EnumValueDefinitionNode(
           name: _i1.NameNode(value: 'RENAME'), directives: [])
+    ]);
+const RepositoryMigration = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'RepositoryMigration'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'Migration'), isNonNull: false),
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'continueOnError'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'failureReason'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'migrationLogUrl'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'URI'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'migrationSource'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'MigrationSource'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'repositoryName'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'sourceUrl'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'URI'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'state'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'MigrationState'), isNonNull: true))
+    ]);
+const RepositoryMigrationConnection = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'RepositoryMigrationConnection'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'edges'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'RepositoryMigrationEdge'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'nodes'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'RepositoryMigration'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'pageInfo'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'PageInfo'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'totalCount'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true))
+    ]);
+const RepositoryMigrationEdge = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'RepositoryMigrationEdge'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'cursor'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'node'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'RepositoryMigration'),
+              isNonNull: false))
+    ]);
+const RepositoryMigrationOrder = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'RepositoryMigrationOrder'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'direction'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'RepositoryMigrationOrderDirection'),
+              isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'field'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'RepositoryMigrationOrderField'),
+              isNonNull: true),
+          defaultValue: null)
+    ]);
+const RepositoryMigrationOrderDirection = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'RepositoryMigrationOrderDirection'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'ASC'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'DESC'), directives: [])
+    ]);
+const RepositoryMigrationOrderField = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'RepositoryMigrationOrderField'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'CREATED_AT'), directives: [])
     ]);
 const RepositoryNode = _i1.InterfaceTypeDefinitionNode(
     name: _i1.NameNode(value: 'RepositoryNode'),
@@ -46466,6 +55082,12 @@ const RepositoryOwner = _i1.InterfaceTypeDefinitionNode(
           name: _i1.NameNode(value: 'repository'),
           directives: [],
           args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'followRenames'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+                defaultValue: _i1.BooleanValueNode(value: true)),
             _i1.InputValueDefinitionNode(
                 name: _i1.NameNode(value: 'name'),
                 directives: [],
@@ -46914,6 +55536,12 @@ const RepositoryVulnerabilityAlert = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'dependabotUpdate'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DependabotUpdate'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'dismissReason'),
           directives: [],
           args: [],
@@ -46932,11 +55560,40 @@ const RepositoryVulnerabilityAlert = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'User'), isNonNull: false)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'fixReason'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `fixReason` field is being removed. You can still use `fixedAt` and `dismissReason`. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'fixedAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'id'),
           directives: [],
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'number'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'repository'),
           directives: [],
@@ -46956,6 +55613,13 @@ const RepositoryVulnerabilityAlert = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'SecurityVulnerability'),
               isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'state'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'RepositoryVulnerabilityAlertState'),
+              isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'vulnerableManifestFilename'),
           directives: [],
@@ -47029,6 +55693,17 @@ const RepositoryVulnerabilityAlertEdge = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'RepositoryVulnerabilityAlert'),
               isNonNull: false))
+    ]);
+const RepositoryVulnerabilityAlertState = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'RepositoryVulnerabilityAlertState'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'DISMISSED'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'FIXED'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'OPEN'), directives: [])
     ]);
 const RequestReviewsInput = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'RequestReviewsInput'),
@@ -47154,6 +55829,60 @@ const RequestedReviewer = _i1.UnionTypeDefinitionNode(
       _i1.NamedTypeNode(name: _i1.NameNode(value: 'Team'), isNonNull: false),
       _i1.NamedTypeNode(name: _i1.NameNode(value: 'User'), isNonNull: false)
     ]);
+const RequestedReviewerConnection = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'RequestedReviewerConnection'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'edges'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'RequestedReviewerEdge'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'nodes'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'RequestedReviewer'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'pageInfo'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'PageInfo'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'totalCount'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true))
+    ]);
+const RequestedReviewerEdge = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'RequestedReviewerEdge'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'cursor'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'node'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'RequestedReviewer'), isNonNull: false))
+    ]);
 const RequirableByPullRequest = _i1.InterfaceTypeDefinitionNode(
     name: _i1.NameNode(value: 'RequirableByPullRequest'),
     directives: [],
@@ -47177,6 +55906,41 @@ const RequirableByPullRequest = _i1.InterfaceTypeDefinitionNode(
           ],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Boolean'), isNonNull: true))
+    ]);
+const RequiredStatusCheckDescription = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'RequiredStatusCheckDescription'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'app'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'App'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'context'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true))
+    ]);
+const RequiredStatusCheckInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'RequiredStatusCheckInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'appId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'context'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true),
+          defaultValue: null)
     ]);
 const RerequestCheckSuiteInput = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'RerequestCheckSuiteInput'),
@@ -47357,6 +56121,7 @@ const ReviewDismissalAllowanceActor = _i1.UnionTypeDefinitionNode(
     name: _i1.NameNode(value: 'ReviewDismissalAllowanceActor'),
     directives: [],
     types: [
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'App'), isNonNull: false),
       _i1.NamedTypeNode(name: _i1.NameNode(value: 'Team'), isNonNull: false),
       _i1.NamedTypeNode(name: _i1.NameNode(value: 'User'), isNonNull: false)
     ]);
@@ -47696,6 +56461,156 @@ const ReviewStatusHovercardContext = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'PullRequestReviewDecision'),
               isNonNull: false))
     ]);
+const RevokeEnterpriseOrganizationsMigratorRoleInput =
+    _i1.InputObjectTypeDefinitionNode(
+        name: _i1.NameNode(
+            value: 'RevokeEnterpriseOrganizationsMigratorRoleInput'),
+        directives: [],
+        fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'enterpriseId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(value: 'Enterprise', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'login'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true),
+          defaultValue: null)
+    ]);
+const RevokeEnterpriseOrganizationsMigratorRolePayload =
+    _i1.ObjectTypeDefinitionNode(
+        name: _i1.NameNode(
+            value: 'RevokeEnterpriseOrganizationsMigratorRolePayload'),
+        directives: [],
+        interfaces: [],
+        fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'organizations'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'OrganizationConnection'),
+              isNonNull: false))
+    ]);
+const RevokeMigratorRoleInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'RevokeMigratorRoleInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'actor'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'actorType'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ActorType'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'organizationId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'Organization', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null)
+    ]);
+const RevokeMigratorRolePayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'RevokeMigratorRolePayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'success'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: false))
+    ]);
+const RoleInOrganization = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'RoleInOrganization'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'DIRECT_MEMBER'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'OWNER'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'UNAFFILIATED'), directives: [])
+    ]);
 const SamlDigestAlgorithm = _i1.EnumTypeDefinitionNode(
     name: _i1.NameNode(value: 'SamlDigestAlgorithm'),
     directives: [],
@@ -47975,6 +56890,13 @@ const SecurityAdvisory = _i1.ObjectTypeDefinitionNode(
     ],
     fields: [
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'classification'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'SecurityAdvisoryClassification'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'cvss'),
           directives: [],
           args: [],
@@ -48113,6 +57035,16 @@ const SecurityAdvisory = _i1.ObjectTypeDefinitionNode(
                     name: _i1.NameNode(value: 'String'), isNonNull: false),
                 defaultValue: null),
             _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'classifications'),
+                directives: [],
+                type: _i1.ListTypeNode(
+                    type: _i1.NamedTypeNode(
+                        name: _i1.NameNode(
+                            value: 'SecurityAdvisoryClassification'),
+                        isNonNull: true),
+                    isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
                 name: _i1.NameNode(value: 'ecosystem'),
                 directives: [],
                 type: _i1.NamedTypeNode(
@@ -48173,6 +57105,15 @@ const SecurityAdvisory = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'DateTime'), isNonNull: false))
     ]);
+const SecurityAdvisoryClassification = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'SecurityAdvisoryClassification'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'GENERAL'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'MALWARE'), directives: [])
+    ]);
 const SecurityAdvisoryConnection = _i1.ObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'SecurityAdvisoryConnection'),
     directives: [],
@@ -48224,11 +57165,11 @@ const SecurityAdvisoryEcosystem = _i1.EnumTypeDefinitionNode(
       _i1.EnumValueDefinitionNode(
           name: _i1.NameNode(value: 'NUGET'), directives: []),
       _i1.EnumValueDefinitionNode(
-          name: _i1.NameNode(value: 'OTHER'), directives: []),
-      _i1.EnumValueDefinitionNode(
           name: _i1.NameNode(value: 'PIP'), directives: []),
       _i1.EnumValueDefinitionNode(
-          name: _i1.NameNode(value: 'RUBYGEMS'), directives: [])
+          name: _i1.NameNode(value: 'RUBYGEMS'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'RUST'), directives: [])
     ]);
 const SecurityAdvisoryEdge = _i1.ObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'SecurityAdvisoryEdge'),
@@ -48808,6 +57749,24 @@ const SmimeSignature = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Boolean'), isNonNull: true))
     ]);
+const SortBy = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'SortBy'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'direction'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'OrderDirection'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'field'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true))
+    ]);
 const Sponsor = _i1.UnionTypeDefinitionNode(
     name: _i1.NameNode(value: 'Sponsor'),
     directives: [],
@@ -48816,10 +57775,94 @@ const Sponsor = _i1.UnionTypeDefinitionNode(
           name: _i1.NameNode(value: 'Organization'), isNonNull: false),
       _i1.NamedTypeNode(name: _i1.NameNode(value: 'User'), isNonNull: false)
     ]);
+const SponsorConnection = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'SponsorConnection'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'edges'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'SponsorEdge'), isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'nodes'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'Sponsor'), isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'pageInfo'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'PageInfo'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'totalCount'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true))
+    ]);
+const SponsorEdge = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'SponsorEdge'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'cursor'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'node'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Sponsor'), isNonNull: false))
+    ]);
+const SponsorOrder = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'SponsorOrder'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'direction'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'OrderDirection'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'field'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'SponsorOrderField'), isNonNull: true),
+          defaultValue: null)
+    ]);
+const SponsorOrderField = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'SponsorOrderField'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'LOGIN'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'RELEVANCE'), directives: [])
+    ]);
 const Sponsorable = _i1.InterfaceTypeDefinitionNode(
     name: _i1.NameNode(value: 'Sponsorable'),
     directives: [],
     fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'estimatedNextSponsorsPayoutInCents'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'hasSponsorsListing'),
           directives: [],
@@ -48845,6 +57888,112 @@ const Sponsorable = _i1.InterfaceTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'monthlyEstimatedSponsorsIncomeInCents'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'sponsoring'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'orderBy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'SponsorOrder'),
+                    isNonNull: false),
+                defaultValue: _i1.ObjectValueNode(fields: [
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'field'),
+                      value: _i1.EnumValueNode(
+                          name: _i1.NameNode(value: 'RELEVANCE'))),
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'direction'),
+                      value:
+                          _i1.EnumValueNode(name: _i1.NameNode(value: 'DESC')))
+                ]))
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'SponsorConnection'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'sponsors'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'orderBy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'SponsorOrder'),
+                    isNonNull: false),
+                defaultValue: _i1.ObjectValueNode(fields: [
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'field'),
+                      value: _i1.EnumValueNode(
+                          name: _i1.NameNode(value: 'RELEVANCE'))),
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'direction'),
+                      value:
+                          _i1.EnumValueNode(name: _i1.NameNode(value: 'DESC')))
+                ])),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'tierId'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'ID'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'SponsorConnection'), isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'sponsorsActivities'),
           directives: [],
@@ -48913,6 +58062,60 @@ const Sponsorable = _i1.InterfaceTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Sponsorship'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorshipForViewerAsSponsorable'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Sponsorship'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorshipNewsletters'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'orderBy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'SponsorshipNewsletterOrder'),
+                    isNonNull: false),
+                defaultValue: _i1.ObjectValueNode(fields: [
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'field'),
+                      value: _i1.EnumValueNode(
+                          name: _i1.NameNode(value: 'CREATED_AT'))),
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'direction'),
+                      value:
+                          _i1.EnumValueNode(name: _i1.NameNode(value: 'DESC')))
+                ]))
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'SponsorshipNewsletterConnection'),
+              isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'sponsorshipsAsMaintainer'),
           directives: [],
@@ -49341,11 +58544,23 @@ const SponsorsListing = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'ID'), isNonNull: true)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'isPublic'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'name'),
           directives: [],
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'nextPayoutDate'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Date'), isNonNull: false)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'shortDescription'),
           directives: [],
@@ -49358,6 +58573,12 @@ const SponsorsListing = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorable'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Sponsorable'), isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'tiers'),
           directives: [],
@@ -49651,6 +58872,12 @@ const Sponsorship = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'isSponsorOptedIntoEmail'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'maintainer'),
           directives: [
             _i1.DirectiveNode(
@@ -49780,6 +59007,136 @@ const SponsorshipEdge = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Sponsorship'), isNonNull: false))
+    ]);
+const SponsorshipNewsletter = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'SponsorshipNewsletter'),
+    directives: [],
+    interfaces: [
+      _i1.NamedTypeNode(name: _i1.NameNode(value: 'Node'), isNonNull: false)
+    ],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'body'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'createdAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'id'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'isPublished'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorable'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Sponsorable'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'subject'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'updatedAt'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DateTime'), isNonNull: true))
+    ]);
+const SponsorshipNewsletterConnection = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'SponsorshipNewsletterConnection'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'edges'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'SponsorshipNewsletterEdge'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'nodes'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'SponsorshipNewsletter'),
+                  isNonNull: false),
+              isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'pageInfo'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'PageInfo'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'totalCount'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true))
+    ]);
+const SponsorshipNewsletterEdge = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'SponsorshipNewsletterEdge'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'cursor'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'node'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'SponsorshipNewsletter'),
+              isNonNull: false))
+    ]);
+const SponsorshipNewsletterOrder = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'SponsorshipNewsletterOrder'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'direction'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'OrderDirection'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'field'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'SponsorshipNewsletterOrderField'),
+              isNonNull: true),
+          defaultValue: null)
+    ]);
+const SponsorshipNewsletterOrderField = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'SponsorshipNewsletterOrderField'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'CREATED_AT'), directives: [])
     ]);
 const SponsorshipOrder = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'SponsorshipOrder'),
@@ -50022,6 +59379,118 @@ const StarredRepositoryEdge = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'DateTime'), isNonNull: true))
+    ]);
+const StartRepositoryMigrationInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'StartRepositoryMigrationInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'accessToken'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'continueOnError'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'gitArchiveUrl'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'githubPat'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'metadataArchiveUrl'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'ownerId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'Organization', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'repositoryName'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'skipReleases'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'sourceId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'MigrationSource', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'sourceRepositoryUrl'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'URI'), isNonNull: true),
+          defaultValue: null)
+    ]);
+const StartRepositoryMigrationPayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'StartRepositoryMigrationPayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'repositoryMigration'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'RepositoryMigration'),
+              isNonNull: false))
     ]);
 const Status = _i1.ObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'Status'),
@@ -53294,6 +62763,85 @@ const Topic = _i1.ObjectTypeDefinitionNode(
                   name: _i1.NameNode(value: 'Topic'), isNonNull: true),
               isNonNull: true)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'repositories'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'affiliations'),
+                directives: [],
+                type: _i1.ListTypeNode(
+                    type: _i1.NamedTypeNode(
+                        name: _i1.NameNode(value: 'RepositoryAffiliation'),
+                        isNonNull: false),
+                    isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'isLocked'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'orderBy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'RepositoryOrder'),
+                    isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'ownerAffiliations'),
+                directives: [],
+                type: _i1.ListTypeNode(
+                    type: _i1.NamedTypeNode(
+                        name: _i1.NameNode(value: 'RepositoryAffiliation'),
+                        isNonNull: false),
+                    isNonNull: false),
+                defaultValue: _i1.ListValueNode(values: [
+                  _i1.EnumValueNode(name: _i1.NameNode(value: 'OWNER')),
+                  _i1.EnumValueNode(name: _i1.NameNode(value: 'COLLABORATOR'))
+                ])),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'privacy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'RepositoryPrivacy'),
+                    isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'sponsorableOnly'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+                defaultValue: _i1.BooleanValueNode(value: false))
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'RepositoryConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'stargazerCount'),
           directives: [],
           args: [],
@@ -53373,6 +62921,15 @@ const TopicSuggestionDeclineReason = _i1.EnumTypeDefinitionNode(
           name: _i1.NameNode(value: 'TOO_GENERAL'), directives: []),
       _i1.EnumValueDefinitionNode(
           name: _i1.NameNode(value: 'TOO_SPECIFIC'), directives: [])
+    ]);
+const TrackedIssueStates = _i1.EnumTypeDefinitionNode(
+    name: _i1.NameNode(value: 'TrackedIssueStates'),
+    directives: [],
+    values: [
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'CLOSED'), directives: []),
+      _i1.EnumValueDefinitionNode(
+          name: _i1.NameNode(value: 'OPEN'), directives: [])
     ]);
 const TransferIssueInput = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'TransferIssueInput'),
@@ -53545,6 +63102,12 @@ const TreeEntry = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'lineCount'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'mode'),
           directives: [],
           args: [],
@@ -53694,6 +63257,52 @@ const UnassignedEvent = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'User'), isNonNull: false))
+    ]);
+const UnfollowOrganizationInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'UnfollowOrganizationInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'organizationId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'Organization', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null)
+    ]);
+const UnfollowOrganizationPayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'UnfollowOrganizationPayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'organization'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Organization'), isNonNull: false))
     ]);
 const UnfollowUserInput = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'UnfollowUserInput'),
@@ -54478,6 +64087,12 @@ const UpdateBranchProtectionRuleInput = _i1.InputObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
           defaultValue: null),
       _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'blocksCreations'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
           name: _i1.NameNode(value: 'branchProtectionRuleId'),
           directives: [
             _i1.DirectiveNode(
@@ -54493,6 +64108,22 @@ const UpdateBranchProtectionRuleInput = _i1.InputObjectTypeDefinitionNode(
           ],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'bypassForcePushActorIds'),
+          directives: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ID'), isNonNull: true),
+              isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'bypassPullRequestActorIds'),
+          directives: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ID'), isNonNull: true),
+              isNonNull: false),
           defaultValue: null),
       _i1.InputValueDefinitionNode(
           name: _i1.NameNode(value: 'clientMutationId'),
@@ -54538,6 +64169,15 @@ const UpdateBranchProtectionRuleInput = _i1.InputObjectTypeDefinitionNode(
           type: _i1.ListTypeNode(
               type: _i1.NamedTypeNode(
                   name: _i1.NameNode(value: 'String'), isNonNull: true),
+              isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'requiredStatusChecks'),
+          directives: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'RequiredStatusCheckInput'),
+                  isNonNull: true),
               isNonNull: false),
           defaultValue: null),
       _i1.InputValueDefinitionNode(
@@ -55708,6 +65348,77 @@ const UpdateEnterpriseOrganizationProjectsSettingPayload =
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'String'), isNonNull: false))
     ]);
+const UpdateEnterpriseOwnerOrganizationRoleInput =
+    _i1.InputObjectTypeDefinitionNode(
+        name: _i1.NameNode(value: 'UpdateEnterpriseOwnerOrganizationRoleInput'),
+        directives: [],
+        fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'enterpriseId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(value: 'Enterprise', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'organizationId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'Organization', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'organizationRole'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'RoleInOrganization'), isNonNull: true),
+          defaultValue: null)
+    ]);
+const UpdateEnterpriseOwnerOrganizationRolePayload =
+    _i1.ObjectTypeDefinitionNode(
+        name:
+            _i1.NameNode(value: 'UpdateEnterpriseOwnerOrganizationRolePayload'),
+        directives: [],
+        interfaces: [],
+        fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'message'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false))
+    ]);
 const UpdateEnterpriseProfileInput = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'UpdateEnterpriseProfileInput'),
     directives: [],
@@ -56535,6 +66246,70 @@ const UpdateNotificationRestrictionSettingPayload =
               name: _i1.NameNode(value: 'VerifiableDomainOwner'),
               isNonNull: false))
     ]);
+const UpdateOrganizationAllowPrivateRepositoryForkingSettingInput =
+    _i1.InputObjectTypeDefinitionNode(
+        name: _i1.NameNode(
+            value:
+                'UpdateOrganizationAllowPrivateRepositoryForkingSettingInput'),
+        directives: [],
+        fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'forkingEnabled'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'organizationId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'Organization', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null)
+    ]);
+const UpdateOrganizationAllowPrivateRepositoryForkingSettingPayload =
+    _i1.ObjectTypeDefinitionNode(
+        name: _i1.NameNode(
+            value:
+                'UpdateOrganizationAllowPrivateRepositoryForkingSettingPayload'),
+        directives: [],
+        interfaces: [],
+        fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'message'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'organization'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Organization'), isNonNull: false))
+    ]);
 const UpdateProjectCardInput = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'UpdateProjectCardInput'),
     directives: [],
@@ -56645,6 +66420,81 @@ const UpdateProjectColumnPayload = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'ProjectColumn'), isNonNull: false))
     ]);
+const UpdateProjectDraftIssueInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'UpdateProjectDraftIssueInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'assigneeIds'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(value: 'User', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ID'), isNonNull: true),
+              isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'body'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'draftIssueId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(value: 'DraftIssue', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'title'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null)
+    ]);
+const UpdateProjectDraftIssuePayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'UpdateProjectDraftIssuePayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'draftIssue'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DraftIssue'), isNonNull: false))
+    ]);
 const UpdateProjectInput = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'UpdateProjectInput'),
     directives: [],
@@ -56696,6 +66546,190 @@ const UpdateProjectInput = _i1.InputObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'ProjectState'), isNonNull: false),
           defaultValue: null)
     ]);
+const UpdateProjectNextInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'UpdateProjectNextInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'closed'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'description'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'projectId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'ProjectNext', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'public'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'shortDescription'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'title'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null)
+    ]);
+const UpdateProjectNextItemFieldInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'UpdateProjectNextItemFieldInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'fieldId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'ProjectNextField', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'itemId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'ProjectNextItem', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'projectId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'ProjectNext', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'value'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null)
+    ]);
+const UpdateProjectNextItemFieldPayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'UpdateProjectNextItemFieldPayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectNextItem'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNextItem'), isNonNull: false))
+    ]);
+const UpdateProjectNextPayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'UpdateProjectNextPayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectNext'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNext'), isNonNull: false))
+    ]);
 const UpdateProjectPayload = _i1.ObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'UpdateProjectPayload'),
     directives: [],
@@ -56713,6 +66747,407 @@ const UpdateProjectPayload = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Project'), isNonNull: false))
+    ]);
+const UpdateProjectV2DraftIssueInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'UpdateProjectV2DraftIssueInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'assigneeIds'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(value: 'User', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ID'), isNonNull: true),
+              isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'body'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'draftIssueId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(value: 'DraftIssue', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'title'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null)
+    ]);
+const UpdateProjectV2DraftIssuePayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'UpdateProjectV2DraftIssuePayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'draftIssue'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'DraftIssue'), isNonNull: false))
+    ]);
+const UpdateProjectV2Input = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'UpdateProjectV2Input'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'closed'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'projectId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(value: 'ProjectV2', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'public'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'readme'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'shortDescription'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'title'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null)
+    ]);
+const UpdateProjectV2ItemFieldValueInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'UpdateProjectV2ItemFieldValueInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'fieldId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'ProjectV2Field', isBlock: false),
+                        _i1.StringValueNode(
+                            value: 'ProjectV2IterationField', isBlock: false),
+                        _i1.StringValueNode(
+                            value: 'ProjectV2SingleSelectField', isBlock: false)
+                      ])),
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'abstractType'),
+                      value: _i1.StringValueNode(
+                          value: 'ProjectV2FieldConfiguration', isBlock: false))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'itemId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'ProjectV2Item', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'projectId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(value: 'ProjectV2', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'value'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2FieldValue'),
+              isNonNull: true),
+          defaultValue: null)
+    ]);
+const UpdateProjectV2ItemFieldValuePayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'UpdateProjectV2ItemFieldValuePayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectV2Item'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2Item'), isNonNull: false))
+    ]);
+const UpdateProjectV2ItemPositionInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'UpdateProjectV2ItemPositionInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'afterId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'ProjectV2Item', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'itemId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'ProjectV2Item', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'projectId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(value: 'ProjectV2', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null)
+    ]);
+const UpdateProjectV2ItemPositionPayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'UpdateProjectV2ItemPositionPayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'items'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2ItemConnection'),
+              isNonNull: false))
+    ]);
+const UpdateProjectV2Payload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'UpdateProjectV2Payload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectV2'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2'), isNonNull: false))
+    ]);
+const UpdatePullRequestBranchInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'UpdatePullRequestBranchInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'expectedHeadOid'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'GitObjectID'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'pullRequestId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'PullRequest', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null)
+    ]);
+const UpdatePullRequestBranchPayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'UpdatePullRequestBranchPayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'pullRequest'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'PullRequest'), isNonNull: false))
     ]);
 const UpdatePullRequestInput = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'UpdatePullRequestInput'),
@@ -57167,6 +67602,104 @@ const UpdateRepositoryPayload = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Repository'), isNonNull: false))
     ]);
+const UpdateSponsorshipPreferencesInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'UpdateSponsorshipPreferencesInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'privacyLevel'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'SponsorshipPrivacy'),
+              isNonNull: false),
+          defaultValue: _i1.EnumValueNode(name: _i1.NameNode(value: 'PUBLIC'))),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'receiveEmails'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+          defaultValue: _i1.BooleanValueNode(value: true)),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'Organization', isBlock: false),
+                        _i1.StringValueNode(value: 'User', isBlock: false)
+                      ])),
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'abstractType'),
+                      value:
+                          _i1.StringValueNode(value: 'Sponsor', isBlock: false))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorLogin'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorableId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(
+                            value: 'Organization', isBlock: false),
+                        _i1.StringValueNode(value: 'User', isBlock: false)
+                      ])),
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'abstractType'),
+                      value: _i1.StringValueNode(
+                          value: 'Sponsorable', isBlock: false))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorableLogin'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null)
+    ]);
+const UpdateSponsorshipPreferencesPayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'UpdateSponsorshipPreferencesPayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorship'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Sponsorship'), isNonNull: false))
+    ]);
 const UpdateSubscriptionInput = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'UpdateSubscriptionInput'),
     directives: [],
@@ -57457,6 +67990,84 @@ const UpdateTeamReviewAssignmentPayload = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Team'), isNonNull: false))
     ]);
+const UpdateTeamsRepositoryInput = _i1.InputObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'UpdateTeamsRepositoryInput'),
+    directives: [],
+    fields: [
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'permission'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'RepositoryPermission'),
+              isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'repositoryId'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(value: 'Repository', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ID'), isNonNull: true),
+          defaultValue: null),
+      _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'teamIds'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'possibleTypes'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'concreteTypes'),
+                      value: _i1.ListValueNode(values: [
+                        _i1.StringValueNode(value: 'Team', isBlock: false)
+                      ]))
+                ])
+          ],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'ID'), isNonNull: true),
+              isNonNull: true),
+          defaultValue: null)
+    ]);
+const UpdateTeamsRepositoryPayload = _i1.ObjectTypeDefinitionNode(
+    name: _i1.NameNode(value: 'UpdateTeamsRepositoryPayload'),
+    directives: [],
+    interfaces: [],
+    fields: [
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'clientMutationId'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'String'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'repository'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Repository'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'teams'),
+          directives: [],
+          args: [],
+          type: _i1.ListTypeNode(
+              type: _i1.NamedTypeNode(
+                  name: _i1.NameNode(value: 'Team'), isNonNull: true),
+              isNonNull: false))
+    ]);
 const UpdateTopicsInput = _i1.InputObjectTypeDefinitionNode(
     name: _i1.NameNode(value: 'UpdateTopicsInput'),
     directives: [],
@@ -57529,7 +68140,13 @@ const User = _i1.ObjectTypeDefinitionNode(
       _i1.NamedTypeNode(
           name: _i1.NameNode(value: 'ProfileOwner'), isNonNull: false),
       _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectNextOwner'), isNonNull: false),
+      _i1.NamedTypeNode(
           name: _i1.NameNode(value: 'ProjectOwner'), isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2Owner'), isNonNull: false),
+      _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'ProjectV2Recent'), isNonNull: false),
       _i1.NamedTypeNode(
           name: _i1.NameNode(value: 'RepositoryDiscussionAuthor'),
           isNonNull: false),
@@ -57686,6 +68303,12 @@ const User = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'estimatedNextSponsorsPayoutInCents'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'followers'),
           directives: [],
@@ -57895,6 +68518,12 @@ const User = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'isFollowingViewer'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Boolean'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'isGitHubStar'),
           directives: [],
           args: [],
@@ -58056,6 +68685,12 @@ const User = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'String'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'monthlyEstimatedSponsorsIncomeInCents'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Int'), isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'name'),
           directives: [],
@@ -58291,6 +68926,43 @@ const User = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Project'), isNonNull: false)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectNext'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'number'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNext'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectV2'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'number'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: true),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'projects'),
           directives: [],
           args: [
@@ -58344,6 +69016,63 @@ const User = _i1.ObjectTypeDefinitionNode(
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'ProjectConnection'), isNonNull: true)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectsNext'),
+          directives: [
+            _i1.DirectiveNode(
+                name: _i1.NameNode(value: 'deprecated'),
+                arguments: [
+                  _i1.ArgumentNode(
+                      name: _i1.NameNode(value: 'reason'),
+                      value: _i1.StringValueNode(
+                          value:
+                              'The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2022-10-01 UTC.',
+                          isBlock: false))
+                ])
+          ],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'query'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'sortBy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'ProjectNextOrderField'),
+                    isNonNull: false),
+                defaultValue:
+                    _i1.EnumValueNode(name: _i1.NameNode(value: 'TITLE')))
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectNextConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'projectsResourcePath'),
           directives: [],
           args: [],
@@ -58355,6 +69084,60 @@ const User = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'URI'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'projectsV2'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'orderBy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'ProjectV2Order'),
+                    isNonNull: false),
+                defaultValue: _i1.ObjectValueNode(fields: [
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'field'),
+                      value: _i1.EnumValueNode(
+                          name: _i1.NameNode(value: 'NUMBER'))),
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'direction'),
+                      value:
+                          _i1.EnumValueNode(name: _i1.NameNode(value: 'DESC')))
+                ])),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'query'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2Connection'),
+              isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'publicKeys'),
           directives: [],
@@ -58453,6 +69236,38 @@ const User = _i1.ObjectTypeDefinitionNode(
           ],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'PullRequestConnection'),
+              isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'recentProjects'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'ProjectV2Connection'),
               isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'repositories'),
@@ -58604,6 +69419,12 @@ const User = _i1.ObjectTypeDefinitionNode(
           name: _i1.NameNode(value: 'repository'),
           directives: [],
           args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'followRenames'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Boolean'), isNonNull: false),
+                defaultValue: _i1.BooleanValueNode(value: true)),
             _i1.InputValueDefinitionNode(
                 name: _i1.NameNode(value: 'name'),
                 directives: [],
@@ -58772,6 +69593,106 @@ const User = _i1.ObjectTypeDefinitionNode(
               name: _i1.NameNode(value: 'SavedReplyConnection'),
               isNonNull: false)),
       _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'sponsoring'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'orderBy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'SponsorOrder'),
+                    isNonNull: false),
+                defaultValue: _i1.ObjectValueNode(fields: [
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'field'),
+                      value: _i1.EnumValueNode(
+                          name: _i1.NameNode(value: 'RELEVANCE'))),
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'direction'),
+                      value:
+                          _i1.EnumValueNode(name: _i1.NameNode(value: 'DESC')))
+                ]))
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'SponsorConnection'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'sponsors'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'orderBy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'SponsorOrder'),
+                    isNonNull: false),
+                defaultValue: _i1.ObjectValueNode(fields: [
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'field'),
+                      value: _i1.EnumValueNode(
+                          name: _i1.NameNode(value: 'RELEVANCE'))),
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'direction'),
+                      value:
+                          _i1.EnumValueNode(name: _i1.NameNode(value: 'DESC')))
+                ])),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'tierId'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'ID'), isNonNull: false),
+                defaultValue: null)
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'SponsorConnection'), isNonNull: true)),
+      _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'sponsorsActivities'),
           directives: [],
           args: [
@@ -58839,6 +69760,60 @@ const User = _i1.ObjectTypeDefinitionNode(
           args: [],
           type: _i1.NamedTypeNode(
               name: _i1.NameNode(value: 'Sponsorship'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorshipForViewerAsSponsorable'),
+          directives: [],
+          args: [],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'Sponsorship'), isNonNull: false)),
+      _i1.FieldDefinitionNode(
+          name: _i1.NameNode(value: 'sponsorshipNewsletters'),
+          directives: [],
+          args: [
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'after'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'before'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'String'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'first'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'last'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'Int'), isNonNull: false),
+                defaultValue: null),
+            _i1.InputValueDefinitionNode(
+                name: _i1.NameNode(value: 'orderBy'),
+                directives: [],
+                type: _i1.NamedTypeNode(
+                    name: _i1.NameNode(value: 'SponsorshipNewsletterOrder'),
+                    isNonNull: false),
+                defaultValue: _i1.ObjectValueNode(fields: [
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'field'),
+                      value: _i1.EnumValueNode(
+                          name: _i1.NameNode(value: 'CREATED_AT'))),
+                  _i1.ObjectFieldNode(
+                      name: _i1.NameNode(value: 'direction'),
+                      value:
+                          _i1.EnumValueNode(name: _i1.NameNode(value: 'DESC')))
+                ]))
+          ],
+          type: _i1.NamedTypeNode(
+              name: _i1.NameNode(value: 'SponsorshipNewsletterConnection'),
+              isNonNull: true)),
       _i1.FieldDefinitionNode(
           name: _i1.NameNode(value: 'sponsorshipsAsMaintainer'),
           directives: [],
@@ -59989,20 +70964,26 @@ const WorkflowRun = _i1.ObjectTypeDefinitionNode(
 const X509Certificate = _i1.ScalarTypeDefinitionNode(
     name: _i1.NameNode(value: 'X509Certificate'), directives: []);
 const document = _i1.DocumentNode(definitions: [
+  requiredCapabilities,
   preview,
   possibleTypes,
+  AbortQueuedMigrationsInput,
+  AbortQueuedMigrationsPayload,
   AcceptEnterpriseAdministratorInvitationInput,
   AcceptEnterpriseAdministratorInvitationPayload,
   AcceptTopicSuggestionInput,
   AcceptTopicSuggestionPayload,
   Actor,
   ActorLocation,
+  ActorType,
   AddAssigneesToAssignableInput,
   AddAssigneesToAssignablePayload,
   AddCommentInput,
   AddCommentPayload,
   AddDiscussionCommentInput,
   AddDiscussionCommentPayload,
+  AddDiscussionPollVoteInput,
+  AddDiscussionPollVotePayload,
   AddEnterpriseSupportEntitlementInput,
   AddEnterpriseSupportEntitlementPayload,
   AddLabelsToLabelableInput,
@@ -60011,6 +70992,14 @@ const document = _i1.DocumentNode(definitions: [
   AddProjectCardPayload,
   AddProjectColumnInput,
   AddProjectColumnPayload,
+  AddProjectDraftIssueInput,
+  AddProjectDraftIssuePayload,
+  AddProjectNextItemInput,
+  AddProjectNextItemPayload,
+  AddProjectV2DraftIssueInput,
+  AddProjectV2DraftIssuePayload,
+  AddProjectV2ItemByIdInput,
+  AddProjectV2ItemByIdPayload,
   AddPullRequestReviewCommentInput,
   AddPullRequestReviewCommentPayload,
   AddPullRequestReviewInput,
@@ -60047,6 +71036,7 @@ const document = _i1.DocumentNode(definitions: [
   AutoSquashEnabledEvent,
   AutomaticBaseChangeFailedEvent,
   AutomaticBaseChangeSucceededEvent,
+  Base64String,
   BaseRefChangedEvent,
   BaseRefDeletedEvent,
   BaseRefForcePushedEvent,
@@ -60054,18 +71044,27 @@ const document = _i1.DocumentNode(definitions: [
   BlameRange,
   Blob,
   Bot,
+  BranchActorAllowanceActor,
   BranchProtectionRule,
   BranchProtectionRuleConflict,
   BranchProtectionRuleConflictConnection,
   BranchProtectionRuleConflictEdge,
   BranchProtectionRuleConnection,
   BranchProtectionRuleEdge,
+  BypassForcePushAllowance,
+  BypassForcePushAllowanceConnection,
+  BypassForcePushAllowanceEdge,
+  BypassPullRequestAllowance,
+  BypassPullRequestAllowanceConnection,
+  BypassPullRequestAllowanceEdge,
   CVSS,
   CWE,
   CWEConnection,
   CWEEdge,
   CancelEnterpriseAdminInvitationInput,
   CancelEnterpriseAdminInvitationPayload,
+  CancelSponsorshipInput,
+  CancelSponsorshipPayload,
   ChangeUserStatusInput,
   ChangeUserStatusPayload,
   CheckAnnotation,
@@ -60125,9 +71124,9 @@ const document = _i1.DocumentNode(definitions: [
   CommitContributionsByRepository,
   CommitEdge,
   CommitHistoryConnection,
+  CommitMessage,
+  CommittableBranch,
   ConnectedEvent,
-  ContentAttachment,
-  ContentReference,
   Contribution,
   ContributionCalendar,
   ContributionCalendarDay,
@@ -60142,14 +71141,15 @@ const document = _i1.DocumentNode(definitions: [
   ConvertPullRequestToDraftPayload,
   ConvertToDraftEvent,
   ConvertedNoteToIssueEvent,
+  ConvertedToDiscussionEvent,
   CreateBranchProtectionRuleInput,
   CreateBranchProtectionRulePayload,
   CreateCheckRunInput,
   CreateCheckRunPayload,
   CreateCheckSuiteInput,
   CreateCheckSuitePayload,
-  CreateContentAttachmentInput,
-  CreateContentAttachmentPayload,
+  CreateCommitOnBranchInput,
+  CreateCommitOnBranchPayload,
   CreateDeploymentInput,
   CreateDeploymentPayload,
   CreateDeploymentStatusInput,
@@ -60166,14 +71166,22 @@ const document = _i1.DocumentNode(definitions: [
   CreateIssuePayload,
   CreateLabelInput,
   CreateLabelPayload,
+  CreateMigrationSourceInput,
+  CreateMigrationSourcePayload,
   CreateProjectInput,
   CreateProjectPayload,
+  CreateProjectV2Input,
+  CreateProjectV2Payload,
   CreatePullRequestInput,
   CreatePullRequestPayload,
   CreateRefInput,
   CreateRefPayload,
   CreateRepositoryInput,
   CreateRepositoryPayload,
+  CreateSponsorsTierInput,
+  CreateSponsorsTierPayload,
+  CreateSponsorshipInput,
+  CreateSponsorshipPayload,
   CreateTeamDiscussionCommentInput,
   CreateTeamDiscussionCommentPayload,
   CreateTeamDiscussionInput,
@@ -60228,7 +71236,11 @@ const document = _i1.DocumentNode(definitions: [
   DeleteProjectColumnInput,
   DeleteProjectColumnPayload,
   DeleteProjectInput,
+  DeleteProjectNextItemInput,
+  DeleteProjectNextItemPayload,
   DeleteProjectPayload,
+  DeleteProjectV2ItemInput,
+  DeleteProjectV2ItemPayload,
   DeletePullRequestReviewCommentInput,
   DeletePullRequestReviewCommentPayload,
   DeletePullRequestReviewInput,
@@ -60242,9 +71254,12 @@ const document = _i1.DocumentNode(definitions: [
   DeleteVerifiableDomainInput,
   DeleteVerifiableDomainPayload,
   DemilestonedEvent,
+  DependabotUpdate,
+  DependabotUpdateError,
   DependencyGraphDependency,
   DependencyGraphDependencyConnection,
   DependencyGraphDependencyEdge,
+  DependencyGraphEcosystem,
   DependencyGraphManifest,
   DependencyGraphManifestConnection,
   DependencyGraphManifestEdge,
@@ -60292,8 +71307,18 @@ const document = _i1.DocumentNode(definitions: [
   DiscussionEdge,
   DiscussionOrder,
   DiscussionOrderField,
+  DiscussionPoll,
+  DiscussionPollOption,
+  DiscussionPollOptionConnection,
+  DiscussionPollOptionEdge,
+  DiscussionPollOptionOrder,
+  DiscussionPollOptionOrderField,
   DismissPullRequestReviewInput,
   DismissPullRequestReviewPayload,
+  DismissReason,
+  DismissRepositoryVulnerabilityAlertInput,
+  DismissRepositoryVulnerabilityAlertPayload,
+  DraftIssue,
   DraftPullRequestReviewComment,
   DraftPullRequestReviewThread,
   EnablePullRequestAutoMergeInput,
@@ -60325,8 +71350,6 @@ const document = _i1.DocumentNode(definitions: [
   EnterpriseOutsideCollaboratorConnection,
   EnterpriseOutsideCollaboratorEdge,
   EnterpriseOwnerInfo,
-  EnterprisePendingCollaboratorConnection,
-  EnterprisePendingCollaboratorEdge,
   EnterprisePendingMemberInvitationConnection,
   EnterprisePendingMemberInvitationEdge,
   EnterpriseRepositoryInfo,
@@ -60362,11 +71385,17 @@ const document = _i1.DocumentNode(definitions: [
   EnvironmentConnection,
   EnvironmentEdge,
   ExternalIdentity,
+  ExternalIdentityAttribute,
   ExternalIdentityConnection,
   ExternalIdentityEdge,
   ExternalIdentitySamlAttributes,
   ExternalIdentityScimAttributes,
+  FileAddition,
+  FileChanges,
+  FileDeletion,
   FileViewedState,
+  FollowOrganizationInput,
+  FollowOrganizationPayload,
   FollowUserInput,
   FollowUserPayload,
   FollowerConnection,
@@ -60396,6 +71425,10 @@ const document = _i1.DocumentNode(definitions: [
   GitSignatureState,
   GitTimestamp,
   GpgSignature,
+  GrantEnterpriseOrganizationsMigratorRoleInput,
+  GrantEnterpriseOrganizationsMigratorRolePayload,
+  GrantMigratorRoleInput,
+  GrantMigratorRolePayload,
   HTML,
   HeadRefDeletedEvent,
   HeadRefForcePushedEvent,
@@ -60416,6 +71449,7 @@ const document = _i1.DocumentNode(definitions: [
   IpAllowListForInstalledAppsEnabledSettingValue,
   IpAllowListOwner,
   Issue,
+  IssueClosedStateReason,
   IssueComment,
   IssueCommentConnection,
   IssueCommentEdge,
@@ -60429,6 +71463,7 @@ const document = _i1.DocumentNode(definitions: [
   IssueOrder,
   IssueOrderField,
   IssueState,
+  IssueStateReason,
   IssueTemplate,
   IssueTimelineConnection,
   IssueTimelineItem,
@@ -60483,6 +71518,10 @@ const document = _i1.DocumentNode(definitions: [
   MergeStateStatus,
   MergeableState,
   MergedEvent,
+  Migration,
+  MigrationSource,
+  MigrationSourceType,
+  MigrationState,
   Milestone,
   MilestoneConnection,
   MilestoneEdge,
@@ -60502,6 +71541,8 @@ const document = _i1.DocumentNode(definitions: [
   Mutation,
   Node,
   NotificationRestrictionSettingValue,
+  OIDCProvider,
+  OIDCProviderType,
   OauthApplicationAuditEntryData,
   OauthApplicationCreateAuditEntry,
   OauthApplicationCreateAuditEntryState,
@@ -60521,6 +71562,8 @@ const document = _i1.DocumentNode(definitions: [
   OrgEnableOauthAppRestrictionsAuditEntry,
   OrgEnableSamlAuditEntry,
   OrgEnableTwoFactorRequirementAuditEntry,
+  OrgEnterpriseOwnerOrder,
+  OrgEnterpriseOwnerOrderField,
   OrgInviteMemberAuditEntry,
   OrgInviteToBusinessAuditEntry,
   OrgOauthAppAccessApprovedAuditEntry,
@@ -60554,6 +71597,8 @@ const document = _i1.DocumentNode(definitions: [
   OrganizationAuditEntryEdge,
   OrganizationConnection,
   OrganizationEdge,
+  OrganizationEnterpriseOwnerConnection,
+  OrganizationEnterpriseOwnerEdge,
   OrganizationIdentityProvider,
   OrganizationInvitation,
   OrganizationInvitationConnection,
@@ -60564,6 +71609,7 @@ const document = _i1.DocumentNode(definitions: [
   OrganizationMemberEdge,
   OrganizationMemberRole,
   OrganizationMembersCanCreateRepositoriesSettingValue,
+  OrganizationOrUser,
   OrganizationOrder,
   OrganizationOrderField,
   OrganizationTeamsHovercardContext,
@@ -60589,6 +71635,7 @@ const document = _i1.DocumentNode(definitions: [
   PackageVersionOrderField,
   PackageVersionStatistics,
   PageInfo,
+  PatchStatus,
   PermissionGranter,
   PermissionSource,
   PinIssueInput,
@@ -60626,12 +71673,82 @@ const document = _i1.DocumentNode(definitions: [
   ProjectColumnPurpose,
   ProjectConnection,
   ProjectEdge,
+  ProjectItemType,
+  ProjectNext,
+  ProjectNextConnection,
+  ProjectNextEdge,
+  ProjectNextField,
+  ProjectNextFieldCommon,
+  ProjectNextFieldConnection,
+  ProjectNextFieldEdge,
+  ProjectNextFieldType,
+  ProjectNextItem,
+  ProjectNextItemConnection,
+  ProjectNextItemContent,
+  ProjectNextItemEdge,
+  ProjectNextItemFieldValue,
+  ProjectNextItemFieldValueConnection,
+  ProjectNextItemFieldValueEdge,
+  ProjectNextOrderField,
+  ProjectNextOwner,
   ProjectOrder,
   ProjectOrderField,
   ProjectOwner,
   ProjectProgress,
   ProjectState,
   ProjectTemplate,
+  ProjectV2,
+  ProjectV2Connection,
+  ProjectV2Edge,
+  ProjectV2Field,
+  ProjectV2FieldCommon,
+  ProjectV2FieldConfiguration,
+  ProjectV2FieldConfigurationConnection,
+  ProjectV2FieldConfigurationEdge,
+  ProjectV2FieldConnection,
+  ProjectV2FieldEdge,
+  ProjectV2FieldType,
+  ProjectV2FieldValue,
+  ProjectV2Item,
+  ProjectV2ItemConnection,
+  ProjectV2ItemContent,
+  ProjectV2ItemEdge,
+  ProjectV2ItemFieldDateValue,
+  ProjectV2ItemFieldIterationValue,
+  ProjectV2ItemFieldLabelValue,
+  ProjectV2ItemFieldMilestoneValue,
+  ProjectV2ItemFieldNumberValue,
+  ProjectV2ItemFieldPullRequestValue,
+  ProjectV2ItemFieldRepositoryValue,
+  ProjectV2ItemFieldReviewerValue,
+  ProjectV2ItemFieldSingleSelectValue,
+  ProjectV2ItemFieldTextValue,
+  ProjectV2ItemFieldUserValue,
+  ProjectV2ItemFieldValue,
+  ProjectV2ItemFieldValueCommon,
+  ProjectV2ItemFieldValueConnection,
+  ProjectV2ItemFieldValueEdge,
+  ProjectV2ItemType,
+  ProjectV2IterationField,
+  ProjectV2IterationFieldConfiguration,
+  ProjectV2IterationFieldIteration,
+  ProjectV2Order,
+  ProjectV2OrderField,
+  ProjectV2Owner,
+  ProjectV2Recent,
+  ProjectV2SingleSelectField,
+  ProjectV2SingleSelectFieldOption,
+  ProjectV2SortBy,
+  ProjectV2SortByConnection,
+  ProjectV2SortByEdge,
+  ProjectV2View,
+  ProjectV2ViewConnection,
+  ProjectV2ViewEdge,
+  ProjectV2ViewLayout,
+  ProjectView,
+  ProjectViewConnection,
+  ProjectViewEdge,
+  ProjectViewLayout,
   PublicKey,
   PublicKeyConnection,
   PublicKeyEdge,
@@ -60776,6 +71893,8 @@ const document = _i1.DocumentNode(definitions: [
   Repository,
   RepositoryAffiliation,
   RepositoryAuditEntryData,
+  RepositoryCodeowners,
+  RepositoryCodeownersError,
   RepositoryCollaboratorConnection,
   RepositoryCollaboratorEdge,
   RepositoryConnection,
@@ -60795,6 +71914,12 @@ const document = _i1.DocumentNode(definitions: [
   RepositoryInvitationOrder,
   RepositoryInvitationOrderField,
   RepositoryLockReason,
+  RepositoryMigration,
+  RepositoryMigrationConnection,
+  RepositoryMigrationEdge,
+  RepositoryMigrationOrder,
+  RepositoryMigrationOrderDirection,
+  RepositoryMigrationOrderField,
   RepositoryNode,
   RepositoryOrder,
   RepositoryOrderField,
@@ -60810,11 +71935,16 @@ const document = _i1.DocumentNode(definitions: [
   RepositoryVulnerabilityAlert,
   RepositoryVulnerabilityAlertConnection,
   RepositoryVulnerabilityAlertEdge,
+  RepositoryVulnerabilityAlertState,
   RequestReviewsInput,
   RequestReviewsPayload,
   RequestableCheckStatusState,
   RequestedReviewer,
+  RequestedReviewerConnection,
+  RequestedReviewerEdge,
   RequirableByPullRequest,
+  RequiredStatusCheckDescription,
+  RequiredStatusCheckInput,
   RerequestCheckSuiteInput,
   RerequestCheckSuitePayload,
   ResolveReviewThreadInput,
@@ -60831,6 +71961,11 @@ const document = _i1.DocumentNode(definitions: [
   ReviewRequestRemovedEvent,
   ReviewRequestedEvent,
   ReviewStatusHovercardContext,
+  RevokeEnterpriseOrganizationsMigratorRoleInput,
+  RevokeEnterpriseOrganizationsMigratorRolePayload,
+  RevokeMigratorRoleInput,
+  RevokeMigratorRolePayload,
+  RoleInOrganization,
   SamlDigestAlgorithm,
   SamlSignatureAlgorithm,
   SavedReply,
@@ -60843,6 +71978,7 @@ const document = _i1.DocumentNode(definitions: [
   SearchResultItemEdge,
   SearchType,
   SecurityAdvisory,
+  SecurityAdvisoryClassification,
   SecurityAdvisoryConnection,
   SecurityAdvisoryEcosystem,
   SecurityAdvisoryEdge,
@@ -60869,7 +72005,12 @@ const document = _i1.DocumentNode(definitions: [
   SetUserInteractionLimitInput,
   SetUserInteractionLimitPayload,
   SmimeSignature,
+  SortBy,
   Sponsor,
+  SponsorConnection,
+  SponsorEdge,
+  SponsorOrder,
+  SponsorOrderField,
   Sponsorable,
   SponsorableItem,
   SponsorableItemConnection,
@@ -60895,6 +72036,11 @@ const document = _i1.DocumentNode(definitions: [
   Sponsorship,
   SponsorshipConnection,
   SponsorshipEdge,
+  SponsorshipNewsletter,
+  SponsorshipNewsletterConnection,
+  SponsorshipNewsletterEdge,
+  SponsorshipNewsletterOrder,
+  SponsorshipNewsletterOrderField,
   SponsorshipOrder,
   SponsorshipOrderField,
   SponsorshipPrivacy,
@@ -60905,6 +72051,8 @@ const document = _i1.DocumentNode(definitions: [
   Starrable,
   StarredRepositoryConnection,
   StarredRepositoryEdge,
+  StartRepositoryMigrationInput,
+  StartRepositoryMigrationPayload,
   Status,
   StatusCheckRollup,
   StatusCheckRollupContext,
@@ -60961,6 +72109,7 @@ const document = _i1.DocumentNode(definitions: [
   Topic,
   TopicAuditEntryData,
   TopicSuggestionDeclineReason,
+  TrackedIssueStates,
   TransferIssueInput,
   TransferIssuePayload,
   TransferredEvent,
@@ -60970,6 +72119,8 @@ const document = _i1.DocumentNode(definitions: [
   UnarchiveRepositoryInput,
   UnarchiveRepositoryPayload,
   UnassignedEvent,
+  UnfollowOrganizationInput,
+  UnfollowOrganizationPayload,
   UnfollowUserInput,
   UnfollowUserPayload,
   UniformResourceLocatable,
@@ -61031,6 +72182,8 @@ const document = _i1.DocumentNode(definitions: [
   UpdateEnterpriseMembersCanViewDependencyInsightsSettingPayload,
   UpdateEnterpriseOrganizationProjectsSettingInput,
   UpdateEnterpriseOrganizationProjectsSettingPayload,
+  UpdateEnterpriseOwnerOrganizationRoleInput,
+  UpdateEnterpriseOwnerOrganizationRolePayload,
   UpdateEnterpriseProfileInput,
   UpdateEnterpriseProfilePayload,
   UpdateEnterpriseRepositoryProjectsSettingInput,
@@ -61055,12 +72208,30 @@ const document = _i1.DocumentNode(definitions: [
   UpdateLabelPayload,
   UpdateNotificationRestrictionSettingInput,
   UpdateNotificationRestrictionSettingPayload,
+  UpdateOrganizationAllowPrivateRepositoryForkingSettingInput,
+  UpdateOrganizationAllowPrivateRepositoryForkingSettingPayload,
   UpdateProjectCardInput,
   UpdateProjectCardPayload,
   UpdateProjectColumnInput,
   UpdateProjectColumnPayload,
+  UpdateProjectDraftIssueInput,
+  UpdateProjectDraftIssuePayload,
   UpdateProjectInput,
+  UpdateProjectNextInput,
+  UpdateProjectNextItemFieldInput,
+  UpdateProjectNextItemFieldPayload,
+  UpdateProjectNextPayload,
   UpdateProjectPayload,
+  UpdateProjectV2DraftIssueInput,
+  UpdateProjectV2DraftIssuePayload,
+  UpdateProjectV2Input,
+  UpdateProjectV2ItemFieldValueInput,
+  UpdateProjectV2ItemFieldValuePayload,
+  UpdateProjectV2ItemPositionInput,
+  UpdateProjectV2ItemPositionPayload,
+  UpdateProjectV2Payload,
+  UpdatePullRequestBranchInput,
+  UpdatePullRequestBranchPayload,
   UpdatePullRequestInput,
   UpdatePullRequestPayload,
   UpdatePullRequestReviewCommentInput,
@@ -61073,6 +72244,8 @@ const document = _i1.DocumentNode(definitions: [
   UpdateRefsPayload,
   UpdateRepositoryInput,
   UpdateRepositoryPayload,
+  UpdateSponsorshipPreferencesInput,
+  UpdateSponsorshipPreferencesPayload,
   UpdateSubscriptionInput,
   UpdateSubscriptionPayload,
   UpdateTeamDiscussionCommentInput,
@@ -61081,6 +72254,8 @@ const document = _i1.DocumentNode(definitions: [
   UpdateTeamDiscussionPayload,
   UpdateTeamReviewAssignmentInput,
   UpdateTeamReviewAssignmentPayload,
+  UpdateTeamsRepositoryInput,
+  UpdateTeamsRepositoryPayload,
   UpdateTopicsInput,
   UpdateTopicsPayload,
   User,

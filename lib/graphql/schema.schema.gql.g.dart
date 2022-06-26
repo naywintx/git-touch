@@ -6,6 +6,26 @@ part of 'schema.schema.gql.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
+const GActorType _$gActorTypeTEAM = const GActorType._('TEAM');
+const GActorType _$gActorTypeUSER = const GActorType._('USER');
+
+GActorType _$gActorTypeValueOf(String name) {
+  switch (name) {
+    case 'TEAM':
+      return _$gActorTypeTEAM;
+    case 'USER':
+      return _$gActorTypeUSER;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GActorType> _$gActorTypeValues =
+    new BuiltSet<GActorType>(const <GActorType>[
+  _$gActorTypeTEAM,
+  _$gActorTypeUSER,
+]);
+
 const GAuditLogOrderField _$gAuditLogOrderFieldCREATED_AT =
     const GAuditLogOrderField._('CREATED_AT');
 
@@ -399,6 +419,63 @@ final BuiltSet<GDefaultRepositoryPermissionField>
   _$gDefaultRepositoryPermissionFieldWRITE,
 ]);
 
+const GDependencyGraphEcosystem _$gDependencyGraphEcosystemACTIONS =
+    const GDependencyGraphEcosystem._('ACTIONS');
+const GDependencyGraphEcosystem _$gDependencyGraphEcosystemCOMPOSER =
+    const GDependencyGraphEcosystem._('COMPOSER');
+const GDependencyGraphEcosystem _$gDependencyGraphEcosystemGO =
+    const GDependencyGraphEcosystem._('GO');
+const GDependencyGraphEcosystem _$gDependencyGraphEcosystemMAVEN =
+    const GDependencyGraphEcosystem._('MAVEN');
+const GDependencyGraphEcosystem _$gDependencyGraphEcosystemNPM =
+    const GDependencyGraphEcosystem._('NPM');
+const GDependencyGraphEcosystem _$gDependencyGraphEcosystemNUGET =
+    const GDependencyGraphEcosystem._('NUGET');
+const GDependencyGraphEcosystem _$gDependencyGraphEcosystemPIP =
+    const GDependencyGraphEcosystem._('PIP');
+const GDependencyGraphEcosystem _$gDependencyGraphEcosystemRUBYGEMS =
+    const GDependencyGraphEcosystem._('RUBYGEMS');
+const GDependencyGraphEcosystem _$gDependencyGraphEcosystemRUST =
+    const GDependencyGraphEcosystem._('RUST');
+
+GDependencyGraphEcosystem _$gDependencyGraphEcosystemValueOf(String name) {
+  switch (name) {
+    case 'ACTIONS':
+      return _$gDependencyGraphEcosystemACTIONS;
+    case 'COMPOSER':
+      return _$gDependencyGraphEcosystemCOMPOSER;
+    case 'GO':
+      return _$gDependencyGraphEcosystemGO;
+    case 'MAVEN':
+      return _$gDependencyGraphEcosystemMAVEN;
+    case 'NPM':
+      return _$gDependencyGraphEcosystemNPM;
+    case 'NUGET':
+      return _$gDependencyGraphEcosystemNUGET;
+    case 'PIP':
+      return _$gDependencyGraphEcosystemPIP;
+    case 'RUBYGEMS':
+      return _$gDependencyGraphEcosystemRUBYGEMS;
+    case 'RUST':
+      return _$gDependencyGraphEcosystemRUST;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GDependencyGraphEcosystem> _$gDependencyGraphEcosystemValues =
+    new BuiltSet<GDependencyGraphEcosystem>(const <GDependencyGraphEcosystem>[
+  _$gDependencyGraphEcosystemACTIONS,
+  _$gDependencyGraphEcosystemCOMPOSER,
+  _$gDependencyGraphEcosystemGO,
+  _$gDependencyGraphEcosystemMAVEN,
+  _$gDependencyGraphEcosystemNPM,
+  _$gDependencyGraphEcosystemNUGET,
+  _$gDependencyGraphEcosystemPIP,
+  _$gDependencyGraphEcosystemRUBYGEMS,
+  _$gDependencyGraphEcosystemRUST,
+]);
+
 const GDeploymentOrderField _$gDeploymentOrderFieldCREATED_AT =
     const GDeploymentOrderField._('CREATED_AT');
 
@@ -617,6 +694,70 @@ final BuiltSet<GDiscussionOrderField> _$gDiscussionOrderFieldValues =
     new BuiltSet<GDiscussionOrderField>(const <GDiscussionOrderField>[
   _$gDiscussionOrderFieldCREATED_AT,
   _$gDiscussionOrderFieldUPDATED_AT,
+]);
+
+const GDiscussionPollOptionOrderField
+    _$gDiscussionPollOptionOrderFieldAUTHORED_ORDER =
+    const GDiscussionPollOptionOrderField._('AUTHORED_ORDER');
+const GDiscussionPollOptionOrderField
+    _$gDiscussionPollOptionOrderFieldVOTE_COUNT =
+    const GDiscussionPollOptionOrderField._('VOTE_COUNT');
+
+GDiscussionPollOptionOrderField _$gDiscussionPollOptionOrderFieldValueOf(
+    String name) {
+  switch (name) {
+    case 'AUTHORED_ORDER':
+      return _$gDiscussionPollOptionOrderFieldAUTHORED_ORDER;
+    case 'VOTE_COUNT':
+      return _$gDiscussionPollOptionOrderFieldVOTE_COUNT;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GDiscussionPollOptionOrderField>
+    _$gDiscussionPollOptionOrderFieldValues =
+    new BuiltSet<GDiscussionPollOptionOrderField>(const <
+        GDiscussionPollOptionOrderField>[
+  _$gDiscussionPollOptionOrderFieldAUTHORED_ORDER,
+  _$gDiscussionPollOptionOrderFieldVOTE_COUNT,
+]);
+
+const GDismissReason _$gDismissReasonFIX_STARTED =
+    const GDismissReason._('FIX_STARTED');
+const GDismissReason _$gDismissReasonINACCURATE =
+    const GDismissReason._('INACCURATE');
+const GDismissReason _$gDismissReasonNOT_USED =
+    const GDismissReason._('NOT_USED');
+const GDismissReason _$gDismissReasonNO_BANDWIDTH =
+    const GDismissReason._('NO_BANDWIDTH');
+const GDismissReason _$gDismissReasonTOLERABLE_RISK =
+    const GDismissReason._('TOLERABLE_RISK');
+
+GDismissReason _$gDismissReasonValueOf(String name) {
+  switch (name) {
+    case 'FIX_STARTED':
+      return _$gDismissReasonFIX_STARTED;
+    case 'INACCURATE':
+      return _$gDismissReasonINACCURATE;
+    case 'NOT_USED':
+      return _$gDismissReasonNOT_USED;
+    case 'NO_BANDWIDTH':
+      return _$gDismissReasonNO_BANDWIDTH;
+    case 'TOLERABLE_RISK':
+      return _$gDismissReasonTOLERABLE_RISK;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GDismissReason> _$gDismissReasonValues =
+    new BuiltSet<GDismissReason>(const <GDismissReason>[
+  _$gDismissReasonFIX_STARTED,
+  _$gDismissReasonINACCURATE,
+  _$gDismissReasonNOT_USED,
+  _$gDismissReasonNO_BANDWIDTH,
+  _$gDismissReasonTOLERABLE_RISK,
 ]);
 
 const GEnterpriseAdministratorInvitationOrderField
@@ -1083,6 +1224,8 @@ const GFundingPlatform _$gFundingPlatformISSUEHUNT =
     const GFundingPlatform._('ISSUEHUNT');
 const GFundingPlatform _$gFundingPlatformKO_FI =
     const GFundingPlatform._('KO_FI');
+const GFundingPlatform _$gFundingPlatformLFX_CROWDFUNDING =
+    const GFundingPlatform._('LFX_CROWDFUNDING');
 const GFundingPlatform _$gFundingPlatformLIBERAPAY =
     const GFundingPlatform._('LIBERAPAY');
 const GFundingPlatform _$gFundingPlatformOPEN_COLLECTIVE =
@@ -1106,6 +1249,8 @@ GFundingPlatform _$gFundingPlatformValueOf(String name) {
       return _$gFundingPlatformISSUEHUNT;
     case 'KO_FI':
       return _$gFundingPlatformKO_FI;
+    case 'LFX_CROWDFUNDING':
+      return _$gFundingPlatformLFX_CROWDFUNDING;
     case 'LIBERAPAY':
       return _$gFundingPlatformLIBERAPAY;
     case 'OPEN_COLLECTIVE':
@@ -1128,6 +1273,7 @@ final BuiltSet<GFundingPlatform> _$gFundingPlatformValues =
   _$gFundingPlatformGITHUB,
   _$gFundingPlatformISSUEHUNT,
   _$gFundingPlatformKO_FI,
+  _$gFundingPlatformLFX_CROWDFUNDING,
   _$gFundingPlatformLIBERAPAY,
   _$gFundingPlatformOPEN_COLLECTIVE,
   _$gFundingPlatformOTECHIE,
@@ -1393,6 +1539,28 @@ final BuiltSet<GIpAllowListForInstalledAppsEnabledSettingValue>
   _$gIpAllowListForInstalledAppsEnabledSettingValueENABLED,
 ]);
 
+const GIssueClosedStateReason _$gIssueClosedStateReasonCOMPLETED =
+    const GIssueClosedStateReason._('COMPLETED');
+const GIssueClosedStateReason _$gIssueClosedStateReasonNOT_PLANNED =
+    const GIssueClosedStateReason._('NOT_PLANNED');
+
+GIssueClosedStateReason _$gIssueClosedStateReasonValueOf(String name) {
+  switch (name) {
+    case 'COMPLETED':
+      return _$gIssueClosedStateReasonCOMPLETED;
+    case 'NOT_PLANNED':
+      return _$gIssueClosedStateReasonNOT_PLANNED;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GIssueClosedStateReason> _$gIssueClosedStateReasonValues =
+    new BuiltSet<GIssueClosedStateReason>(const <GIssueClosedStateReason>[
+  _$gIssueClosedStateReasonCOMPLETED,
+  _$gIssueClosedStateReasonNOT_PLANNED,
+]);
+
 const GIssueCommentOrderField _$gIssueCommentOrderFieldUPDATED_AT =
     const GIssueCommentOrderField._('UPDATED_AT');
 
@@ -1457,6 +1625,33 @@ final BuiltSet<GIssueState> _$gIssueStateValues =
   _$gIssueStateOPEN,
 ]);
 
+const GIssueStateReason _$gIssueStateReasonCOMPLETED =
+    const GIssueStateReason._('COMPLETED');
+const GIssueStateReason _$gIssueStateReasonNOT_PLANNED =
+    const GIssueStateReason._('NOT_PLANNED');
+const GIssueStateReason _$gIssueStateReasonREOPENED =
+    const GIssueStateReason._('REOPENED');
+
+GIssueStateReason _$gIssueStateReasonValueOf(String name) {
+  switch (name) {
+    case 'COMPLETED':
+      return _$gIssueStateReasonCOMPLETED;
+    case 'NOT_PLANNED':
+      return _$gIssueStateReasonNOT_PLANNED;
+    case 'REOPENED':
+      return _$gIssueStateReasonREOPENED;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GIssueStateReason> _$gIssueStateReasonValues =
+    new BuiltSet<GIssueStateReason>(const <GIssueStateReason>[
+  _$gIssueStateReasonCOMPLETED,
+  _$gIssueStateReasonNOT_PLANNED,
+  _$gIssueStateReasonREOPENED,
+]);
+
 const GIssueTimelineItemsItemType
     _$gIssueTimelineItemsItemTypeADDED_TO_PROJECT_EVENT =
     const GIssueTimelineItemsItemType._('ADDED_TO_PROJECT_EVENT');
@@ -1472,6 +1667,9 @@ const GIssueTimelineItemsItemType _$gIssueTimelineItemsItemTypeCONNECTED_EVENT =
 const GIssueTimelineItemsItemType
     _$gIssueTimelineItemsItemTypeCONVERTED_NOTE_TO_ISSUE_EVENT =
     const GIssueTimelineItemsItemType._('CONVERTED_NOTE_TO_ISSUE_EVENT');
+const GIssueTimelineItemsItemType
+    _$gIssueTimelineItemsItemTypeCONVERTED_TO_DISCUSSION_EVENT =
+    const GIssueTimelineItemsItemType._('CONVERTED_TO_DISCUSSION_EVENT');
 const GIssueTimelineItemsItemType
     _$gIssueTimelineItemsItemTypeCROSS_REFERENCED_EVENT =
     const GIssueTimelineItemsItemType._('CROSS_REFERENCED_EVENT');
@@ -1550,6 +1748,8 @@ GIssueTimelineItemsItemType _$gIssueTimelineItemsItemTypeValueOf(String name) {
       return _$gIssueTimelineItemsItemTypeCONNECTED_EVENT;
     case 'CONVERTED_NOTE_TO_ISSUE_EVENT':
       return _$gIssueTimelineItemsItemTypeCONVERTED_NOTE_TO_ISSUE_EVENT;
+    case 'CONVERTED_TO_DISCUSSION_EVENT':
+      return _$gIssueTimelineItemsItemTypeCONVERTED_TO_DISCUSSION_EVENT;
     case 'CROSS_REFERENCED_EVENT':
       return _$gIssueTimelineItemsItemTypeCROSS_REFERENCED_EVENT;
     case 'DEMILESTONED_EVENT':
@@ -1612,6 +1812,7 @@ final BuiltSet<GIssueTimelineItemsItemType>
   _$gIssueTimelineItemsItemTypeCOMMENT_DELETED_EVENT,
   _$gIssueTimelineItemsItemTypeCONNECTED_EVENT,
   _$gIssueTimelineItemsItemTypeCONVERTED_NOTE_TO_ISSUE_EVENT,
+  _$gIssueTimelineItemsItemTypeCONVERTED_TO_DISCUSSION_EVENT,
   _$gIssueTimelineItemsItemTypeCROSS_REFERENCED_EVENT,
   _$gIssueTimelineItemsItemTypeDEMILESTONED_EVENT,
   _$gIssueTimelineItemsItemTypeDISCONNECTED_EVENT,
@@ -1784,6 +1985,90 @@ final BuiltSet<GMergeableState> _$gMergeableStateValues =
   _$gMergeableStateUNKNOWN,
 ]);
 
+const GMigrationSourceType _$gMigrationSourceTypeAZURE_DEVOPS =
+    const GMigrationSourceType._('AZURE_DEVOPS');
+const GMigrationSourceType _$gMigrationSourceTypeBITBUCKET_SERVER =
+    const GMigrationSourceType._('BITBUCKET_SERVER');
+const GMigrationSourceType _$gMigrationSourceTypeGITHUB =
+    const GMigrationSourceType._('GITHUB');
+const GMigrationSourceType _$gMigrationSourceTypeGITHUB_ARCHIVE =
+    const GMigrationSourceType._('GITHUB_ARCHIVE');
+const GMigrationSourceType _$gMigrationSourceTypeGITLAB =
+    const GMigrationSourceType._('GITLAB');
+
+GMigrationSourceType _$gMigrationSourceTypeValueOf(String name) {
+  switch (name) {
+    case 'AZURE_DEVOPS':
+      return _$gMigrationSourceTypeAZURE_DEVOPS;
+    case 'BITBUCKET_SERVER':
+      return _$gMigrationSourceTypeBITBUCKET_SERVER;
+    case 'GITHUB':
+      return _$gMigrationSourceTypeGITHUB;
+    case 'GITHUB_ARCHIVE':
+      return _$gMigrationSourceTypeGITHUB_ARCHIVE;
+    case 'GITLAB':
+      return _$gMigrationSourceTypeGITLAB;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GMigrationSourceType> _$gMigrationSourceTypeValues =
+    new BuiltSet<GMigrationSourceType>(const <GMigrationSourceType>[
+  _$gMigrationSourceTypeAZURE_DEVOPS,
+  _$gMigrationSourceTypeBITBUCKET_SERVER,
+  _$gMigrationSourceTypeGITHUB,
+  _$gMigrationSourceTypeGITHUB_ARCHIVE,
+  _$gMigrationSourceTypeGITLAB,
+]);
+
+const GMigrationState _$gMigrationStateFAILED =
+    const GMigrationState._('FAILED');
+const GMigrationState _$gMigrationStateFAILED_VALIDATION =
+    const GMigrationState._('FAILED_VALIDATION');
+const GMigrationState _$gMigrationStateIN_PROGRESS =
+    const GMigrationState._('IN_PROGRESS');
+const GMigrationState _$gMigrationStateNOT_STARTED =
+    const GMigrationState._('NOT_STARTED');
+const GMigrationState _$gMigrationStatePENDING_VALIDATION =
+    const GMigrationState._('PENDING_VALIDATION');
+const GMigrationState _$gMigrationStateQUEUED =
+    const GMigrationState._('QUEUED');
+const GMigrationState _$gMigrationStateSUCCEEDED =
+    const GMigrationState._('SUCCEEDED');
+
+GMigrationState _$gMigrationStateValueOf(String name) {
+  switch (name) {
+    case 'FAILED':
+      return _$gMigrationStateFAILED;
+    case 'FAILED_VALIDATION':
+      return _$gMigrationStateFAILED_VALIDATION;
+    case 'IN_PROGRESS':
+      return _$gMigrationStateIN_PROGRESS;
+    case 'NOT_STARTED':
+      return _$gMigrationStateNOT_STARTED;
+    case 'PENDING_VALIDATION':
+      return _$gMigrationStatePENDING_VALIDATION;
+    case 'QUEUED':
+      return _$gMigrationStateQUEUED;
+    case 'SUCCEEDED':
+      return _$gMigrationStateSUCCEEDED;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GMigrationState> _$gMigrationStateValues =
+    new BuiltSet<GMigrationState>(const <GMigrationState>[
+  _$gMigrationStateFAILED,
+  _$gMigrationStateFAILED_VALIDATION,
+  _$gMigrationStateIN_PROGRESS,
+  _$gMigrationStateNOT_STARTED,
+  _$gMigrationStatePENDING_VALIDATION,
+  _$gMigrationStateQUEUED,
+  _$gMigrationStateSUCCEEDED,
+]);
+
 const GMilestoneOrderField _$gMilestoneOrderFieldCREATED_AT =
     const GMilestoneOrderField._('CREATED_AT');
 const GMilestoneOrderField _$gMilestoneOrderFieldDUE_DATE =
@@ -1862,6 +2147,23 @@ final BuiltSet<GNotificationRestrictionSettingValue>
         GNotificationRestrictionSettingValue>[
   _$gNotificationRestrictionSettingValueDISABLED,
   _$gNotificationRestrictionSettingValueENABLED,
+]);
+
+const GOIDCProviderType _$gOIDCProviderTypeAAD =
+    const GOIDCProviderType._('AAD');
+
+GOIDCProviderType _$gOIDCProviderTypeValueOf(String name) {
+  switch (name) {
+    case 'AAD':
+      return _$gOIDCProviderTypeAAD;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GOIDCProviderType> _$gOIDCProviderTypeValues =
+    new BuiltSet<GOIDCProviderType>(const <GOIDCProviderType>[
+  _$gOIDCProviderTypeAAD,
 ]);
 
 const GOauthApplicationCreateAuditEntryState
@@ -2031,6 +2333,25 @@ final BuiltSet<GOrgCreateAuditEntryBillingPlan>
   _$gOrgCreateAuditEntryBillingPlanUNLIMITED,
 ]);
 
+const GOrgEnterpriseOwnerOrderField _$gOrgEnterpriseOwnerOrderFieldLOGIN =
+    const GOrgEnterpriseOwnerOrderField._('LOGIN');
+
+GOrgEnterpriseOwnerOrderField _$gOrgEnterpriseOwnerOrderFieldValueOf(
+    String name) {
+  switch (name) {
+    case 'LOGIN':
+      return _$gOrgEnterpriseOwnerOrderFieldLOGIN;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GOrgEnterpriseOwnerOrderField>
+    _$gOrgEnterpriseOwnerOrderFieldValues = new BuiltSet<
+        GOrgEnterpriseOwnerOrderField>(const <GOrgEnterpriseOwnerOrderField>[
+  _$gOrgEnterpriseOwnerOrderFieldLOGIN,
+]);
+
 const GOrgRemoveBillingManagerAuditEntryReason
     _$gOrgRemoveBillingManagerAuditEntryReasonSAML_EXTERNAL_IDENTITY_MISSING =
     const GOrgRemoveBillingManagerAuditEntryReason._(
@@ -2080,6 +2401,9 @@ const GOrgRemoveMemberAuditEntryMembershipType
     _$gOrgRemoveMemberAuditEntryMembershipTypeOUTSIDE_COLLABORATOR =
     const GOrgRemoveMemberAuditEntryMembershipType._('OUTSIDE_COLLABORATOR');
 const GOrgRemoveMemberAuditEntryMembershipType
+    _$gOrgRemoveMemberAuditEntryMembershipTypeSUSPENDED =
+    const GOrgRemoveMemberAuditEntryMembershipType._('SUSPENDED');
+const GOrgRemoveMemberAuditEntryMembershipType
     _$gOrgRemoveMemberAuditEntryMembershipTypeUNAFFILIATED =
     const GOrgRemoveMemberAuditEntryMembershipType._('UNAFFILIATED');
 
@@ -2094,6 +2418,8 @@ GOrgRemoveMemberAuditEntryMembershipType
       return _$gOrgRemoveMemberAuditEntryMembershipTypeDIRECT_MEMBER;
     case 'OUTSIDE_COLLABORATOR':
       return _$gOrgRemoveMemberAuditEntryMembershipTypeOUTSIDE_COLLABORATOR;
+    case 'SUSPENDED':
+      return _$gOrgRemoveMemberAuditEntryMembershipTypeSUSPENDED;
     case 'UNAFFILIATED':
       return _$gOrgRemoveMemberAuditEntryMembershipTypeUNAFFILIATED;
     default:
@@ -2109,6 +2435,7 @@ final BuiltSet<GOrgRemoveMemberAuditEntryMembershipType>
   _$gOrgRemoveMemberAuditEntryMembershipTypeBILLING_MANAGER,
   _$gOrgRemoveMemberAuditEntryMembershipTypeDIRECT_MEMBER,
   _$gOrgRemoveMemberAuditEntryMembershipTypeOUTSIDE_COLLABORATOR,
+  _$gOrgRemoveMemberAuditEntryMembershipTypeSUSPENDED,
   _$gOrgRemoveMemberAuditEntryMembershipTypeUNAFFILIATED,
 ]);
 
@@ -2449,6 +2776,9 @@ const GOrganizationMembersCanCreateRepositoriesSettingValue
     _$gOrganizationMembersCanCreateRepositoriesSettingValueDISABLED =
     const GOrganizationMembersCanCreateRepositoriesSettingValue._('DISABLED');
 const GOrganizationMembersCanCreateRepositoriesSettingValue
+    _$gOrganizationMembersCanCreateRepositoriesSettingValueINTERNAL =
+    const GOrganizationMembersCanCreateRepositoriesSettingValue._('INTERNAL');
+const GOrganizationMembersCanCreateRepositoriesSettingValue
     _$gOrganizationMembersCanCreateRepositoriesSettingValuePRIVATE =
     const GOrganizationMembersCanCreateRepositoriesSettingValue._('PRIVATE');
 
@@ -2460,6 +2790,8 @@ GOrganizationMembersCanCreateRepositoriesSettingValue
       return _$gOrganizationMembersCanCreateRepositoriesSettingValueALL;
     case 'DISABLED':
       return _$gOrganizationMembersCanCreateRepositoriesSettingValueDISABLED;
+    case 'INTERNAL':
+      return _$gOrganizationMembersCanCreateRepositoriesSettingValueINTERNAL;
     case 'PRIVATE':
       return _$gOrganizationMembersCanCreateRepositoriesSettingValuePRIVATE;
     default:
@@ -2473,6 +2805,7 @@ final BuiltSet<GOrganizationMembersCanCreateRepositoriesSettingValue>
         GOrganizationMembersCanCreateRepositoriesSettingValue>[
   _$gOrganizationMembersCanCreateRepositoriesSettingValueALL,
   _$gOrganizationMembersCanCreateRepositoriesSettingValueDISABLED,
+  _$gOrganizationMembersCanCreateRepositoriesSettingValueINTERNAL,
   _$gOrganizationMembersCanCreateRepositoriesSettingValuePRIVATE,
 ]);
 
@@ -2587,6 +2920,42 @@ GPackageVersionOrderField _$gPackageVersionOrderFieldValueOf(String name) {
 final BuiltSet<GPackageVersionOrderField> _$gPackageVersionOrderFieldValues =
     new BuiltSet<GPackageVersionOrderField>(const <GPackageVersionOrderField>[
   _$gPackageVersionOrderFieldCREATED_AT,
+]);
+
+const GPatchStatus _$gPatchStatusADDED = const GPatchStatus._('ADDED');
+const GPatchStatus _$gPatchStatusCHANGED = const GPatchStatus._('CHANGED');
+const GPatchStatus _$gPatchStatusCOPIED = const GPatchStatus._('COPIED');
+const GPatchStatus _$gPatchStatusDELETED = const GPatchStatus._('DELETED');
+const GPatchStatus _$gPatchStatusMODIFIED = const GPatchStatus._('MODIFIED');
+const GPatchStatus _$gPatchStatusRENAMED = const GPatchStatus._('RENAMED');
+
+GPatchStatus _$gPatchStatusValueOf(String name) {
+  switch (name) {
+    case 'ADDED':
+      return _$gPatchStatusADDED;
+    case 'CHANGED':
+      return _$gPatchStatusCHANGED;
+    case 'COPIED':
+      return _$gPatchStatusCOPIED;
+    case 'DELETED':
+      return _$gPatchStatusDELETED;
+    case 'MODIFIED':
+      return _$gPatchStatusMODIFIED;
+    case 'RENAMED':
+      return _$gPatchStatusRENAMED;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GPatchStatus> _$gPatchStatusValues =
+    new BuiltSet<GPatchStatus>(const <GPatchStatus>[
+  _$gPatchStatusADDED,
+  _$gPatchStatusCHANGED,
+  _$gPatchStatusCOPIED,
+  _$gPatchStatusDELETED,
+  _$gPatchStatusMODIFIED,
+  _$gPatchStatusRENAMED,
 ]);
 
 const GPinnableItemType _$gPinnableItemTypeGIST =
@@ -2796,6 +3165,147 @@ final BuiltSet<GProjectColumnPurpose> _$gProjectColumnPurposeValues =
   _$gProjectColumnPurposeTODO,
 ]);
 
+const GProjectItemType _$gProjectItemTypeDRAFT_ISSUE =
+    const GProjectItemType._('DRAFT_ISSUE');
+const GProjectItemType _$gProjectItemTypeISSUE =
+    const GProjectItemType._('ISSUE');
+const GProjectItemType _$gProjectItemTypePULL_REQUEST =
+    const GProjectItemType._('PULL_REQUEST');
+const GProjectItemType _$gProjectItemTypeREDACTED =
+    const GProjectItemType._('REDACTED');
+
+GProjectItemType _$gProjectItemTypeValueOf(String name) {
+  switch (name) {
+    case 'DRAFT_ISSUE':
+      return _$gProjectItemTypeDRAFT_ISSUE;
+    case 'ISSUE':
+      return _$gProjectItemTypeISSUE;
+    case 'PULL_REQUEST':
+      return _$gProjectItemTypePULL_REQUEST;
+    case 'REDACTED':
+      return _$gProjectItemTypeREDACTED;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GProjectItemType> _$gProjectItemTypeValues =
+    new BuiltSet<GProjectItemType>(const <GProjectItemType>[
+  _$gProjectItemTypeDRAFT_ISSUE,
+  _$gProjectItemTypeISSUE,
+  _$gProjectItemTypePULL_REQUEST,
+  _$gProjectItemTypeREDACTED,
+]);
+
+const GProjectNextFieldType _$gProjectNextFieldTypeASSIGNEES =
+    const GProjectNextFieldType._('ASSIGNEES');
+const GProjectNextFieldType _$gProjectNextFieldTypeDATE =
+    const GProjectNextFieldType._('DATE');
+const GProjectNextFieldType _$gProjectNextFieldTypeITERATION =
+    const GProjectNextFieldType._('ITERATION');
+const GProjectNextFieldType _$gProjectNextFieldTypeLABELS =
+    const GProjectNextFieldType._('LABELS');
+const GProjectNextFieldType _$gProjectNextFieldTypeLINKED_PULL_REQUESTS =
+    const GProjectNextFieldType._('LINKED_PULL_REQUESTS');
+const GProjectNextFieldType _$gProjectNextFieldTypeMILESTONE =
+    const GProjectNextFieldType._('MILESTONE');
+const GProjectNextFieldType _$gProjectNextFieldTypeNUMBER =
+    const GProjectNextFieldType._('NUMBER');
+const GProjectNextFieldType _$gProjectNextFieldTypeREPOSITORY =
+    const GProjectNextFieldType._('REPOSITORY');
+const GProjectNextFieldType _$gProjectNextFieldTypeREVIEWERS =
+    const GProjectNextFieldType._('REVIEWERS');
+const GProjectNextFieldType _$gProjectNextFieldTypeSINGLE_SELECT =
+    const GProjectNextFieldType._('SINGLE_SELECT');
+const GProjectNextFieldType _$gProjectNextFieldTypeTEXT =
+    const GProjectNextFieldType._('TEXT');
+const GProjectNextFieldType _$gProjectNextFieldTypeTITLE =
+    const GProjectNextFieldType._('TITLE');
+const GProjectNextFieldType _$gProjectNextFieldTypeTRACKS =
+    const GProjectNextFieldType._('TRACKS');
+
+GProjectNextFieldType _$gProjectNextFieldTypeValueOf(String name) {
+  switch (name) {
+    case 'ASSIGNEES':
+      return _$gProjectNextFieldTypeASSIGNEES;
+    case 'DATE':
+      return _$gProjectNextFieldTypeDATE;
+    case 'ITERATION':
+      return _$gProjectNextFieldTypeITERATION;
+    case 'LABELS':
+      return _$gProjectNextFieldTypeLABELS;
+    case 'LINKED_PULL_REQUESTS':
+      return _$gProjectNextFieldTypeLINKED_PULL_REQUESTS;
+    case 'MILESTONE':
+      return _$gProjectNextFieldTypeMILESTONE;
+    case 'NUMBER':
+      return _$gProjectNextFieldTypeNUMBER;
+    case 'REPOSITORY':
+      return _$gProjectNextFieldTypeREPOSITORY;
+    case 'REVIEWERS':
+      return _$gProjectNextFieldTypeREVIEWERS;
+    case 'SINGLE_SELECT':
+      return _$gProjectNextFieldTypeSINGLE_SELECT;
+    case 'TEXT':
+      return _$gProjectNextFieldTypeTEXT;
+    case 'TITLE':
+      return _$gProjectNextFieldTypeTITLE;
+    case 'TRACKS':
+      return _$gProjectNextFieldTypeTRACKS;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GProjectNextFieldType> _$gProjectNextFieldTypeValues =
+    new BuiltSet<GProjectNextFieldType>(const <GProjectNextFieldType>[
+  _$gProjectNextFieldTypeASSIGNEES,
+  _$gProjectNextFieldTypeDATE,
+  _$gProjectNextFieldTypeITERATION,
+  _$gProjectNextFieldTypeLABELS,
+  _$gProjectNextFieldTypeLINKED_PULL_REQUESTS,
+  _$gProjectNextFieldTypeMILESTONE,
+  _$gProjectNextFieldTypeNUMBER,
+  _$gProjectNextFieldTypeREPOSITORY,
+  _$gProjectNextFieldTypeREVIEWERS,
+  _$gProjectNextFieldTypeSINGLE_SELECT,
+  _$gProjectNextFieldTypeTEXT,
+  _$gProjectNextFieldTypeTITLE,
+  _$gProjectNextFieldTypeTRACKS,
+]);
+
+const GProjectNextOrderField _$gProjectNextOrderFieldCREATED_AT =
+    const GProjectNextOrderField._('CREATED_AT');
+const GProjectNextOrderField _$gProjectNextOrderFieldNUMBER =
+    const GProjectNextOrderField._('NUMBER');
+const GProjectNextOrderField _$gProjectNextOrderFieldTITLE =
+    const GProjectNextOrderField._('TITLE');
+const GProjectNextOrderField _$gProjectNextOrderFieldUPDATED_AT =
+    const GProjectNextOrderField._('UPDATED_AT');
+
+GProjectNextOrderField _$gProjectNextOrderFieldValueOf(String name) {
+  switch (name) {
+    case 'CREATED_AT':
+      return _$gProjectNextOrderFieldCREATED_AT;
+    case 'NUMBER':
+      return _$gProjectNextOrderFieldNUMBER;
+    case 'TITLE':
+      return _$gProjectNextOrderFieldTITLE;
+    case 'UPDATED_AT':
+      return _$gProjectNextOrderFieldUPDATED_AT;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GProjectNextOrderField> _$gProjectNextOrderFieldValues =
+    new BuiltSet<GProjectNextOrderField>(const <GProjectNextOrderField>[
+  _$gProjectNextOrderFieldCREATED_AT,
+  _$gProjectNextOrderFieldNUMBER,
+  _$gProjectNextOrderFieldTITLE,
+  _$gProjectNextOrderFieldUPDATED_AT,
+]);
+
 const GProjectOrderField _$gProjectOrderFieldCREATED_AT =
     const GProjectOrderField._('CREATED_AT');
 const GProjectOrderField _$gProjectOrderFieldNAME =
@@ -2873,6 +3383,191 @@ final BuiltSet<GProjectTemplate> _$gProjectTemplateValues =
   _$gProjectTemplateAUTOMATED_REVIEWS_KANBAN,
   _$gProjectTemplateBASIC_KANBAN,
   _$gProjectTemplateBUG_TRIAGE,
+]);
+
+const GProjectV2FieldType _$gProjectV2FieldTypeASSIGNEES =
+    const GProjectV2FieldType._('ASSIGNEES');
+const GProjectV2FieldType _$gProjectV2FieldTypeDATE =
+    const GProjectV2FieldType._('DATE');
+const GProjectV2FieldType _$gProjectV2FieldTypeITERATION =
+    const GProjectV2FieldType._('ITERATION');
+const GProjectV2FieldType _$gProjectV2FieldTypeLABELS =
+    const GProjectV2FieldType._('LABELS');
+const GProjectV2FieldType _$gProjectV2FieldTypeLINKED_PULL_REQUESTS =
+    const GProjectV2FieldType._('LINKED_PULL_REQUESTS');
+const GProjectV2FieldType _$gProjectV2FieldTypeMILESTONE =
+    const GProjectV2FieldType._('MILESTONE');
+const GProjectV2FieldType _$gProjectV2FieldTypeNUMBER =
+    const GProjectV2FieldType._('NUMBER');
+const GProjectV2FieldType _$gProjectV2FieldTypeREPOSITORY =
+    const GProjectV2FieldType._('REPOSITORY');
+const GProjectV2FieldType _$gProjectV2FieldTypeREVIEWERS =
+    const GProjectV2FieldType._('REVIEWERS');
+const GProjectV2FieldType _$gProjectV2FieldTypeSINGLE_SELECT =
+    const GProjectV2FieldType._('SINGLE_SELECT');
+const GProjectV2FieldType _$gProjectV2FieldTypeTEXT =
+    const GProjectV2FieldType._('TEXT');
+const GProjectV2FieldType _$gProjectV2FieldTypeTITLE =
+    const GProjectV2FieldType._('TITLE');
+const GProjectV2FieldType _$gProjectV2FieldTypeTRACKS =
+    const GProjectV2FieldType._('TRACKS');
+
+GProjectV2FieldType _$gProjectV2FieldTypeValueOf(String name) {
+  switch (name) {
+    case 'ASSIGNEES':
+      return _$gProjectV2FieldTypeASSIGNEES;
+    case 'DATE':
+      return _$gProjectV2FieldTypeDATE;
+    case 'ITERATION':
+      return _$gProjectV2FieldTypeITERATION;
+    case 'LABELS':
+      return _$gProjectV2FieldTypeLABELS;
+    case 'LINKED_PULL_REQUESTS':
+      return _$gProjectV2FieldTypeLINKED_PULL_REQUESTS;
+    case 'MILESTONE':
+      return _$gProjectV2FieldTypeMILESTONE;
+    case 'NUMBER':
+      return _$gProjectV2FieldTypeNUMBER;
+    case 'REPOSITORY':
+      return _$gProjectV2FieldTypeREPOSITORY;
+    case 'REVIEWERS':
+      return _$gProjectV2FieldTypeREVIEWERS;
+    case 'SINGLE_SELECT':
+      return _$gProjectV2FieldTypeSINGLE_SELECT;
+    case 'TEXT':
+      return _$gProjectV2FieldTypeTEXT;
+    case 'TITLE':
+      return _$gProjectV2FieldTypeTITLE;
+    case 'TRACKS':
+      return _$gProjectV2FieldTypeTRACKS;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GProjectV2FieldType> _$gProjectV2FieldTypeValues =
+    new BuiltSet<GProjectV2FieldType>(const <GProjectV2FieldType>[
+  _$gProjectV2FieldTypeASSIGNEES,
+  _$gProjectV2FieldTypeDATE,
+  _$gProjectV2FieldTypeITERATION,
+  _$gProjectV2FieldTypeLABELS,
+  _$gProjectV2FieldTypeLINKED_PULL_REQUESTS,
+  _$gProjectV2FieldTypeMILESTONE,
+  _$gProjectV2FieldTypeNUMBER,
+  _$gProjectV2FieldTypeREPOSITORY,
+  _$gProjectV2FieldTypeREVIEWERS,
+  _$gProjectV2FieldTypeSINGLE_SELECT,
+  _$gProjectV2FieldTypeTEXT,
+  _$gProjectV2FieldTypeTITLE,
+  _$gProjectV2FieldTypeTRACKS,
+]);
+
+const GProjectV2ItemType _$gProjectV2ItemTypeDRAFT_ISSUE =
+    const GProjectV2ItemType._('DRAFT_ISSUE');
+const GProjectV2ItemType _$gProjectV2ItemTypeISSUE =
+    const GProjectV2ItemType._('ISSUE');
+const GProjectV2ItemType _$gProjectV2ItemTypePULL_REQUEST =
+    const GProjectV2ItemType._('PULL_REQUEST');
+const GProjectV2ItemType _$gProjectV2ItemTypeREDACTED =
+    const GProjectV2ItemType._('REDACTED');
+
+GProjectV2ItemType _$gProjectV2ItemTypeValueOf(String name) {
+  switch (name) {
+    case 'DRAFT_ISSUE':
+      return _$gProjectV2ItemTypeDRAFT_ISSUE;
+    case 'ISSUE':
+      return _$gProjectV2ItemTypeISSUE;
+    case 'PULL_REQUEST':
+      return _$gProjectV2ItemTypePULL_REQUEST;
+    case 'REDACTED':
+      return _$gProjectV2ItemTypeREDACTED;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GProjectV2ItemType> _$gProjectV2ItemTypeValues =
+    new BuiltSet<GProjectV2ItemType>(const <GProjectV2ItemType>[
+  _$gProjectV2ItemTypeDRAFT_ISSUE,
+  _$gProjectV2ItemTypeISSUE,
+  _$gProjectV2ItemTypePULL_REQUEST,
+  _$gProjectV2ItemTypeREDACTED,
+]);
+
+const GProjectV2OrderField _$gProjectV2OrderFieldCREATED_AT =
+    const GProjectV2OrderField._('CREATED_AT');
+const GProjectV2OrderField _$gProjectV2OrderFieldNUMBER =
+    const GProjectV2OrderField._('NUMBER');
+const GProjectV2OrderField _$gProjectV2OrderFieldTITLE =
+    const GProjectV2OrderField._('TITLE');
+const GProjectV2OrderField _$gProjectV2OrderFieldUPDATED_AT =
+    const GProjectV2OrderField._('UPDATED_AT');
+
+GProjectV2OrderField _$gProjectV2OrderFieldValueOf(String name) {
+  switch (name) {
+    case 'CREATED_AT':
+      return _$gProjectV2OrderFieldCREATED_AT;
+    case 'NUMBER':
+      return _$gProjectV2OrderFieldNUMBER;
+    case 'TITLE':
+      return _$gProjectV2OrderFieldTITLE;
+    case 'UPDATED_AT':
+      return _$gProjectV2OrderFieldUPDATED_AT;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GProjectV2OrderField> _$gProjectV2OrderFieldValues =
+    new BuiltSet<GProjectV2OrderField>(const <GProjectV2OrderField>[
+  _$gProjectV2OrderFieldCREATED_AT,
+  _$gProjectV2OrderFieldNUMBER,
+  _$gProjectV2OrderFieldTITLE,
+  _$gProjectV2OrderFieldUPDATED_AT,
+]);
+
+const GProjectV2ViewLayout _$gProjectV2ViewLayoutBOARD_LAYOUT =
+    const GProjectV2ViewLayout._('BOARD_LAYOUT');
+const GProjectV2ViewLayout _$gProjectV2ViewLayoutTABLE_LAYOUT =
+    const GProjectV2ViewLayout._('TABLE_LAYOUT');
+
+GProjectV2ViewLayout _$gProjectV2ViewLayoutValueOf(String name) {
+  switch (name) {
+    case 'BOARD_LAYOUT':
+      return _$gProjectV2ViewLayoutBOARD_LAYOUT;
+    case 'TABLE_LAYOUT':
+      return _$gProjectV2ViewLayoutTABLE_LAYOUT;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GProjectV2ViewLayout> _$gProjectV2ViewLayoutValues =
+    new BuiltSet<GProjectV2ViewLayout>(const <GProjectV2ViewLayout>[
+  _$gProjectV2ViewLayoutBOARD_LAYOUT,
+  _$gProjectV2ViewLayoutTABLE_LAYOUT,
+]);
+
+const GProjectViewLayout _$gProjectViewLayoutBOARD_LAYOUT =
+    const GProjectViewLayout._('BOARD_LAYOUT');
+const GProjectViewLayout _$gProjectViewLayoutTABLE_LAYOUT =
+    const GProjectViewLayout._('TABLE_LAYOUT');
+
+GProjectViewLayout _$gProjectViewLayoutValueOf(String name) {
+  switch (name) {
+    case 'BOARD_LAYOUT':
+      return _$gProjectViewLayoutBOARD_LAYOUT;
+    case 'TABLE_LAYOUT':
+      return _$gProjectViewLayoutTABLE_LAYOUT;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GProjectViewLayout> _$gProjectViewLayoutValues =
+    new BuiltSet<GProjectViewLayout>(const <GProjectViewLayout>[
+  _$gProjectViewLayoutBOARD_LAYOUT,
+  _$gProjectViewLayoutTABLE_LAYOUT,
 ]);
 
 const GPullRequestMergeMethod _$gPullRequestMergeMethodMERGE =
@@ -3072,6 +3767,9 @@ final BuiltSet<GPullRequestState> _$gPullRequestStateValues =
 ]);
 
 const GPullRequestTimelineItemsItemType
+    _$gPullRequestTimelineItemsItemTypeADDED_TO_MERGE_QUEUE_EVENT =
+    const GPullRequestTimelineItemsItemType._('ADDED_TO_MERGE_QUEUE_EVENT');
+const GPullRequestTimelineItemsItemType
     _$gPullRequestTimelineItemsItemTypeADDED_TO_PROJECT_EVENT =
     const GPullRequestTimelineItemsItemType._('ADDED_TO_PROJECT_EVENT');
 const GPullRequestTimelineItemsItemType
@@ -3118,6 +3816,9 @@ const GPullRequestTimelineItemsItemType
 const GPullRequestTimelineItemsItemType
     _$gPullRequestTimelineItemsItemTypeCONVERTED_NOTE_TO_ISSUE_EVENT =
     const GPullRequestTimelineItemsItemType._('CONVERTED_NOTE_TO_ISSUE_EVENT');
+const GPullRequestTimelineItemsItemType
+    _$gPullRequestTimelineItemsItemTypeCONVERTED_TO_DISCUSSION_EVENT =
+    const GPullRequestTimelineItemsItemType._('CONVERTED_TO_DISCUSSION_EVENT');
 const GPullRequestTimelineItemsItemType
     _$gPullRequestTimelineItemsItemTypeCONVERT_TO_DRAFT_EVENT =
     const GPullRequestTimelineItemsItemType._('CONVERT_TO_DRAFT_EVENT');
@@ -3196,6 +3897,9 @@ const GPullRequestTimelineItemsItemType
     _$gPullRequestTimelineItemsItemTypeREFERENCED_EVENT =
     const GPullRequestTimelineItemsItemType._('REFERENCED_EVENT');
 const GPullRequestTimelineItemsItemType
+    _$gPullRequestTimelineItemsItemTypeREMOVED_FROM_MERGE_QUEUE_EVENT =
+    const GPullRequestTimelineItemsItemType._('REMOVED_FROM_MERGE_QUEUE_EVENT');
+const GPullRequestTimelineItemsItemType
     _$gPullRequestTimelineItemsItemTypeREMOVED_FROM_PROJECT_EVENT =
     const GPullRequestTimelineItemsItemType._('REMOVED_FROM_PROJECT_EVENT');
 const GPullRequestTimelineItemsItemType
@@ -3244,6 +3948,8 @@ const GPullRequestTimelineItemsItemType
 GPullRequestTimelineItemsItemType _$gPullRequestTimelineItemsItemTypeValueOf(
     String name) {
   switch (name) {
+    case 'ADDED_TO_MERGE_QUEUE_EVENT':
+      return _$gPullRequestTimelineItemsItemTypeADDED_TO_MERGE_QUEUE_EVENT;
     case 'ADDED_TO_PROJECT_EVENT':
       return _$gPullRequestTimelineItemsItemTypeADDED_TO_PROJECT_EVENT;
     case 'ASSIGNED_EVENT':
@@ -3274,6 +3980,8 @@ GPullRequestTimelineItemsItemType _$gPullRequestTimelineItemsItemTypeValueOf(
       return _$gPullRequestTimelineItemsItemTypeCONNECTED_EVENT;
     case 'CONVERTED_NOTE_TO_ISSUE_EVENT':
       return _$gPullRequestTimelineItemsItemTypeCONVERTED_NOTE_TO_ISSUE_EVENT;
+    case 'CONVERTED_TO_DISCUSSION_EVENT':
+      return _$gPullRequestTimelineItemsItemTypeCONVERTED_TO_DISCUSSION_EVENT;
     case 'CONVERT_TO_DRAFT_EVENT':
       return _$gPullRequestTimelineItemsItemTypeCONVERT_TO_DRAFT_EVENT;
     case 'CROSS_REFERENCED_EVENT':
@@ -3324,6 +4032,8 @@ GPullRequestTimelineItemsItemType _$gPullRequestTimelineItemsItemTypeValueOf(
       return _$gPullRequestTimelineItemsItemTypeREADY_FOR_REVIEW_EVENT;
     case 'REFERENCED_EVENT':
       return _$gPullRequestTimelineItemsItemTypeREFERENCED_EVENT;
+    case 'REMOVED_FROM_MERGE_QUEUE_EVENT':
+      return _$gPullRequestTimelineItemsItemTypeREMOVED_FROM_MERGE_QUEUE_EVENT;
     case 'REMOVED_FROM_PROJECT_EVENT':
       return _$gPullRequestTimelineItemsItemTypeREMOVED_FROM_PROJECT_EVENT;
     case 'RENAMED_TITLE_EVENT':
@@ -3363,6 +4073,7 @@ final BuiltSet<GPullRequestTimelineItemsItemType>
     _$gPullRequestTimelineItemsItemTypeValues =
     new BuiltSet<GPullRequestTimelineItemsItemType>(const <
         GPullRequestTimelineItemsItemType>[
+  _$gPullRequestTimelineItemsItemTypeADDED_TO_MERGE_QUEUE_EVENT,
   _$gPullRequestTimelineItemsItemTypeADDED_TO_PROJECT_EVENT,
   _$gPullRequestTimelineItemsItemTypeASSIGNED_EVENT,
   _$gPullRequestTimelineItemsItemTypeAUTOMATIC_BASE_CHANGE_FAILED_EVENT,
@@ -3378,6 +4089,7 @@ final BuiltSet<GPullRequestTimelineItemsItemType>
   _$gPullRequestTimelineItemsItemTypeCOMMENT_DELETED_EVENT,
   _$gPullRequestTimelineItemsItemTypeCONNECTED_EVENT,
   _$gPullRequestTimelineItemsItemTypeCONVERTED_NOTE_TO_ISSUE_EVENT,
+  _$gPullRequestTimelineItemsItemTypeCONVERTED_TO_DISCUSSION_EVENT,
   _$gPullRequestTimelineItemsItemTypeCONVERT_TO_DRAFT_EVENT,
   _$gPullRequestTimelineItemsItemTypeCROSS_REFERENCED_EVENT,
   _$gPullRequestTimelineItemsItemTypeDEMILESTONED_EVENT,
@@ -3403,6 +4115,7 @@ final BuiltSet<GPullRequestTimelineItemsItemType>
   _$gPullRequestTimelineItemsItemTypePULL_REQUEST_REVISION_MARKER,
   _$gPullRequestTimelineItemsItemTypeREADY_FOR_REVIEW_EVENT,
   _$gPullRequestTimelineItemsItemTypeREFERENCED_EVENT,
+  _$gPullRequestTimelineItemsItemTypeREMOVED_FROM_MERGE_QUEUE_EVENT,
   _$gPullRequestTimelineItemsItemTypeREMOVED_FROM_PROJECT_EVENT,
   _$gPullRequestTimelineItemsItemTypeRENAMED_TITLE_EVENT,
   _$gPullRequestTimelineItemsItemTypeREOPENED_EVENT,
@@ -4007,17 +4720,12 @@ final BuiltSet<GRepositoryInteractionLimitOrigin>
 const GRepositoryInvitationOrderField
     _$gRepositoryInvitationOrderFieldCREATED_AT =
     const GRepositoryInvitationOrderField._('CREATED_AT');
-const GRepositoryInvitationOrderField
-    _$gRepositoryInvitationOrderFieldINVITEE_LOGIN =
-    const GRepositoryInvitationOrderField._('INVITEE_LOGIN');
 
 GRepositoryInvitationOrderField _$gRepositoryInvitationOrderFieldValueOf(
     String name) {
   switch (name) {
     case 'CREATED_AT':
       return _$gRepositoryInvitationOrderFieldCREATED_AT;
-    case 'INVITEE_LOGIN':
-      return _$gRepositoryInvitationOrderFieldINVITEE_LOGIN;
     default:
       throw new ArgumentError(name);
   }
@@ -4028,7 +4736,6 @@ final BuiltSet<GRepositoryInvitationOrderField>
     new BuiltSet<GRepositoryInvitationOrderField>(const <
         GRepositoryInvitationOrderField>[
   _$gRepositoryInvitationOrderFieldCREATED_AT,
-  _$gRepositoryInvitationOrderFieldINVITEE_LOGIN,
 ]);
 
 const GRepositoryLockReason _$gRepositoryLockReasonBILLING =
@@ -4061,6 +4768,53 @@ final BuiltSet<GRepositoryLockReason> _$gRepositoryLockReasonValues =
   _$gRepositoryLockReasonMIGRATING,
   _$gRepositoryLockReasonMOVING,
   _$gRepositoryLockReasonRENAME,
+]);
+
+const GRepositoryMigrationOrderDirection
+    _$gRepositoryMigrationOrderDirectionASC =
+    const GRepositoryMigrationOrderDirection._('ASC');
+const GRepositoryMigrationOrderDirection
+    _$gRepositoryMigrationOrderDirectionDESC =
+    const GRepositoryMigrationOrderDirection._('DESC');
+
+GRepositoryMigrationOrderDirection _$gRepositoryMigrationOrderDirectionValueOf(
+    String name) {
+  switch (name) {
+    case 'ASC':
+      return _$gRepositoryMigrationOrderDirectionASC;
+    case 'DESC':
+      return _$gRepositoryMigrationOrderDirectionDESC;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GRepositoryMigrationOrderDirection>
+    _$gRepositoryMigrationOrderDirectionValues =
+    new BuiltSet<GRepositoryMigrationOrderDirection>(const <
+        GRepositoryMigrationOrderDirection>[
+  _$gRepositoryMigrationOrderDirectionASC,
+  _$gRepositoryMigrationOrderDirectionDESC,
+]);
+
+const GRepositoryMigrationOrderField
+    _$gRepositoryMigrationOrderFieldCREATED_AT =
+    const GRepositoryMigrationOrderField._('CREATED_AT');
+
+GRepositoryMigrationOrderField _$gRepositoryMigrationOrderFieldValueOf(
+    String name) {
+  switch (name) {
+    case 'CREATED_AT':
+      return _$gRepositoryMigrationOrderFieldCREATED_AT;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GRepositoryMigrationOrderField>
+    _$gRepositoryMigrationOrderFieldValues = new BuiltSet<
+        GRepositoryMigrationOrderField>(const <GRepositoryMigrationOrderField>[
+  _$gRepositoryMigrationOrderFieldCREATED_AT,
 ]);
 
 const GRepositoryOrderField _$gRepositoryOrderFieldCREATED_AT =
@@ -4186,6 +4940,39 @@ final BuiltSet<GRepositoryVisibility> _$gRepositoryVisibilityValues =
   _$gRepositoryVisibilityPUBLIC,
 ]);
 
+const GRepositoryVulnerabilityAlertState
+    _$gRepositoryVulnerabilityAlertStateDISMISSED =
+    const GRepositoryVulnerabilityAlertState._('DISMISSED');
+const GRepositoryVulnerabilityAlertState
+    _$gRepositoryVulnerabilityAlertStateFIXED =
+    const GRepositoryVulnerabilityAlertState._('FIXED');
+const GRepositoryVulnerabilityAlertState
+    _$gRepositoryVulnerabilityAlertStateOPEN =
+    const GRepositoryVulnerabilityAlertState._('OPEN');
+
+GRepositoryVulnerabilityAlertState _$gRepositoryVulnerabilityAlertStateValueOf(
+    String name) {
+  switch (name) {
+    case 'DISMISSED':
+      return _$gRepositoryVulnerabilityAlertStateDISMISSED;
+    case 'FIXED':
+      return _$gRepositoryVulnerabilityAlertStateFIXED;
+    case 'OPEN':
+      return _$gRepositoryVulnerabilityAlertStateOPEN;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GRepositoryVulnerabilityAlertState>
+    _$gRepositoryVulnerabilityAlertStateValues =
+    new BuiltSet<GRepositoryVulnerabilityAlertState>(const <
+        GRepositoryVulnerabilityAlertState>[
+  _$gRepositoryVulnerabilityAlertStateDISMISSED,
+  _$gRepositoryVulnerabilityAlertStateFIXED,
+  _$gRepositoryVulnerabilityAlertStateOPEN,
+]);
+
 const GRequestableCheckStatusState _$gRequestableCheckStatusStateCOMPLETED =
     const GRequestableCheckStatusState._('COMPLETED');
 const GRequestableCheckStatusState _$gRequestableCheckStatusStateIN_PROGRESS =
@@ -4223,6 +5010,33 @@ final BuiltSet<GRequestableCheckStatusState>
   _$gRequestableCheckStatusStatePENDING,
   _$gRequestableCheckStatusStateQUEUED,
   _$gRequestableCheckStatusStateWAITING,
+]);
+
+const GRoleInOrganization _$gRoleInOrganizationDIRECT_MEMBER =
+    const GRoleInOrganization._('DIRECT_MEMBER');
+const GRoleInOrganization _$gRoleInOrganizationOWNER =
+    const GRoleInOrganization._('OWNER');
+const GRoleInOrganization _$gRoleInOrganizationUNAFFILIATED =
+    const GRoleInOrganization._('UNAFFILIATED');
+
+GRoleInOrganization _$gRoleInOrganizationValueOf(String name) {
+  switch (name) {
+    case 'DIRECT_MEMBER':
+      return _$gRoleInOrganizationDIRECT_MEMBER;
+    case 'OWNER':
+      return _$gRoleInOrganizationOWNER;
+    case 'UNAFFILIATED':
+      return _$gRoleInOrganizationUNAFFILIATED;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GRoleInOrganization> _$gRoleInOrganizationValues =
+    new BuiltSet<GRoleInOrganization>(const <GRoleInOrganization>[
+  _$gRoleInOrganizationDIRECT_MEMBER,
+  _$gRoleInOrganizationOWNER,
+  _$gRoleInOrganizationUNAFFILIATED,
 ]);
 
 const GSamlDigestAlgorithm _$gSamlDigestAlgorithmSHA1 =
@@ -4334,6 +5148,31 @@ final BuiltSet<GSearchType> _$gSearchTypeValues =
   _$gSearchTypeUSER,
 ]);
 
+const GSecurityAdvisoryClassification _$gSecurityAdvisoryClassificationGENERAL =
+    const GSecurityAdvisoryClassification._('GENERAL');
+const GSecurityAdvisoryClassification _$gSecurityAdvisoryClassificationMALWARE =
+    const GSecurityAdvisoryClassification._('MALWARE');
+
+GSecurityAdvisoryClassification _$gSecurityAdvisoryClassificationValueOf(
+    String name) {
+  switch (name) {
+    case 'GENERAL':
+      return _$gSecurityAdvisoryClassificationGENERAL;
+    case 'MALWARE':
+      return _$gSecurityAdvisoryClassificationMALWARE;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GSecurityAdvisoryClassification>
+    _$gSecurityAdvisoryClassificationValues =
+    new BuiltSet<GSecurityAdvisoryClassification>(const <
+        GSecurityAdvisoryClassification>[
+  _$gSecurityAdvisoryClassificationGENERAL,
+  _$gSecurityAdvisoryClassificationMALWARE,
+]);
+
 const GSecurityAdvisoryEcosystem _$gSecurityAdvisoryEcosystemCOMPOSER =
     const GSecurityAdvisoryEcosystem._('COMPOSER');
 const GSecurityAdvisoryEcosystem _$gSecurityAdvisoryEcosystemGO =
@@ -4344,12 +5183,12 @@ const GSecurityAdvisoryEcosystem _$gSecurityAdvisoryEcosystemNPM =
     const GSecurityAdvisoryEcosystem._('NPM');
 const GSecurityAdvisoryEcosystem _$gSecurityAdvisoryEcosystemNUGET =
     const GSecurityAdvisoryEcosystem._('NUGET');
-const GSecurityAdvisoryEcosystem _$gSecurityAdvisoryEcosystemOTHER =
-    const GSecurityAdvisoryEcosystem._('OTHER');
 const GSecurityAdvisoryEcosystem _$gSecurityAdvisoryEcosystemPIP =
     const GSecurityAdvisoryEcosystem._('PIP');
 const GSecurityAdvisoryEcosystem _$gSecurityAdvisoryEcosystemRUBYGEMS =
     const GSecurityAdvisoryEcosystem._('RUBYGEMS');
+const GSecurityAdvisoryEcosystem _$gSecurityAdvisoryEcosystemRUST =
+    const GSecurityAdvisoryEcosystem._('RUST');
 
 GSecurityAdvisoryEcosystem _$gSecurityAdvisoryEcosystemValueOf(String name) {
   switch (name) {
@@ -4363,12 +5202,12 @@ GSecurityAdvisoryEcosystem _$gSecurityAdvisoryEcosystemValueOf(String name) {
       return _$gSecurityAdvisoryEcosystemNPM;
     case 'NUGET':
       return _$gSecurityAdvisoryEcosystemNUGET;
-    case 'OTHER':
-      return _$gSecurityAdvisoryEcosystemOTHER;
     case 'PIP':
       return _$gSecurityAdvisoryEcosystemPIP;
     case 'RUBYGEMS':
       return _$gSecurityAdvisoryEcosystemRUBYGEMS;
+    case 'RUST':
+      return _$gSecurityAdvisoryEcosystemRUST;
     default:
       throw new ArgumentError(name);
   }
@@ -4381,9 +5220,9 @@ final BuiltSet<GSecurityAdvisoryEcosystem> _$gSecurityAdvisoryEcosystemValues =
   _$gSecurityAdvisoryEcosystemMAVEN,
   _$gSecurityAdvisoryEcosystemNPM,
   _$gSecurityAdvisoryEcosystemNUGET,
-  _$gSecurityAdvisoryEcosystemOTHER,
   _$gSecurityAdvisoryEcosystemPIP,
   _$gSecurityAdvisoryEcosystemRUBYGEMS,
+  _$gSecurityAdvisoryEcosystemRUST,
 ]);
 
 const GSecurityAdvisoryIdentifierType _$gSecurityAdvisoryIdentifierTypeCVE =
@@ -4485,6 +5324,28 @@ final BuiltSet<GSecurityVulnerabilityOrderField>
     new BuiltSet<GSecurityVulnerabilityOrderField>(const <
         GSecurityVulnerabilityOrderField>[
   _$gSecurityVulnerabilityOrderFieldUPDATED_AT,
+]);
+
+const GSponsorOrderField _$gSponsorOrderFieldLOGIN =
+    const GSponsorOrderField._('LOGIN');
+const GSponsorOrderField _$gSponsorOrderFieldRELEVANCE =
+    const GSponsorOrderField._('RELEVANCE');
+
+GSponsorOrderField _$gSponsorOrderFieldValueOf(String name) {
+  switch (name) {
+    case 'LOGIN':
+      return _$gSponsorOrderFieldLOGIN;
+    case 'RELEVANCE':
+      return _$gSponsorOrderFieldRELEVANCE;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GSponsorOrderField> _$gSponsorOrderFieldValues =
+    new BuiltSet<GSponsorOrderField>(const <GSponsorOrderField>[
+  _$gSponsorOrderFieldLOGIN,
+  _$gSponsorOrderFieldRELEVANCE,
 ]);
 
 const GSponsorableOrderField _$gSponsorableOrderFieldLOGIN =
@@ -4638,6 +5499,27 @@ final BuiltSet<GSponsorsTierOrderField> _$gSponsorsTierOrderFieldValues =
     new BuiltSet<GSponsorsTierOrderField>(const <GSponsorsTierOrderField>[
   _$gSponsorsTierOrderFieldCREATED_AT,
   _$gSponsorsTierOrderFieldMONTHLY_PRICE_IN_CENTS,
+]);
+
+const GSponsorshipNewsletterOrderField
+    _$gSponsorshipNewsletterOrderFieldCREATED_AT =
+    const GSponsorshipNewsletterOrderField._('CREATED_AT');
+
+GSponsorshipNewsletterOrderField _$gSponsorshipNewsletterOrderFieldValueOf(
+    String name) {
+  switch (name) {
+    case 'CREATED_AT':
+      return _$gSponsorshipNewsletterOrderFieldCREATED_AT;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GSponsorshipNewsletterOrderField>
+    _$gSponsorshipNewsletterOrderFieldValues =
+    new BuiltSet<GSponsorshipNewsletterOrderField>(const <
+        GSponsorshipNewsletterOrderField>[
+  _$gSponsorshipNewsletterOrderFieldCREATED_AT,
 ]);
 
 const GSponsorshipOrderField _$gSponsorshipOrderFieldCREATED_AT =
@@ -5025,6 +5907,28 @@ final BuiltSet<GTopicSuggestionDeclineReason>
   _$gTopicSuggestionDeclineReasonTOO_SPECIFIC,
 ]);
 
+const GTrackedIssueStates _$gTrackedIssueStatesCLOSED =
+    const GTrackedIssueStates._('CLOSED');
+const GTrackedIssueStates _$gTrackedIssueStatesOPEN =
+    const GTrackedIssueStates._('OPEN');
+
+GTrackedIssueStates _$gTrackedIssueStatesValueOf(String name) {
+  switch (name) {
+    case 'CLOSED':
+      return _$gTrackedIssueStatesCLOSED;
+    case 'OPEN':
+      return _$gTrackedIssueStatesOPEN;
+    default:
+      throw new ArgumentError(name);
+  }
+}
+
+final BuiltSet<GTrackedIssueStates> _$gTrackedIssueStatesValues =
+    new BuiltSet<GTrackedIssueStates>(const <GTrackedIssueStates>[
+  _$gTrackedIssueStatesCLOSED,
+  _$gTrackedIssueStatesOPEN,
+]);
+
 const GUserBlockDuration _$gUserBlockDurationONE_DAY =
     const GUserBlockDuration._('ONE_DAY');
 const GUserBlockDuration _$gUserBlockDurationONE_MONTH =
@@ -5102,12 +6006,16 @@ final BuiltSet<GVerifiableDomainOrderField>
   _$gVerifiableDomainOrderFieldDOMAIN,
 ]);
 
+Serializer<GAbortQueuedMigrationsInput>
+    _$gAbortQueuedMigrationsInputSerializer =
+    new _$GAbortQueuedMigrationsInputSerializer();
 Serializer<GAcceptEnterpriseAdministratorInvitationInput>
     _$gAcceptEnterpriseAdministratorInvitationInputSerializer =
     new _$GAcceptEnterpriseAdministratorInvitationInputSerializer();
 Serializer<GAcceptTopicSuggestionInput>
     _$gAcceptTopicSuggestionInputSerializer =
     new _$GAcceptTopicSuggestionInputSerializer();
+Serializer<GActorType> _$gActorTypeSerializer = new _$GActorTypeSerializer();
 Serializer<GAddAssigneesToAssignableInput>
     _$gAddAssigneesToAssignableInputSerializer =
     new _$GAddAssigneesToAssignableInputSerializer();
@@ -5115,6 +6023,9 @@ Serializer<GAddCommentInput> _$gAddCommentInputSerializer =
     new _$GAddCommentInputSerializer();
 Serializer<GAddDiscussionCommentInput> _$gAddDiscussionCommentInputSerializer =
     new _$GAddDiscussionCommentInputSerializer();
+Serializer<GAddDiscussionPollVoteInput>
+    _$gAddDiscussionPollVoteInputSerializer =
+    new _$GAddDiscussionPollVoteInputSerializer();
 Serializer<GAddEnterpriseSupportEntitlementInput>
     _$gAddEnterpriseSupportEntitlementInputSerializer =
     new _$GAddEnterpriseSupportEntitlementInputSerializer();
@@ -5124,6 +6035,15 @@ Serializer<GAddProjectCardInput> _$gAddProjectCardInputSerializer =
     new _$GAddProjectCardInputSerializer();
 Serializer<GAddProjectColumnInput> _$gAddProjectColumnInputSerializer =
     new _$GAddProjectColumnInputSerializer();
+Serializer<GAddProjectDraftIssueInput> _$gAddProjectDraftIssueInputSerializer =
+    new _$GAddProjectDraftIssueInputSerializer();
+Serializer<GAddProjectNextItemInput> _$gAddProjectNextItemInputSerializer =
+    new _$GAddProjectNextItemInputSerializer();
+Serializer<GAddProjectV2DraftIssueInput>
+    _$gAddProjectV2DraftIssueInputSerializer =
+    new _$GAddProjectV2DraftIssueInputSerializer();
+Serializer<GAddProjectV2ItemByIdInput> _$gAddProjectV2ItemByIdInputSerializer =
+    new _$GAddProjectV2ItemByIdInputSerializer();
 Serializer<GAddPullRequestReviewCommentInput>
     _$gAddPullRequestReviewCommentInputSerializer =
     new _$GAddPullRequestReviewCommentInputSerializer();
@@ -5154,6 +6074,8 @@ Serializer<GAuditLogOrderField> _$gAuditLogOrderFieldSerializer =
 Serializer<GCancelEnterpriseAdminInvitationInput>
     _$gCancelEnterpriseAdminInvitationInputSerializer =
     new _$GCancelEnterpriseAdminInvitationInputSerializer();
+Serializer<GCancelSponsorshipInput> _$gCancelSponsorshipInputSerializer =
+    new _$GCancelSponsorshipInputSerializer();
 Serializer<GChangeUserStatusInput> _$gChangeUserStatusInputSerializer =
     new _$GChangeUserStatusInputSerializer();
 Serializer<GCheckAnnotationData> _$gCheckAnnotationDataSerializer =
@@ -5206,6 +6128,10 @@ Serializer<GCommitContributionOrder> _$gCommitContributionOrderSerializer =
 Serializer<GCommitContributionOrderField>
     _$gCommitContributionOrderFieldSerializer =
     new _$GCommitContributionOrderFieldSerializer();
+Serializer<GCommitMessage> _$gCommitMessageSerializer =
+    new _$GCommitMessageSerializer();
+Serializer<GCommittableBranch> _$gCommittableBranchSerializer =
+    new _$GCommittableBranchSerializer();
 Serializer<GContributionLevel> _$gContributionLevelSerializer =
     new _$GContributionLevelSerializer();
 Serializer<GContributionOrder> _$gContributionOrderSerializer =
@@ -5223,9 +6149,8 @@ Serializer<GCreateCheckRunInput> _$gCreateCheckRunInputSerializer =
     new _$GCreateCheckRunInputSerializer();
 Serializer<GCreateCheckSuiteInput> _$gCreateCheckSuiteInputSerializer =
     new _$GCreateCheckSuiteInputSerializer();
-Serializer<GCreateContentAttachmentInput>
-    _$gCreateContentAttachmentInputSerializer =
-    new _$GCreateContentAttachmentInputSerializer();
+Serializer<GCreateCommitOnBranchInput> _$gCreateCommitOnBranchInputSerializer =
+    new _$GCreateCommitOnBranchInputSerializer();
 Serializer<GCreateDeploymentInput> _$gCreateDeploymentInputSerializer =
     new _$GCreateDeploymentInputSerializer();
 Serializer<GCreateDeploymentStatusInput>
@@ -5245,14 +6170,23 @@ Serializer<GCreateIssueInput> _$gCreateIssueInputSerializer =
     new _$GCreateIssueInputSerializer();
 Serializer<GCreateLabelInput> _$gCreateLabelInputSerializer =
     new _$GCreateLabelInputSerializer();
+Serializer<GCreateMigrationSourceInput>
+    _$gCreateMigrationSourceInputSerializer =
+    new _$GCreateMigrationSourceInputSerializer();
 Serializer<GCreateProjectInput> _$gCreateProjectInputSerializer =
     new _$GCreateProjectInputSerializer();
+Serializer<GCreateProjectV2Input> _$gCreateProjectV2InputSerializer =
+    new _$GCreateProjectV2InputSerializer();
 Serializer<GCreatePullRequestInput> _$gCreatePullRequestInputSerializer =
     new _$GCreatePullRequestInputSerializer();
 Serializer<GCreateRefInput> _$gCreateRefInputSerializer =
     new _$GCreateRefInputSerializer();
 Serializer<GCreateRepositoryInput> _$gCreateRepositoryInputSerializer =
     new _$GCreateRepositoryInputSerializer();
+Serializer<GCreateSponsorsTierInput> _$gCreateSponsorsTierInputSerializer =
+    new _$GCreateSponsorsTierInputSerializer();
+Serializer<GCreateSponsorshipInput> _$gCreateSponsorshipInputSerializer =
+    new _$GCreateSponsorshipInputSerializer();
 Serializer<GCreateTeamDiscussionCommentInput>
     _$gCreateTeamDiscussionCommentInputSerializer =
     new _$GCreateTeamDiscussionCommentInputSerializer();
@@ -5293,6 +6227,11 @@ Serializer<GDeleteProjectColumnInput> _$gDeleteProjectColumnInputSerializer =
     new _$GDeleteProjectColumnInputSerializer();
 Serializer<GDeleteProjectInput> _$gDeleteProjectInputSerializer =
     new _$GDeleteProjectInputSerializer();
+Serializer<GDeleteProjectNextItemInput>
+    _$gDeleteProjectNextItemInputSerializer =
+    new _$GDeleteProjectNextItemInputSerializer();
+Serializer<GDeleteProjectV2ItemInput> _$gDeleteProjectV2ItemInputSerializer =
+    new _$GDeleteProjectV2ItemInputSerializer();
 Serializer<GDeletePullRequestReviewCommentInput>
     _$gDeletePullRequestReviewCommentInputSerializer =
     new _$GDeletePullRequestReviewCommentInputSerializer();
@@ -5309,6 +6248,8 @@ Serializer<GDeleteTeamDiscussionInput> _$gDeleteTeamDiscussionInputSerializer =
 Serializer<GDeleteVerifiableDomainInput>
     _$gDeleteVerifiableDomainInputSerializer =
     new _$GDeleteVerifiableDomainInputSerializer();
+Serializer<GDependencyGraphEcosystem> _$gDependencyGraphEcosystemSerializer =
+    new _$GDependencyGraphEcosystemSerializer();
 Serializer<GDeploymentOrder> _$gDeploymentOrderSerializer =
     new _$GDeploymentOrderSerializer();
 Serializer<GDeploymentOrderField> _$gDeploymentOrderFieldSerializer =
@@ -5330,9 +6271,19 @@ Serializer<GDiscussionOrder> _$gDiscussionOrderSerializer =
     new _$GDiscussionOrderSerializer();
 Serializer<GDiscussionOrderField> _$gDiscussionOrderFieldSerializer =
     new _$GDiscussionOrderFieldSerializer();
+Serializer<GDiscussionPollOptionOrder> _$gDiscussionPollOptionOrderSerializer =
+    new _$GDiscussionPollOptionOrderSerializer();
+Serializer<GDiscussionPollOptionOrderField>
+    _$gDiscussionPollOptionOrderFieldSerializer =
+    new _$GDiscussionPollOptionOrderFieldSerializer();
 Serializer<GDismissPullRequestReviewInput>
     _$gDismissPullRequestReviewInputSerializer =
     new _$GDismissPullRequestReviewInputSerializer();
+Serializer<GDismissReason> _$gDismissReasonSerializer =
+    new _$GDismissReasonSerializer();
+Serializer<GDismissRepositoryVulnerabilityAlertInput>
+    _$gDismissRepositoryVulnerabilityAlertInputSerializer =
+    new _$GDismissRepositoryVulnerabilityAlertInputSerializer();
 Serializer<GDraftPullRequestReviewComment>
     _$gDraftPullRequestReviewCommentSerializer =
     new _$GDraftPullRequestReviewCommentSerializer();
@@ -5403,8 +6354,16 @@ Serializer<GEnterpriseUserAccountMembershipRole>
     new _$GEnterpriseUserAccountMembershipRoleSerializer();
 Serializer<GEnterpriseUserDeployment> _$gEnterpriseUserDeploymentSerializer =
     new _$GEnterpriseUserDeploymentSerializer();
+Serializer<GFileAddition> _$gFileAdditionSerializer =
+    new _$GFileAdditionSerializer();
+Serializer<GFileChanges> _$gFileChangesSerializer =
+    new _$GFileChangesSerializer();
+Serializer<GFileDeletion> _$gFileDeletionSerializer =
+    new _$GFileDeletionSerializer();
 Serializer<GFileViewedState> _$gFileViewedStateSerializer =
     new _$GFileViewedStateSerializer();
+Serializer<GFollowOrganizationInput> _$gFollowOrganizationInputSerializer =
+    new _$GFollowOrganizationInputSerializer();
 Serializer<GFollowUserInput> _$gFollowUserInputSerializer =
     new _$GFollowUserInputSerializer();
 Serializer<GFundingPlatform> _$gFundingPlatformSerializer =
@@ -5416,6 +6375,11 @@ Serializer<GGistPrivacy> _$gGistPrivacySerializer =
     new _$GGistPrivacySerializer();
 Serializer<GGitSignatureState> _$gGitSignatureStateSerializer =
     new _$GGitSignatureStateSerializer();
+Serializer<GGrantEnterpriseOrganizationsMigratorRoleInput>
+    _$gGrantEnterpriseOrganizationsMigratorRoleInputSerializer =
+    new _$GGrantEnterpriseOrganizationsMigratorRoleInputSerializer();
+Serializer<GGrantMigratorRoleInput> _$gGrantMigratorRoleInputSerializer =
+    new _$GGrantMigratorRoleInputSerializer();
 Serializer<GIdentityProviderConfigurationState>
     _$gIdentityProviderConfigurationStateSerializer =
     new _$GIdentityProviderConfigurationStateSerializer();
@@ -5435,6 +6399,8 @@ Serializer<GIpAllowListEntryOrderField>
 Serializer<GIpAllowListForInstalledAppsEnabledSettingValue>
     _$gIpAllowListForInstalledAppsEnabledSettingValueSerializer =
     new _$GIpAllowListForInstalledAppsEnabledSettingValueSerializer();
+Serializer<GIssueClosedStateReason> _$gIssueClosedStateReasonSerializer =
+    new _$GIssueClosedStateReasonSerializer();
 Serializer<GIssueCommentOrder> _$gIssueCommentOrderSerializer =
     new _$GIssueCommentOrderSerializer();
 Serializer<GIssueCommentOrderField> _$gIssueCommentOrderFieldSerializer =
@@ -5445,6 +6411,8 @@ Serializer<GIssueOrder> _$gIssueOrderSerializer = new _$GIssueOrderSerializer();
 Serializer<GIssueOrderField> _$gIssueOrderFieldSerializer =
     new _$GIssueOrderFieldSerializer();
 Serializer<GIssueState> _$gIssueStateSerializer = new _$GIssueStateSerializer();
+Serializer<GIssueStateReason> _$gIssueStateReasonSerializer =
+    new _$GIssueStateReasonSerializer();
 Serializer<GIssueTimelineItemsItemType>
     _$gIssueTimelineItemsItemTypeSerializer =
     new _$GIssueTimelineItemsItemTypeSerializer();
@@ -5477,6 +6445,10 @@ Serializer<GMergeStateStatus> _$gMergeStateStatusSerializer =
     new _$GMergeStateStatusSerializer();
 Serializer<GMergeableState> _$gMergeableStateSerializer =
     new _$GMergeableStateSerializer();
+Serializer<GMigrationSourceType> _$gMigrationSourceTypeSerializer =
+    new _$GMigrationSourceTypeSerializer();
+Serializer<GMigrationState> _$gMigrationStateSerializer =
+    new _$GMigrationStateSerializer();
 Serializer<GMilestoneOrder> _$gMilestoneOrderSerializer =
     new _$GMilestoneOrderSerializer();
 Serializer<GMilestoneOrderField> _$gMilestoneOrderFieldSerializer =
@@ -5492,6 +6464,8 @@ Serializer<GMoveProjectColumnInput> _$gMoveProjectColumnInputSerializer =
 Serializer<GNotificationRestrictionSettingValue>
     _$gNotificationRestrictionSettingValueSerializer =
     new _$GNotificationRestrictionSettingValueSerializer();
+Serializer<GOIDCProviderType> _$gOIDCProviderTypeSerializer =
+    new _$GOIDCProviderTypeSerializer();
 Serializer<GOauthApplicationCreateAuditEntryState>
     _$gOauthApplicationCreateAuditEntryStateSerializer =
     new _$GOauthApplicationCreateAuditEntryStateSerializer();
@@ -5505,6 +6479,11 @@ Serializer<GOrgAddMemberAuditEntryPermission>
 Serializer<GOrgCreateAuditEntryBillingPlan>
     _$gOrgCreateAuditEntryBillingPlanSerializer =
     new _$GOrgCreateAuditEntryBillingPlanSerializer();
+Serializer<GOrgEnterpriseOwnerOrder> _$gOrgEnterpriseOwnerOrderSerializer =
+    new _$GOrgEnterpriseOwnerOrderSerializer();
+Serializer<GOrgEnterpriseOwnerOrderField>
+    _$gOrgEnterpriseOwnerOrderFieldSerializer =
+    new _$GOrgEnterpriseOwnerOrderFieldSerializer();
 Serializer<GOrgRemoveBillingManagerAuditEntryReason>
     _$gOrgRemoveBillingManagerAuditEntryReasonSerializer =
     new _$GOrgRemoveBillingManagerAuditEntryReasonSerializer();
@@ -5558,6 +6537,8 @@ Serializer<GPackageVersionOrder> _$gPackageVersionOrderSerializer =
     new _$GPackageVersionOrderSerializer();
 Serializer<GPackageVersionOrderField> _$gPackageVersionOrderFieldSerializer =
     new _$GPackageVersionOrderFieldSerializer();
+Serializer<GPatchStatus> _$gPatchStatusSerializer =
+    new _$GPatchStatusSerializer();
 Serializer<GPinIssueInput> _$gPinIssueInputSerializer =
     new _$GPinIssueInputSerializer();
 Serializer<GPinnableItemType> _$gPinnableItemTypeSerializer =
@@ -5576,6 +6557,12 @@ Serializer<GProjectColumnImport> _$gProjectColumnImportSerializer =
     new _$GProjectColumnImportSerializer();
 Serializer<GProjectColumnPurpose> _$gProjectColumnPurposeSerializer =
     new _$GProjectColumnPurposeSerializer();
+Serializer<GProjectItemType> _$gProjectItemTypeSerializer =
+    new _$GProjectItemTypeSerializer();
+Serializer<GProjectNextFieldType> _$gProjectNextFieldTypeSerializer =
+    new _$GProjectNextFieldTypeSerializer();
+Serializer<GProjectNextOrderField> _$gProjectNextOrderFieldSerializer =
+    new _$GProjectNextOrderFieldSerializer();
 Serializer<GProjectOrder> _$gProjectOrderSerializer =
     new _$GProjectOrderSerializer();
 Serializer<GProjectOrderField> _$gProjectOrderFieldSerializer =
@@ -5584,6 +6571,20 @@ Serializer<GProjectState> _$gProjectStateSerializer =
     new _$GProjectStateSerializer();
 Serializer<GProjectTemplate> _$gProjectTemplateSerializer =
     new _$GProjectTemplateSerializer();
+Serializer<GProjectV2FieldType> _$gProjectV2FieldTypeSerializer =
+    new _$GProjectV2FieldTypeSerializer();
+Serializer<GProjectV2FieldValue> _$gProjectV2FieldValueSerializer =
+    new _$GProjectV2FieldValueSerializer();
+Serializer<GProjectV2ItemType> _$gProjectV2ItemTypeSerializer =
+    new _$GProjectV2ItemTypeSerializer();
+Serializer<GProjectV2Order> _$gProjectV2OrderSerializer =
+    new _$GProjectV2OrderSerializer();
+Serializer<GProjectV2OrderField> _$gProjectV2OrderFieldSerializer =
+    new _$GProjectV2OrderFieldSerializer();
+Serializer<GProjectV2ViewLayout> _$gProjectV2ViewLayoutSerializer =
+    new _$GProjectV2ViewLayoutSerializer();
+Serializer<GProjectViewLayout> _$gProjectViewLayoutSerializer =
+    new _$GProjectViewLayoutSerializer();
 Serializer<GPullRequestMergeMethod> _$gPullRequestMergeMethodSerializer =
     new _$GPullRequestMergeMethodSerializer();
 Serializer<GPullRequestOrder> _$gPullRequestOrderSerializer =
@@ -5704,6 +6705,14 @@ Serializer<GRepositoryInvitationOrderField>
     new _$GRepositoryInvitationOrderFieldSerializer();
 Serializer<GRepositoryLockReason> _$gRepositoryLockReasonSerializer =
     new _$GRepositoryLockReasonSerializer();
+Serializer<GRepositoryMigrationOrder> _$gRepositoryMigrationOrderSerializer =
+    new _$GRepositoryMigrationOrderSerializer();
+Serializer<GRepositoryMigrationOrderDirection>
+    _$gRepositoryMigrationOrderDirectionSerializer =
+    new _$GRepositoryMigrationOrderDirectionSerializer();
+Serializer<GRepositoryMigrationOrderField>
+    _$gRepositoryMigrationOrderFieldSerializer =
+    new _$GRepositoryMigrationOrderFieldSerializer();
 Serializer<GRepositoryOrder> _$gRepositoryOrderSerializer =
     new _$GRepositoryOrderSerializer();
 Serializer<GRepositoryOrderField> _$gRepositoryOrderFieldSerializer =
@@ -5714,15 +6723,27 @@ Serializer<GRepositoryPrivacy> _$gRepositoryPrivacySerializer =
     new _$GRepositoryPrivacySerializer();
 Serializer<GRepositoryVisibility> _$gRepositoryVisibilitySerializer =
     new _$GRepositoryVisibilitySerializer();
+Serializer<GRepositoryVulnerabilityAlertState>
+    _$gRepositoryVulnerabilityAlertStateSerializer =
+    new _$GRepositoryVulnerabilityAlertStateSerializer();
 Serializer<GRequestReviewsInput> _$gRequestReviewsInputSerializer =
     new _$GRequestReviewsInputSerializer();
 Serializer<GRequestableCheckStatusState>
     _$gRequestableCheckStatusStateSerializer =
     new _$GRequestableCheckStatusStateSerializer();
+Serializer<GRequiredStatusCheckInput> _$gRequiredStatusCheckInputSerializer =
+    new _$GRequiredStatusCheckInputSerializer();
 Serializer<GRerequestCheckSuiteInput> _$gRerequestCheckSuiteInputSerializer =
     new _$GRerequestCheckSuiteInputSerializer();
 Serializer<GResolveReviewThreadInput> _$gResolveReviewThreadInputSerializer =
     new _$GResolveReviewThreadInputSerializer();
+Serializer<GRevokeEnterpriseOrganizationsMigratorRoleInput>
+    _$gRevokeEnterpriseOrganizationsMigratorRoleInputSerializer =
+    new _$GRevokeEnterpriseOrganizationsMigratorRoleInputSerializer();
+Serializer<GRevokeMigratorRoleInput> _$gRevokeMigratorRoleInputSerializer =
+    new _$GRevokeMigratorRoleInputSerializer();
+Serializer<GRoleInOrganization> _$gRoleInOrganizationSerializer =
+    new _$GRoleInOrganizationSerializer();
 Serializer<GSamlDigestAlgorithm> _$gSamlDigestAlgorithmSerializer =
     new _$GSamlDigestAlgorithmSerializer();
 Serializer<GSamlSignatureAlgorithm> _$gSamlSignatureAlgorithmSerializer =
@@ -5732,6 +6753,9 @@ Serializer<GSavedReplyOrder> _$gSavedReplyOrderSerializer =
 Serializer<GSavedReplyOrderField> _$gSavedReplyOrderFieldSerializer =
     new _$GSavedReplyOrderFieldSerializer();
 Serializer<GSearchType> _$gSearchTypeSerializer = new _$GSearchTypeSerializer();
+Serializer<GSecurityAdvisoryClassification>
+    _$gSecurityAdvisoryClassificationSerializer =
+    new _$GSecurityAdvisoryClassificationSerializer();
 Serializer<GSecurityAdvisoryEcosystem> _$gSecurityAdvisoryEcosystemSerializer =
     new _$GSecurityAdvisoryEcosystemSerializer();
 Serializer<GSecurityAdvisoryIdentifierFilter>
@@ -5765,6 +6789,10 @@ Serializer<GSetRepositoryInteractionLimitInput>
 Serializer<GSetUserInteractionLimitInput>
     _$gSetUserInteractionLimitInputSerializer =
     new _$GSetUserInteractionLimitInputSerializer();
+Serializer<GSponsorOrder> _$gSponsorOrderSerializer =
+    new _$GSponsorOrderSerializer();
+Serializer<GSponsorOrderField> _$gSponsorOrderFieldSerializer =
+    new _$GSponsorOrderFieldSerializer();
 Serializer<GSponsorableOrder> _$gSponsorableOrderSerializer =
     new _$GSponsorableOrderSerializer();
 Serializer<GSponsorableOrderField> _$gSponsorableOrderFieldSerializer =
@@ -5784,6 +6812,12 @@ Serializer<GSponsorsTierOrder> _$gSponsorsTierOrderSerializer =
     new _$GSponsorsTierOrderSerializer();
 Serializer<GSponsorsTierOrderField> _$gSponsorsTierOrderFieldSerializer =
     new _$GSponsorsTierOrderFieldSerializer();
+Serializer<GSponsorshipNewsletterOrder>
+    _$gSponsorshipNewsletterOrderSerializer =
+    new _$GSponsorshipNewsletterOrderSerializer();
+Serializer<GSponsorshipNewsletterOrderField>
+    _$gSponsorshipNewsletterOrderFieldSerializer =
+    new _$GSponsorshipNewsletterOrderFieldSerializer();
 Serializer<GSponsorshipOrder> _$gSponsorshipOrderSerializer =
     new _$GSponsorshipOrderSerializer();
 Serializer<GSponsorshipOrderField> _$gSponsorshipOrderFieldSerializer =
@@ -5793,6 +6827,9 @@ Serializer<GSponsorshipPrivacy> _$gSponsorshipPrivacySerializer =
 Serializer<GStarOrder> _$gStarOrderSerializer = new _$GStarOrderSerializer();
 Serializer<GStarOrderField> _$gStarOrderFieldSerializer =
     new _$GStarOrderFieldSerializer();
+Serializer<GStartRepositoryMigrationInput>
+    _$gStartRepositoryMigrationInputSerializer =
+    new _$GStartRepositoryMigrationInputSerializer();
 Serializer<GStatusState> _$gStatusStateSerializer =
     new _$GStatusStateSerializer();
 Serializer<GSubmitPullRequestReviewInput>
@@ -5834,10 +6871,14 @@ Serializer<GTeamRole> _$gTeamRoleSerializer = new _$GTeamRoleSerializer();
 Serializer<GTopicSuggestionDeclineReason>
     _$gTopicSuggestionDeclineReasonSerializer =
     new _$GTopicSuggestionDeclineReasonSerializer();
+Serializer<GTrackedIssueStates> _$gTrackedIssueStatesSerializer =
+    new _$GTrackedIssueStatesSerializer();
 Serializer<GTransferIssueInput> _$gTransferIssueInputSerializer =
     new _$GTransferIssueInputSerializer();
 Serializer<GUnarchiveRepositoryInput> _$gUnarchiveRepositoryInputSerializer =
     new _$GUnarchiveRepositoryInputSerializer();
+Serializer<GUnfollowOrganizationInput> _$gUnfollowOrganizationInputSerializer =
+    new _$GUnfollowOrganizationInputSerializer();
 Serializer<GUnfollowUserInput> _$gUnfollowUserInputSerializer =
     new _$GUnfollowUserInputSerializer();
 Serializer<GUnlinkRepositoryFromProjectInput>
@@ -5909,6 +6950,9 @@ Serializer<GUpdateEnterpriseMembersCanViewDependencyInsightsSettingInput>
 Serializer<GUpdateEnterpriseOrganizationProjectsSettingInput>
     _$gUpdateEnterpriseOrganizationProjectsSettingInputSerializer =
     new _$GUpdateEnterpriseOrganizationProjectsSettingInputSerializer();
+Serializer<GUpdateEnterpriseOwnerOrganizationRoleInput>
+    _$gUpdateEnterpriseOwnerOrganizationRoleInputSerializer =
+    new _$GUpdateEnterpriseOwnerOrganizationRoleInputSerializer();
 Serializer<GUpdateEnterpriseProfileInput>
     _$gUpdateEnterpriseProfileInputSerializer =
     new _$GUpdateEnterpriseProfileInputSerializer();
@@ -5941,12 +6985,37 @@ Serializer<GUpdateLabelInput> _$gUpdateLabelInputSerializer =
 Serializer<GUpdateNotificationRestrictionSettingInput>
     _$gUpdateNotificationRestrictionSettingInputSerializer =
     new _$GUpdateNotificationRestrictionSettingInputSerializer();
+Serializer<GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput>
+    _$gUpdateOrganizationAllowPrivateRepositoryForkingSettingInputSerializer =
+    new _$GUpdateOrganizationAllowPrivateRepositoryForkingSettingInputSerializer();
 Serializer<GUpdateProjectCardInput> _$gUpdateProjectCardInputSerializer =
     new _$GUpdateProjectCardInputSerializer();
 Serializer<GUpdateProjectColumnInput> _$gUpdateProjectColumnInputSerializer =
     new _$GUpdateProjectColumnInputSerializer();
+Serializer<GUpdateProjectDraftIssueInput>
+    _$gUpdateProjectDraftIssueInputSerializer =
+    new _$GUpdateProjectDraftIssueInputSerializer();
 Serializer<GUpdateProjectInput> _$gUpdateProjectInputSerializer =
     new _$GUpdateProjectInputSerializer();
+Serializer<GUpdateProjectNextInput> _$gUpdateProjectNextInputSerializer =
+    new _$GUpdateProjectNextInputSerializer();
+Serializer<GUpdateProjectNextItemFieldInput>
+    _$gUpdateProjectNextItemFieldInputSerializer =
+    new _$GUpdateProjectNextItemFieldInputSerializer();
+Serializer<GUpdateProjectV2DraftIssueInput>
+    _$gUpdateProjectV2DraftIssueInputSerializer =
+    new _$GUpdateProjectV2DraftIssueInputSerializer();
+Serializer<GUpdateProjectV2Input> _$gUpdateProjectV2InputSerializer =
+    new _$GUpdateProjectV2InputSerializer();
+Serializer<GUpdateProjectV2ItemFieldValueInput>
+    _$gUpdateProjectV2ItemFieldValueInputSerializer =
+    new _$GUpdateProjectV2ItemFieldValueInputSerializer();
+Serializer<GUpdateProjectV2ItemPositionInput>
+    _$gUpdateProjectV2ItemPositionInputSerializer =
+    new _$GUpdateProjectV2ItemPositionInputSerializer();
+Serializer<GUpdatePullRequestBranchInput>
+    _$gUpdatePullRequestBranchInputSerializer =
+    new _$GUpdatePullRequestBranchInputSerializer();
 Serializer<GUpdatePullRequestInput> _$gUpdatePullRequestInputSerializer =
     new _$GUpdatePullRequestInputSerializer();
 Serializer<GUpdatePullRequestReviewCommentInput>
@@ -5961,6 +7030,9 @@ Serializer<GUpdateRefsInput> _$gUpdateRefsInputSerializer =
     new _$GUpdateRefsInputSerializer();
 Serializer<GUpdateRepositoryInput> _$gUpdateRepositoryInputSerializer =
     new _$GUpdateRepositoryInputSerializer();
+Serializer<GUpdateSponsorshipPreferencesInput>
+    _$gUpdateSponsorshipPreferencesInputSerializer =
+    new _$GUpdateSponsorshipPreferencesInputSerializer();
 Serializer<GUpdateSubscriptionInput> _$gUpdateSubscriptionInputSerializer =
     new _$GUpdateSubscriptionInputSerializer();
 Serializer<GUpdateTeamDiscussionCommentInput>
@@ -5971,6 +7043,9 @@ Serializer<GUpdateTeamDiscussionInput> _$gUpdateTeamDiscussionInputSerializer =
 Serializer<GUpdateTeamReviewAssignmentInput>
     _$gUpdateTeamReviewAssignmentInputSerializer =
     new _$GUpdateTeamReviewAssignmentInputSerializer();
+Serializer<GUpdateTeamsRepositoryInput>
+    _$gUpdateTeamsRepositoryInputSerializer =
+    new _$GUpdateTeamsRepositoryInputSerializer();
 Serializer<GUpdateTopicsInput> _$gUpdateTopicsInputSerializer =
     new _$GUpdateTopicsInputSerializer();
 Serializer<GUserBlockDuration> _$gUserBlockDurationSerializer =
@@ -5987,6 +7062,63 @@ Serializer<GVerifiableDomainOrderField>
 Serializer<GVerifyVerifiableDomainInput>
     _$gVerifyVerifiableDomainInputSerializer =
     new _$GVerifyVerifiableDomainInputSerializer();
+
+class _$GAbortQueuedMigrationsInputSerializer
+    implements StructuredSerializer<GAbortQueuedMigrationsInput> {
+  @override
+  final Iterable<Type> types = const [
+    GAbortQueuedMigrationsInput,
+    _$GAbortQueuedMigrationsInput
+  ];
+  @override
+  final String wireName = 'GAbortQueuedMigrationsInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GAbortQueuedMigrationsInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'ownerId',
+      serializers.serialize(object.ownerId,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GAbortQueuedMigrationsInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GAbortQueuedMigrationsInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'ownerId':
+          result.ownerId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
 
 class _$GAcceptEnterpriseAdministratorInvitationInputSerializer
     implements
@@ -6107,6 +7239,23 @@ class _$GAcceptTopicSuggestionInputSerializer
 
     return result.build();
   }
+}
+
+class _$GActorTypeSerializer implements PrimitiveSerializer<GActorType> {
+  @override
+  final Iterable<Type> types = const <Type>[GActorType];
+  @override
+  final String wireName = 'GActorType';
+
+  @override
+  Object serialize(Serializers serializers, GActorType object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GActorType deserialize(Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GActorType.valueOf(serialized as String);
 }
 
 class _$GAddAssigneesToAssignableInputSerializer
@@ -6301,6 +7450,63 @@ class _$GAddDiscussionCommentInputSerializer
         case 'replyToId':
           result.replyToId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GAddDiscussionPollVoteInputSerializer
+    implements StructuredSerializer<GAddDiscussionPollVoteInput> {
+  @override
+  final Iterable<Type> types = const [
+    GAddDiscussionPollVoteInput,
+    _$GAddDiscussionPollVoteInput
+  ];
+  @override
+  final String wireName = 'GAddDiscussionPollVoteInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GAddDiscussionPollVoteInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'pollOptionId',
+      serializers.serialize(object.pollOptionId,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GAddDiscussionPollVoteInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GAddDiscussionPollVoteInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'pollOptionId':
+          result.pollOptionId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
       }
     }
@@ -6569,6 +7775,326 @@ class _$GAddProjectColumnInputSerializer
           break;
         case 'name':
           result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'projectId':
+          result.projectId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GAddProjectDraftIssueInputSerializer
+    implements StructuredSerializer<GAddProjectDraftIssueInput> {
+  @override
+  final Iterable<Type> types = const [
+    GAddProjectDraftIssueInput,
+    _$GAddProjectDraftIssueInput
+  ];
+  @override
+  final String wireName = 'GAddProjectDraftIssueInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GAddProjectDraftIssueInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.assigneeIds;
+    if (value != null) {
+      result
+        ..add('assigneeIds')
+        ..add(serializers.serialize(value,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(String)])));
+    }
+    value = object.body;
+    if (value != null) {
+      result
+        ..add('body')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.projectId;
+    if (value != null) {
+      result
+        ..add('projectId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.title;
+    if (value != null) {
+      result
+        ..add('title')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GAddProjectDraftIssueInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GAddProjectDraftIssueInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'assigneeIds':
+          result.assigneeIds.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(String)]))!
+              as BuiltList<Object?>);
+          break;
+        case 'body':
+          result.body = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'projectId':
+          result.projectId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'title':
+          result.title = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GAddProjectNextItemInputSerializer
+    implements StructuredSerializer<GAddProjectNextItemInput> {
+  @override
+  final Iterable<Type> types = const [
+    GAddProjectNextItemInput,
+    _$GAddProjectNextItemInput
+  ];
+  @override
+  final String wireName = 'GAddProjectNextItemInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GAddProjectNextItemInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.contentId;
+    if (value != null) {
+      result
+        ..add('contentId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.projectId;
+    if (value != null) {
+      result
+        ..add('projectId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GAddProjectNextItemInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GAddProjectNextItemInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'contentId':
+          result.contentId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'projectId':
+          result.projectId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GAddProjectV2DraftIssueInputSerializer
+    implements StructuredSerializer<GAddProjectV2DraftIssueInput> {
+  @override
+  final Iterable<Type> types = const [
+    GAddProjectV2DraftIssueInput,
+    _$GAddProjectV2DraftIssueInput
+  ];
+  @override
+  final String wireName = 'GAddProjectV2DraftIssueInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GAddProjectV2DraftIssueInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'projectId',
+      serializers.serialize(object.projectId,
+          specifiedType: const FullType(String)),
+      'title',
+      serializers.serialize(object.title,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.assigneeIds;
+    if (value != null) {
+      result
+        ..add('assigneeIds')
+        ..add(serializers.serialize(value,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(String)])));
+    }
+    value = object.body;
+    if (value != null) {
+      result
+        ..add('body')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GAddProjectV2DraftIssueInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GAddProjectV2DraftIssueInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'assigneeIds':
+          result.assigneeIds.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(String)]))!
+              as BuiltList<Object?>);
+          break;
+        case 'body':
+          result.body = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'projectId':
+          result.projectId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'title':
+          result.title = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GAddProjectV2ItemByIdInputSerializer
+    implements StructuredSerializer<GAddProjectV2ItemByIdInput> {
+  @override
+  final Iterable<Type> types = const [
+    GAddProjectV2ItemByIdInput,
+    _$GAddProjectV2ItemByIdInput
+  ];
+  @override
+  final String wireName = 'GAddProjectV2ItemByIdInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GAddProjectV2ItemByIdInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'contentId',
+      serializers.serialize(object.contentId,
+          specifiedType: const FullType(String)),
+      'projectId',
+      serializers.serialize(object.projectId,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GAddProjectV2ItemByIdInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GAddProjectV2ItemByIdInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'contentId':
+          result.contentId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
         case 'projectId':
@@ -7490,6 +9016,99 @@ class _$GCancelEnterpriseAdminInvitationInputSerializer
         case 'invitationId':
           result.invitationId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GCancelSponsorshipInputSerializer
+    implements StructuredSerializer<GCancelSponsorshipInput> {
+  @override
+  final Iterable<Type> types = const [
+    GCancelSponsorshipInput,
+    _$GCancelSponsorshipInput
+  ];
+  @override
+  final String wireName = 'GCancelSponsorshipInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GCancelSponsorshipInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.sponsorId;
+    if (value != null) {
+      result
+        ..add('sponsorId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.sponsorLogin;
+    if (value != null) {
+      result
+        ..add('sponsorLogin')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.sponsorableId;
+    if (value != null) {
+      result
+        ..add('sponsorableId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.sponsorableLogin;
+    if (value != null) {
+      result
+        ..add('sponsorableLogin')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GCancelSponsorshipInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GCancelSponsorshipInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'sponsorId':
+          result.sponsorId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'sponsorLogin':
+          result.sponsorLogin = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'sponsorableId':
+          result.sponsorableId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'sponsorableLogin':
+          result.sponsorableLogin = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
           break;
       }
     }
@@ -8504,6 +10123,13 @@ class _$GCloseIssueInputSerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.stateReason;
+    if (value != null) {
+      result
+        ..add('stateReason')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GIssueClosedStateReason)));
+    }
     return result;
   }
 
@@ -8526,6 +10152,11 @@ class _$GCloseIssueInputSerializer
         case 'issueId':
           result.issueId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'stateReason':
+          result.stateReason = serializers.deserialize(value,
+                  specifiedType: const FullType(GIssueClosedStateReason))
+              as GIssueClosedStateReason?;
           break;
       }
     }
@@ -8781,6 +10412,127 @@ class _$GCommitContributionOrderFieldSerializer
       GCommitContributionOrderField.valueOf(serialized as String);
 }
 
+class _$GCommitMessageSerializer
+    implements StructuredSerializer<GCommitMessage> {
+  @override
+  final Iterable<Type> types = const [GCommitMessage, _$GCommitMessage];
+  @override
+  final String wireName = 'GCommitMessage';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers, GCommitMessage object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'headline',
+      serializers.serialize(object.headline,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.body;
+    if (value != null) {
+      result
+        ..add('body')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GCommitMessage deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GCommitMessageBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'body':
+          result.body = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'headline':
+          result.headline = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GCommittableBranchSerializer
+    implements StructuredSerializer<GCommittableBranch> {
+  @override
+  final Iterable<Type> types = const [GCommittableBranch, _$GCommittableBranch];
+  @override
+  final String wireName = 'GCommittableBranch';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GCommittableBranch object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.branchName;
+    if (value != null) {
+      result
+        ..add('branchName')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.id;
+    if (value != null) {
+      result
+        ..add('id')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.repositoryNameWithOwner;
+    if (value != null) {
+      result
+        ..add('repositoryNameWithOwner')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GCommittableBranch deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GCommittableBranchBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'branchName':
+          result.branchName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'repositoryNameWithOwner':
+          result.repositoryNameWithOwner = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
 class _$GContributionLevelSerializer
     implements PrimitiveSerializer<GContributionLevel> {
   @override
@@ -9023,6 +10775,29 @@ class _$GCreateBranchProtectionRuleInputSerializer
         ..add(
             serializers.serialize(value, specifiedType: const FullType(bool)));
     }
+    value = object.blocksCreations;
+    if (value != null) {
+      result
+        ..add('blocksCreations')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(bool)));
+    }
+    value = object.bypassForcePushActorIds;
+    if (value != null) {
+      result
+        ..add('bypassForcePushActorIds')
+        ..add(serializers.serialize(value,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(String)])));
+    }
+    value = object.bypassPullRequestActorIds;
+    if (value != null) {
+      result
+        ..add('bypassPullRequestActorIds')
+        ..add(serializers.serialize(value,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(String)])));
+    }
     value = object.clientMutationId;
     if (value != null) {
       result
@@ -9065,6 +10840,14 @@ class _$GCreateBranchProtectionRuleInputSerializer
         ..add(serializers.serialize(value,
             specifiedType:
                 const FullType(BuiltList, const [const FullType(String)])));
+    }
+    value = object.requiredStatusChecks;
+    if (value != null) {
+      result
+        ..add('requiredStatusChecks')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                BuiltList, const [const FullType(GRequiredStatusCheckInput)])));
     }
     value = object.requiresApprovingReviews;
     if (value != null) {
@@ -9160,6 +10943,23 @@ class _$GCreateBranchProtectionRuleInputSerializer
           result.allowsForcePushes = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool?;
           break;
+        case 'blocksCreations':
+          result.blocksCreations = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool?;
+          break;
+        case 'bypassForcePushActorIds':
+          result.bypassForcePushActorIds.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(String)]))!
+              as BuiltList<Object?>);
+          break;
+        case 'bypassPullRequestActorIds':
+          result.bypassPullRequestActorIds.replace(serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(String)]))!
+              as BuiltList<Object?>);
+          break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
@@ -9196,6 +10996,12 @@ class _$GCreateBranchProtectionRuleInputSerializer
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
               as BuiltList<Object?>);
+          break;
+        case 'requiredStatusChecks':
+          result.requiredStatusChecks.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(GRequiredStatusCheckInput)
+              ]))! as BuiltList<Object?>);
           break;
         case 'requiresApprovingReviews':
           result.requiresApprovingReviews = serializers.deserialize(value,
@@ -9474,29 +11280,30 @@ class _$GCreateCheckSuiteInputSerializer
   }
 }
 
-class _$GCreateContentAttachmentInputSerializer
-    implements StructuredSerializer<GCreateContentAttachmentInput> {
+class _$GCreateCommitOnBranchInputSerializer
+    implements StructuredSerializer<GCreateCommitOnBranchInput> {
   @override
   final Iterable<Type> types = const [
-    GCreateContentAttachmentInput,
-    _$GCreateContentAttachmentInput
+    GCreateCommitOnBranchInput,
+    _$GCreateCommitOnBranchInput
   ];
   @override
-  final String wireName = 'GCreateContentAttachmentInput';
+  final String wireName = 'GCreateCommitOnBranchInput';
 
   @override
   Iterable<Object?> serialize(
-      Serializers serializers, GCreateContentAttachmentInput object,
+      Serializers serializers, GCreateCommitOnBranchInput object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object?>[
-      'body',
-      serializers.serialize(object.body, specifiedType: const FullType(String)),
-      'contentReferenceId',
-      serializers.serialize(object.contentReferenceId,
+      'branch',
+      serializers.serialize(object.branch,
+          specifiedType: const FullType(GCommittableBranch)),
+      'expectedHeadOid',
+      serializers.serialize(object.expectedHeadOid,
           specifiedType: const FullType(String)),
-      'title',
-      serializers.serialize(object.title,
-          specifiedType: const FullType(String)),
+      'message',
+      serializers.serialize(object.message,
+          specifiedType: const FullType(GCommitMessage)),
     ];
     Object? value;
     value = object.clientMutationId;
@@ -9506,14 +11313,21 @@ class _$GCreateContentAttachmentInputSerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.fileChanges;
+    if (value != null) {
+      result
+        ..add('fileChanges')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GFileChanges)));
+    }
     return result;
   }
 
   @override
-  GCreateContentAttachmentInput deserialize(
+  GCreateCommitOnBranchInput deserialize(
       Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = new GCreateContentAttachmentInputBuilder();
+    final result = new GCreateCommitOnBranchInputBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -9521,21 +11335,27 @@ class _$GCreateContentAttachmentInputSerializer
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
-        case 'body':
-          result.body = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+        case 'branch':
+          result.branch.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(GCommittableBranch))!
+              as GCommittableBranch);
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
-        case 'contentReferenceId':
-          result.contentReferenceId = serializers.deserialize(value,
+        case 'expectedHeadOid':
+          result.expectedHeadOid = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
-        case 'title':
-          result.title = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+        case 'fileChanges':
+          result.fileChanges.replace(serializers.deserialize(value,
+              specifiedType: const FullType(GFileChanges))! as GFileChanges);
+          break;
+        case 'message':
+          result.message.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(GCommitMessage))!
+              as GCommitMessage);
           break;
       }
     }
@@ -10319,6 +12139,105 @@ class _$GCreateLabelInputSerializer
   }
 }
 
+class _$GCreateMigrationSourceInputSerializer
+    implements StructuredSerializer<GCreateMigrationSourceInput> {
+  @override
+  final Iterable<Type> types = const [
+    GCreateMigrationSourceInput,
+    _$GCreateMigrationSourceInput
+  ];
+  @override
+  final String wireName = 'GCreateMigrationSourceInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GCreateMigrationSourceInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'name',
+      serializers.serialize(object.name, specifiedType: const FullType(String)),
+      'ownerId',
+      serializers.serialize(object.ownerId,
+          specifiedType: const FullType(String)),
+      'type',
+      serializers.serialize(object.type,
+          specifiedType: const FullType(GMigrationSourceType)),
+      'url',
+      serializers.serialize(object.url, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.accessToken;
+    if (value != null) {
+      result
+        ..add('accessToken')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.githubPat;
+    if (value != null) {
+      result
+        ..add('githubPat')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GCreateMigrationSourceInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GCreateMigrationSourceInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'accessToken':
+          result.accessToken = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'githubPat':
+          result.githubPat = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'name':
+          result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'ownerId':
+          result.ownerId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'type':
+          result.type = serializers.deserialize(value,
+                  specifiedType: const FullType(GMigrationSourceType))
+              as GMigrationSourceType;
+          break;
+        case 'url':
+          result.url = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
 class _$GCreateProjectInputSerializer
     implements StructuredSerializer<GCreateProjectInput> {
   @override
@@ -10411,6 +12330,70 @@ class _$GCreateProjectInputSerializer
           result.template = serializers.deserialize(value,
                   specifiedType: const FullType(GProjectTemplate))
               as GProjectTemplate?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GCreateProjectV2InputSerializer
+    implements StructuredSerializer<GCreateProjectV2Input> {
+  @override
+  final Iterable<Type> types = const [
+    GCreateProjectV2Input,
+    _$GCreateProjectV2Input
+  ];
+  @override
+  final String wireName = 'GCreateProjectV2Input';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GCreateProjectV2Input object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'ownerId',
+      serializers.serialize(object.ownerId,
+          specifiedType: const FullType(String)),
+      'title',
+      serializers.serialize(object.title,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GCreateProjectV2Input deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GCreateProjectV2InputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'ownerId':
+          result.ownerId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'title':
+          result.title = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
       }
     }
@@ -10728,6 +12711,305 @@ class _$GCreateRepositoryInputSerializer
           result.visibility = serializers.deserialize(value,
                   specifiedType: const FullType(GRepositoryVisibility))
               as GRepositoryVisibility;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GCreateSponsorsTierInputSerializer
+    implements StructuredSerializer<GCreateSponsorsTierInput> {
+  @override
+  final Iterable<Type> types = const [
+    GCreateSponsorsTierInput,
+    _$GCreateSponsorsTierInput
+  ];
+  @override
+  final String wireName = 'GCreateSponsorsTierInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GCreateSponsorsTierInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'amount',
+      serializers.serialize(object.amount, specifiedType: const FullType(int)),
+      'description',
+      serializers.serialize(object.description,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.isRecurring;
+    if (value != null) {
+      result
+        ..add('isRecurring')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(bool)));
+    }
+    value = object.publish;
+    if (value != null) {
+      result
+        ..add('publish')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(bool)));
+    }
+    value = object.repositoryId;
+    if (value != null) {
+      result
+        ..add('repositoryId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.repositoryName;
+    if (value != null) {
+      result
+        ..add('repositoryName')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.repositoryOwnerLogin;
+    if (value != null) {
+      result
+        ..add('repositoryOwnerLogin')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.sponsorableId;
+    if (value != null) {
+      result
+        ..add('sponsorableId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.sponsorableLogin;
+    if (value != null) {
+      result
+        ..add('sponsorableLogin')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.welcomeMessage;
+    if (value != null) {
+      result
+        ..add('welcomeMessage')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GCreateSponsorsTierInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GCreateSponsorsTierInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'amount':
+          result.amount = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'description':
+          result.description = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'isRecurring':
+          result.isRecurring = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool?;
+          break;
+        case 'publish':
+          result.publish = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool?;
+          break;
+        case 'repositoryId':
+          result.repositoryId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'repositoryName':
+          result.repositoryName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'repositoryOwnerLogin':
+          result.repositoryOwnerLogin = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'sponsorableId':
+          result.sponsorableId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'sponsorableLogin':
+          result.sponsorableLogin = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'welcomeMessage':
+          result.welcomeMessage = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GCreateSponsorshipInputSerializer
+    implements StructuredSerializer<GCreateSponsorshipInput> {
+  @override
+  final Iterable<Type> types = const [
+    GCreateSponsorshipInput,
+    _$GCreateSponsorshipInput
+  ];
+  @override
+  final String wireName = 'GCreateSponsorshipInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GCreateSponsorshipInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.amount;
+    if (value != null) {
+      result
+        ..add('amount')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.isRecurring;
+    if (value != null) {
+      result
+        ..add('isRecurring')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(bool)));
+    }
+    value = object.privacyLevel;
+    if (value != null) {
+      result
+        ..add('privacyLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GSponsorshipPrivacy)));
+    }
+    value = object.receiveEmails;
+    if (value != null) {
+      result
+        ..add('receiveEmails')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(bool)));
+    }
+    value = object.sponsorId;
+    if (value != null) {
+      result
+        ..add('sponsorId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.sponsorLogin;
+    if (value != null) {
+      result
+        ..add('sponsorLogin')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.sponsorableId;
+    if (value != null) {
+      result
+        ..add('sponsorableId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.sponsorableLogin;
+    if (value != null) {
+      result
+        ..add('sponsorableLogin')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.tierId;
+    if (value != null) {
+      result
+        ..add('tierId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GCreateSponsorshipInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GCreateSponsorshipInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'amount':
+          result.amount = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int?;
+          break;
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'isRecurring':
+          result.isRecurring = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool?;
+          break;
+        case 'privacyLevel':
+          result.privacyLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(GSponsorshipPrivacy))
+              as GSponsorshipPrivacy?;
+          break;
+        case 'receiveEmails':
+          result.receiveEmails = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool?;
+          break;
+        case 'sponsorId':
+          result.sponsorId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'sponsorLogin':
+          result.sponsorLogin = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'sponsorableId':
+          result.sponsorableId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'sponsorableLogin':
+          result.sponsorableLogin = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'tierId':
+          result.tierId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
           break;
       }
     }
@@ -11698,6 +13980,141 @@ class _$GDeleteProjectInputSerializer
   }
 }
 
+class _$GDeleteProjectNextItemInputSerializer
+    implements StructuredSerializer<GDeleteProjectNextItemInput> {
+  @override
+  final Iterable<Type> types = const [
+    GDeleteProjectNextItemInput,
+    _$GDeleteProjectNextItemInput
+  ];
+  @override
+  final String wireName = 'GDeleteProjectNextItemInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GDeleteProjectNextItemInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.itemId;
+    if (value != null) {
+      result
+        ..add('itemId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.projectId;
+    if (value != null) {
+      result
+        ..add('projectId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GDeleteProjectNextItemInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GDeleteProjectNextItemInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'itemId':
+          result.itemId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'projectId':
+          result.projectId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GDeleteProjectV2ItemInputSerializer
+    implements StructuredSerializer<GDeleteProjectV2ItemInput> {
+  @override
+  final Iterable<Type> types = const [
+    GDeleteProjectV2ItemInput,
+    _$GDeleteProjectV2ItemInput
+  ];
+  @override
+  final String wireName = 'GDeleteProjectV2ItemInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GDeleteProjectV2ItemInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'itemId',
+      serializers.serialize(object.itemId,
+          specifiedType: const FullType(String)),
+      'projectId',
+      serializers.serialize(object.projectId,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GDeleteProjectV2ItemInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GDeleteProjectV2ItemInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'itemId':
+          result.itemId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'projectId':
+          result.projectId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
 class _$GDeletePullRequestReviewCommentInputSerializer
     implements StructuredSerializer<GDeletePullRequestReviewCommentInput> {
   @override
@@ -12032,6 +14449,25 @@ class _$GDeleteVerifiableDomainInputSerializer
   }
 }
 
+class _$GDependencyGraphEcosystemSerializer
+    implements PrimitiveSerializer<GDependencyGraphEcosystem> {
+  @override
+  final Iterable<Type> types = const <Type>[GDependencyGraphEcosystem];
+  @override
+  final String wireName = 'GDependencyGraphEcosystem';
+
+  @override
+  Object serialize(Serializers serializers, GDependencyGraphEcosystem object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GDependencyGraphEcosystem deserialize(
+          Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GDependencyGraphEcosystem.valueOf(serialized as String);
+}
+
 class _$GDeploymentOrderSerializer
     implements StructuredSerializer<GDeploymentOrder> {
   @override
@@ -12318,6 +14754,82 @@ class _$GDiscussionOrderFieldSerializer
       GDiscussionOrderField.valueOf(serialized as String);
 }
 
+class _$GDiscussionPollOptionOrderSerializer
+    implements StructuredSerializer<GDiscussionPollOptionOrder> {
+  @override
+  final Iterable<Type> types = const [
+    GDiscussionPollOptionOrder,
+    _$GDiscussionPollOptionOrder
+  ];
+  @override
+  final String wireName = 'GDiscussionPollOptionOrder';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GDiscussionPollOptionOrder object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'direction',
+      serializers.serialize(object.direction,
+          specifiedType: const FullType(GOrderDirection)),
+      'field',
+      serializers.serialize(object.field,
+          specifiedType: const FullType(GDiscussionPollOptionOrderField)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GDiscussionPollOptionOrder deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GDiscussionPollOptionOrderBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'direction':
+          result.direction = serializers.deserialize(value,
+                  specifiedType: const FullType(GOrderDirection))
+              as GOrderDirection;
+          break;
+        case 'field':
+          result.field = serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(GDiscussionPollOptionOrderField))
+              as GDiscussionPollOptionOrderField;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GDiscussionPollOptionOrderFieldSerializer
+    implements PrimitiveSerializer<GDiscussionPollOptionOrderField> {
+  @override
+  final Iterable<Type> types = const <Type>[GDiscussionPollOptionOrderField];
+  @override
+  final String wireName = 'GDiscussionPollOptionOrderField';
+
+  @override
+  Object serialize(
+          Serializers serializers, GDiscussionPollOptionOrderField object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GDiscussionPollOptionOrderField deserialize(
+          Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GDiscussionPollOptionOrderField.valueOf(serialized as String);
+}
+
 class _$GDismissPullRequestReviewInputSerializer
     implements StructuredSerializer<GDismissPullRequestReviewInput> {
   @override
@@ -12373,6 +14885,88 @@ class _$GDismissPullRequestReviewInputSerializer
           break;
         case 'pullRequestReviewId':
           result.pullRequestReviewId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GDismissReasonSerializer
+    implements PrimitiveSerializer<GDismissReason> {
+  @override
+  final Iterable<Type> types = const <Type>[GDismissReason];
+  @override
+  final String wireName = 'GDismissReason';
+
+  @override
+  Object serialize(Serializers serializers, GDismissReason object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GDismissReason deserialize(Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GDismissReason.valueOf(serialized as String);
+}
+
+class _$GDismissRepositoryVulnerabilityAlertInputSerializer
+    implements StructuredSerializer<GDismissRepositoryVulnerabilityAlertInput> {
+  @override
+  final Iterable<Type> types = const [
+    GDismissRepositoryVulnerabilityAlertInput,
+    _$GDismissRepositoryVulnerabilityAlertInput
+  ];
+  @override
+  final String wireName = 'GDismissRepositoryVulnerabilityAlertInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GDismissRepositoryVulnerabilityAlertInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'dismissReason',
+      serializers.serialize(object.dismissReason,
+          specifiedType: const FullType(GDismissReason)),
+      'repositoryVulnerabilityAlertId',
+      serializers.serialize(object.repositoryVulnerabilityAlertId,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GDismissRepositoryVulnerabilityAlertInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GDismissRepositoryVulnerabilityAlertInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'dismissReason':
+          result.dismissReason = serializers.deserialize(value,
+              specifiedType: const FullType(GDismissReason)) as GDismissReason;
+          break;
+        case 'repositoryVulnerabilityAlertId':
+          result.repositoryVulnerabilityAlertId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
       }
@@ -13305,6 +15899,154 @@ class _$GEnterpriseUserDeploymentSerializer
       GEnterpriseUserDeployment.valueOf(serialized as String);
 }
 
+class _$GFileAdditionSerializer implements StructuredSerializer<GFileAddition> {
+  @override
+  final Iterable<Type> types = const [GFileAddition, _$GFileAddition];
+  @override
+  final String wireName = 'GFileAddition';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers, GFileAddition object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'contents',
+      serializers.serialize(object.contents,
+          specifiedType: const FullType(GBase64String)),
+      'path',
+      serializers.serialize(object.path, specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GFileAddition deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GFileAdditionBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'contents':
+          result.contents.replace(serializers.deserialize(value,
+              specifiedType: const FullType(GBase64String))! as GBase64String);
+          break;
+        case 'path':
+          result.path = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GFileChangesSerializer implements StructuredSerializer<GFileChanges> {
+  @override
+  final Iterable<Type> types = const [GFileChanges, _$GFileChanges];
+  @override
+  final String wireName = 'GFileChanges';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers, GFileChanges object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.additions;
+    if (value != null) {
+      result
+        ..add('additions')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                BuiltList, const [const FullType(GFileAddition)])));
+    }
+    value = object.deletions;
+    if (value != null) {
+      result
+        ..add('deletions')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                BuiltList, const [const FullType(GFileDeletion)])));
+    }
+    return result;
+  }
+
+  @override
+  GFileChanges deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GFileChangesBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'additions':
+          result.additions.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(GFileAddition)]))!
+              as BuiltList<Object?>);
+          break;
+        case 'deletions':
+          result.deletions.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(GFileDeletion)]))!
+              as BuiltList<Object?>);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GFileDeletionSerializer implements StructuredSerializer<GFileDeletion> {
+  @override
+  final Iterable<Type> types = const [GFileDeletion, _$GFileDeletion];
+  @override
+  final String wireName = 'GFileDeletion';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers, GFileDeletion object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'path',
+      serializers.serialize(object.path, specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GFileDeletion deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GFileDeletionBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'path':
+          result.path = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
 class _$GFileViewedStateSerializer
     implements PrimitiveSerializer<GFileViewedState> {
   @override
@@ -13321,6 +16063,63 @@ class _$GFileViewedStateSerializer
   GFileViewedState deserialize(Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
       GFileViewedState.valueOf(serialized as String);
+}
+
+class _$GFollowOrganizationInputSerializer
+    implements StructuredSerializer<GFollowOrganizationInput> {
+  @override
+  final Iterable<Type> types = const [
+    GFollowOrganizationInput,
+    _$GFollowOrganizationInput
+  ];
+  @override
+  final String wireName = 'GFollowOrganizationInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GFollowOrganizationInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'organizationId',
+      serializers.serialize(object.organizationId,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GFollowOrganizationInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GFollowOrganizationInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'organizationId':
+          result.organizationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
 }
 
 class _$GFollowUserInputSerializer
@@ -13494,6 +16293,142 @@ class _$GGitSignatureStateSerializer
   GGitSignatureState deserialize(Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
       GGitSignatureState.valueOf(serialized as String);
+}
+
+class _$GGrantEnterpriseOrganizationsMigratorRoleInputSerializer
+    implements
+        StructuredSerializer<GGrantEnterpriseOrganizationsMigratorRoleInput> {
+  @override
+  final Iterable<Type> types = const [
+    GGrantEnterpriseOrganizationsMigratorRoleInput,
+    _$GGrantEnterpriseOrganizationsMigratorRoleInput
+  ];
+  @override
+  final String wireName = 'GGrantEnterpriseOrganizationsMigratorRoleInput';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GGrantEnterpriseOrganizationsMigratorRoleInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'enterpriseId',
+      serializers.serialize(object.enterpriseId,
+          specifiedType: const FullType(String)),
+      'login',
+      serializers.serialize(object.login,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GGrantEnterpriseOrganizationsMigratorRoleInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GGrantEnterpriseOrganizationsMigratorRoleInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'enterpriseId':
+          result.enterpriseId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'login':
+          result.login = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GGrantMigratorRoleInputSerializer
+    implements StructuredSerializer<GGrantMigratorRoleInput> {
+  @override
+  final Iterable<Type> types = const [
+    GGrantMigratorRoleInput,
+    _$GGrantMigratorRoleInput
+  ];
+  @override
+  final String wireName = 'GGrantMigratorRoleInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GGrantMigratorRoleInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'actor',
+      serializers.serialize(object.actor,
+          specifiedType: const FullType(String)),
+      'actorType',
+      serializers.serialize(object.actorType,
+          specifiedType: const FullType(GActorType)),
+      'organizationId',
+      serializers.serialize(object.organizationId,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GGrantMigratorRoleInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GGrantMigratorRoleInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'actor':
+          result.actor = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'actorType':
+          result.actorType = serializers.deserialize(value,
+              specifiedType: const FullType(GActorType)) as GActorType;
+          break;
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'organizationId':
+          result.organizationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
 }
 
 class _$GIdentityProviderConfigurationStateSerializer
@@ -13822,6 +16757,25 @@ class _$GIpAllowListForInstalledAppsEnabledSettingValueSerializer
           serialized as String);
 }
 
+class _$GIssueClosedStateReasonSerializer
+    implements PrimitiveSerializer<GIssueClosedStateReason> {
+  @override
+  final Iterable<Type> types = const <Type>[GIssueClosedStateReason];
+  @override
+  final String wireName = 'GIssueClosedStateReason';
+
+  @override
+  Object serialize(Serializers serializers, GIssueClosedStateReason object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GIssueClosedStateReason deserialize(
+          Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GIssueClosedStateReason.valueOf(serialized as String);
+}
+
 class _$GIssueCommentOrderSerializer
     implements StructuredSerializer<GIssueCommentOrder> {
   @override
@@ -13940,6 +16894,13 @@ class _$GIssueFiltersSerializer implements StructuredSerializer<GIssueFilters> {
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.milestoneNumber;
+    if (value != null) {
+      result
+        ..add('milestoneNumber')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
     value = object.since;
     if (value != null) {
       result
@@ -13997,6 +16958,10 @@ class _$GIssueFiltersSerializer implements StructuredSerializer<GIssueFilters> {
           break;
         case 'milestone':
           result.milestone = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'milestoneNumber':
+          result.milestoneNumber = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
         case 'since':
@@ -14102,6 +17067,24 @@ class _$GIssueStateSerializer implements PrimitiveSerializer<GIssueState> {
   GIssueState deserialize(Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
       GIssueState.valueOf(serialized as String);
+}
+
+class _$GIssueStateReasonSerializer
+    implements PrimitiveSerializer<GIssueStateReason> {
+  @override
+  final Iterable<Type> types = const <Type>[GIssueStateReason];
+  @override
+  final String wireName = 'GIssueStateReason';
+
+  @override
+  Object serialize(Serializers serializers, GIssueStateReason object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GIssueStateReason deserialize(Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GIssueStateReason.valueOf(serialized as String);
 }
 
 class _$GIssueTimelineItemsItemTypeSerializer
@@ -14817,6 +17800,42 @@ class _$GMergeableStateSerializer
       GMergeableState.valueOf(serialized as String);
 }
 
+class _$GMigrationSourceTypeSerializer
+    implements PrimitiveSerializer<GMigrationSourceType> {
+  @override
+  final Iterable<Type> types = const <Type>[GMigrationSourceType];
+  @override
+  final String wireName = 'GMigrationSourceType';
+
+  @override
+  Object serialize(Serializers serializers, GMigrationSourceType object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GMigrationSourceType deserialize(Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GMigrationSourceType.valueOf(serialized as String);
+}
+
+class _$GMigrationStateSerializer
+    implements PrimitiveSerializer<GMigrationState> {
+  @override
+  final Iterable<Type> types = const <Type>[GMigrationState];
+  @override
+  final String wireName = 'GMigrationState';
+
+  @override
+  Object serialize(Serializers serializers, GMigrationState object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GMigrationState deserialize(Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GMigrationState.valueOf(serialized as String);
+}
+
 class _$GMilestoneOrderSerializer
     implements StructuredSerializer<GMilestoneOrder> {
   @override
@@ -15134,6 +18153,24 @@ class _$GNotificationRestrictionSettingValueSerializer
       GNotificationRestrictionSettingValue.valueOf(serialized as String);
 }
 
+class _$GOIDCProviderTypeSerializer
+    implements PrimitiveSerializer<GOIDCProviderType> {
+  @override
+  final Iterable<Type> types = const <Type>[GOIDCProviderType];
+  @override
+  final String wireName = 'GOIDCProviderType';
+
+  @override
+  Object serialize(Serializers serializers, GOIDCProviderType object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GOIDCProviderType deserialize(Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GOIDCProviderType.valueOf(serialized as String);
+}
+
 class _$GOauthApplicationCreateAuditEntryStateSerializer
     implements PrimitiveSerializer<GOauthApplicationCreateAuditEntryState> {
   @override
@@ -15230,6 +18267,81 @@ class _$GOrgCreateAuditEntryBillingPlanSerializer
           Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
       GOrgCreateAuditEntryBillingPlan.valueOf(serialized as String);
+}
+
+class _$GOrgEnterpriseOwnerOrderSerializer
+    implements StructuredSerializer<GOrgEnterpriseOwnerOrder> {
+  @override
+  final Iterable<Type> types = const [
+    GOrgEnterpriseOwnerOrder,
+    _$GOrgEnterpriseOwnerOrder
+  ];
+  @override
+  final String wireName = 'GOrgEnterpriseOwnerOrder';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GOrgEnterpriseOwnerOrder object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'direction',
+      serializers.serialize(object.direction,
+          specifiedType: const FullType(GOrderDirection)),
+      'field',
+      serializers.serialize(object.field,
+          specifiedType: const FullType(GOrgEnterpriseOwnerOrderField)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GOrgEnterpriseOwnerOrder deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GOrgEnterpriseOwnerOrderBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'direction':
+          result.direction = serializers.deserialize(value,
+                  specifiedType: const FullType(GOrderDirection))
+              as GOrderDirection;
+          break;
+        case 'field':
+          result.field = serializers.deserialize(value,
+                  specifiedType: const FullType(GOrgEnterpriseOwnerOrderField))
+              as GOrgEnterpriseOwnerOrderField;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOrgEnterpriseOwnerOrderFieldSerializer
+    implements PrimitiveSerializer<GOrgEnterpriseOwnerOrderField> {
+  @override
+  final Iterable<Type> types = const <Type>[GOrgEnterpriseOwnerOrderField];
+  @override
+  final String wireName = 'GOrgEnterpriseOwnerOrderField';
+
+  @override
+  Object serialize(
+          Serializers serializers, GOrgEnterpriseOwnerOrderField object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GOrgEnterpriseOwnerOrderField deserialize(
+          Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GOrgEnterpriseOwnerOrderField.valueOf(serialized as String);
 }
 
 class _$GOrgRemoveBillingManagerAuditEntryReasonSerializer
@@ -15825,6 +18937,23 @@ class _$GPackageVersionOrderFieldSerializer
       GPackageVersionOrderField.valueOf(serialized as String);
 }
 
+class _$GPatchStatusSerializer implements PrimitiveSerializer<GPatchStatus> {
+  @override
+  final Iterable<Type> types = const <Type>[GPatchStatus];
+  @override
+  final String wireName = 'GPatchStatus';
+
+  @override
+  Object serialize(Serializers serializers, GPatchStatus object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GPatchStatus deserialize(Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GPatchStatus.valueOf(serialized as String);
+}
+
 class _$GPinIssueInputSerializer
     implements StructuredSerializer<GPinIssueInput> {
   @override
@@ -16105,6 +19234,60 @@ class _$GProjectColumnPurposeSerializer
       GProjectColumnPurpose.valueOf(serialized as String);
 }
 
+class _$GProjectItemTypeSerializer
+    implements PrimitiveSerializer<GProjectItemType> {
+  @override
+  final Iterable<Type> types = const <Type>[GProjectItemType];
+  @override
+  final String wireName = 'GProjectItemType';
+
+  @override
+  Object serialize(Serializers serializers, GProjectItemType object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GProjectItemType deserialize(Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GProjectItemType.valueOf(serialized as String);
+}
+
+class _$GProjectNextFieldTypeSerializer
+    implements PrimitiveSerializer<GProjectNextFieldType> {
+  @override
+  final Iterable<Type> types = const <Type>[GProjectNextFieldType];
+  @override
+  final String wireName = 'GProjectNextFieldType';
+
+  @override
+  Object serialize(Serializers serializers, GProjectNextFieldType object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GProjectNextFieldType deserialize(Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GProjectNextFieldType.valueOf(serialized as String);
+}
+
+class _$GProjectNextOrderFieldSerializer
+    implements PrimitiveSerializer<GProjectNextOrderField> {
+  @override
+  final Iterable<Type> types = const <Type>[GProjectNextOrderField];
+  @override
+  final String wireName = 'GProjectNextOrderField';
+
+  @override
+  Object serialize(Serializers serializers, GProjectNextOrderField object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GProjectNextOrderField deserialize(Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GProjectNextOrderField.valueOf(serialized as String);
+}
+
 class _$GProjectOrderSerializer implements StructuredSerializer<GProjectOrder> {
   @override
   final Iterable<Type> types = const [GProjectOrder, _$GProjectOrder];
@@ -16206,6 +19389,240 @@ class _$GProjectTemplateSerializer
   GProjectTemplate deserialize(Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
       GProjectTemplate.valueOf(serialized as String);
+}
+
+class _$GProjectV2FieldTypeSerializer
+    implements PrimitiveSerializer<GProjectV2FieldType> {
+  @override
+  final Iterable<Type> types = const <Type>[GProjectV2FieldType];
+  @override
+  final String wireName = 'GProjectV2FieldType';
+
+  @override
+  Object serialize(Serializers serializers, GProjectV2FieldType object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GProjectV2FieldType deserialize(Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GProjectV2FieldType.valueOf(serialized as String);
+}
+
+class _$GProjectV2FieldValueSerializer
+    implements StructuredSerializer<GProjectV2FieldValue> {
+  @override
+  final Iterable<Type> types = const [
+    GProjectV2FieldValue,
+    _$GProjectV2FieldValue
+  ];
+  @override
+  final String wireName = 'GProjectV2FieldValue';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GProjectV2FieldValue object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.date;
+    if (value != null) {
+      result
+        ..add('date')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(GDate)));
+    }
+    value = object.iterationId;
+    if (value != null) {
+      result
+        ..add('iterationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.number;
+    if (value != null) {
+      result
+        ..add('number')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(double)));
+    }
+    value = object.singleSelectOptionId;
+    if (value != null) {
+      result
+        ..add('singleSelectOptionId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.text;
+    if (value != null) {
+      result
+        ..add('text')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GProjectV2FieldValue deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GProjectV2FieldValueBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'date':
+          result.date.replace(serializers.deserialize(value,
+              specifiedType: const FullType(GDate))! as GDate);
+          break;
+        case 'iterationId':
+          result.iterationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'number':
+          result.number = serializers.deserialize(value,
+              specifiedType: const FullType(double)) as double?;
+          break;
+        case 'singleSelectOptionId':
+          result.singleSelectOptionId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'text':
+          result.text = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GProjectV2ItemTypeSerializer
+    implements PrimitiveSerializer<GProjectV2ItemType> {
+  @override
+  final Iterable<Type> types = const <Type>[GProjectV2ItemType];
+  @override
+  final String wireName = 'GProjectV2ItemType';
+
+  @override
+  Object serialize(Serializers serializers, GProjectV2ItemType object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GProjectV2ItemType deserialize(Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GProjectV2ItemType.valueOf(serialized as String);
+}
+
+class _$GProjectV2OrderSerializer
+    implements StructuredSerializer<GProjectV2Order> {
+  @override
+  final Iterable<Type> types = const [GProjectV2Order, _$GProjectV2Order];
+  @override
+  final String wireName = 'GProjectV2Order';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers, GProjectV2Order object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'direction',
+      serializers.serialize(object.direction,
+          specifiedType: const FullType(GOrderDirection)),
+      'field',
+      serializers.serialize(object.field,
+          specifiedType: const FullType(GProjectV2OrderField)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GProjectV2Order deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GProjectV2OrderBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'direction':
+          result.direction = serializers.deserialize(value,
+                  specifiedType: const FullType(GOrderDirection))
+              as GOrderDirection;
+          break;
+        case 'field':
+          result.field = serializers.deserialize(value,
+                  specifiedType: const FullType(GProjectV2OrderField))
+              as GProjectV2OrderField;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GProjectV2OrderFieldSerializer
+    implements PrimitiveSerializer<GProjectV2OrderField> {
+  @override
+  final Iterable<Type> types = const <Type>[GProjectV2OrderField];
+  @override
+  final String wireName = 'GProjectV2OrderField';
+
+  @override
+  Object serialize(Serializers serializers, GProjectV2OrderField object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GProjectV2OrderField deserialize(Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GProjectV2OrderField.valueOf(serialized as String);
+}
+
+class _$GProjectV2ViewLayoutSerializer
+    implements PrimitiveSerializer<GProjectV2ViewLayout> {
+  @override
+  final Iterable<Type> types = const <Type>[GProjectV2ViewLayout];
+  @override
+  final String wireName = 'GProjectV2ViewLayout';
+
+  @override
+  Object serialize(Serializers serializers, GProjectV2ViewLayout object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GProjectV2ViewLayout deserialize(Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GProjectV2ViewLayout.valueOf(serialized as String);
+}
+
+class _$GProjectViewLayoutSerializer
+    implements PrimitiveSerializer<GProjectViewLayout> {
+  @override
+  final Iterable<Type> types = const <Type>[GProjectViewLayout];
+  @override
+  final String wireName = 'GProjectViewLayout';
+
+  @override
+  Object serialize(Serializers serializers, GProjectViewLayout object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GProjectViewLayout deserialize(Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GProjectViewLayout.valueOf(serialized as String);
 }
 
 class _$GPullRequestMergeMethodSerializer
@@ -17997,6 +21414,102 @@ class _$GRepositoryLockReasonSerializer
       GRepositoryLockReason.valueOf(serialized as String);
 }
 
+class _$GRepositoryMigrationOrderSerializer
+    implements StructuredSerializer<GRepositoryMigrationOrder> {
+  @override
+  final Iterable<Type> types = const [
+    GRepositoryMigrationOrder,
+    _$GRepositoryMigrationOrder
+  ];
+  @override
+  final String wireName = 'GRepositoryMigrationOrder';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GRepositoryMigrationOrder object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'direction',
+      serializers.serialize(object.direction,
+          specifiedType: const FullType(GRepositoryMigrationOrderDirection)),
+      'field',
+      serializers.serialize(object.field,
+          specifiedType: const FullType(GRepositoryMigrationOrderField)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GRepositoryMigrationOrder deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GRepositoryMigrationOrderBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'direction':
+          result.direction = serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(GRepositoryMigrationOrderDirection))
+              as GRepositoryMigrationOrderDirection;
+          break;
+        case 'field':
+          result.field = serializers.deserialize(value,
+                  specifiedType: const FullType(GRepositoryMigrationOrderField))
+              as GRepositoryMigrationOrderField;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GRepositoryMigrationOrderDirectionSerializer
+    implements PrimitiveSerializer<GRepositoryMigrationOrderDirection> {
+  @override
+  final Iterable<Type> types = const <Type>[GRepositoryMigrationOrderDirection];
+  @override
+  final String wireName = 'GRepositoryMigrationOrderDirection';
+
+  @override
+  Object serialize(
+          Serializers serializers, GRepositoryMigrationOrderDirection object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GRepositoryMigrationOrderDirection deserialize(
+          Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GRepositoryMigrationOrderDirection.valueOf(serialized as String);
+}
+
+class _$GRepositoryMigrationOrderFieldSerializer
+    implements PrimitiveSerializer<GRepositoryMigrationOrderField> {
+  @override
+  final Iterable<Type> types = const <Type>[GRepositoryMigrationOrderField];
+  @override
+  final String wireName = 'GRepositoryMigrationOrderField';
+
+  @override
+  Object serialize(
+          Serializers serializers, GRepositoryMigrationOrderField object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GRepositoryMigrationOrderField deserialize(
+          Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GRepositoryMigrationOrderField.valueOf(serialized as String);
+}
+
 class _$GRepositoryOrderSerializer
     implements StructuredSerializer<GRepositoryOrder> {
   @override
@@ -18120,6 +21633,26 @@ class _$GRepositoryVisibilitySerializer
       GRepositoryVisibility.valueOf(serialized as String);
 }
 
+class _$GRepositoryVulnerabilityAlertStateSerializer
+    implements PrimitiveSerializer<GRepositoryVulnerabilityAlertState> {
+  @override
+  final Iterable<Type> types = const <Type>[GRepositoryVulnerabilityAlertState];
+  @override
+  final String wireName = 'GRepositoryVulnerabilityAlertState';
+
+  @override
+  Object serialize(
+          Serializers serializers, GRepositoryVulnerabilityAlertState object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GRepositoryVulnerabilityAlertState deserialize(
+          Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GRepositoryVulnerabilityAlertState.valueOf(serialized as String);
+}
+
 class _$GRequestReviewsInputSerializer
     implements StructuredSerializer<GRequestReviewsInput> {
   @override
@@ -18233,6 +21766,63 @@ class _$GRequestableCheckStatusStateSerializer
           Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
       GRequestableCheckStatusState.valueOf(serialized as String);
+}
+
+class _$GRequiredStatusCheckInputSerializer
+    implements StructuredSerializer<GRequiredStatusCheckInput> {
+  @override
+  final Iterable<Type> types = const [
+    GRequiredStatusCheckInput,
+    _$GRequiredStatusCheckInput
+  ];
+  @override
+  final String wireName = 'GRequiredStatusCheckInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GRequiredStatusCheckInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'context',
+      serializers.serialize(object.context,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.appId;
+    if (value != null) {
+      result
+        ..add('appId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GRequiredStatusCheckInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GRequiredStatusCheckInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'appId':
+          result.appId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'context':
+          result.context = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
 }
 
 class _$GRerequestCheckSuiteInputSerializer
@@ -18356,6 +21946,160 @@ class _$GResolveReviewThreadInputSerializer
   }
 }
 
+class _$GRevokeEnterpriseOrganizationsMigratorRoleInputSerializer
+    implements
+        StructuredSerializer<GRevokeEnterpriseOrganizationsMigratorRoleInput> {
+  @override
+  final Iterable<Type> types = const [
+    GRevokeEnterpriseOrganizationsMigratorRoleInput,
+    _$GRevokeEnterpriseOrganizationsMigratorRoleInput
+  ];
+  @override
+  final String wireName = 'GRevokeEnterpriseOrganizationsMigratorRoleInput';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GRevokeEnterpriseOrganizationsMigratorRoleInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'enterpriseId',
+      serializers.serialize(object.enterpriseId,
+          specifiedType: const FullType(String)),
+      'login',
+      serializers.serialize(object.login,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GRevokeEnterpriseOrganizationsMigratorRoleInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GRevokeEnterpriseOrganizationsMigratorRoleInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'enterpriseId':
+          result.enterpriseId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'login':
+          result.login = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GRevokeMigratorRoleInputSerializer
+    implements StructuredSerializer<GRevokeMigratorRoleInput> {
+  @override
+  final Iterable<Type> types = const [
+    GRevokeMigratorRoleInput,
+    _$GRevokeMigratorRoleInput
+  ];
+  @override
+  final String wireName = 'GRevokeMigratorRoleInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GRevokeMigratorRoleInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'actor',
+      serializers.serialize(object.actor,
+          specifiedType: const FullType(String)),
+      'actorType',
+      serializers.serialize(object.actorType,
+          specifiedType: const FullType(GActorType)),
+      'organizationId',
+      serializers.serialize(object.organizationId,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GRevokeMigratorRoleInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GRevokeMigratorRoleInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'actor':
+          result.actor = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'actorType':
+          result.actorType = serializers.deserialize(value,
+              specifiedType: const FullType(GActorType)) as GActorType;
+          break;
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'organizationId':
+          result.organizationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GRoleInOrganizationSerializer
+    implements PrimitiveSerializer<GRoleInOrganization> {
+  @override
+  final Iterable<Type> types = const <Type>[GRoleInOrganization];
+  @override
+  final String wireName = 'GRoleInOrganization';
+
+  @override
+  Object serialize(Serializers serializers, GRoleInOrganization object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GRoleInOrganization deserialize(Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GRoleInOrganization.valueOf(serialized as String);
+}
+
 class _$GSamlDigestAlgorithmSerializer
     implements PrimitiveSerializer<GSamlDigestAlgorithm> {
   @override
@@ -18477,6 +22221,26 @@ class _$GSearchTypeSerializer implements PrimitiveSerializer<GSearchType> {
   GSearchType deserialize(Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
       GSearchType.valueOf(serialized as String);
+}
+
+class _$GSecurityAdvisoryClassificationSerializer
+    implements PrimitiveSerializer<GSecurityAdvisoryClassification> {
+  @override
+  final Iterable<Type> types = const <Type>[GSecurityAdvisoryClassification];
+  @override
+  final String wireName = 'GSecurityAdvisoryClassification';
+
+  @override
+  Object serialize(
+          Serializers serializers, GSecurityAdvisoryClassification object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GSecurityAdvisoryClassification deserialize(
+          Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GSecurityAdvisoryClassification.valueOf(serialized as String);
 }
 
 class _$GSecurityAdvisoryEcosystemSerializer
@@ -19074,6 +22838,74 @@ class _$GSetUserInteractionLimitInputSerializer
   }
 }
 
+class _$GSponsorOrderSerializer implements StructuredSerializer<GSponsorOrder> {
+  @override
+  final Iterable<Type> types = const [GSponsorOrder, _$GSponsorOrder];
+  @override
+  final String wireName = 'GSponsorOrder';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers, GSponsorOrder object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'direction',
+      serializers.serialize(object.direction,
+          specifiedType: const FullType(GOrderDirection)),
+      'field',
+      serializers.serialize(object.field,
+          specifiedType: const FullType(GSponsorOrderField)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GSponsorOrder deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GSponsorOrderBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'direction':
+          result.direction = serializers.deserialize(value,
+                  specifiedType: const FullType(GOrderDirection))
+              as GOrderDirection;
+          break;
+        case 'field':
+          result.field = serializers.deserialize(value,
+                  specifiedType: const FullType(GSponsorOrderField))
+              as GSponsorOrderField;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GSponsorOrderFieldSerializer
+    implements PrimitiveSerializer<GSponsorOrderField> {
+  @override
+  final Iterable<Type> types = const <Type>[GSponsorOrderField];
+  @override
+  final String wireName = 'GSponsorOrderField';
+
+  @override
+  Object serialize(Serializers serializers, GSponsorOrderField object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GSponsorOrderField deserialize(Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GSponsorOrderField.valueOf(serialized as String);
+}
+
 class _$GSponsorableOrderSerializer
     implements StructuredSerializer<GSponsorableOrder> {
   @override
@@ -19344,6 +23176,82 @@ class _$GSponsorsTierOrderFieldSerializer
       GSponsorsTierOrderField.valueOf(serialized as String);
 }
 
+class _$GSponsorshipNewsletterOrderSerializer
+    implements StructuredSerializer<GSponsorshipNewsletterOrder> {
+  @override
+  final Iterable<Type> types = const [
+    GSponsorshipNewsletterOrder,
+    _$GSponsorshipNewsletterOrder
+  ];
+  @override
+  final String wireName = 'GSponsorshipNewsletterOrder';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GSponsorshipNewsletterOrder object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'direction',
+      serializers.serialize(object.direction,
+          specifiedType: const FullType(GOrderDirection)),
+      'field',
+      serializers.serialize(object.field,
+          specifiedType: const FullType(GSponsorshipNewsletterOrderField)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GSponsorshipNewsletterOrder deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GSponsorshipNewsletterOrderBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'direction':
+          result.direction = serializers.deserialize(value,
+                  specifiedType: const FullType(GOrderDirection))
+              as GOrderDirection;
+          break;
+        case 'field':
+          result.field = serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(GSponsorshipNewsletterOrderField))
+              as GSponsorshipNewsletterOrderField;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GSponsorshipNewsletterOrderFieldSerializer
+    implements PrimitiveSerializer<GSponsorshipNewsletterOrderField> {
+  @override
+  final Iterable<Type> types = const <Type>[GSponsorshipNewsletterOrderField];
+  @override
+  final String wireName = 'GSponsorshipNewsletterOrderField';
+
+  @override
+  Object serialize(
+          Serializers serializers, GSponsorshipNewsletterOrderField object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GSponsorshipNewsletterOrderField deserialize(
+          Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GSponsorshipNewsletterOrderField.valueOf(serialized as String);
+}
+
 class _$GSponsorshipOrderSerializer
     implements StructuredSerializer<GSponsorshipOrder> {
   @override
@@ -19496,6 +23404,146 @@ class _$GStarOrderFieldSerializer
   GStarOrderField deserialize(Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
       GStarOrderField.valueOf(serialized as String);
+}
+
+class _$GStartRepositoryMigrationInputSerializer
+    implements StructuredSerializer<GStartRepositoryMigrationInput> {
+  @override
+  final Iterable<Type> types = const [
+    GStartRepositoryMigrationInput,
+    _$GStartRepositoryMigrationInput
+  ];
+  @override
+  final String wireName = 'GStartRepositoryMigrationInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GStartRepositoryMigrationInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'accessToken',
+      serializers.serialize(object.accessToken,
+          specifiedType: const FullType(String)),
+      'ownerId',
+      serializers.serialize(object.ownerId,
+          specifiedType: const FullType(String)),
+      'repositoryName',
+      serializers.serialize(object.repositoryName,
+          specifiedType: const FullType(String)),
+      'sourceId',
+      serializers.serialize(object.sourceId,
+          specifiedType: const FullType(String)),
+      'sourceRepositoryUrl',
+      serializers.serialize(object.sourceRepositoryUrl,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.continueOnError;
+    if (value != null) {
+      result
+        ..add('continueOnError')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(bool)));
+    }
+    value = object.gitArchiveUrl;
+    if (value != null) {
+      result
+        ..add('gitArchiveUrl')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.githubPat;
+    if (value != null) {
+      result
+        ..add('githubPat')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.metadataArchiveUrl;
+    if (value != null) {
+      result
+        ..add('metadataArchiveUrl')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.skipReleases;
+    if (value != null) {
+      result
+        ..add('skipReleases')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(bool)));
+    }
+    return result;
+  }
+
+  @override
+  GStartRepositoryMigrationInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GStartRepositoryMigrationInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'accessToken':
+          result.accessToken = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'continueOnError':
+          result.continueOnError = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool?;
+          break;
+        case 'gitArchiveUrl':
+          result.gitArchiveUrl = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'githubPat':
+          result.githubPat = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'metadataArchiveUrl':
+          result.metadataArchiveUrl = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'ownerId':
+          result.ownerId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'repositoryName':
+          result.repositoryName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'skipReleases':
+          result.skipReleases = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool?;
+          break;
+        case 'sourceId':
+          result.sourceId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'sourceRepositoryUrl':
+          result.sourceRepositoryUrl = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
 }
 
 class _$GStatusStateSerializer implements PrimitiveSerializer<GStatusState> {
@@ -20094,6 +24142,24 @@ class _$GTopicSuggestionDeclineReasonSerializer
       GTopicSuggestionDeclineReason.valueOf(serialized as String);
 }
 
+class _$GTrackedIssueStatesSerializer
+    implements PrimitiveSerializer<GTrackedIssueStates> {
+  @override
+  final Iterable<Type> types = const <Type>[GTrackedIssueStates];
+  @override
+  final String wireName = 'GTrackedIssueStates';
+
+  @override
+  Object serialize(Serializers serializers, GTrackedIssueStates object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      object.name;
+
+  @override
+  GTrackedIssueStates deserialize(Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      GTrackedIssueStates.valueOf(serialized as String);
+}
+
 class _$GTransferIssueInputSerializer
     implements StructuredSerializer<GTransferIssueInput> {
   @override
@@ -20206,6 +24272,63 @@ class _$GUnarchiveRepositoryInputSerializer
           break;
         case 'repositoryId':
           result.repositoryId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GUnfollowOrganizationInputSerializer
+    implements StructuredSerializer<GUnfollowOrganizationInput> {
+  @override
+  final Iterable<Type> types = const [
+    GUnfollowOrganizationInput,
+    _$GUnfollowOrganizationInput
+  ];
+  @override
+  final String wireName = 'GUnfollowOrganizationInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GUnfollowOrganizationInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'organizationId',
+      serializers.serialize(object.organizationId,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GUnfollowOrganizationInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GUnfollowOrganizationInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'organizationId':
+          result.organizationId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
       }
@@ -20774,6 +24897,29 @@ class _$GUpdateBranchProtectionRuleInputSerializer
         ..add(
             serializers.serialize(value, specifiedType: const FullType(bool)));
     }
+    value = object.blocksCreations;
+    if (value != null) {
+      result
+        ..add('blocksCreations')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(bool)));
+    }
+    value = object.bypassForcePushActorIds;
+    if (value != null) {
+      result
+        ..add('bypassForcePushActorIds')
+        ..add(serializers.serialize(value,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(String)])));
+    }
+    value = object.bypassPullRequestActorIds;
+    if (value != null) {
+      result
+        ..add('bypassPullRequestActorIds')
+        ..add(serializers.serialize(value,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(String)])));
+    }
     value = object.clientMutationId;
     if (value != null) {
       result
@@ -20823,6 +24969,14 @@ class _$GUpdateBranchProtectionRuleInputSerializer
         ..add(serializers.serialize(value,
             specifiedType:
                 const FullType(BuiltList, const [const FullType(String)])));
+    }
+    value = object.requiredStatusChecks;
+    if (value != null) {
+      result
+        ..add('requiredStatusChecks')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                BuiltList, const [const FullType(GRequiredStatusCheckInput)])));
     }
     value = object.requiresApprovingReviews;
     if (value != null) {
@@ -20918,9 +25072,26 @@ class _$GUpdateBranchProtectionRuleInputSerializer
           result.allowsForcePushes = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool?;
           break;
+        case 'blocksCreations':
+          result.blocksCreations = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool?;
+          break;
         case 'branchProtectionRuleId':
           result.branchProtectionRuleId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'bypassForcePushActorIds':
+          result.bypassForcePushActorIds.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(String)]))!
+              as BuiltList<Object?>);
+          break;
+        case 'bypassPullRequestActorIds':
+          result.bypassPullRequestActorIds.replace(serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(String)]))!
+              as BuiltList<Object?>);
           break;
         case 'clientMutationId':
           result.clientMutationId = serializers.deserialize(value,
@@ -20954,6 +25125,12 @@ class _$GUpdateBranchProtectionRuleInputSerializer
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(String)]))!
               as BuiltList<Object?>);
+          break;
+        case 'requiredStatusChecks':
+          result.requiredStatusChecks.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(GRequiredStatusCheckInput)
+              ]))! as BuiltList<Object?>);
           break;
         case 'requiresApprovingReviews':
           result.requiresApprovingReviews = serializers.deserialize(value,
@@ -22292,6 +26469,79 @@ class _$GUpdateEnterpriseOrganizationProjectsSettingInputSerializer
   }
 }
 
+class _$GUpdateEnterpriseOwnerOrganizationRoleInputSerializer
+    implements
+        StructuredSerializer<GUpdateEnterpriseOwnerOrganizationRoleInput> {
+  @override
+  final Iterable<Type> types = const [
+    GUpdateEnterpriseOwnerOrganizationRoleInput,
+    _$GUpdateEnterpriseOwnerOrganizationRoleInput
+  ];
+  @override
+  final String wireName = 'GUpdateEnterpriseOwnerOrganizationRoleInput';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GUpdateEnterpriseOwnerOrganizationRoleInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'enterpriseId',
+      serializers.serialize(object.enterpriseId,
+          specifiedType: const FullType(String)),
+      'organizationId',
+      serializers.serialize(object.organizationId,
+          specifiedType: const FullType(String)),
+      'organizationRole',
+      serializers.serialize(object.organizationRole,
+          specifiedType: const FullType(GRoleInOrganization)),
+    ];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GUpdateEnterpriseOwnerOrganizationRoleInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GUpdateEnterpriseOwnerOrganizationRoleInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'enterpriseId':
+          result.enterpriseId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'organizationId':
+          result.organizationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'organizationRole':
+          result.organizationRole = serializers.deserialize(value,
+                  specifiedType: const FullType(GRoleInOrganization))
+              as GRoleInOrganization;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
 class _$GUpdateEnterpriseProfileInputSerializer
     implements StructuredSerializer<GUpdateEnterpriseProfileInput> {
   @override
@@ -23250,6 +27500,74 @@ class _$GUpdateNotificationRestrictionSettingInputSerializer
   }
 }
 
+class _$GUpdateOrganizationAllowPrivateRepositoryForkingSettingInputSerializer
+    implements
+        StructuredSerializer<
+            GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput> {
+  @override
+  final Iterable<Type> types = const [
+    GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput,
+    _$GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput
+  ];
+  @override
+  final String wireName =
+      'GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'forkingEnabled',
+      serializers.serialize(object.forkingEnabled,
+          specifiedType: const FullType(bool)),
+      'organizationId',
+      serializers.serialize(object.organizationId,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GUpdateOrganizationAllowPrivateRepositoryForkingSettingInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'forkingEnabled':
+          result.forkingEnabled = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'organizationId':
+          result.organizationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
 class _$GUpdateProjectCardInputSerializer
     implements StructuredSerializer<GUpdateProjectCardInput> {
   @override
@@ -23392,6 +27710,99 @@ class _$GUpdateProjectColumnInputSerializer
   }
 }
 
+class _$GUpdateProjectDraftIssueInputSerializer
+    implements StructuredSerializer<GUpdateProjectDraftIssueInput> {
+  @override
+  final Iterable<Type> types = const [
+    GUpdateProjectDraftIssueInput,
+    _$GUpdateProjectDraftIssueInput
+  ];
+  @override
+  final String wireName = 'GUpdateProjectDraftIssueInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GUpdateProjectDraftIssueInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'draftIssueId',
+      serializers.serialize(object.draftIssueId,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.assigneeIds;
+    if (value != null) {
+      result
+        ..add('assigneeIds')
+        ..add(serializers.serialize(value,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(String)])));
+    }
+    value = object.body;
+    if (value != null) {
+      result
+        ..add('body')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.title;
+    if (value != null) {
+      result
+        ..add('title')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GUpdateProjectDraftIssueInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GUpdateProjectDraftIssueInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'assigneeIds':
+          result.assigneeIds.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(String)]))!
+              as BuiltList<Object?>);
+          break;
+        case 'body':
+          result.body = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'draftIssueId':
+          result.draftIssueId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'title':
+          result.title = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
 class _$GUpdateProjectInputSerializer
     implements StructuredSerializer<GUpdateProjectInput> {
   @override
@@ -23485,6 +27896,641 @@ class _$GUpdateProjectInputSerializer
         case 'state':
           result.state = serializers.deserialize(value,
               specifiedType: const FullType(GProjectState)) as GProjectState?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GUpdateProjectNextInputSerializer
+    implements StructuredSerializer<GUpdateProjectNextInput> {
+  @override
+  final Iterable<Type> types = const [
+    GUpdateProjectNextInput,
+    _$GUpdateProjectNextInput
+  ];
+  @override
+  final String wireName = 'GUpdateProjectNextInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GUpdateProjectNextInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.closed;
+    if (value != null) {
+      result
+        ..add('closed')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(bool)));
+    }
+    value = object.description;
+    if (value != null) {
+      result
+        ..add('description')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.projectId;
+    if (value != null) {
+      result
+        ..add('projectId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.public;
+    if (value != null) {
+      result
+        ..add('public')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(bool)));
+    }
+    value = object.shortDescription;
+    if (value != null) {
+      result
+        ..add('shortDescription')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.title;
+    if (value != null) {
+      result
+        ..add('title')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GUpdateProjectNextInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GUpdateProjectNextInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'closed':
+          result.closed = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool?;
+          break;
+        case 'description':
+          result.description = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'projectId':
+          result.projectId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'public':
+          result.public = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool?;
+          break;
+        case 'shortDescription':
+          result.shortDescription = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'title':
+          result.title = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GUpdateProjectNextItemFieldInputSerializer
+    implements StructuredSerializer<GUpdateProjectNextItemFieldInput> {
+  @override
+  final Iterable<Type> types = const [
+    GUpdateProjectNextItemFieldInput,
+    _$GUpdateProjectNextItemFieldInput
+  ];
+  @override
+  final String wireName = 'GUpdateProjectNextItemFieldInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GUpdateProjectNextItemFieldInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.fieldId;
+    if (value != null) {
+      result
+        ..add('fieldId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.itemId;
+    if (value != null) {
+      result
+        ..add('itemId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.projectId;
+    if (value != null) {
+      result
+        ..add('projectId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.value;
+    if (value != null) {
+      result
+        ..add('value')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GUpdateProjectNextItemFieldInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GUpdateProjectNextItemFieldInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'fieldId':
+          result.fieldId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'itemId':
+          result.itemId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'projectId':
+          result.projectId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'value':
+          result.value = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GUpdateProjectV2DraftIssueInputSerializer
+    implements StructuredSerializer<GUpdateProjectV2DraftIssueInput> {
+  @override
+  final Iterable<Type> types = const [
+    GUpdateProjectV2DraftIssueInput,
+    _$GUpdateProjectV2DraftIssueInput
+  ];
+  @override
+  final String wireName = 'GUpdateProjectV2DraftIssueInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GUpdateProjectV2DraftIssueInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'draftIssueId',
+      serializers.serialize(object.draftIssueId,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.assigneeIds;
+    if (value != null) {
+      result
+        ..add('assigneeIds')
+        ..add(serializers.serialize(value,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(String)])));
+    }
+    value = object.body;
+    if (value != null) {
+      result
+        ..add('body')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.title;
+    if (value != null) {
+      result
+        ..add('title')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GUpdateProjectV2DraftIssueInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GUpdateProjectV2DraftIssueInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'assigneeIds':
+          result.assigneeIds.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(String)]))!
+              as BuiltList<Object?>);
+          break;
+        case 'body':
+          result.body = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'draftIssueId':
+          result.draftIssueId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'title':
+          result.title = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GUpdateProjectV2InputSerializer
+    implements StructuredSerializer<GUpdateProjectV2Input> {
+  @override
+  final Iterable<Type> types = const [
+    GUpdateProjectV2Input,
+    _$GUpdateProjectV2Input
+  ];
+  @override
+  final String wireName = 'GUpdateProjectV2Input';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GUpdateProjectV2Input object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'projectId',
+      serializers.serialize(object.projectId,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.closed;
+    if (value != null) {
+      result
+        ..add('closed')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(bool)));
+    }
+    value = object.public;
+    if (value != null) {
+      result
+        ..add('public')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(bool)));
+    }
+    value = object.readme;
+    if (value != null) {
+      result
+        ..add('readme')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.shortDescription;
+    if (value != null) {
+      result
+        ..add('shortDescription')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.title;
+    if (value != null) {
+      result
+        ..add('title')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GUpdateProjectV2Input deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GUpdateProjectV2InputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'closed':
+          result.closed = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool?;
+          break;
+        case 'projectId':
+          result.projectId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'public':
+          result.public = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool?;
+          break;
+        case 'readme':
+          result.readme = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'shortDescription':
+          result.shortDescription = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'title':
+          result.title = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GUpdateProjectV2ItemFieldValueInputSerializer
+    implements StructuredSerializer<GUpdateProjectV2ItemFieldValueInput> {
+  @override
+  final Iterable<Type> types = const [
+    GUpdateProjectV2ItemFieldValueInput,
+    _$GUpdateProjectV2ItemFieldValueInput
+  ];
+  @override
+  final String wireName = 'GUpdateProjectV2ItemFieldValueInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GUpdateProjectV2ItemFieldValueInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'fieldId',
+      serializers.serialize(object.fieldId,
+          specifiedType: const FullType(String)),
+      'itemId',
+      serializers.serialize(object.itemId,
+          specifiedType: const FullType(String)),
+      'projectId',
+      serializers.serialize(object.projectId,
+          specifiedType: const FullType(String)),
+      'value',
+      serializers.serialize(object.value,
+          specifiedType: const FullType(GProjectV2FieldValue)),
+    ];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GUpdateProjectV2ItemFieldValueInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GUpdateProjectV2ItemFieldValueInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'fieldId':
+          result.fieldId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'itemId':
+          result.itemId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'projectId':
+          result.projectId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'value':
+          result.value.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(GProjectV2FieldValue))!
+              as GProjectV2FieldValue);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GUpdateProjectV2ItemPositionInputSerializer
+    implements StructuredSerializer<GUpdateProjectV2ItemPositionInput> {
+  @override
+  final Iterable<Type> types = const [
+    GUpdateProjectV2ItemPositionInput,
+    _$GUpdateProjectV2ItemPositionInput
+  ];
+  @override
+  final String wireName = 'GUpdateProjectV2ItemPositionInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GUpdateProjectV2ItemPositionInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'itemId',
+      serializers.serialize(object.itemId,
+          specifiedType: const FullType(String)),
+      'projectId',
+      serializers.serialize(object.projectId,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.afterId;
+    if (value != null) {
+      result
+        ..add('afterId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GUpdateProjectV2ItemPositionInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GUpdateProjectV2ItemPositionInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'afterId':
+          result.afterId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'itemId':
+          result.itemId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'projectId':
+          result.projectId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GUpdatePullRequestBranchInputSerializer
+    implements StructuredSerializer<GUpdatePullRequestBranchInput> {
+  @override
+  final Iterable<Type> types = const [
+    GUpdatePullRequestBranchInput,
+    _$GUpdatePullRequestBranchInput
+  ];
+  @override
+  final String wireName = 'GUpdatePullRequestBranchInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GUpdatePullRequestBranchInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'pullRequestId',
+      serializers.serialize(object.pullRequestId,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.expectedHeadOid;
+    if (value != null) {
+      result
+        ..add('expectedHeadOid')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GUpdatePullRequestBranchInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GUpdatePullRequestBranchInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'expectedHeadOid':
+          result.expectedHeadOid = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'pullRequestId':
+          result.pullRequestId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
       }
     }
@@ -24052,6 +29098,122 @@ class _$GUpdateRepositoryInputSerializer
   }
 }
 
+class _$GUpdateSponsorshipPreferencesInputSerializer
+    implements StructuredSerializer<GUpdateSponsorshipPreferencesInput> {
+  @override
+  final Iterable<Type> types = const [
+    GUpdateSponsorshipPreferencesInput,
+    _$GUpdateSponsorshipPreferencesInput
+  ];
+  @override
+  final String wireName = 'GUpdateSponsorshipPreferencesInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GUpdateSponsorshipPreferencesInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.privacyLevel;
+    if (value != null) {
+      result
+        ..add('privacyLevel')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GSponsorshipPrivacy)));
+    }
+    value = object.receiveEmails;
+    if (value != null) {
+      result
+        ..add('receiveEmails')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(bool)));
+    }
+    value = object.sponsorId;
+    if (value != null) {
+      result
+        ..add('sponsorId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.sponsorLogin;
+    if (value != null) {
+      result
+        ..add('sponsorLogin')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.sponsorableId;
+    if (value != null) {
+      result
+        ..add('sponsorableId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.sponsorableLogin;
+    if (value != null) {
+      result
+        ..add('sponsorableLogin')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GUpdateSponsorshipPreferencesInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GUpdateSponsorshipPreferencesInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'privacyLevel':
+          result.privacyLevel = serializers.deserialize(value,
+                  specifiedType: const FullType(GSponsorshipPrivacy))
+              as GSponsorshipPrivacy?;
+          break;
+        case 'receiveEmails':
+          result.receiveEmails = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool?;
+          break;
+        case 'sponsorId':
+          result.sponsorId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'sponsorLogin':
+          result.sponsorLogin = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'sponsorableId':
+          result.sponsorableId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'sponsorableLogin':
+          result.sponsorableLogin = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
 class _$GUpdateSubscriptionInputSerializer
     implements StructuredSerializer<GUpdateSubscriptionInput> {
   @override
@@ -24400,6 +29562,81 @@ class _$GUpdateTeamReviewAssignmentInputSerializer
   }
 }
 
+class _$GUpdateTeamsRepositoryInputSerializer
+    implements StructuredSerializer<GUpdateTeamsRepositoryInput> {
+  @override
+  final Iterable<Type> types = const [
+    GUpdateTeamsRepositoryInput,
+    _$GUpdateTeamsRepositoryInput
+  ];
+  @override
+  final String wireName = 'GUpdateTeamsRepositoryInput';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GUpdateTeamsRepositoryInput object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'permission',
+      serializers.serialize(object.permission,
+          specifiedType: const FullType(GRepositoryPermission)),
+      'repositoryId',
+      serializers.serialize(object.repositoryId,
+          specifiedType: const FullType(String)),
+      'teamIds',
+      serializers.serialize(object.teamIds,
+          specifiedType:
+              const FullType(BuiltList, const [const FullType(String)])),
+    ];
+    Object? value;
+    value = object.clientMutationId;
+    if (value != null) {
+      result
+        ..add('clientMutationId')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GUpdateTeamsRepositoryInput deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GUpdateTeamsRepositoryInputBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'clientMutationId':
+          result.clientMutationId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'permission':
+          result.permission = serializers.deserialize(value,
+                  specifiedType: const FullType(GRepositoryPermission))
+              as GRepositoryPermission;
+          break;
+        case 'repositoryId':
+          result.repositoryId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'teamIds':
+          result.teamIds.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(String)]))!
+              as BuiltList<Object?>);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
 class _$GUpdateTopicsInputSerializer
     implements StructuredSerializer<GUpdateTopicsInput> {
   @override
@@ -24678,6 +29915,104 @@ class _$GVerifyVerifiableDomainInputSerializer
     }
 
     return result.build();
+  }
+}
+
+class _$GAbortQueuedMigrationsInput extends GAbortQueuedMigrationsInput {
+  @override
+  final String? clientMutationId;
+  @override
+  final String ownerId;
+
+  factory _$GAbortQueuedMigrationsInput(
+          [void Function(GAbortQueuedMigrationsInputBuilder)? updates]) =>
+      (new GAbortQueuedMigrationsInputBuilder()..update(updates)).build();
+
+  _$GAbortQueuedMigrationsInput._(
+      {this.clientMutationId, required this.ownerId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        ownerId, 'GAbortQueuedMigrationsInput', 'ownerId');
+  }
+
+  @override
+  GAbortQueuedMigrationsInput rebuild(
+          void Function(GAbortQueuedMigrationsInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GAbortQueuedMigrationsInputBuilder toBuilder() =>
+      new GAbortQueuedMigrationsInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GAbortQueuedMigrationsInput &&
+        clientMutationId == other.clientMutationId &&
+        ownerId == other.ownerId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, clientMutationId.hashCode), ownerId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GAbortQueuedMigrationsInput')
+          ..add('clientMutationId', clientMutationId)
+          ..add('ownerId', ownerId))
+        .toString();
+  }
+}
+
+class GAbortQueuedMigrationsInputBuilder
+    implements
+        Builder<GAbortQueuedMigrationsInput,
+            GAbortQueuedMigrationsInputBuilder> {
+  _$GAbortQueuedMigrationsInput? _$v;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  String? _ownerId;
+  String? get ownerId => _$this._ownerId;
+  set ownerId(String? ownerId) => _$this._ownerId = ownerId;
+
+  GAbortQueuedMigrationsInputBuilder();
+
+  GAbortQueuedMigrationsInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _clientMutationId = $v.clientMutationId;
+      _ownerId = $v.ownerId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GAbortQueuedMigrationsInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GAbortQueuedMigrationsInput;
+  }
+
+  @override
+  void update(void Function(GAbortQueuedMigrationsInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GAbortQueuedMigrationsInput build() {
+    final _$result = _$v ??
+        new _$GAbortQueuedMigrationsInput._(
+            clientMutationId: clientMutationId,
+            ownerId: BuiltValueNullFieldError.checkNotNull(
+                ownerId, 'GAbortQueuedMigrationsInput', 'ownerId'));
+    replace(_$result);
+    return _$result;
   }
 }
 
@@ -25263,6 +30598,104 @@ class GAddDiscussionCommentInputBuilder
   }
 }
 
+class _$GAddDiscussionPollVoteInput extends GAddDiscussionPollVoteInput {
+  @override
+  final String? clientMutationId;
+  @override
+  final String pollOptionId;
+
+  factory _$GAddDiscussionPollVoteInput(
+          [void Function(GAddDiscussionPollVoteInputBuilder)? updates]) =>
+      (new GAddDiscussionPollVoteInputBuilder()..update(updates)).build();
+
+  _$GAddDiscussionPollVoteInput._(
+      {this.clientMutationId, required this.pollOptionId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        pollOptionId, 'GAddDiscussionPollVoteInput', 'pollOptionId');
+  }
+
+  @override
+  GAddDiscussionPollVoteInput rebuild(
+          void Function(GAddDiscussionPollVoteInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GAddDiscussionPollVoteInputBuilder toBuilder() =>
+      new GAddDiscussionPollVoteInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GAddDiscussionPollVoteInput &&
+        clientMutationId == other.clientMutationId &&
+        pollOptionId == other.pollOptionId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, clientMutationId.hashCode), pollOptionId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GAddDiscussionPollVoteInput')
+          ..add('clientMutationId', clientMutationId)
+          ..add('pollOptionId', pollOptionId))
+        .toString();
+  }
+}
+
+class GAddDiscussionPollVoteInputBuilder
+    implements
+        Builder<GAddDiscussionPollVoteInput,
+            GAddDiscussionPollVoteInputBuilder> {
+  _$GAddDiscussionPollVoteInput? _$v;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  String? _pollOptionId;
+  String? get pollOptionId => _$this._pollOptionId;
+  set pollOptionId(String? pollOptionId) => _$this._pollOptionId = pollOptionId;
+
+  GAddDiscussionPollVoteInputBuilder();
+
+  GAddDiscussionPollVoteInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _clientMutationId = $v.clientMutationId;
+      _pollOptionId = $v.pollOptionId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GAddDiscussionPollVoteInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GAddDiscussionPollVoteInput;
+  }
+
+  @override
+  void update(void Function(GAddDiscussionPollVoteInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GAddDiscussionPollVoteInput build() {
+    final _$result = _$v ??
+        new _$GAddDiscussionPollVoteInput._(
+            clientMutationId: clientMutationId,
+            pollOptionId: BuiltValueNullFieldError.checkNotNull(
+                pollOptionId, 'GAddDiscussionPollVoteInput', 'pollOptionId'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
 class _$GAddEnterpriseSupportEntitlementInput
     extends GAddEnterpriseSupportEntitlementInput {
   @override
@@ -25735,6 +31168,523 @@ class GAddProjectColumnInputBuilder
                 name, 'GAddProjectColumnInput', 'name'),
             projectId: BuiltValueNullFieldError.checkNotNull(
                 projectId, 'GAddProjectColumnInput', 'projectId'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GAddProjectDraftIssueInput extends GAddProjectDraftIssueInput {
+  @override
+  final BuiltList<String>? assigneeIds;
+  @override
+  final String? body;
+  @override
+  final String? clientMutationId;
+  @override
+  final String? projectId;
+  @override
+  final String? title;
+
+  factory _$GAddProjectDraftIssueInput(
+          [void Function(GAddProjectDraftIssueInputBuilder)? updates]) =>
+      (new GAddProjectDraftIssueInputBuilder()..update(updates)).build();
+
+  _$GAddProjectDraftIssueInput._(
+      {this.assigneeIds,
+      this.body,
+      this.clientMutationId,
+      this.projectId,
+      this.title})
+      : super._();
+
+  @override
+  GAddProjectDraftIssueInput rebuild(
+          void Function(GAddProjectDraftIssueInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GAddProjectDraftIssueInputBuilder toBuilder() =>
+      new GAddProjectDraftIssueInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GAddProjectDraftIssueInput &&
+        assigneeIds == other.assigneeIds &&
+        body == other.body &&
+        clientMutationId == other.clientMutationId &&
+        projectId == other.projectId &&
+        title == other.title;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc($jc($jc(0, assigneeIds.hashCode), body.hashCode),
+                clientMutationId.hashCode),
+            projectId.hashCode),
+        title.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GAddProjectDraftIssueInput')
+          ..add('assigneeIds', assigneeIds)
+          ..add('body', body)
+          ..add('clientMutationId', clientMutationId)
+          ..add('projectId', projectId)
+          ..add('title', title))
+        .toString();
+  }
+}
+
+class GAddProjectDraftIssueInputBuilder
+    implements
+        Builder<GAddProjectDraftIssueInput, GAddProjectDraftIssueInputBuilder> {
+  _$GAddProjectDraftIssueInput? _$v;
+
+  ListBuilder<String>? _assigneeIds;
+  ListBuilder<String> get assigneeIds =>
+      _$this._assigneeIds ??= new ListBuilder<String>();
+  set assigneeIds(ListBuilder<String>? assigneeIds) =>
+      _$this._assigneeIds = assigneeIds;
+
+  String? _body;
+  String? get body => _$this._body;
+  set body(String? body) => _$this._body = body;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  String? _projectId;
+  String? get projectId => _$this._projectId;
+  set projectId(String? projectId) => _$this._projectId = projectId;
+
+  String? _title;
+  String? get title => _$this._title;
+  set title(String? title) => _$this._title = title;
+
+  GAddProjectDraftIssueInputBuilder();
+
+  GAddProjectDraftIssueInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _assigneeIds = $v.assigneeIds?.toBuilder();
+      _body = $v.body;
+      _clientMutationId = $v.clientMutationId;
+      _projectId = $v.projectId;
+      _title = $v.title;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GAddProjectDraftIssueInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GAddProjectDraftIssueInput;
+  }
+
+  @override
+  void update(void Function(GAddProjectDraftIssueInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GAddProjectDraftIssueInput build() {
+    _$GAddProjectDraftIssueInput _$result;
+    try {
+      _$result = _$v ??
+          new _$GAddProjectDraftIssueInput._(
+              assigneeIds: _assigneeIds?.build(),
+              body: body,
+              clientMutationId: clientMutationId,
+              projectId: projectId,
+              title: title);
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'assigneeIds';
+        _assigneeIds?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'GAddProjectDraftIssueInput', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GAddProjectNextItemInput extends GAddProjectNextItemInput {
+  @override
+  final String? clientMutationId;
+  @override
+  final String? contentId;
+  @override
+  final String? projectId;
+
+  factory _$GAddProjectNextItemInput(
+          [void Function(GAddProjectNextItemInputBuilder)? updates]) =>
+      (new GAddProjectNextItemInputBuilder()..update(updates)).build();
+
+  _$GAddProjectNextItemInput._(
+      {this.clientMutationId, this.contentId, this.projectId})
+      : super._();
+
+  @override
+  GAddProjectNextItemInput rebuild(
+          void Function(GAddProjectNextItemInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GAddProjectNextItemInputBuilder toBuilder() =>
+      new GAddProjectNextItemInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GAddProjectNextItemInput &&
+        clientMutationId == other.clientMutationId &&
+        contentId == other.contentId &&
+        projectId == other.projectId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc($jc(0, clientMutationId.hashCode), contentId.hashCode),
+        projectId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GAddProjectNextItemInput')
+          ..add('clientMutationId', clientMutationId)
+          ..add('contentId', contentId)
+          ..add('projectId', projectId))
+        .toString();
+  }
+}
+
+class GAddProjectNextItemInputBuilder
+    implements
+        Builder<GAddProjectNextItemInput, GAddProjectNextItemInputBuilder> {
+  _$GAddProjectNextItemInput? _$v;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  String? _contentId;
+  String? get contentId => _$this._contentId;
+  set contentId(String? contentId) => _$this._contentId = contentId;
+
+  String? _projectId;
+  String? get projectId => _$this._projectId;
+  set projectId(String? projectId) => _$this._projectId = projectId;
+
+  GAddProjectNextItemInputBuilder();
+
+  GAddProjectNextItemInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _clientMutationId = $v.clientMutationId;
+      _contentId = $v.contentId;
+      _projectId = $v.projectId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GAddProjectNextItemInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GAddProjectNextItemInput;
+  }
+
+  @override
+  void update(void Function(GAddProjectNextItemInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GAddProjectNextItemInput build() {
+    final _$result = _$v ??
+        new _$GAddProjectNextItemInput._(
+            clientMutationId: clientMutationId,
+            contentId: contentId,
+            projectId: projectId);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GAddProjectV2DraftIssueInput extends GAddProjectV2DraftIssueInput {
+  @override
+  final BuiltList<String>? assigneeIds;
+  @override
+  final String? body;
+  @override
+  final String? clientMutationId;
+  @override
+  final String projectId;
+  @override
+  final String title;
+
+  factory _$GAddProjectV2DraftIssueInput(
+          [void Function(GAddProjectV2DraftIssueInputBuilder)? updates]) =>
+      (new GAddProjectV2DraftIssueInputBuilder()..update(updates)).build();
+
+  _$GAddProjectV2DraftIssueInput._(
+      {this.assigneeIds,
+      this.body,
+      this.clientMutationId,
+      required this.projectId,
+      required this.title})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        projectId, 'GAddProjectV2DraftIssueInput', 'projectId');
+    BuiltValueNullFieldError.checkNotNull(
+        title, 'GAddProjectV2DraftIssueInput', 'title');
+  }
+
+  @override
+  GAddProjectV2DraftIssueInput rebuild(
+          void Function(GAddProjectV2DraftIssueInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GAddProjectV2DraftIssueInputBuilder toBuilder() =>
+      new GAddProjectV2DraftIssueInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GAddProjectV2DraftIssueInput &&
+        assigneeIds == other.assigneeIds &&
+        body == other.body &&
+        clientMutationId == other.clientMutationId &&
+        projectId == other.projectId &&
+        title == other.title;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc($jc($jc(0, assigneeIds.hashCode), body.hashCode),
+                clientMutationId.hashCode),
+            projectId.hashCode),
+        title.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GAddProjectV2DraftIssueInput')
+          ..add('assigneeIds', assigneeIds)
+          ..add('body', body)
+          ..add('clientMutationId', clientMutationId)
+          ..add('projectId', projectId)
+          ..add('title', title))
+        .toString();
+  }
+}
+
+class GAddProjectV2DraftIssueInputBuilder
+    implements
+        Builder<GAddProjectV2DraftIssueInput,
+            GAddProjectV2DraftIssueInputBuilder> {
+  _$GAddProjectV2DraftIssueInput? _$v;
+
+  ListBuilder<String>? _assigneeIds;
+  ListBuilder<String> get assigneeIds =>
+      _$this._assigneeIds ??= new ListBuilder<String>();
+  set assigneeIds(ListBuilder<String>? assigneeIds) =>
+      _$this._assigneeIds = assigneeIds;
+
+  String? _body;
+  String? get body => _$this._body;
+  set body(String? body) => _$this._body = body;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  String? _projectId;
+  String? get projectId => _$this._projectId;
+  set projectId(String? projectId) => _$this._projectId = projectId;
+
+  String? _title;
+  String? get title => _$this._title;
+  set title(String? title) => _$this._title = title;
+
+  GAddProjectV2DraftIssueInputBuilder();
+
+  GAddProjectV2DraftIssueInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _assigneeIds = $v.assigneeIds?.toBuilder();
+      _body = $v.body;
+      _clientMutationId = $v.clientMutationId;
+      _projectId = $v.projectId;
+      _title = $v.title;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GAddProjectV2DraftIssueInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GAddProjectV2DraftIssueInput;
+  }
+
+  @override
+  void update(void Function(GAddProjectV2DraftIssueInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GAddProjectV2DraftIssueInput build() {
+    _$GAddProjectV2DraftIssueInput _$result;
+    try {
+      _$result = _$v ??
+          new _$GAddProjectV2DraftIssueInput._(
+              assigneeIds: _assigneeIds?.build(),
+              body: body,
+              clientMutationId: clientMutationId,
+              projectId: BuiltValueNullFieldError.checkNotNull(
+                  projectId, 'GAddProjectV2DraftIssueInput', 'projectId'),
+              title: BuiltValueNullFieldError.checkNotNull(
+                  title, 'GAddProjectV2DraftIssueInput', 'title'));
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'assigneeIds';
+        _assigneeIds?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'GAddProjectV2DraftIssueInput', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GAddProjectV2ItemByIdInput extends GAddProjectV2ItemByIdInput {
+  @override
+  final String? clientMutationId;
+  @override
+  final String contentId;
+  @override
+  final String projectId;
+
+  factory _$GAddProjectV2ItemByIdInput(
+          [void Function(GAddProjectV2ItemByIdInputBuilder)? updates]) =>
+      (new GAddProjectV2ItemByIdInputBuilder()..update(updates)).build();
+
+  _$GAddProjectV2ItemByIdInput._(
+      {this.clientMutationId, required this.contentId, required this.projectId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        contentId, 'GAddProjectV2ItemByIdInput', 'contentId');
+    BuiltValueNullFieldError.checkNotNull(
+        projectId, 'GAddProjectV2ItemByIdInput', 'projectId');
+  }
+
+  @override
+  GAddProjectV2ItemByIdInput rebuild(
+          void Function(GAddProjectV2ItemByIdInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GAddProjectV2ItemByIdInputBuilder toBuilder() =>
+      new GAddProjectV2ItemByIdInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GAddProjectV2ItemByIdInput &&
+        clientMutationId == other.clientMutationId &&
+        contentId == other.contentId &&
+        projectId == other.projectId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc($jc(0, clientMutationId.hashCode), contentId.hashCode),
+        projectId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GAddProjectV2ItemByIdInput')
+          ..add('clientMutationId', clientMutationId)
+          ..add('contentId', contentId)
+          ..add('projectId', projectId))
+        .toString();
+  }
+}
+
+class GAddProjectV2ItemByIdInputBuilder
+    implements
+        Builder<GAddProjectV2ItemByIdInput, GAddProjectV2ItemByIdInputBuilder> {
+  _$GAddProjectV2ItemByIdInput? _$v;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  String? _contentId;
+  String? get contentId => _$this._contentId;
+  set contentId(String? contentId) => _$this._contentId = contentId;
+
+  String? _projectId;
+  String? get projectId => _$this._projectId;
+  set projectId(String? projectId) => _$this._projectId = projectId;
+
+  GAddProjectV2ItemByIdInputBuilder();
+
+  GAddProjectV2ItemByIdInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _clientMutationId = $v.clientMutationId;
+      _contentId = $v.contentId;
+      _projectId = $v.projectId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GAddProjectV2ItemByIdInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GAddProjectV2ItemByIdInput;
+  }
+
+  @override
+  void update(void Function(GAddProjectV2ItemByIdInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GAddProjectV2ItemByIdInput build() {
+    final _$result = _$v ??
+        new _$GAddProjectV2ItemByIdInput._(
+            clientMutationId: clientMutationId,
+            contentId: BuiltValueNullFieldError.checkNotNull(
+                contentId, 'GAddProjectV2ItemByIdInput', 'contentId'),
+            projectId: BuiltValueNullFieldError.checkNotNull(
+                projectId, 'GAddProjectV2ItemByIdInput', 'projectId'));
     replace(_$result);
     return _$result;
   }
@@ -27130,6 +33080,83 @@ class GAuditLogOrderBuilder
   }
 }
 
+class _$GBase64String extends GBase64String {
+  @override
+  final String value;
+
+  factory _$GBase64String([void Function(GBase64StringBuilder)? updates]) =>
+      (new GBase64StringBuilder()..update(updates)).build();
+
+  _$GBase64String._({required this.value}) : super._() {
+    BuiltValueNullFieldError.checkNotNull(value, 'GBase64String', 'value');
+  }
+
+  @override
+  GBase64String rebuild(void Function(GBase64StringBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GBase64StringBuilder toBuilder() => new GBase64StringBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GBase64String && value == other.value;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(0, value.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GBase64String')..add('value', value))
+        .toString();
+  }
+}
+
+class GBase64StringBuilder
+    implements Builder<GBase64String, GBase64StringBuilder> {
+  _$GBase64String? _$v;
+
+  String? _value;
+  String? get value => _$this._value;
+  set value(String? value) => _$this._value = value;
+
+  GBase64StringBuilder();
+
+  GBase64StringBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _value = $v.value;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GBase64String other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GBase64String;
+  }
+
+  @override
+  void update(void Function(GBase64StringBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GBase64String build() {
+    final _$result = _$v ??
+        new _$GBase64String._(
+            value: BuiltValueNullFieldError.checkNotNull(
+                value, 'GBase64String', 'value'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
 class _$GCancelEnterpriseAdminInvitationInput
     extends GCancelEnterpriseAdminInvitationInput {
   @override
@@ -27228,6 +33255,140 @@ class GCancelEnterpriseAdminInvitationInputBuilder
             clientMutationId: clientMutationId,
             invitationId: BuiltValueNullFieldError.checkNotNull(invitationId,
                 'GCancelEnterpriseAdminInvitationInput', 'invitationId'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GCancelSponsorshipInput extends GCancelSponsorshipInput {
+  @override
+  final String? clientMutationId;
+  @override
+  final String? sponsorId;
+  @override
+  final String? sponsorLogin;
+  @override
+  final String? sponsorableId;
+  @override
+  final String? sponsorableLogin;
+
+  factory _$GCancelSponsorshipInput(
+          [void Function(GCancelSponsorshipInputBuilder)? updates]) =>
+      (new GCancelSponsorshipInputBuilder()..update(updates)).build();
+
+  _$GCancelSponsorshipInput._(
+      {this.clientMutationId,
+      this.sponsorId,
+      this.sponsorLogin,
+      this.sponsorableId,
+      this.sponsorableLogin})
+      : super._();
+
+  @override
+  GCancelSponsorshipInput rebuild(
+          void Function(GCancelSponsorshipInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GCancelSponsorshipInputBuilder toBuilder() =>
+      new GCancelSponsorshipInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GCancelSponsorshipInput &&
+        clientMutationId == other.clientMutationId &&
+        sponsorId == other.sponsorId &&
+        sponsorLogin == other.sponsorLogin &&
+        sponsorableId == other.sponsorableId &&
+        sponsorableLogin == other.sponsorableLogin;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc($jc($jc(0, clientMutationId.hashCode), sponsorId.hashCode),
+                sponsorLogin.hashCode),
+            sponsorableId.hashCode),
+        sponsorableLogin.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GCancelSponsorshipInput')
+          ..add('clientMutationId', clientMutationId)
+          ..add('sponsorId', sponsorId)
+          ..add('sponsorLogin', sponsorLogin)
+          ..add('sponsorableId', sponsorableId)
+          ..add('sponsorableLogin', sponsorableLogin))
+        .toString();
+  }
+}
+
+class GCancelSponsorshipInputBuilder
+    implements
+        Builder<GCancelSponsorshipInput, GCancelSponsorshipInputBuilder> {
+  _$GCancelSponsorshipInput? _$v;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  String? _sponsorId;
+  String? get sponsorId => _$this._sponsorId;
+  set sponsorId(String? sponsorId) => _$this._sponsorId = sponsorId;
+
+  String? _sponsorLogin;
+  String? get sponsorLogin => _$this._sponsorLogin;
+  set sponsorLogin(String? sponsorLogin) => _$this._sponsorLogin = sponsorLogin;
+
+  String? _sponsorableId;
+  String? get sponsorableId => _$this._sponsorableId;
+  set sponsorableId(String? sponsorableId) =>
+      _$this._sponsorableId = sponsorableId;
+
+  String? _sponsorableLogin;
+  String? get sponsorableLogin => _$this._sponsorableLogin;
+  set sponsorableLogin(String? sponsorableLogin) =>
+      _$this._sponsorableLogin = sponsorableLogin;
+
+  GCancelSponsorshipInputBuilder();
+
+  GCancelSponsorshipInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _clientMutationId = $v.clientMutationId;
+      _sponsorId = $v.sponsorId;
+      _sponsorLogin = $v.sponsorLogin;
+      _sponsorableId = $v.sponsorableId;
+      _sponsorableLogin = $v.sponsorableLogin;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GCancelSponsorshipInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GCancelSponsorshipInput;
+  }
+
+  @override
+  void update(void Function(GCancelSponsorshipInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GCancelSponsorshipInput build() {
+    final _$result = _$v ??
+        new _$GCancelSponsorshipInput._(
+            clientMutationId: clientMutationId,
+            sponsorId: sponsorId,
+            sponsorLogin: sponsorLogin,
+            sponsorableId: sponsorableId,
+            sponsorableLogin: sponsorableLogin);
     replace(_$result);
     return _$result;
   }
@@ -28793,12 +34954,15 @@ class _$GCloseIssueInput extends GCloseIssueInput {
   final String? clientMutationId;
   @override
   final String issueId;
+  @override
+  final GIssueClosedStateReason? stateReason;
 
   factory _$GCloseIssueInput(
           [void Function(GCloseIssueInputBuilder)? updates]) =>
       (new GCloseIssueInputBuilder()..update(updates)).build();
 
-  _$GCloseIssueInput._({this.clientMutationId, required this.issueId})
+  _$GCloseIssueInput._(
+      {this.clientMutationId, required this.issueId, this.stateReason})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         issueId, 'GCloseIssueInput', 'issueId');
@@ -28817,19 +34981,22 @@ class _$GCloseIssueInput extends GCloseIssueInput {
     if (identical(other, this)) return true;
     return other is GCloseIssueInput &&
         clientMutationId == other.clientMutationId &&
-        issueId == other.issueId;
+        issueId == other.issueId &&
+        stateReason == other.stateReason;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, clientMutationId.hashCode), issueId.hashCode));
+    return $jf($jc($jc($jc(0, clientMutationId.hashCode), issueId.hashCode),
+        stateReason.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('GCloseIssueInput')
           ..add('clientMutationId', clientMutationId)
-          ..add('issueId', issueId))
+          ..add('issueId', issueId)
+          ..add('stateReason', stateReason))
         .toString();
   }
 }
@@ -28847,6 +35014,11 @@ class GCloseIssueInputBuilder
   String? get issueId => _$this._issueId;
   set issueId(String? issueId) => _$this._issueId = issueId;
 
+  GIssueClosedStateReason? _stateReason;
+  GIssueClosedStateReason? get stateReason => _$this._stateReason;
+  set stateReason(GIssueClosedStateReason? stateReason) =>
+      _$this._stateReason = stateReason;
+
   GCloseIssueInputBuilder();
 
   GCloseIssueInputBuilder get _$this {
@@ -28854,6 +35026,7 @@ class GCloseIssueInputBuilder
     if ($v != null) {
       _clientMutationId = $v.clientMutationId;
       _issueId = $v.issueId;
+      _stateReason = $v.stateReason;
       _$v = null;
     }
     return this;
@@ -28876,7 +35049,8 @@ class GCloseIssueInputBuilder
         new _$GCloseIssueInput._(
             clientMutationId: clientMutationId,
             issueId: BuiltValueNullFieldError.checkNotNull(
-                issueId, 'GCloseIssueInput', 'issueId'));
+                issueId, 'GCloseIssueInput', 'issueId'),
+            stateReason: stateReason);
     replace(_$result);
     return _$result;
   }
@@ -29167,6 +35341,200 @@ class GCommitContributionOrderBuilder
                 direction, 'GCommitContributionOrder', 'direction'),
             field: BuiltValueNullFieldError.checkNotNull(
                 field, 'GCommitContributionOrder', 'field'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GCommitMessage extends GCommitMessage {
+  @override
+  final String? body;
+  @override
+  final String headline;
+
+  factory _$GCommitMessage([void Function(GCommitMessageBuilder)? updates]) =>
+      (new GCommitMessageBuilder()..update(updates)).build();
+
+  _$GCommitMessage._({this.body, required this.headline}) : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        headline, 'GCommitMessage', 'headline');
+  }
+
+  @override
+  GCommitMessage rebuild(void Function(GCommitMessageBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GCommitMessageBuilder toBuilder() =>
+      new GCommitMessageBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GCommitMessage &&
+        body == other.body &&
+        headline == other.headline;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, body.hashCode), headline.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GCommitMessage')
+          ..add('body', body)
+          ..add('headline', headline))
+        .toString();
+  }
+}
+
+class GCommitMessageBuilder
+    implements Builder<GCommitMessage, GCommitMessageBuilder> {
+  _$GCommitMessage? _$v;
+
+  String? _body;
+  String? get body => _$this._body;
+  set body(String? body) => _$this._body = body;
+
+  String? _headline;
+  String? get headline => _$this._headline;
+  set headline(String? headline) => _$this._headline = headline;
+
+  GCommitMessageBuilder();
+
+  GCommitMessageBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _body = $v.body;
+      _headline = $v.headline;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GCommitMessage other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GCommitMessage;
+  }
+
+  @override
+  void update(void Function(GCommitMessageBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GCommitMessage build() {
+    final _$result = _$v ??
+        new _$GCommitMessage._(
+            body: body,
+            headline: BuiltValueNullFieldError.checkNotNull(
+                headline, 'GCommitMessage', 'headline'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GCommittableBranch extends GCommittableBranch {
+  @override
+  final String? branchName;
+  @override
+  final String? id;
+  @override
+  final String? repositoryNameWithOwner;
+
+  factory _$GCommittableBranch(
+          [void Function(GCommittableBranchBuilder)? updates]) =>
+      (new GCommittableBranchBuilder()..update(updates)).build();
+
+  _$GCommittableBranch._(
+      {this.branchName, this.id, this.repositoryNameWithOwner})
+      : super._();
+
+  @override
+  GCommittableBranch rebuild(
+          void Function(GCommittableBranchBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GCommittableBranchBuilder toBuilder() =>
+      new GCommittableBranchBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GCommittableBranch &&
+        branchName == other.branchName &&
+        id == other.id &&
+        repositoryNameWithOwner == other.repositoryNameWithOwner;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc($jc(0, branchName.hashCode), id.hashCode),
+        repositoryNameWithOwner.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GCommittableBranch')
+          ..add('branchName', branchName)
+          ..add('id', id)
+          ..add('repositoryNameWithOwner', repositoryNameWithOwner))
+        .toString();
+  }
+}
+
+class GCommittableBranchBuilder
+    implements Builder<GCommittableBranch, GCommittableBranchBuilder> {
+  _$GCommittableBranch? _$v;
+
+  String? _branchName;
+  String? get branchName => _$this._branchName;
+  set branchName(String? branchName) => _$this._branchName = branchName;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
+
+  String? _repositoryNameWithOwner;
+  String? get repositoryNameWithOwner => _$this._repositoryNameWithOwner;
+  set repositoryNameWithOwner(String? repositoryNameWithOwner) =>
+      _$this._repositoryNameWithOwner = repositoryNameWithOwner;
+
+  GCommittableBranchBuilder();
+
+  GCommittableBranchBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _branchName = $v.branchName;
+      _id = $v.id;
+      _repositoryNameWithOwner = $v.repositoryNameWithOwner;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GCommittableBranch other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GCommittableBranch;
+  }
+
+  @override
+  void update(void Function(GCommittableBranchBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GCommittableBranch build() {
+    final _$result = _$v ??
+        new _$GCommittableBranch._(
+            branchName: branchName,
+            id: id,
+            repositoryNameWithOwner: repositoryNameWithOwner);
     replace(_$result);
     return _$result;
   }
@@ -29506,6 +35874,12 @@ class _$GCreateBranchProtectionRuleInput
   @override
   final bool? allowsForcePushes;
   @override
+  final bool? blocksCreations;
+  @override
+  final BuiltList<String>? bypassForcePushActorIds;
+  @override
+  final BuiltList<String>? bypassPullRequestActorIds;
+  @override
   final String? clientMutationId;
   @override
   final bool? dismissesStaleReviews;
@@ -29521,6 +35895,8 @@ class _$GCreateBranchProtectionRuleInput
   final int? requiredApprovingReviewCount;
   @override
   final BuiltList<String>? requiredStatusCheckContexts;
+  @override
+  final BuiltList<GRequiredStatusCheckInput>? requiredStatusChecks;
   @override
   final bool? requiresApprovingReviews;
   @override
@@ -29549,6 +35925,9 @@ class _$GCreateBranchProtectionRuleInput
   _$GCreateBranchProtectionRuleInput._(
       {this.allowsDeletions,
       this.allowsForcePushes,
+      this.blocksCreations,
+      this.bypassForcePushActorIds,
+      this.bypassPullRequestActorIds,
       this.clientMutationId,
       this.dismissesStaleReviews,
       this.isAdminEnforced,
@@ -29557,6 +35936,7 @@ class _$GCreateBranchProtectionRuleInput
       required this.repositoryId,
       this.requiredApprovingReviewCount,
       this.requiredStatusCheckContexts,
+      this.requiredStatusChecks,
       this.requiresApprovingReviews,
       this.requiresCodeOwnerReviews,
       this.requiresCommitSignatures,
@@ -29589,6 +35969,9 @@ class _$GCreateBranchProtectionRuleInput
     return other is GCreateBranchProtectionRuleInput &&
         allowsDeletions == other.allowsDeletions &&
         allowsForcePushes == other.allowsForcePushes &&
+        blocksCreations == other.blocksCreations &&
+        bypassForcePushActorIds == other.bypassForcePushActorIds &&
+        bypassPullRequestActorIds == other.bypassPullRequestActorIds &&
         clientMutationId == other.clientMutationId &&
         dismissesStaleReviews == other.dismissesStaleReviews &&
         isAdminEnforced == other.isAdminEnforced &&
@@ -29597,6 +35980,7 @@ class _$GCreateBranchProtectionRuleInput
         repositoryId == other.repositoryId &&
         requiredApprovingReviewCount == other.requiredApprovingReviewCount &&
         requiredStatusCheckContexts == other.requiredStatusCheckContexts &&
+        requiredStatusChecks == other.requiredStatusChecks &&
         requiresApprovingReviews == other.requiresApprovingReviews &&
         requiresCodeOwnerReviews == other.requiresCodeOwnerReviews &&
         requiresCommitSignatures == other.requiresCommitSignatures &&
@@ -29630,28 +36014,16 @@ class _$GCreateBranchProtectionRuleInput
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc(
-                                                                                $jc(
-                                                                                    0,
-                                                                                    allowsDeletions
-                                                                                        .hashCode),
-                                                                                allowsForcePushes
-                                                                                    .hashCode),
-                                                                            clientMutationId
-                                                                                .hashCode),
-                                                                        dismissesStaleReviews
-                                                                            .hashCode),
-                                                                    isAdminEnforced
-                                                                        .hashCode),
-                                                                pattern
-                                                                    .hashCode),
-                                                            pushActorIds
-                                                                .hashCode),
-                                                        repositoryId.hashCode),
-                                                    requiredApprovingReviewCount
-                                                        .hashCode),
-                                                requiredStatusCheckContexts
-                                                    .hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc(0, allowsDeletions.hashCode), allowsForcePushes.hashCode), blocksCreations.hashCode), bypassForcePushActorIds.hashCode), bypassPullRequestActorIds.hashCode),
+                                                                                clientMutationId.hashCode),
+                                                                            dismissesStaleReviews.hashCode),
+                                                                        isAdminEnforced.hashCode),
+                                                                    pattern.hashCode),
+                                                                pushActorIds.hashCode),
+                                                            repositoryId.hashCode),
+                                                        requiredApprovingReviewCount.hashCode),
+                                                    requiredStatusCheckContexts.hashCode),
+                                                requiredStatusChecks.hashCode),
                                             requiresApprovingReviews.hashCode),
                                         requiresCodeOwnerReviews.hashCode),
                                     requiresCommitSignatures.hashCode),
@@ -29669,6 +36041,9 @@ class _$GCreateBranchProtectionRuleInput
     return (newBuiltValueToStringHelper('GCreateBranchProtectionRuleInput')
           ..add('allowsDeletions', allowsDeletions)
           ..add('allowsForcePushes', allowsForcePushes)
+          ..add('blocksCreations', blocksCreations)
+          ..add('bypassForcePushActorIds', bypassForcePushActorIds)
+          ..add('bypassPullRequestActorIds', bypassPullRequestActorIds)
           ..add('clientMutationId', clientMutationId)
           ..add('dismissesStaleReviews', dismissesStaleReviews)
           ..add('isAdminEnforced', isAdminEnforced)
@@ -29677,6 +36052,7 @@ class _$GCreateBranchProtectionRuleInput
           ..add('repositoryId', repositoryId)
           ..add('requiredApprovingReviewCount', requiredApprovingReviewCount)
           ..add('requiredStatusCheckContexts', requiredStatusCheckContexts)
+          ..add('requiredStatusChecks', requiredStatusChecks)
           ..add('requiresApprovingReviews', requiresApprovingReviews)
           ..add('requiresCodeOwnerReviews', requiresCodeOwnerReviews)
           ..add('requiresCommitSignatures', requiresCommitSignatures)
@@ -29707,6 +36083,24 @@ class GCreateBranchProtectionRuleInputBuilder
   bool? get allowsForcePushes => _$this._allowsForcePushes;
   set allowsForcePushes(bool? allowsForcePushes) =>
       _$this._allowsForcePushes = allowsForcePushes;
+
+  bool? _blocksCreations;
+  bool? get blocksCreations => _$this._blocksCreations;
+  set blocksCreations(bool? blocksCreations) =>
+      _$this._blocksCreations = blocksCreations;
+
+  ListBuilder<String>? _bypassForcePushActorIds;
+  ListBuilder<String> get bypassForcePushActorIds =>
+      _$this._bypassForcePushActorIds ??= new ListBuilder<String>();
+  set bypassForcePushActorIds(ListBuilder<String>? bypassForcePushActorIds) =>
+      _$this._bypassForcePushActorIds = bypassForcePushActorIds;
+
+  ListBuilder<String>? _bypassPullRequestActorIds;
+  ListBuilder<String> get bypassPullRequestActorIds =>
+      _$this._bypassPullRequestActorIds ??= new ListBuilder<String>();
+  set bypassPullRequestActorIds(
+          ListBuilder<String>? bypassPullRequestActorIds) =>
+      _$this._bypassPullRequestActorIds = bypassPullRequestActorIds;
 
   String? _clientMutationId;
   String? get clientMutationId => _$this._clientMutationId;
@@ -29748,6 +36142,14 @@ class GCreateBranchProtectionRuleInputBuilder
   set requiredStatusCheckContexts(
           ListBuilder<String>? requiredStatusCheckContexts) =>
       _$this._requiredStatusCheckContexts = requiredStatusCheckContexts;
+
+  ListBuilder<GRequiredStatusCheckInput>? _requiredStatusChecks;
+  ListBuilder<GRequiredStatusCheckInput> get requiredStatusChecks =>
+      _$this._requiredStatusChecks ??=
+          new ListBuilder<GRequiredStatusCheckInput>();
+  set requiredStatusChecks(
+          ListBuilder<GRequiredStatusCheckInput>? requiredStatusChecks) =>
+      _$this._requiredStatusChecks = requiredStatusChecks;
 
   bool? _requiresApprovingReviews;
   bool? get requiresApprovingReviews => _$this._requiresApprovingReviews;
@@ -29808,6 +36210,9 @@ class GCreateBranchProtectionRuleInputBuilder
     if ($v != null) {
       _allowsDeletions = $v.allowsDeletions;
       _allowsForcePushes = $v.allowsForcePushes;
+      _blocksCreations = $v.blocksCreations;
+      _bypassForcePushActorIds = $v.bypassForcePushActorIds?.toBuilder();
+      _bypassPullRequestActorIds = $v.bypassPullRequestActorIds?.toBuilder();
       _clientMutationId = $v.clientMutationId;
       _dismissesStaleReviews = $v.dismissesStaleReviews;
       _isAdminEnforced = $v.isAdminEnforced;
@@ -29817,6 +36222,7 @@ class GCreateBranchProtectionRuleInputBuilder
       _requiredApprovingReviewCount = $v.requiredApprovingReviewCount;
       _requiredStatusCheckContexts =
           $v.requiredStatusCheckContexts?.toBuilder();
+      _requiredStatusChecks = $v.requiredStatusChecks?.toBuilder();
       _requiresApprovingReviews = $v.requiresApprovingReviews;
       _requiresCodeOwnerReviews = $v.requiresCodeOwnerReviews;
       _requiresCommitSignatures = $v.requiresCommitSignatures;
@@ -29851,6 +36257,9 @@ class GCreateBranchProtectionRuleInputBuilder
           new _$GCreateBranchProtectionRuleInput._(
               allowsDeletions: allowsDeletions,
               allowsForcePushes: allowsForcePushes,
+              blocksCreations: blocksCreations,
+              bypassForcePushActorIds: _bypassForcePushActorIds?.build(),
+              bypassPullRequestActorIds: _bypassPullRequestActorIds?.build(),
               clientMutationId: clientMutationId,
               dismissesStaleReviews: dismissesStaleReviews,
               isAdminEnforced: isAdminEnforced,
@@ -29862,6 +36271,7 @@ class GCreateBranchProtectionRuleInputBuilder
               requiredApprovingReviewCount: requiredApprovingReviewCount,
               requiredStatusCheckContexts:
                   _requiredStatusCheckContexts?.build(),
+              requiredStatusChecks: _requiredStatusChecks?.build(),
               requiresApprovingReviews: requiresApprovingReviews,
               requiresCodeOwnerReviews: requiresCodeOwnerReviews,
               requiresCommitSignatures: requiresCommitSignatures,
@@ -29875,11 +36285,18 @@ class GCreateBranchProtectionRuleInputBuilder
     } catch (_) {
       late String _$failedField;
       try {
+        _$failedField = 'bypassForcePushActorIds';
+        _bypassForcePushActorIds?.build();
+        _$failedField = 'bypassPullRequestActorIds';
+        _bypassPullRequestActorIds?.build();
+
         _$failedField = 'pushActorIds';
         _pushActorIds?.build();
 
         _$failedField = 'requiredStatusCheckContexts';
         _requiredStatusCheckContexts?.build();
+        _$failedField = 'requiredStatusChecks';
+        _requiredStatusChecks?.build();
 
         _$failedField = 'reviewDismissalActorIds';
         _reviewDismissalActorIds?.build();
@@ -30259,134 +36676,166 @@ class GCreateCheckSuiteInputBuilder
   }
 }
 
-class _$GCreateContentAttachmentInput extends GCreateContentAttachmentInput {
+class _$GCreateCommitOnBranchInput extends GCreateCommitOnBranchInput {
   @override
-  final String body;
+  final GCommittableBranch branch;
   @override
   final String? clientMutationId;
   @override
-  final String contentReferenceId;
+  final String expectedHeadOid;
   @override
-  final String title;
+  final GFileChanges? fileChanges;
+  @override
+  final GCommitMessage message;
 
-  factory _$GCreateContentAttachmentInput(
-          [void Function(GCreateContentAttachmentInputBuilder)? updates]) =>
-      (new GCreateContentAttachmentInputBuilder()..update(updates)).build();
+  factory _$GCreateCommitOnBranchInput(
+          [void Function(GCreateCommitOnBranchInputBuilder)? updates]) =>
+      (new GCreateCommitOnBranchInputBuilder()..update(updates)).build();
 
-  _$GCreateContentAttachmentInput._(
-      {required this.body,
+  _$GCreateCommitOnBranchInput._(
+      {required this.branch,
       this.clientMutationId,
-      required this.contentReferenceId,
-      required this.title})
+      required this.expectedHeadOid,
+      this.fileChanges,
+      required this.message})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        body, 'GCreateContentAttachmentInput', 'body');
-    BuiltValueNullFieldError.checkNotNull(contentReferenceId,
-        'GCreateContentAttachmentInput', 'contentReferenceId');
+        branch, 'GCreateCommitOnBranchInput', 'branch');
     BuiltValueNullFieldError.checkNotNull(
-        title, 'GCreateContentAttachmentInput', 'title');
+        expectedHeadOid, 'GCreateCommitOnBranchInput', 'expectedHeadOid');
+    BuiltValueNullFieldError.checkNotNull(
+        message, 'GCreateCommitOnBranchInput', 'message');
   }
 
   @override
-  GCreateContentAttachmentInput rebuild(
-          void Function(GCreateContentAttachmentInputBuilder) updates) =>
+  GCreateCommitOnBranchInput rebuild(
+          void Function(GCreateCommitOnBranchInputBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  GCreateContentAttachmentInputBuilder toBuilder() =>
-      new GCreateContentAttachmentInputBuilder()..replace(this);
+  GCreateCommitOnBranchInputBuilder toBuilder() =>
+      new GCreateCommitOnBranchInputBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is GCreateContentAttachmentInput &&
-        body == other.body &&
+    return other is GCreateCommitOnBranchInput &&
+        branch == other.branch &&
         clientMutationId == other.clientMutationId &&
-        contentReferenceId == other.contentReferenceId &&
-        title == other.title;
+        expectedHeadOid == other.expectedHeadOid &&
+        fileChanges == other.fileChanges &&
+        message == other.message;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, body.hashCode), clientMutationId.hashCode),
-            contentReferenceId.hashCode),
-        title.hashCode));
+        $jc(
+            $jc($jc($jc(0, branch.hashCode), clientMutationId.hashCode),
+                expectedHeadOid.hashCode),
+            fileChanges.hashCode),
+        message.hashCode));
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('GCreateContentAttachmentInput')
-          ..add('body', body)
+    return (newBuiltValueToStringHelper('GCreateCommitOnBranchInput')
+          ..add('branch', branch)
           ..add('clientMutationId', clientMutationId)
-          ..add('contentReferenceId', contentReferenceId)
-          ..add('title', title))
+          ..add('expectedHeadOid', expectedHeadOid)
+          ..add('fileChanges', fileChanges)
+          ..add('message', message))
         .toString();
   }
 }
 
-class GCreateContentAttachmentInputBuilder
+class GCreateCommitOnBranchInputBuilder
     implements
-        Builder<GCreateContentAttachmentInput,
-            GCreateContentAttachmentInputBuilder> {
-  _$GCreateContentAttachmentInput? _$v;
+        Builder<GCreateCommitOnBranchInput, GCreateCommitOnBranchInputBuilder> {
+  _$GCreateCommitOnBranchInput? _$v;
 
-  String? _body;
-  String? get body => _$this._body;
-  set body(String? body) => _$this._body = body;
+  GCommittableBranchBuilder? _branch;
+  GCommittableBranchBuilder get branch =>
+      _$this._branch ??= new GCommittableBranchBuilder();
+  set branch(GCommittableBranchBuilder? branch) => _$this._branch = branch;
 
   String? _clientMutationId;
   String? get clientMutationId => _$this._clientMutationId;
   set clientMutationId(String? clientMutationId) =>
       _$this._clientMutationId = clientMutationId;
 
-  String? _contentReferenceId;
-  String? get contentReferenceId => _$this._contentReferenceId;
-  set contentReferenceId(String? contentReferenceId) =>
-      _$this._contentReferenceId = contentReferenceId;
+  String? _expectedHeadOid;
+  String? get expectedHeadOid => _$this._expectedHeadOid;
+  set expectedHeadOid(String? expectedHeadOid) =>
+      _$this._expectedHeadOid = expectedHeadOid;
 
-  String? _title;
-  String? get title => _$this._title;
-  set title(String? title) => _$this._title = title;
+  GFileChangesBuilder? _fileChanges;
+  GFileChangesBuilder get fileChanges =>
+      _$this._fileChanges ??= new GFileChangesBuilder();
+  set fileChanges(GFileChangesBuilder? fileChanges) =>
+      _$this._fileChanges = fileChanges;
 
-  GCreateContentAttachmentInputBuilder();
+  GCommitMessageBuilder? _message;
+  GCommitMessageBuilder get message =>
+      _$this._message ??= new GCommitMessageBuilder();
+  set message(GCommitMessageBuilder? message) => _$this._message = message;
 
-  GCreateContentAttachmentInputBuilder get _$this {
+  GCreateCommitOnBranchInputBuilder();
+
+  GCreateCommitOnBranchInputBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _body = $v.body;
+      _branch = $v.branch.toBuilder();
       _clientMutationId = $v.clientMutationId;
-      _contentReferenceId = $v.contentReferenceId;
-      _title = $v.title;
+      _expectedHeadOid = $v.expectedHeadOid;
+      _fileChanges = $v.fileChanges?.toBuilder();
+      _message = $v.message.toBuilder();
       _$v = null;
     }
     return this;
   }
 
   @override
-  void replace(GCreateContentAttachmentInput other) {
+  void replace(GCreateCommitOnBranchInput other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GCreateContentAttachmentInput;
+    _$v = other as _$GCreateCommitOnBranchInput;
   }
 
   @override
-  void update(void Function(GCreateContentAttachmentInputBuilder)? updates) {
+  void update(void Function(GCreateCommitOnBranchInputBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  _$GCreateContentAttachmentInput build() {
-    final _$result = _$v ??
-        new _$GCreateContentAttachmentInput._(
-            body: BuiltValueNullFieldError.checkNotNull(
-                body, 'GCreateContentAttachmentInput', 'body'),
-            clientMutationId: clientMutationId,
-            contentReferenceId: BuiltValueNullFieldError.checkNotNull(
-                contentReferenceId,
-                'GCreateContentAttachmentInput',
-                'contentReferenceId'),
-            title: BuiltValueNullFieldError.checkNotNull(
-                title, 'GCreateContentAttachmentInput', 'title'));
+  _$GCreateCommitOnBranchInput build() {
+    _$GCreateCommitOnBranchInput _$result;
+    try {
+      _$result = _$v ??
+          new _$GCreateCommitOnBranchInput._(
+              branch: branch.build(),
+              clientMutationId: clientMutationId,
+              expectedHeadOid: BuiltValueNullFieldError.checkNotNull(
+                  expectedHeadOid,
+                  'GCreateCommitOnBranchInput',
+                  'expectedHeadOid'),
+              fileChanges: _fileChanges?.build(),
+              message: message.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'branch';
+        branch.build();
+
+        _$failedField = 'fileChanges';
+        _fileChanges?.build();
+        _$failedField = 'message';
+        message.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'GCreateCommitOnBranchInput', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }
@@ -31715,6 +38164,180 @@ class GCreateLabelInputBuilder
   }
 }
 
+class _$GCreateMigrationSourceInput extends GCreateMigrationSourceInput {
+  @override
+  final String? accessToken;
+  @override
+  final String? clientMutationId;
+  @override
+  final String? githubPat;
+  @override
+  final String name;
+  @override
+  final String ownerId;
+  @override
+  final GMigrationSourceType type;
+  @override
+  final String url;
+
+  factory _$GCreateMigrationSourceInput(
+          [void Function(GCreateMigrationSourceInputBuilder)? updates]) =>
+      (new GCreateMigrationSourceInputBuilder()..update(updates)).build();
+
+  _$GCreateMigrationSourceInput._(
+      {this.accessToken,
+      this.clientMutationId,
+      this.githubPat,
+      required this.name,
+      required this.ownerId,
+      required this.type,
+      required this.url})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        name, 'GCreateMigrationSourceInput', 'name');
+    BuiltValueNullFieldError.checkNotNull(
+        ownerId, 'GCreateMigrationSourceInput', 'ownerId');
+    BuiltValueNullFieldError.checkNotNull(
+        type, 'GCreateMigrationSourceInput', 'type');
+    BuiltValueNullFieldError.checkNotNull(
+        url, 'GCreateMigrationSourceInput', 'url');
+  }
+
+  @override
+  GCreateMigrationSourceInput rebuild(
+          void Function(GCreateMigrationSourceInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GCreateMigrationSourceInputBuilder toBuilder() =>
+      new GCreateMigrationSourceInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GCreateMigrationSourceInput &&
+        accessToken == other.accessToken &&
+        clientMutationId == other.clientMutationId &&
+        githubPat == other.githubPat &&
+        name == other.name &&
+        ownerId == other.ownerId &&
+        type == other.type &&
+        url == other.url;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc(
+                        $jc($jc(0, accessToken.hashCode),
+                            clientMutationId.hashCode),
+                        githubPat.hashCode),
+                    name.hashCode),
+                ownerId.hashCode),
+            type.hashCode),
+        url.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GCreateMigrationSourceInput')
+          ..add('accessToken', accessToken)
+          ..add('clientMutationId', clientMutationId)
+          ..add('githubPat', githubPat)
+          ..add('name', name)
+          ..add('ownerId', ownerId)
+          ..add('type', type)
+          ..add('url', url))
+        .toString();
+  }
+}
+
+class GCreateMigrationSourceInputBuilder
+    implements
+        Builder<GCreateMigrationSourceInput,
+            GCreateMigrationSourceInputBuilder> {
+  _$GCreateMigrationSourceInput? _$v;
+
+  String? _accessToken;
+  String? get accessToken => _$this._accessToken;
+  set accessToken(String? accessToken) => _$this._accessToken = accessToken;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  String? _githubPat;
+  String? get githubPat => _$this._githubPat;
+  set githubPat(String? githubPat) => _$this._githubPat = githubPat;
+
+  String? _name;
+  String? get name => _$this._name;
+  set name(String? name) => _$this._name = name;
+
+  String? _ownerId;
+  String? get ownerId => _$this._ownerId;
+  set ownerId(String? ownerId) => _$this._ownerId = ownerId;
+
+  GMigrationSourceType? _type;
+  GMigrationSourceType? get type => _$this._type;
+  set type(GMigrationSourceType? type) => _$this._type = type;
+
+  String? _url;
+  String? get url => _$this._url;
+  set url(String? url) => _$this._url = url;
+
+  GCreateMigrationSourceInputBuilder();
+
+  GCreateMigrationSourceInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _accessToken = $v.accessToken;
+      _clientMutationId = $v.clientMutationId;
+      _githubPat = $v.githubPat;
+      _name = $v.name;
+      _ownerId = $v.ownerId;
+      _type = $v.type;
+      _url = $v.url;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GCreateMigrationSourceInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GCreateMigrationSourceInput;
+  }
+
+  @override
+  void update(void Function(GCreateMigrationSourceInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GCreateMigrationSourceInput build() {
+    final _$result = _$v ??
+        new _$GCreateMigrationSourceInput._(
+            accessToken: accessToken,
+            clientMutationId: clientMutationId,
+            githubPat: githubPat,
+            name: BuiltValueNullFieldError.checkNotNull(
+                name, 'GCreateMigrationSourceInput', 'name'),
+            ownerId: BuiltValueNullFieldError.checkNotNull(
+                ownerId, 'GCreateMigrationSourceInput', 'ownerId'),
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, 'GCreateMigrationSourceInput', 'type'),
+            url: BuiltValueNullFieldError.checkNotNull(
+                url, 'GCreateMigrationSourceInput', 'url'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
 class _$GCreateProjectInput extends GCreateProjectInput {
   @override
   final String? body;
@@ -31875,6 +38498,116 @@ class GCreateProjectInputBuilder
       }
       rethrow;
     }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GCreateProjectV2Input extends GCreateProjectV2Input {
+  @override
+  final String? clientMutationId;
+  @override
+  final String ownerId;
+  @override
+  final String title;
+
+  factory _$GCreateProjectV2Input(
+          [void Function(GCreateProjectV2InputBuilder)? updates]) =>
+      (new GCreateProjectV2InputBuilder()..update(updates)).build();
+
+  _$GCreateProjectV2Input._(
+      {this.clientMutationId, required this.ownerId, required this.title})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        ownerId, 'GCreateProjectV2Input', 'ownerId');
+    BuiltValueNullFieldError.checkNotNull(
+        title, 'GCreateProjectV2Input', 'title');
+  }
+
+  @override
+  GCreateProjectV2Input rebuild(
+          void Function(GCreateProjectV2InputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GCreateProjectV2InputBuilder toBuilder() =>
+      new GCreateProjectV2InputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GCreateProjectV2Input &&
+        clientMutationId == other.clientMutationId &&
+        ownerId == other.ownerId &&
+        title == other.title;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc($jc(0, clientMutationId.hashCode), ownerId.hashCode),
+        title.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GCreateProjectV2Input')
+          ..add('clientMutationId', clientMutationId)
+          ..add('ownerId', ownerId)
+          ..add('title', title))
+        .toString();
+  }
+}
+
+class GCreateProjectV2InputBuilder
+    implements Builder<GCreateProjectV2Input, GCreateProjectV2InputBuilder> {
+  _$GCreateProjectV2Input? _$v;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  String? _ownerId;
+  String? get ownerId => _$this._ownerId;
+  set ownerId(String? ownerId) => _$this._ownerId = ownerId;
+
+  String? _title;
+  String? get title => _$this._title;
+  set title(String? title) => _$this._title = title;
+
+  GCreateProjectV2InputBuilder();
+
+  GCreateProjectV2InputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _clientMutationId = $v.clientMutationId;
+      _ownerId = $v.ownerId;
+      _title = $v.title;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GCreateProjectV2Input other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GCreateProjectV2Input;
+  }
+
+  @override
+  void update(void Function(GCreateProjectV2InputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GCreateProjectV2Input build() {
+    final _$result = _$v ??
+        new _$GCreateProjectV2Input._(
+            clientMutationId: clientMutationId,
+            ownerId: BuiltValueNullFieldError.checkNotNull(
+                ownerId, 'GCreateProjectV2Input', 'ownerId'),
+            title: BuiltValueNullFieldError.checkNotNull(
+                title, 'GCreateProjectV2Input', 'title'));
     replace(_$result);
     return _$result;
   }
@@ -32392,6 +39125,433 @@ class GCreateRepositoryInputBuilder
             template: template,
             visibility: BuiltValueNullFieldError.checkNotNull(
                 visibility, 'GCreateRepositoryInput', 'visibility'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GCreateSponsorsTierInput extends GCreateSponsorsTierInput {
+  @override
+  final int amount;
+  @override
+  final String? clientMutationId;
+  @override
+  final String description;
+  @override
+  final bool? isRecurring;
+  @override
+  final bool? publish;
+  @override
+  final String? repositoryId;
+  @override
+  final String? repositoryName;
+  @override
+  final String? repositoryOwnerLogin;
+  @override
+  final String? sponsorableId;
+  @override
+  final String? sponsorableLogin;
+  @override
+  final String? welcomeMessage;
+
+  factory _$GCreateSponsorsTierInput(
+          [void Function(GCreateSponsorsTierInputBuilder)? updates]) =>
+      (new GCreateSponsorsTierInputBuilder()..update(updates)).build();
+
+  _$GCreateSponsorsTierInput._(
+      {required this.amount,
+      this.clientMutationId,
+      required this.description,
+      this.isRecurring,
+      this.publish,
+      this.repositoryId,
+      this.repositoryName,
+      this.repositoryOwnerLogin,
+      this.sponsorableId,
+      this.sponsorableLogin,
+      this.welcomeMessage})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        amount, 'GCreateSponsorsTierInput', 'amount');
+    BuiltValueNullFieldError.checkNotNull(
+        description, 'GCreateSponsorsTierInput', 'description');
+  }
+
+  @override
+  GCreateSponsorsTierInput rebuild(
+          void Function(GCreateSponsorsTierInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GCreateSponsorsTierInputBuilder toBuilder() =>
+      new GCreateSponsorsTierInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GCreateSponsorsTierInput &&
+        amount == other.amount &&
+        clientMutationId == other.clientMutationId &&
+        description == other.description &&
+        isRecurring == other.isRecurring &&
+        publish == other.publish &&
+        repositoryId == other.repositoryId &&
+        repositoryName == other.repositoryName &&
+        repositoryOwnerLogin == other.repositoryOwnerLogin &&
+        sponsorableId == other.sponsorableId &&
+        sponsorableLogin == other.sponsorableLogin &&
+        welcomeMessage == other.welcomeMessage;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc(
+                        $jc(
+                            $jc(
+                                $jc(
+                                    $jc(
+                                        $jc($jc(0, amount.hashCode),
+                                            clientMutationId.hashCode),
+                                        description.hashCode),
+                                    isRecurring.hashCode),
+                                publish.hashCode),
+                            repositoryId.hashCode),
+                        repositoryName.hashCode),
+                    repositoryOwnerLogin.hashCode),
+                sponsorableId.hashCode),
+            sponsorableLogin.hashCode),
+        welcomeMessage.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GCreateSponsorsTierInput')
+          ..add('amount', amount)
+          ..add('clientMutationId', clientMutationId)
+          ..add('description', description)
+          ..add('isRecurring', isRecurring)
+          ..add('publish', publish)
+          ..add('repositoryId', repositoryId)
+          ..add('repositoryName', repositoryName)
+          ..add('repositoryOwnerLogin', repositoryOwnerLogin)
+          ..add('sponsorableId', sponsorableId)
+          ..add('sponsorableLogin', sponsorableLogin)
+          ..add('welcomeMessage', welcomeMessage))
+        .toString();
+  }
+}
+
+class GCreateSponsorsTierInputBuilder
+    implements
+        Builder<GCreateSponsorsTierInput, GCreateSponsorsTierInputBuilder> {
+  _$GCreateSponsorsTierInput? _$v;
+
+  int? _amount;
+  int? get amount => _$this._amount;
+  set amount(int? amount) => _$this._amount = amount;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  String? _description;
+  String? get description => _$this._description;
+  set description(String? description) => _$this._description = description;
+
+  bool? _isRecurring;
+  bool? get isRecurring => _$this._isRecurring;
+  set isRecurring(bool? isRecurring) => _$this._isRecurring = isRecurring;
+
+  bool? _publish;
+  bool? get publish => _$this._publish;
+  set publish(bool? publish) => _$this._publish = publish;
+
+  String? _repositoryId;
+  String? get repositoryId => _$this._repositoryId;
+  set repositoryId(String? repositoryId) => _$this._repositoryId = repositoryId;
+
+  String? _repositoryName;
+  String? get repositoryName => _$this._repositoryName;
+  set repositoryName(String? repositoryName) =>
+      _$this._repositoryName = repositoryName;
+
+  String? _repositoryOwnerLogin;
+  String? get repositoryOwnerLogin => _$this._repositoryOwnerLogin;
+  set repositoryOwnerLogin(String? repositoryOwnerLogin) =>
+      _$this._repositoryOwnerLogin = repositoryOwnerLogin;
+
+  String? _sponsorableId;
+  String? get sponsorableId => _$this._sponsorableId;
+  set sponsorableId(String? sponsorableId) =>
+      _$this._sponsorableId = sponsorableId;
+
+  String? _sponsorableLogin;
+  String? get sponsorableLogin => _$this._sponsorableLogin;
+  set sponsorableLogin(String? sponsorableLogin) =>
+      _$this._sponsorableLogin = sponsorableLogin;
+
+  String? _welcomeMessage;
+  String? get welcomeMessage => _$this._welcomeMessage;
+  set welcomeMessage(String? welcomeMessage) =>
+      _$this._welcomeMessage = welcomeMessage;
+
+  GCreateSponsorsTierInputBuilder();
+
+  GCreateSponsorsTierInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _amount = $v.amount;
+      _clientMutationId = $v.clientMutationId;
+      _description = $v.description;
+      _isRecurring = $v.isRecurring;
+      _publish = $v.publish;
+      _repositoryId = $v.repositoryId;
+      _repositoryName = $v.repositoryName;
+      _repositoryOwnerLogin = $v.repositoryOwnerLogin;
+      _sponsorableId = $v.sponsorableId;
+      _sponsorableLogin = $v.sponsorableLogin;
+      _welcomeMessage = $v.welcomeMessage;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GCreateSponsorsTierInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GCreateSponsorsTierInput;
+  }
+
+  @override
+  void update(void Function(GCreateSponsorsTierInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GCreateSponsorsTierInput build() {
+    final _$result = _$v ??
+        new _$GCreateSponsorsTierInput._(
+            amount: BuiltValueNullFieldError.checkNotNull(
+                amount, 'GCreateSponsorsTierInput', 'amount'),
+            clientMutationId: clientMutationId,
+            description: BuiltValueNullFieldError.checkNotNull(
+                description, 'GCreateSponsorsTierInput', 'description'),
+            isRecurring: isRecurring,
+            publish: publish,
+            repositoryId: repositoryId,
+            repositoryName: repositoryName,
+            repositoryOwnerLogin: repositoryOwnerLogin,
+            sponsorableId: sponsorableId,
+            sponsorableLogin: sponsorableLogin,
+            welcomeMessage: welcomeMessage);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GCreateSponsorshipInput extends GCreateSponsorshipInput {
+  @override
+  final int? amount;
+  @override
+  final String? clientMutationId;
+  @override
+  final bool? isRecurring;
+  @override
+  final GSponsorshipPrivacy? privacyLevel;
+  @override
+  final bool? receiveEmails;
+  @override
+  final String? sponsorId;
+  @override
+  final String? sponsorLogin;
+  @override
+  final String? sponsorableId;
+  @override
+  final String? sponsorableLogin;
+  @override
+  final String? tierId;
+
+  factory _$GCreateSponsorshipInput(
+          [void Function(GCreateSponsorshipInputBuilder)? updates]) =>
+      (new GCreateSponsorshipInputBuilder()..update(updates)).build();
+
+  _$GCreateSponsorshipInput._(
+      {this.amount,
+      this.clientMutationId,
+      this.isRecurring,
+      this.privacyLevel,
+      this.receiveEmails,
+      this.sponsorId,
+      this.sponsorLogin,
+      this.sponsorableId,
+      this.sponsorableLogin,
+      this.tierId})
+      : super._();
+
+  @override
+  GCreateSponsorshipInput rebuild(
+          void Function(GCreateSponsorshipInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GCreateSponsorshipInputBuilder toBuilder() =>
+      new GCreateSponsorshipInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GCreateSponsorshipInput &&
+        amount == other.amount &&
+        clientMutationId == other.clientMutationId &&
+        isRecurring == other.isRecurring &&
+        privacyLevel == other.privacyLevel &&
+        receiveEmails == other.receiveEmails &&
+        sponsorId == other.sponsorId &&
+        sponsorLogin == other.sponsorLogin &&
+        sponsorableId == other.sponsorableId &&
+        sponsorableLogin == other.sponsorableLogin &&
+        tierId == other.tierId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc(
+                        $jc(
+                            $jc(
+                                $jc(
+                                    $jc($jc(0, amount.hashCode),
+                                        clientMutationId.hashCode),
+                                    isRecurring.hashCode),
+                                privacyLevel.hashCode),
+                            receiveEmails.hashCode),
+                        sponsorId.hashCode),
+                    sponsorLogin.hashCode),
+                sponsorableId.hashCode),
+            sponsorableLogin.hashCode),
+        tierId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GCreateSponsorshipInput')
+          ..add('amount', amount)
+          ..add('clientMutationId', clientMutationId)
+          ..add('isRecurring', isRecurring)
+          ..add('privacyLevel', privacyLevel)
+          ..add('receiveEmails', receiveEmails)
+          ..add('sponsorId', sponsorId)
+          ..add('sponsorLogin', sponsorLogin)
+          ..add('sponsorableId', sponsorableId)
+          ..add('sponsorableLogin', sponsorableLogin)
+          ..add('tierId', tierId))
+        .toString();
+  }
+}
+
+class GCreateSponsorshipInputBuilder
+    implements
+        Builder<GCreateSponsorshipInput, GCreateSponsorshipInputBuilder> {
+  _$GCreateSponsorshipInput? _$v;
+
+  int? _amount;
+  int? get amount => _$this._amount;
+  set amount(int? amount) => _$this._amount = amount;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  bool? _isRecurring;
+  bool? get isRecurring => _$this._isRecurring;
+  set isRecurring(bool? isRecurring) => _$this._isRecurring = isRecurring;
+
+  GSponsorshipPrivacy? _privacyLevel;
+  GSponsorshipPrivacy? get privacyLevel => _$this._privacyLevel;
+  set privacyLevel(GSponsorshipPrivacy? privacyLevel) =>
+      _$this._privacyLevel = privacyLevel;
+
+  bool? _receiveEmails;
+  bool? get receiveEmails => _$this._receiveEmails;
+  set receiveEmails(bool? receiveEmails) =>
+      _$this._receiveEmails = receiveEmails;
+
+  String? _sponsorId;
+  String? get sponsorId => _$this._sponsorId;
+  set sponsorId(String? sponsorId) => _$this._sponsorId = sponsorId;
+
+  String? _sponsorLogin;
+  String? get sponsorLogin => _$this._sponsorLogin;
+  set sponsorLogin(String? sponsorLogin) => _$this._sponsorLogin = sponsorLogin;
+
+  String? _sponsorableId;
+  String? get sponsorableId => _$this._sponsorableId;
+  set sponsorableId(String? sponsorableId) =>
+      _$this._sponsorableId = sponsorableId;
+
+  String? _sponsorableLogin;
+  String? get sponsorableLogin => _$this._sponsorableLogin;
+  set sponsorableLogin(String? sponsorableLogin) =>
+      _$this._sponsorableLogin = sponsorableLogin;
+
+  String? _tierId;
+  String? get tierId => _$this._tierId;
+  set tierId(String? tierId) => _$this._tierId = tierId;
+
+  GCreateSponsorshipInputBuilder();
+
+  GCreateSponsorshipInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _amount = $v.amount;
+      _clientMutationId = $v.clientMutationId;
+      _isRecurring = $v.isRecurring;
+      _privacyLevel = $v.privacyLevel;
+      _receiveEmails = $v.receiveEmails;
+      _sponsorId = $v.sponsorId;
+      _sponsorLogin = $v.sponsorLogin;
+      _sponsorableId = $v.sponsorableId;
+      _sponsorableLogin = $v.sponsorableLogin;
+      _tierId = $v.tierId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GCreateSponsorshipInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GCreateSponsorshipInput;
+  }
+
+  @override
+  void update(void Function(GCreateSponsorshipInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GCreateSponsorshipInput build() {
+    final _$result = _$v ??
+        new _$GCreateSponsorshipInput._(
+            amount: amount,
+            clientMutationId: clientMutationId,
+            isRecurring: isRecurring,
+            privacyLevel: privacyLevel,
+            receiveEmails: receiveEmails,
+            sponsorId: sponsorId,
+            sponsorLogin: sponsorLogin,
+            sponsorableId: sponsorableId,
+            sponsorableLogin: sponsorableLogin,
+            tierId: tierId);
     replace(_$result);
     return _$result;
   }
@@ -34113,6 +41273,222 @@ class GDeleteProjectInputBuilder
   }
 }
 
+class _$GDeleteProjectNextItemInput extends GDeleteProjectNextItemInput {
+  @override
+  final String? clientMutationId;
+  @override
+  final String? itemId;
+  @override
+  final String? projectId;
+
+  factory _$GDeleteProjectNextItemInput(
+          [void Function(GDeleteProjectNextItemInputBuilder)? updates]) =>
+      (new GDeleteProjectNextItemInputBuilder()..update(updates)).build();
+
+  _$GDeleteProjectNextItemInput._(
+      {this.clientMutationId, this.itemId, this.projectId})
+      : super._();
+
+  @override
+  GDeleteProjectNextItemInput rebuild(
+          void Function(GDeleteProjectNextItemInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GDeleteProjectNextItemInputBuilder toBuilder() =>
+      new GDeleteProjectNextItemInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GDeleteProjectNextItemInput &&
+        clientMutationId == other.clientMutationId &&
+        itemId == other.itemId &&
+        projectId == other.projectId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc($jc(0, clientMutationId.hashCode), itemId.hashCode),
+        projectId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GDeleteProjectNextItemInput')
+          ..add('clientMutationId', clientMutationId)
+          ..add('itemId', itemId)
+          ..add('projectId', projectId))
+        .toString();
+  }
+}
+
+class GDeleteProjectNextItemInputBuilder
+    implements
+        Builder<GDeleteProjectNextItemInput,
+            GDeleteProjectNextItemInputBuilder> {
+  _$GDeleteProjectNextItemInput? _$v;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  String? _itemId;
+  String? get itemId => _$this._itemId;
+  set itemId(String? itemId) => _$this._itemId = itemId;
+
+  String? _projectId;
+  String? get projectId => _$this._projectId;
+  set projectId(String? projectId) => _$this._projectId = projectId;
+
+  GDeleteProjectNextItemInputBuilder();
+
+  GDeleteProjectNextItemInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _clientMutationId = $v.clientMutationId;
+      _itemId = $v.itemId;
+      _projectId = $v.projectId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GDeleteProjectNextItemInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GDeleteProjectNextItemInput;
+  }
+
+  @override
+  void update(void Function(GDeleteProjectNextItemInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GDeleteProjectNextItemInput build() {
+    final _$result = _$v ??
+        new _$GDeleteProjectNextItemInput._(
+            clientMutationId: clientMutationId,
+            itemId: itemId,
+            projectId: projectId);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GDeleteProjectV2ItemInput extends GDeleteProjectV2ItemInput {
+  @override
+  final String? clientMutationId;
+  @override
+  final String itemId;
+  @override
+  final String projectId;
+
+  factory _$GDeleteProjectV2ItemInput(
+          [void Function(GDeleteProjectV2ItemInputBuilder)? updates]) =>
+      (new GDeleteProjectV2ItemInputBuilder()..update(updates)).build();
+
+  _$GDeleteProjectV2ItemInput._(
+      {this.clientMutationId, required this.itemId, required this.projectId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        itemId, 'GDeleteProjectV2ItemInput', 'itemId');
+    BuiltValueNullFieldError.checkNotNull(
+        projectId, 'GDeleteProjectV2ItemInput', 'projectId');
+  }
+
+  @override
+  GDeleteProjectV2ItemInput rebuild(
+          void Function(GDeleteProjectV2ItemInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GDeleteProjectV2ItemInputBuilder toBuilder() =>
+      new GDeleteProjectV2ItemInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GDeleteProjectV2ItemInput &&
+        clientMutationId == other.clientMutationId &&
+        itemId == other.itemId &&
+        projectId == other.projectId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc($jc(0, clientMutationId.hashCode), itemId.hashCode),
+        projectId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GDeleteProjectV2ItemInput')
+          ..add('clientMutationId', clientMutationId)
+          ..add('itemId', itemId)
+          ..add('projectId', projectId))
+        .toString();
+  }
+}
+
+class GDeleteProjectV2ItemInputBuilder
+    implements
+        Builder<GDeleteProjectV2ItemInput, GDeleteProjectV2ItemInputBuilder> {
+  _$GDeleteProjectV2ItemInput? _$v;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  String? _itemId;
+  String? get itemId => _$this._itemId;
+  set itemId(String? itemId) => _$this._itemId = itemId;
+
+  String? _projectId;
+  String? get projectId => _$this._projectId;
+  set projectId(String? projectId) => _$this._projectId = projectId;
+
+  GDeleteProjectV2ItemInputBuilder();
+
+  GDeleteProjectV2ItemInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _clientMutationId = $v.clientMutationId;
+      _itemId = $v.itemId;
+      _projectId = $v.projectId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GDeleteProjectV2ItemInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GDeleteProjectV2ItemInput;
+  }
+
+  @override
+  void update(void Function(GDeleteProjectV2ItemInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GDeleteProjectV2ItemInput build() {
+    final _$result = _$v ??
+        new _$GDeleteProjectV2ItemInput._(
+            clientMutationId: clientMutationId,
+            itemId: BuiltValueNullFieldError.checkNotNull(
+                itemId, 'GDeleteProjectV2ItemInput', 'itemId'),
+            projectId: BuiltValueNullFieldError.checkNotNull(
+                projectId, 'GDeleteProjectV2ItemInput', 'projectId'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
 class _$GDeletePullRequestReviewCommentInput
     extends GDeletePullRequestReviewCommentInput {
   @override
@@ -34993,6 +42369,104 @@ class GDiscussionOrderBuilder
   }
 }
 
+class _$GDiscussionPollOptionOrder extends GDiscussionPollOptionOrder {
+  @override
+  final GOrderDirection direction;
+  @override
+  final GDiscussionPollOptionOrderField field;
+
+  factory _$GDiscussionPollOptionOrder(
+          [void Function(GDiscussionPollOptionOrderBuilder)? updates]) =>
+      (new GDiscussionPollOptionOrderBuilder()..update(updates)).build();
+
+  _$GDiscussionPollOptionOrder._({required this.direction, required this.field})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        direction, 'GDiscussionPollOptionOrder', 'direction');
+    BuiltValueNullFieldError.checkNotNull(
+        field, 'GDiscussionPollOptionOrder', 'field');
+  }
+
+  @override
+  GDiscussionPollOptionOrder rebuild(
+          void Function(GDiscussionPollOptionOrderBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GDiscussionPollOptionOrderBuilder toBuilder() =>
+      new GDiscussionPollOptionOrderBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GDiscussionPollOptionOrder &&
+        direction == other.direction &&
+        field == other.field;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, direction.hashCode), field.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GDiscussionPollOptionOrder')
+          ..add('direction', direction)
+          ..add('field', field))
+        .toString();
+  }
+}
+
+class GDiscussionPollOptionOrderBuilder
+    implements
+        Builder<GDiscussionPollOptionOrder, GDiscussionPollOptionOrderBuilder> {
+  _$GDiscussionPollOptionOrder? _$v;
+
+  GOrderDirection? _direction;
+  GOrderDirection? get direction => _$this._direction;
+  set direction(GOrderDirection? direction) => _$this._direction = direction;
+
+  GDiscussionPollOptionOrderField? _field;
+  GDiscussionPollOptionOrderField? get field => _$this._field;
+  set field(GDiscussionPollOptionOrderField? field) => _$this._field = field;
+
+  GDiscussionPollOptionOrderBuilder();
+
+  GDiscussionPollOptionOrderBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _direction = $v.direction;
+      _field = $v.field;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GDiscussionPollOptionOrder other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GDiscussionPollOptionOrder;
+  }
+
+  @override
+  void update(void Function(GDiscussionPollOptionOrderBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GDiscussionPollOptionOrder build() {
+    final _$result = _$v ??
+        new _$GDiscussionPollOptionOrder._(
+            direction: BuiltValueNullFieldError.checkNotNull(
+                direction, 'GDiscussionPollOptionOrder', 'direction'),
+            field: BuiltValueNullFieldError.checkNotNull(
+                field, 'GDiscussionPollOptionOrder', 'field'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
 class _$GDismissPullRequestReviewInput extends GDismissPullRequestReviewInput {
   @override
   final String? clientMutationId;
@@ -35105,6 +42579,137 @@ class GDismissPullRequestReviewInputBuilder
                 pullRequestReviewId,
                 'GDismissPullRequestReviewInput',
                 'pullRequestReviewId'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GDismissRepositoryVulnerabilityAlertInput
+    extends GDismissRepositoryVulnerabilityAlertInput {
+  @override
+  final String? clientMutationId;
+  @override
+  final GDismissReason dismissReason;
+  @override
+  final String repositoryVulnerabilityAlertId;
+
+  factory _$GDismissRepositoryVulnerabilityAlertInput(
+          [void Function(GDismissRepositoryVulnerabilityAlertInputBuilder)?
+              updates]) =>
+      (new GDismissRepositoryVulnerabilityAlertInputBuilder()..update(updates))
+          .build();
+
+  _$GDismissRepositoryVulnerabilityAlertInput._(
+      {this.clientMutationId,
+      required this.dismissReason,
+      required this.repositoryVulnerabilityAlertId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(dismissReason,
+        'GDismissRepositoryVulnerabilityAlertInput', 'dismissReason');
+    BuiltValueNullFieldError.checkNotNull(
+        repositoryVulnerabilityAlertId,
+        'GDismissRepositoryVulnerabilityAlertInput',
+        'repositoryVulnerabilityAlertId');
+  }
+
+  @override
+  GDismissRepositoryVulnerabilityAlertInput rebuild(
+          void Function(GDismissRepositoryVulnerabilityAlertInputBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GDismissRepositoryVulnerabilityAlertInputBuilder toBuilder() =>
+      new GDismissRepositoryVulnerabilityAlertInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GDismissRepositoryVulnerabilityAlertInput &&
+        clientMutationId == other.clientMutationId &&
+        dismissReason == other.dismissReason &&
+        repositoryVulnerabilityAlertId == other.repositoryVulnerabilityAlertId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc($jc(0, clientMutationId.hashCode), dismissReason.hashCode),
+        repositoryVulnerabilityAlertId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            'GDismissRepositoryVulnerabilityAlertInput')
+          ..add('clientMutationId', clientMutationId)
+          ..add('dismissReason', dismissReason)
+          ..add(
+              'repositoryVulnerabilityAlertId', repositoryVulnerabilityAlertId))
+        .toString();
+  }
+}
+
+class GDismissRepositoryVulnerabilityAlertInputBuilder
+    implements
+        Builder<GDismissRepositoryVulnerabilityAlertInput,
+            GDismissRepositoryVulnerabilityAlertInputBuilder> {
+  _$GDismissRepositoryVulnerabilityAlertInput? _$v;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  GDismissReason? _dismissReason;
+  GDismissReason? get dismissReason => _$this._dismissReason;
+  set dismissReason(GDismissReason? dismissReason) =>
+      _$this._dismissReason = dismissReason;
+
+  String? _repositoryVulnerabilityAlertId;
+  String? get repositoryVulnerabilityAlertId =>
+      _$this._repositoryVulnerabilityAlertId;
+  set repositoryVulnerabilityAlertId(String? repositoryVulnerabilityAlertId) =>
+      _$this._repositoryVulnerabilityAlertId = repositoryVulnerabilityAlertId;
+
+  GDismissRepositoryVulnerabilityAlertInputBuilder();
+
+  GDismissRepositoryVulnerabilityAlertInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _clientMutationId = $v.clientMutationId;
+      _dismissReason = $v.dismissReason;
+      _repositoryVulnerabilityAlertId = $v.repositoryVulnerabilityAlertId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GDismissRepositoryVulnerabilityAlertInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GDismissRepositoryVulnerabilityAlertInput;
+  }
+
+  @override
+  void update(
+      void Function(GDismissRepositoryVulnerabilityAlertInputBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GDismissRepositoryVulnerabilityAlertInput build() {
+    final _$result = _$v ??
+        new _$GDismissRepositoryVulnerabilityAlertInput._(
+            clientMutationId: clientMutationId,
+            dismissReason: BuiltValueNullFieldError.checkNotNull(dismissReason,
+                'GDismissRepositoryVulnerabilityAlertInput', 'dismissReason'),
+            repositoryVulnerabilityAlertId:
+                BuiltValueNullFieldError.checkNotNull(
+                    repositoryVulnerabilityAlertId,
+                    'GDismissRepositoryVulnerabilityAlertInput',
+                    'repositoryVulnerabilityAlertId'));
     replace(_$result);
     return _$result;
   }
@@ -36159,6 +43764,390 @@ class GEnterpriseServerUserAccountsUploadOrderBuilder
   }
 }
 
+class _$GFileAddition extends GFileAddition {
+  @override
+  final GBase64String contents;
+  @override
+  final String path;
+
+  factory _$GFileAddition([void Function(GFileAdditionBuilder)? updates]) =>
+      (new GFileAdditionBuilder()..update(updates)).build();
+
+  _$GFileAddition._({required this.contents, required this.path}) : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        contents, 'GFileAddition', 'contents');
+    BuiltValueNullFieldError.checkNotNull(path, 'GFileAddition', 'path');
+  }
+
+  @override
+  GFileAddition rebuild(void Function(GFileAdditionBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GFileAdditionBuilder toBuilder() => new GFileAdditionBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GFileAddition &&
+        contents == other.contents &&
+        path == other.path;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, contents.hashCode), path.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GFileAddition')
+          ..add('contents', contents)
+          ..add('path', path))
+        .toString();
+  }
+}
+
+class GFileAdditionBuilder
+    implements Builder<GFileAddition, GFileAdditionBuilder> {
+  _$GFileAddition? _$v;
+
+  GBase64StringBuilder? _contents;
+  GBase64StringBuilder get contents =>
+      _$this._contents ??= new GBase64StringBuilder();
+  set contents(GBase64StringBuilder? contents) => _$this._contents = contents;
+
+  String? _path;
+  String? get path => _$this._path;
+  set path(String? path) => _$this._path = path;
+
+  GFileAdditionBuilder();
+
+  GFileAdditionBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _contents = $v.contents.toBuilder();
+      _path = $v.path;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GFileAddition other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GFileAddition;
+  }
+
+  @override
+  void update(void Function(GFileAdditionBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GFileAddition build() {
+    _$GFileAddition _$result;
+    try {
+      _$result = _$v ??
+          new _$GFileAddition._(
+              contents: contents.build(),
+              path: BuiltValueNullFieldError.checkNotNull(
+                  path, 'GFileAddition', 'path'));
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'contents';
+        contents.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'GFileAddition', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GFileChanges extends GFileChanges {
+  @override
+  final BuiltList<GFileAddition>? additions;
+  @override
+  final BuiltList<GFileDeletion>? deletions;
+
+  factory _$GFileChanges([void Function(GFileChangesBuilder)? updates]) =>
+      (new GFileChangesBuilder()..update(updates)).build();
+
+  _$GFileChanges._({this.additions, this.deletions}) : super._();
+
+  @override
+  GFileChanges rebuild(void Function(GFileChangesBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GFileChangesBuilder toBuilder() => new GFileChangesBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GFileChanges &&
+        additions == other.additions &&
+        deletions == other.deletions;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, additions.hashCode), deletions.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GFileChanges')
+          ..add('additions', additions)
+          ..add('deletions', deletions))
+        .toString();
+  }
+}
+
+class GFileChangesBuilder
+    implements Builder<GFileChanges, GFileChangesBuilder> {
+  _$GFileChanges? _$v;
+
+  ListBuilder<GFileAddition>? _additions;
+  ListBuilder<GFileAddition> get additions =>
+      _$this._additions ??= new ListBuilder<GFileAddition>();
+  set additions(ListBuilder<GFileAddition>? additions) =>
+      _$this._additions = additions;
+
+  ListBuilder<GFileDeletion>? _deletions;
+  ListBuilder<GFileDeletion> get deletions =>
+      _$this._deletions ??= new ListBuilder<GFileDeletion>();
+  set deletions(ListBuilder<GFileDeletion>? deletions) =>
+      _$this._deletions = deletions;
+
+  GFileChangesBuilder();
+
+  GFileChangesBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _additions = $v.additions?.toBuilder();
+      _deletions = $v.deletions?.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GFileChanges other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GFileChanges;
+  }
+
+  @override
+  void update(void Function(GFileChangesBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GFileChanges build() {
+    _$GFileChanges _$result;
+    try {
+      _$result = _$v ??
+          new _$GFileChanges._(
+              additions: _additions?.build(), deletions: _deletions?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'additions';
+        _additions?.build();
+        _$failedField = 'deletions';
+        _deletions?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'GFileChanges', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GFileDeletion extends GFileDeletion {
+  @override
+  final String path;
+
+  factory _$GFileDeletion([void Function(GFileDeletionBuilder)? updates]) =>
+      (new GFileDeletionBuilder()..update(updates)).build();
+
+  _$GFileDeletion._({required this.path}) : super._() {
+    BuiltValueNullFieldError.checkNotNull(path, 'GFileDeletion', 'path');
+  }
+
+  @override
+  GFileDeletion rebuild(void Function(GFileDeletionBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GFileDeletionBuilder toBuilder() => new GFileDeletionBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GFileDeletion && path == other.path;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(0, path.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GFileDeletion')..add('path', path))
+        .toString();
+  }
+}
+
+class GFileDeletionBuilder
+    implements Builder<GFileDeletion, GFileDeletionBuilder> {
+  _$GFileDeletion? _$v;
+
+  String? _path;
+  String? get path => _$this._path;
+  set path(String? path) => _$this._path = path;
+
+  GFileDeletionBuilder();
+
+  GFileDeletionBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _path = $v.path;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GFileDeletion other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GFileDeletion;
+  }
+
+  @override
+  void update(void Function(GFileDeletionBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GFileDeletion build() {
+    final _$result = _$v ??
+        new _$GFileDeletion._(
+            path: BuiltValueNullFieldError.checkNotNull(
+                path, 'GFileDeletion', 'path'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GFollowOrganizationInput extends GFollowOrganizationInput {
+  @override
+  final String? clientMutationId;
+  @override
+  final String organizationId;
+
+  factory _$GFollowOrganizationInput(
+          [void Function(GFollowOrganizationInputBuilder)? updates]) =>
+      (new GFollowOrganizationInputBuilder()..update(updates)).build();
+
+  _$GFollowOrganizationInput._(
+      {this.clientMutationId, required this.organizationId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        organizationId, 'GFollowOrganizationInput', 'organizationId');
+  }
+
+  @override
+  GFollowOrganizationInput rebuild(
+          void Function(GFollowOrganizationInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GFollowOrganizationInputBuilder toBuilder() =>
+      new GFollowOrganizationInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GFollowOrganizationInput &&
+        clientMutationId == other.clientMutationId &&
+        organizationId == other.organizationId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, clientMutationId.hashCode), organizationId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GFollowOrganizationInput')
+          ..add('clientMutationId', clientMutationId)
+          ..add('organizationId', organizationId))
+        .toString();
+  }
+}
+
+class GFollowOrganizationInputBuilder
+    implements
+        Builder<GFollowOrganizationInput, GFollowOrganizationInputBuilder> {
+  _$GFollowOrganizationInput? _$v;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  String? _organizationId;
+  String? get organizationId => _$this._organizationId;
+  set organizationId(String? organizationId) =>
+      _$this._organizationId = organizationId;
+
+  GFollowOrganizationInputBuilder();
+
+  GFollowOrganizationInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _clientMutationId = $v.clientMutationId;
+      _organizationId = $v.organizationId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GFollowOrganizationInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GFollowOrganizationInput;
+  }
+
+  @override
+  void update(void Function(GFollowOrganizationInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GFollowOrganizationInput build() {
+    final _$result = _$v ??
+        new _$GFollowOrganizationInput._(
+            clientMutationId: clientMutationId,
+            organizationId: BuiltValueNullFieldError.checkNotNull(
+                organizationId, 'GFollowOrganizationInput', 'organizationId'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
 class _$GFollowUserInput extends GFollowUserInput {
   @override
   final String? clientMutationId;
@@ -36567,6 +44556,260 @@ class GGitTimestampBuilder
         new _$GGitTimestamp._(
             value: BuiltValueNullFieldError.checkNotNull(
                 value, 'GGitTimestamp', 'value'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GGrantEnterpriseOrganizationsMigratorRoleInput
+    extends GGrantEnterpriseOrganizationsMigratorRoleInput {
+  @override
+  final String? clientMutationId;
+  @override
+  final String enterpriseId;
+  @override
+  final String login;
+
+  factory _$GGrantEnterpriseOrganizationsMigratorRoleInput(
+          [void Function(GGrantEnterpriseOrganizationsMigratorRoleInputBuilder)?
+              updates]) =>
+      (new GGrantEnterpriseOrganizationsMigratorRoleInputBuilder()
+            ..update(updates))
+          .build();
+
+  _$GGrantEnterpriseOrganizationsMigratorRoleInput._(
+      {this.clientMutationId, required this.enterpriseId, required this.login})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(enterpriseId,
+        'GGrantEnterpriseOrganizationsMigratorRoleInput', 'enterpriseId');
+    BuiltValueNullFieldError.checkNotNull(
+        login, 'GGrantEnterpriseOrganizationsMigratorRoleInput', 'login');
+  }
+
+  @override
+  GGrantEnterpriseOrganizationsMigratorRoleInput rebuild(
+          void Function(GGrantEnterpriseOrganizationsMigratorRoleInputBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GGrantEnterpriseOrganizationsMigratorRoleInputBuilder toBuilder() =>
+      new GGrantEnterpriseOrganizationsMigratorRoleInputBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GGrantEnterpriseOrganizationsMigratorRoleInput &&
+        clientMutationId == other.clientMutationId &&
+        enterpriseId == other.enterpriseId &&
+        login == other.login;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc($jc(0, clientMutationId.hashCode), enterpriseId.hashCode),
+        login.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            'GGrantEnterpriseOrganizationsMigratorRoleInput')
+          ..add('clientMutationId', clientMutationId)
+          ..add('enterpriseId', enterpriseId)
+          ..add('login', login))
+        .toString();
+  }
+}
+
+class GGrantEnterpriseOrganizationsMigratorRoleInputBuilder
+    implements
+        Builder<GGrantEnterpriseOrganizationsMigratorRoleInput,
+            GGrantEnterpriseOrganizationsMigratorRoleInputBuilder> {
+  _$GGrantEnterpriseOrganizationsMigratorRoleInput? _$v;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  String? _enterpriseId;
+  String? get enterpriseId => _$this._enterpriseId;
+  set enterpriseId(String? enterpriseId) => _$this._enterpriseId = enterpriseId;
+
+  String? _login;
+  String? get login => _$this._login;
+  set login(String? login) => _$this._login = login;
+
+  GGrantEnterpriseOrganizationsMigratorRoleInputBuilder();
+
+  GGrantEnterpriseOrganizationsMigratorRoleInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _clientMutationId = $v.clientMutationId;
+      _enterpriseId = $v.enterpriseId;
+      _login = $v.login;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GGrantEnterpriseOrganizationsMigratorRoleInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GGrantEnterpriseOrganizationsMigratorRoleInput;
+  }
+
+  @override
+  void update(
+      void Function(GGrantEnterpriseOrganizationsMigratorRoleInputBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GGrantEnterpriseOrganizationsMigratorRoleInput build() {
+    final _$result = _$v ??
+        new _$GGrantEnterpriseOrganizationsMigratorRoleInput._(
+            clientMutationId: clientMutationId,
+            enterpriseId: BuiltValueNullFieldError.checkNotNull(
+                enterpriseId,
+                'GGrantEnterpriseOrganizationsMigratorRoleInput',
+                'enterpriseId'),
+            login: BuiltValueNullFieldError.checkNotNull(login,
+                'GGrantEnterpriseOrganizationsMigratorRoleInput', 'login'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GGrantMigratorRoleInput extends GGrantMigratorRoleInput {
+  @override
+  final String actor;
+  @override
+  final GActorType actorType;
+  @override
+  final String? clientMutationId;
+  @override
+  final String organizationId;
+
+  factory _$GGrantMigratorRoleInput(
+          [void Function(GGrantMigratorRoleInputBuilder)? updates]) =>
+      (new GGrantMigratorRoleInputBuilder()..update(updates)).build();
+
+  _$GGrantMigratorRoleInput._(
+      {required this.actor,
+      required this.actorType,
+      this.clientMutationId,
+      required this.organizationId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        actor, 'GGrantMigratorRoleInput', 'actor');
+    BuiltValueNullFieldError.checkNotNull(
+        actorType, 'GGrantMigratorRoleInput', 'actorType');
+    BuiltValueNullFieldError.checkNotNull(
+        organizationId, 'GGrantMigratorRoleInput', 'organizationId');
+  }
+
+  @override
+  GGrantMigratorRoleInput rebuild(
+          void Function(GGrantMigratorRoleInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GGrantMigratorRoleInputBuilder toBuilder() =>
+      new GGrantMigratorRoleInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GGrantMigratorRoleInput &&
+        actor == other.actor &&
+        actorType == other.actorType &&
+        clientMutationId == other.clientMutationId &&
+        organizationId == other.organizationId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc($jc($jc(0, actor.hashCode), actorType.hashCode),
+            clientMutationId.hashCode),
+        organizationId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GGrantMigratorRoleInput')
+          ..add('actor', actor)
+          ..add('actorType', actorType)
+          ..add('clientMutationId', clientMutationId)
+          ..add('organizationId', organizationId))
+        .toString();
+  }
+}
+
+class GGrantMigratorRoleInputBuilder
+    implements
+        Builder<GGrantMigratorRoleInput, GGrantMigratorRoleInputBuilder> {
+  _$GGrantMigratorRoleInput? _$v;
+
+  String? _actor;
+  String? get actor => _$this._actor;
+  set actor(String? actor) => _$this._actor = actor;
+
+  GActorType? _actorType;
+  GActorType? get actorType => _$this._actorType;
+  set actorType(GActorType? actorType) => _$this._actorType = actorType;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  String? _organizationId;
+  String? get organizationId => _$this._organizationId;
+  set organizationId(String? organizationId) =>
+      _$this._organizationId = organizationId;
+
+  GGrantMigratorRoleInputBuilder();
+
+  GGrantMigratorRoleInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _actor = $v.actor;
+      _actorType = $v.actorType;
+      _clientMutationId = $v.clientMutationId;
+      _organizationId = $v.organizationId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GGrantMigratorRoleInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GGrantMigratorRoleInput;
+  }
+
+  @override
+  void update(void Function(GGrantMigratorRoleInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GGrantMigratorRoleInput build() {
+    final _$result = _$v ??
+        new _$GGrantMigratorRoleInput._(
+            actor: BuiltValueNullFieldError.checkNotNull(
+                actor, 'GGrantMigratorRoleInput', 'actor'),
+            actorType: BuiltValueNullFieldError.checkNotNull(
+                actorType, 'GGrantMigratorRoleInput', 'actorType'),
+            clientMutationId: clientMutationId,
+            organizationId: BuiltValueNullFieldError.checkNotNull(
+                organizationId, 'GGrantMigratorRoleInput', 'organizationId'));
     replace(_$result);
     return _$result;
   }
@@ -37157,6 +45400,8 @@ class _$GIssueFilters extends GIssueFilters {
   @override
   final String? milestone;
   @override
+  final String? milestoneNumber;
+  @override
   final DateTime? since;
   @override
   final BuiltList<GIssueState>? states;
@@ -37172,6 +45417,7 @@ class _$GIssueFilters extends GIssueFilters {
       this.labels,
       this.mentioned,
       this.milestone,
+      this.milestoneNumber,
       this.since,
       this.states,
       this.viewerSubscribed})
@@ -37193,6 +45439,7 @@ class _$GIssueFilters extends GIssueFilters {
         labels == other.labels &&
         mentioned == other.mentioned &&
         milestone == other.milestone &&
+        milestoneNumber == other.milestoneNumber &&
         since == other.since &&
         states == other.states &&
         viewerSubscribed == other.viewerSubscribed;
@@ -37205,10 +45452,14 @@ class _$GIssueFilters extends GIssueFilters {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, assignee.hashCode), createdBy.hashCode),
-                            labels.hashCode),
-                        mentioned.hashCode),
-                    milestone.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, assignee.hashCode),
+                                    createdBy.hashCode),
+                                labels.hashCode),
+                            mentioned.hashCode),
+                        milestone.hashCode),
+                    milestoneNumber.hashCode),
                 since.hashCode),
             states.hashCode),
         viewerSubscribed.hashCode));
@@ -37222,6 +45473,7 @@ class _$GIssueFilters extends GIssueFilters {
           ..add('labels', labels)
           ..add('mentioned', mentioned)
           ..add('milestone', milestone)
+          ..add('milestoneNumber', milestoneNumber)
           ..add('since', since)
           ..add('states', states)
           ..add('viewerSubscribed', viewerSubscribed))
@@ -37254,6 +45506,11 @@ class GIssueFiltersBuilder
   String? get milestone => _$this._milestone;
   set milestone(String? milestone) => _$this._milestone = milestone;
 
+  String? _milestoneNumber;
+  String? get milestoneNumber => _$this._milestoneNumber;
+  set milestoneNumber(String? milestoneNumber) =>
+      _$this._milestoneNumber = milestoneNumber;
+
   DateTime? _since;
   DateTime? get since => _$this._since;
   set since(DateTime? since) => _$this._since = since;
@@ -37278,6 +45535,7 @@ class GIssueFiltersBuilder
       _labels = $v.labels?.toBuilder();
       _mentioned = $v.mentioned;
       _milestone = $v.milestone;
+      _milestoneNumber = $v.milestoneNumber;
       _since = $v.since;
       _states = $v.states?.toBuilder();
       _viewerSubscribed = $v.viewerSubscribed;
@@ -37308,6 +45566,7 @@ class GIssueFiltersBuilder
               labels: _labels?.build(),
               mentioned: mentioned,
               milestone: milestone,
+              milestoneNumber: milestoneNumber,
               since: since,
               states: _states?.build(),
               viewerSubscribed: viewerSubscribed);
@@ -38904,6 +47163,104 @@ class GMoveProjectColumnInputBuilder
   }
 }
 
+class _$GOrgEnterpriseOwnerOrder extends GOrgEnterpriseOwnerOrder {
+  @override
+  final GOrderDirection direction;
+  @override
+  final GOrgEnterpriseOwnerOrderField field;
+
+  factory _$GOrgEnterpriseOwnerOrder(
+          [void Function(GOrgEnterpriseOwnerOrderBuilder)? updates]) =>
+      (new GOrgEnterpriseOwnerOrderBuilder()..update(updates)).build();
+
+  _$GOrgEnterpriseOwnerOrder._({required this.direction, required this.field})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        direction, 'GOrgEnterpriseOwnerOrder', 'direction');
+    BuiltValueNullFieldError.checkNotNull(
+        field, 'GOrgEnterpriseOwnerOrder', 'field');
+  }
+
+  @override
+  GOrgEnterpriseOwnerOrder rebuild(
+          void Function(GOrgEnterpriseOwnerOrderBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOrgEnterpriseOwnerOrderBuilder toBuilder() =>
+      new GOrgEnterpriseOwnerOrderBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOrgEnterpriseOwnerOrder &&
+        direction == other.direction &&
+        field == other.field;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, direction.hashCode), field.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GOrgEnterpriseOwnerOrder')
+          ..add('direction', direction)
+          ..add('field', field))
+        .toString();
+  }
+}
+
+class GOrgEnterpriseOwnerOrderBuilder
+    implements
+        Builder<GOrgEnterpriseOwnerOrder, GOrgEnterpriseOwnerOrderBuilder> {
+  _$GOrgEnterpriseOwnerOrder? _$v;
+
+  GOrderDirection? _direction;
+  GOrderDirection? get direction => _$this._direction;
+  set direction(GOrderDirection? direction) => _$this._direction = direction;
+
+  GOrgEnterpriseOwnerOrderField? _field;
+  GOrgEnterpriseOwnerOrderField? get field => _$this._field;
+  set field(GOrgEnterpriseOwnerOrderField? field) => _$this._field = field;
+
+  GOrgEnterpriseOwnerOrderBuilder();
+
+  GOrgEnterpriseOwnerOrderBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _direction = $v.direction;
+      _field = $v.field;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOrgEnterpriseOwnerOrder other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOrgEnterpriseOwnerOrder;
+  }
+
+  @override
+  void update(void Function(GOrgEnterpriseOwnerOrderBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GOrgEnterpriseOwnerOrder build() {
+    final _$result = _$v ??
+        new _$GOrgEnterpriseOwnerOrder._(
+            direction: BuiltValueNullFieldError.checkNotNull(
+                direction, 'GOrgEnterpriseOwnerOrder', 'direction'),
+            field: BuiltValueNullFieldError.checkNotNull(
+                field, 'GOrgEnterpriseOwnerOrder', 'field'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
 class _$GOrganizationOrder extends GOrganizationOrder {
   @override
   final GOrderDirection direction;
@@ -39738,6 +48095,244 @@ class GProjectOrderBuilder
                 direction, 'GProjectOrder', 'direction'),
             field: BuiltValueNullFieldError.checkNotNull(
                 field, 'GProjectOrder', 'field'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GProjectV2FieldValue extends GProjectV2FieldValue {
+  @override
+  final GDate? date;
+  @override
+  final String? iterationId;
+  @override
+  final double? number;
+  @override
+  final String? singleSelectOptionId;
+  @override
+  final String? text;
+
+  factory _$GProjectV2FieldValue(
+          [void Function(GProjectV2FieldValueBuilder)? updates]) =>
+      (new GProjectV2FieldValueBuilder()..update(updates)).build();
+
+  _$GProjectV2FieldValue._(
+      {this.date,
+      this.iterationId,
+      this.number,
+      this.singleSelectOptionId,
+      this.text})
+      : super._();
+
+  @override
+  GProjectV2FieldValue rebuild(
+          void Function(GProjectV2FieldValueBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GProjectV2FieldValueBuilder toBuilder() =>
+      new GProjectV2FieldValueBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GProjectV2FieldValue &&
+        date == other.date &&
+        iterationId == other.iterationId &&
+        number == other.number &&
+        singleSelectOptionId == other.singleSelectOptionId &&
+        text == other.text;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc($jc($jc(0, date.hashCode), iterationId.hashCode),
+                number.hashCode),
+            singleSelectOptionId.hashCode),
+        text.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GProjectV2FieldValue')
+          ..add('date', date)
+          ..add('iterationId', iterationId)
+          ..add('number', number)
+          ..add('singleSelectOptionId', singleSelectOptionId)
+          ..add('text', text))
+        .toString();
+  }
+}
+
+class GProjectV2FieldValueBuilder
+    implements Builder<GProjectV2FieldValue, GProjectV2FieldValueBuilder> {
+  _$GProjectV2FieldValue? _$v;
+
+  GDateBuilder? _date;
+  GDateBuilder get date => _$this._date ??= new GDateBuilder();
+  set date(GDateBuilder? date) => _$this._date = date;
+
+  String? _iterationId;
+  String? get iterationId => _$this._iterationId;
+  set iterationId(String? iterationId) => _$this._iterationId = iterationId;
+
+  double? _number;
+  double? get number => _$this._number;
+  set number(double? number) => _$this._number = number;
+
+  String? _singleSelectOptionId;
+  String? get singleSelectOptionId => _$this._singleSelectOptionId;
+  set singleSelectOptionId(String? singleSelectOptionId) =>
+      _$this._singleSelectOptionId = singleSelectOptionId;
+
+  String? _text;
+  String? get text => _$this._text;
+  set text(String? text) => _$this._text = text;
+
+  GProjectV2FieldValueBuilder();
+
+  GProjectV2FieldValueBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _date = $v.date?.toBuilder();
+      _iterationId = $v.iterationId;
+      _number = $v.number;
+      _singleSelectOptionId = $v.singleSelectOptionId;
+      _text = $v.text;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GProjectV2FieldValue other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GProjectV2FieldValue;
+  }
+
+  @override
+  void update(void Function(GProjectV2FieldValueBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GProjectV2FieldValue build() {
+    _$GProjectV2FieldValue _$result;
+    try {
+      _$result = _$v ??
+          new _$GProjectV2FieldValue._(
+              date: _date?.build(),
+              iterationId: iterationId,
+              number: number,
+              singleSelectOptionId: singleSelectOptionId,
+              text: text);
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'date';
+        _date?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'GProjectV2FieldValue', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GProjectV2Order extends GProjectV2Order {
+  @override
+  final GOrderDirection direction;
+  @override
+  final GProjectV2OrderField field;
+
+  factory _$GProjectV2Order([void Function(GProjectV2OrderBuilder)? updates]) =>
+      (new GProjectV2OrderBuilder()..update(updates)).build();
+
+  _$GProjectV2Order._({required this.direction, required this.field})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        direction, 'GProjectV2Order', 'direction');
+    BuiltValueNullFieldError.checkNotNull(field, 'GProjectV2Order', 'field');
+  }
+
+  @override
+  GProjectV2Order rebuild(void Function(GProjectV2OrderBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GProjectV2OrderBuilder toBuilder() =>
+      new GProjectV2OrderBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GProjectV2Order &&
+        direction == other.direction &&
+        field == other.field;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, direction.hashCode), field.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GProjectV2Order')
+          ..add('direction', direction)
+          ..add('field', field))
+        .toString();
+  }
+}
+
+class GProjectV2OrderBuilder
+    implements Builder<GProjectV2Order, GProjectV2OrderBuilder> {
+  _$GProjectV2Order? _$v;
+
+  GOrderDirection? _direction;
+  GOrderDirection? get direction => _$this._direction;
+  set direction(GOrderDirection? direction) => _$this._direction = direction;
+
+  GProjectV2OrderField? _field;
+  GProjectV2OrderField? get field => _$this._field;
+  set field(GProjectV2OrderField? field) => _$this._field = field;
+
+  GProjectV2OrderBuilder();
+
+  GProjectV2OrderBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _direction = $v.direction;
+      _field = $v.field;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GProjectV2Order other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GProjectV2Order;
+  }
+
+  @override
+  void update(void Function(GProjectV2OrderBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GProjectV2Order build() {
+    final _$result = _$v ??
+        new _$GProjectV2Order._(
+            direction: BuiltValueNullFieldError.checkNotNull(
+                direction, 'GProjectV2Order', 'direction'),
+            field: BuiltValueNullFieldError.checkNotNull(
+                field, 'GProjectV2Order', 'field'));
     replace(_$result);
     return _$result;
   }
@@ -42025,6 +50620,105 @@ class GRepositoryInvitationOrderBuilder
   }
 }
 
+class _$GRepositoryMigrationOrder extends GRepositoryMigrationOrder {
+  @override
+  final GRepositoryMigrationOrderDirection direction;
+  @override
+  final GRepositoryMigrationOrderField field;
+
+  factory _$GRepositoryMigrationOrder(
+          [void Function(GRepositoryMigrationOrderBuilder)? updates]) =>
+      (new GRepositoryMigrationOrderBuilder()..update(updates)).build();
+
+  _$GRepositoryMigrationOrder._({required this.direction, required this.field})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        direction, 'GRepositoryMigrationOrder', 'direction');
+    BuiltValueNullFieldError.checkNotNull(
+        field, 'GRepositoryMigrationOrder', 'field');
+  }
+
+  @override
+  GRepositoryMigrationOrder rebuild(
+          void Function(GRepositoryMigrationOrderBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GRepositoryMigrationOrderBuilder toBuilder() =>
+      new GRepositoryMigrationOrderBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GRepositoryMigrationOrder &&
+        direction == other.direction &&
+        field == other.field;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, direction.hashCode), field.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GRepositoryMigrationOrder')
+          ..add('direction', direction)
+          ..add('field', field))
+        .toString();
+  }
+}
+
+class GRepositoryMigrationOrderBuilder
+    implements
+        Builder<GRepositoryMigrationOrder, GRepositoryMigrationOrderBuilder> {
+  _$GRepositoryMigrationOrder? _$v;
+
+  GRepositoryMigrationOrderDirection? _direction;
+  GRepositoryMigrationOrderDirection? get direction => _$this._direction;
+  set direction(GRepositoryMigrationOrderDirection? direction) =>
+      _$this._direction = direction;
+
+  GRepositoryMigrationOrderField? _field;
+  GRepositoryMigrationOrderField? get field => _$this._field;
+  set field(GRepositoryMigrationOrderField? field) => _$this._field = field;
+
+  GRepositoryMigrationOrderBuilder();
+
+  GRepositoryMigrationOrderBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _direction = $v.direction;
+      _field = $v.field;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GRepositoryMigrationOrder other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GRepositoryMigrationOrder;
+  }
+
+  @override
+  void update(void Function(GRepositoryMigrationOrderBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GRepositoryMigrationOrder build() {
+    final _$result = _$v ??
+        new _$GRepositoryMigrationOrder._(
+            direction: BuiltValueNullFieldError.checkNotNull(
+                direction, 'GRepositoryMigrationOrder', 'direction'),
+            field: BuiltValueNullFieldError.checkNotNull(
+                field, 'GRepositoryMigrationOrder', 'field'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
 class _$GRepositoryOrder extends GRepositoryOrder {
   @override
   final GOrderDirection direction;
@@ -42274,6 +50968,101 @@ class GRequestReviewsInputBuilder
   }
 }
 
+class _$GRequiredStatusCheckInput extends GRequiredStatusCheckInput {
+  @override
+  final String? appId;
+  @override
+  final String context;
+
+  factory _$GRequiredStatusCheckInput(
+          [void Function(GRequiredStatusCheckInputBuilder)? updates]) =>
+      (new GRequiredStatusCheckInputBuilder()..update(updates)).build();
+
+  _$GRequiredStatusCheckInput._({this.appId, required this.context})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        context, 'GRequiredStatusCheckInput', 'context');
+  }
+
+  @override
+  GRequiredStatusCheckInput rebuild(
+          void Function(GRequiredStatusCheckInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GRequiredStatusCheckInputBuilder toBuilder() =>
+      new GRequiredStatusCheckInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GRequiredStatusCheckInput &&
+        appId == other.appId &&
+        context == other.context;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, appId.hashCode), context.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GRequiredStatusCheckInput')
+          ..add('appId', appId)
+          ..add('context', context))
+        .toString();
+  }
+}
+
+class GRequiredStatusCheckInputBuilder
+    implements
+        Builder<GRequiredStatusCheckInput, GRequiredStatusCheckInputBuilder> {
+  _$GRequiredStatusCheckInput? _$v;
+
+  String? _appId;
+  String? get appId => _$this._appId;
+  set appId(String? appId) => _$this._appId = appId;
+
+  String? _context;
+  String? get context => _$this._context;
+  set context(String? context) => _$this._context = context;
+
+  GRequiredStatusCheckInputBuilder();
+
+  GRequiredStatusCheckInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _appId = $v.appId;
+      _context = $v.context;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GRequiredStatusCheckInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GRequiredStatusCheckInput;
+  }
+
+  @override
+  void update(void Function(GRequiredStatusCheckInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GRequiredStatusCheckInput build() {
+    final _$result = _$v ??
+        new _$GRequiredStatusCheckInput._(
+            appId: appId,
+            context: BuiltValueNullFieldError.checkNotNull(
+                context, 'GRequiredStatusCheckInput', 'context'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
 class _$GRerequestCheckSuiteInput extends GRerequestCheckSuiteInput {
   @override
   final String checkSuiteId;
@@ -42479,6 +51268,261 @@ class GResolveReviewThreadInputBuilder
             clientMutationId: clientMutationId,
             threadId: BuiltValueNullFieldError.checkNotNull(
                 threadId, 'GResolveReviewThreadInput', 'threadId'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GRevokeEnterpriseOrganizationsMigratorRoleInput
+    extends GRevokeEnterpriseOrganizationsMigratorRoleInput {
+  @override
+  final String? clientMutationId;
+  @override
+  final String enterpriseId;
+  @override
+  final String login;
+
+  factory _$GRevokeEnterpriseOrganizationsMigratorRoleInput(
+          [void Function(
+                  GRevokeEnterpriseOrganizationsMigratorRoleInputBuilder)?
+              updates]) =>
+      (new GRevokeEnterpriseOrganizationsMigratorRoleInputBuilder()
+            ..update(updates))
+          .build();
+
+  _$GRevokeEnterpriseOrganizationsMigratorRoleInput._(
+      {this.clientMutationId, required this.enterpriseId, required this.login})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(enterpriseId,
+        'GRevokeEnterpriseOrganizationsMigratorRoleInput', 'enterpriseId');
+    BuiltValueNullFieldError.checkNotNull(
+        login, 'GRevokeEnterpriseOrganizationsMigratorRoleInput', 'login');
+  }
+
+  @override
+  GRevokeEnterpriseOrganizationsMigratorRoleInput rebuild(
+          void Function(GRevokeEnterpriseOrganizationsMigratorRoleInputBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GRevokeEnterpriseOrganizationsMigratorRoleInputBuilder toBuilder() =>
+      new GRevokeEnterpriseOrganizationsMigratorRoleInputBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GRevokeEnterpriseOrganizationsMigratorRoleInput &&
+        clientMutationId == other.clientMutationId &&
+        enterpriseId == other.enterpriseId &&
+        login == other.login;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc($jc(0, clientMutationId.hashCode), enterpriseId.hashCode),
+        login.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            'GRevokeEnterpriseOrganizationsMigratorRoleInput')
+          ..add('clientMutationId', clientMutationId)
+          ..add('enterpriseId', enterpriseId)
+          ..add('login', login))
+        .toString();
+  }
+}
+
+class GRevokeEnterpriseOrganizationsMigratorRoleInputBuilder
+    implements
+        Builder<GRevokeEnterpriseOrganizationsMigratorRoleInput,
+            GRevokeEnterpriseOrganizationsMigratorRoleInputBuilder> {
+  _$GRevokeEnterpriseOrganizationsMigratorRoleInput? _$v;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  String? _enterpriseId;
+  String? get enterpriseId => _$this._enterpriseId;
+  set enterpriseId(String? enterpriseId) => _$this._enterpriseId = enterpriseId;
+
+  String? _login;
+  String? get login => _$this._login;
+  set login(String? login) => _$this._login = login;
+
+  GRevokeEnterpriseOrganizationsMigratorRoleInputBuilder();
+
+  GRevokeEnterpriseOrganizationsMigratorRoleInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _clientMutationId = $v.clientMutationId;
+      _enterpriseId = $v.enterpriseId;
+      _login = $v.login;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GRevokeEnterpriseOrganizationsMigratorRoleInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GRevokeEnterpriseOrganizationsMigratorRoleInput;
+  }
+
+  @override
+  void update(
+      void Function(GRevokeEnterpriseOrganizationsMigratorRoleInputBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GRevokeEnterpriseOrganizationsMigratorRoleInput build() {
+    final _$result = _$v ??
+        new _$GRevokeEnterpriseOrganizationsMigratorRoleInput._(
+            clientMutationId: clientMutationId,
+            enterpriseId: BuiltValueNullFieldError.checkNotNull(
+                enterpriseId,
+                'GRevokeEnterpriseOrganizationsMigratorRoleInput',
+                'enterpriseId'),
+            login: BuiltValueNullFieldError.checkNotNull(login,
+                'GRevokeEnterpriseOrganizationsMigratorRoleInput', 'login'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GRevokeMigratorRoleInput extends GRevokeMigratorRoleInput {
+  @override
+  final String actor;
+  @override
+  final GActorType actorType;
+  @override
+  final String? clientMutationId;
+  @override
+  final String organizationId;
+
+  factory _$GRevokeMigratorRoleInput(
+          [void Function(GRevokeMigratorRoleInputBuilder)? updates]) =>
+      (new GRevokeMigratorRoleInputBuilder()..update(updates)).build();
+
+  _$GRevokeMigratorRoleInput._(
+      {required this.actor,
+      required this.actorType,
+      this.clientMutationId,
+      required this.organizationId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        actor, 'GRevokeMigratorRoleInput', 'actor');
+    BuiltValueNullFieldError.checkNotNull(
+        actorType, 'GRevokeMigratorRoleInput', 'actorType');
+    BuiltValueNullFieldError.checkNotNull(
+        organizationId, 'GRevokeMigratorRoleInput', 'organizationId');
+  }
+
+  @override
+  GRevokeMigratorRoleInput rebuild(
+          void Function(GRevokeMigratorRoleInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GRevokeMigratorRoleInputBuilder toBuilder() =>
+      new GRevokeMigratorRoleInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GRevokeMigratorRoleInput &&
+        actor == other.actor &&
+        actorType == other.actorType &&
+        clientMutationId == other.clientMutationId &&
+        organizationId == other.organizationId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc($jc($jc(0, actor.hashCode), actorType.hashCode),
+            clientMutationId.hashCode),
+        organizationId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GRevokeMigratorRoleInput')
+          ..add('actor', actor)
+          ..add('actorType', actorType)
+          ..add('clientMutationId', clientMutationId)
+          ..add('organizationId', organizationId))
+        .toString();
+  }
+}
+
+class GRevokeMigratorRoleInputBuilder
+    implements
+        Builder<GRevokeMigratorRoleInput, GRevokeMigratorRoleInputBuilder> {
+  _$GRevokeMigratorRoleInput? _$v;
+
+  String? _actor;
+  String? get actor => _$this._actor;
+  set actor(String? actor) => _$this._actor = actor;
+
+  GActorType? _actorType;
+  GActorType? get actorType => _$this._actorType;
+  set actorType(GActorType? actorType) => _$this._actorType = actorType;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  String? _organizationId;
+  String? get organizationId => _$this._organizationId;
+  set organizationId(String? organizationId) =>
+      _$this._organizationId = organizationId;
+
+  GRevokeMigratorRoleInputBuilder();
+
+  GRevokeMigratorRoleInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _actor = $v.actor;
+      _actorType = $v.actorType;
+      _clientMutationId = $v.clientMutationId;
+      _organizationId = $v.organizationId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GRevokeMigratorRoleInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GRevokeMigratorRoleInput;
+  }
+
+  @override
+  void update(void Function(GRevokeMigratorRoleInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GRevokeMigratorRoleInput build() {
+    final _$result = _$v ??
+        new _$GRevokeMigratorRoleInput._(
+            actor: BuiltValueNullFieldError.checkNotNull(
+                actor, 'GRevokeMigratorRoleInput', 'actor'),
+            actorType: BuiltValueNullFieldError.checkNotNull(
+                actorType, 'GRevokeMigratorRoleInput', 'actorType'),
+            clientMutationId: clientMutationId,
+            organizationId: BuiltValueNullFieldError.checkNotNull(
+                organizationId, 'GRevokeMigratorRoleInput', 'organizationId'));
     replace(_$result);
     return _$result;
   }
@@ -43462,6 +52506,99 @@ class GSetUserInteractionLimitInputBuilder
   }
 }
 
+class _$GSponsorOrder extends GSponsorOrder {
+  @override
+  final GOrderDirection direction;
+  @override
+  final GSponsorOrderField field;
+
+  factory _$GSponsorOrder([void Function(GSponsorOrderBuilder)? updates]) =>
+      (new GSponsorOrderBuilder()..update(updates)).build();
+
+  _$GSponsorOrder._({required this.direction, required this.field})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        direction, 'GSponsorOrder', 'direction');
+    BuiltValueNullFieldError.checkNotNull(field, 'GSponsorOrder', 'field');
+  }
+
+  @override
+  GSponsorOrder rebuild(void Function(GSponsorOrderBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GSponsorOrderBuilder toBuilder() => new GSponsorOrderBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GSponsorOrder &&
+        direction == other.direction &&
+        field == other.field;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, direction.hashCode), field.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GSponsorOrder')
+          ..add('direction', direction)
+          ..add('field', field))
+        .toString();
+  }
+}
+
+class GSponsorOrderBuilder
+    implements Builder<GSponsorOrder, GSponsorOrderBuilder> {
+  _$GSponsorOrder? _$v;
+
+  GOrderDirection? _direction;
+  GOrderDirection? get direction => _$this._direction;
+  set direction(GOrderDirection? direction) => _$this._direction = direction;
+
+  GSponsorOrderField? _field;
+  GSponsorOrderField? get field => _$this._field;
+  set field(GSponsorOrderField? field) => _$this._field = field;
+
+  GSponsorOrderBuilder();
+
+  GSponsorOrderBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _direction = $v.direction;
+      _field = $v.field;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GSponsorOrder other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GSponsorOrder;
+  }
+
+  @override
+  void update(void Function(GSponsorOrderBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GSponsorOrder build() {
+    final _$result = _$v ??
+        new _$GSponsorOrder._(
+            direction: BuiltValueNullFieldError.checkNotNull(
+                direction, 'GSponsorOrder', 'direction'),
+            field: BuiltValueNullFieldError.checkNotNull(
+                field, 'GSponsorOrder', 'field'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
 class _$GSponsorableOrder extends GSponsorableOrder {
   @override
   final GOrderDirection direction;
@@ -43750,6 +52887,106 @@ class GSponsorsTierOrderBuilder
   }
 }
 
+class _$GSponsorshipNewsletterOrder extends GSponsorshipNewsletterOrder {
+  @override
+  final GOrderDirection direction;
+  @override
+  final GSponsorshipNewsletterOrderField field;
+
+  factory _$GSponsorshipNewsletterOrder(
+          [void Function(GSponsorshipNewsletterOrderBuilder)? updates]) =>
+      (new GSponsorshipNewsletterOrderBuilder()..update(updates)).build();
+
+  _$GSponsorshipNewsletterOrder._(
+      {required this.direction, required this.field})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        direction, 'GSponsorshipNewsletterOrder', 'direction');
+    BuiltValueNullFieldError.checkNotNull(
+        field, 'GSponsorshipNewsletterOrder', 'field');
+  }
+
+  @override
+  GSponsorshipNewsletterOrder rebuild(
+          void Function(GSponsorshipNewsletterOrderBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GSponsorshipNewsletterOrderBuilder toBuilder() =>
+      new GSponsorshipNewsletterOrderBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GSponsorshipNewsletterOrder &&
+        direction == other.direction &&
+        field == other.field;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, direction.hashCode), field.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GSponsorshipNewsletterOrder')
+          ..add('direction', direction)
+          ..add('field', field))
+        .toString();
+  }
+}
+
+class GSponsorshipNewsletterOrderBuilder
+    implements
+        Builder<GSponsorshipNewsletterOrder,
+            GSponsorshipNewsletterOrderBuilder> {
+  _$GSponsorshipNewsletterOrder? _$v;
+
+  GOrderDirection? _direction;
+  GOrderDirection? get direction => _$this._direction;
+  set direction(GOrderDirection? direction) => _$this._direction = direction;
+
+  GSponsorshipNewsletterOrderField? _field;
+  GSponsorshipNewsletterOrderField? get field => _$this._field;
+  set field(GSponsorshipNewsletterOrderField? field) => _$this._field = field;
+
+  GSponsorshipNewsletterOrderBuilder();
+
+  GSponsorshipNewsletterOrderBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _direction = $v.direction;
+      _field = $v.field;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GSponsorshipNewsletterOrder other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GSponsorshipNewsletterOrder;
+  }
+
+  @override
+  void update(void Function(GSponsorshipNewsletterOrderBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GSponsorshipNewsletterOrder build() {
+    final _$result = _$v ??
+        new _$GSponsorshipNewsletterOrder._(
+            direction: BuiltValueNullFieldError.checkNotNull(
+                direction, 'GSponsorshipNewsletterOrder', 'direction'),
+            field: BuiltValueNullFieldError.checkNotNull(
+                field, 'GSponsorshipNewsletterOrder', 'field'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
 class _$GSponsorshipOrder extends GSponsorshipOrder {
   @override
   final GOrderDirection direction;
@@ -43930,6 +53167,244 @@ class GStarOrderBuilder implements Builder<GStarOrder, GStarOrderBuilder> {
                 direction, 'GStarOrder', 'direction'),
             field: BuiltValueNullFieldError.checkNotNull(
                 field, 'GStarOrder', 'field'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GStartRepositoryMigrationInput extends GStartRepositoryMigrationInput {
+  @override
+  final String accessToken;
+  @override
+  final String? clientMutationId;
+  @override
+  final bool? continueOnError;
+  @override
+  final String? gitArchiveUrl;
+  @override
+  final String? githubPat;
+  @override
+  final String? metadataArchiveUrl;
+  @override
+  final String ownerId;
+  @override
+  final String repositoryName;
+  @override
+  final bool? skipReleases;
+  @override
+  final String sourceId;
+  @override
+  final String sourceRepositoryUrl;
+
+  factory _$GStartRepositoryMigrationInput(
+          [void Function(GStartRepositoryMigrationInputBuilder)? updates]) =>
+      (new GStartRepositoryMigrationInputBuilder()..update(updates)).build();
+
+  _$GStartRepositoryMigrationInput._(
+      {required this.accessToken,
+      this.clientMutationId,
+      this.continueOnError,
+      this.gitArchiveUrl,
+      this.githubPat,
+      this.metadataArchiveUrl,
+      required this.ownerId,
+      required this.repositoryName,
+      this.skipReleases,
+      required this.sourceId,
+      required this.sourceRepositoryUrl})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        accessToken, 'GStartRepositoryMigrationInput', 'accessToken');
+    BuiltValueNullFieldError.checkNotNull(
+        ownerId, 'GStartRepositoryMigrationInput', 'ownerId');
+    BuiltValueNullFieldError.checkNotNull(
+        repositoryName, 'GStartRepositoryMigrationInput', 'repositoryName');
+    BuiltValueNullFieldError.checkNotNull(
+        sourceId, 'GStartRepositoryMigrationInput', 'sourceId');
+    BuiltValueNullFieldError.checkNotNull(sourceRepositoryUrl,
+        'GStartRepositoryMigrationInput', 'sourceRepositoryUrl');
+  }
+
+  @override
+  GStartRepositoryMigrationInput rebuild(
+          void Function(GStartRepositoryMigrationInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GStartRepositoryMigrationInputBuilder toBuilder() =>
+      new GStartRepositoryMigrationInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GStartRepositoryMigrationInput &&
+        accessToken == other.accessToken &&
+        clientMutationId == other.clientMutationId &&
+        continueOnError == other.continueOnError &&
+        gitArchiveUrl == other.gitArchiveUrl &&
+        githubPat == other.githubPat &&
+        metadataArchiveUrl == other.metadataArchiveUrl &&
+        ownerId == other.ownerId &&
+        repositoryName == other.repositoryName &&
+        skipReleases == other.skipReleases &&
+        sourceId == other.sourceId &&
+        sourceRepositoryUrl == other.sourceRepositoryUrl;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc(
+                        $jc(
+                            $jc(
+                                $jc(
+                                    $jc(
+                                        $jc($jc(0, accessToken.hashCode),
+                                            clientMutationId.hashCode),
+                                        continueOnError.hashCode),
+                                    gitArchiveUrl.hashCode),
+                                githubPat.hashCode),
+                            metadataArchiveUrl.hashCode),
+                        ownerId.hashCode),
+                    repositoryName.hashCode),
+                skipReleases.hashCode),
+            sourceId.hashCode),
+        sourceRepositoryUrl.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GStartRepositoryMigrationInput')
+          ..add('accessToken', accessToken)
+          ..add('clientMutationId', clientMutationId)
+          ..add('continueOnError', continueOnError)
+          ..add('gitArchiveUrl', gitArchiveUrl)
+          ..add('githubPat', githubPat)
+          ..add('metadataArchiveUrl', metadataArchiveUrl)
+          ..add('ownerId', ownerId)
+          ..add('repositoryName', repositoryName)
+          ..add('skipReleases', skipReleases)
+          ..add('sourceId', sourceId)
+          ..add('sourceRepositoryUrl', sourceRepositoryUrl))
+        .toString();
+  }
+}
+
+class GStartRepositoryMigrationInputBuilder
+    implements
+        Builder<GStartRepositoryMigrationInput,
+            GStartRepositoryMigrationInputBuilder> {
+  _$GStartRepositoryMigrationInput? _$v;
+
+  String? _accessToken;
+  String? get accessToken => _$this._accessToken;
+  set accessToken(String? accessToken) => _$this._accessToken = accessToken;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  bool? _continueOnError;
+  bool? get continueOnError => _$this._continueOnError;
+  set continueOnError(bool? continueOnError) =>
+      _$this._continueOnError = continueOnError;
+
+  String? _gitArchiveUrl;
+  String? get gitArchiveUrl => _$this._gitArchiveUrl;
+  set gitArchiveUrl(String? gitArchiveUrl) =>
+      _$this._gitArchiveUrl = gitArchiveUrl;
+
+  String? _githubPat;
+  String? get githubPat => _$this._githubPat;
+  set githubPat(String? githubPat) => _$this._githubPat = githubPat;
+
+  String? _metadataArchiveUrl;
+  String? get metadataArchiveUrl => _$this._metadataArchiveUrl;
+  set metadataArchiveUrl(String? metadataArchiveUrl) =>
+      _$this._metadataArchiveUrl = metadataArchiveUrl;
+
+  String? _ownerId;
+  String? get ownerId => _$this._ownerId;
+  set ownerId(String? ownerId) => _$this._ownerId = ownerId;
+
+  String? _repositoryName;
+  String? get repositoryName => _$this._repositoryName;
+  set repositoryName(String? repositoryName) =>
+      _$this._repositoryName = repositoryName;
+
+  bool? _skipReleases;
+  bool? get skipReleases => _$this._skipReleases;
+  set skipReleases(bool? skipReleases) => _$this._skipReleases = skipReleases;
+
+  String? _sourceId;
+  String? get sourceId => _$this._sourceId;
+  set sourceId(String? sourceId) => _$this._sourceId = sourceId;
+
+  String? _sourceRepositoryUrl;
+  String? get sourceRepositoryUrl => _$this._sourceRepositoryUrl;
+  set sourceRepositoryUrl(String? sourceRepositoryUrl) =>
+      _$this._sourceRepositoryUrl = sourceRepositoryUrl;
+
+  GStartRepositoryMigrationInputBuilder();
+
+  GStartRepositoryMigrationInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _accessToken = $v.accessToken;
+      _clientMutationId = $v.clientMutationId;
+      _continueOnError = $v.continueOnError;
+      _gitArchiveUrl = $v.gitArchiveUrl;
+      _githubPat = $v.githubPat;
+      _metadataArchiveUrl = $v.metadataArchiveUrl;
+      _ownerId = $v.ownerId;
+      _repositoryName = $v.repositoryName;
+      _skipReleases = $v.skipReleases;
+      _sourceId = $v.sourceId;
+      _sourceRepositoryUrl = $v.sourceRepositoryUrl;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GStartRepositoryMigrationInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GStartRepositoryMigrationInput;
+  }
+
+  @override
+  void update(void Function(GStartRepositoryMigrationInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GStartRepositoryMigrationInput build() {
+    final _$result = _$v ??
+        new _$GStartRepositoryMigrationInput._(
+            accessToken: BuiltValueNullFieldError.checkNotNull(
+                accessToken, 'GStartRepositoryMigrationInput', 'accessToken'),
+            clientMutationId: clientMutationId,
+            continueOnError: continueOnError,
+            gitArchiveUrl: gitArchiveUrl,
+            githubPat: githubPat,
+            metadataArchiveUrl: metadataArchiveUrl,
+            ownerId: BuiltValueNullFieldError.checkNotNull(
+                ownerId, 'GStartRepositoryMigrationInput', 'ownerId'),
+            repositoryName: BuiltValueNullFieldError.checkNotNull(
+                repositoryName,
+                'GStartRepositoryMigrationInput',
+                'repositoryName'),
+            skipReleases: skipReleases,
+            sourceId: BuiltValueNullFieldError.checkNotNull(
+                sourceId, 'GStartRepositoryMigrationInput', 'sourceId'),
+            sourceRepositoryUrl: BuiltValueNullFieldError.checkNotNull(
+                sourceRepositoryUrl,
+                'GStartRepositoryMigrationInput',
+                'sourceRepositoryUrl'));
     replace(_$result);
     return _$result;
   }
@@ -44757,6 +54232,106 @@ class GUnarchiveRepositoryInputBuilder
             clientMutationId: clientMutationId,
             repositoryId: BuiltValueNullFieldError.checkNotNull(
                 repositoryId, 'GUnarchiveRepositoryInput', 'repositoryId'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GUnfollowOrganizationInput extends GUnfollowOrganizationInput {
+  @override
+  final String? clientMutationId;
+  @override
+  final String organizationId;
+
+  factory _$GUnfollowOrganizationInput(
+          [void Function(GUnfollowOrganizationInputBuilder)? updates]) =>
+      (new GUnfollowOrganizationInputBuilder()..update(updates)).build();
+
+  _$GUnfollowOrganizationInput._(
+      {this.clientMutationId, required this.organizationId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        organizationId, 'GUnfollowOrganizationInput', 'organizationId');
+  }
+
+  @override
+  GUnfollowOrganizationInput rebuild(
+          void Function(GUnfollowOrganizationInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GUnfollowOrganizationInputBuilder toBuilder() =>
+      new GUnfollowOrganizationInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GUnfollowOrganizationInput &&
+        clientMutationId == other.clientMutationId &&
+        organizationId == other.organizationId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, clientMutationId.hashCode), organizationId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GUnfollowOrganizationInput')
+          ..add('clientMutationId', clientMutationId)
+          ..add('organizationId', organizationId))
+        .toString();
+  }
+}
+
+class GUnfollowOrganizationInputBuilder
+    implements
+        Builder<GUnfollowOrganizationInput, GUnfollowOrganizationInputBuilder> {
+  _$GUnfollowOrganizationInput? _$v;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  String? _organizationId;
+  String? get organizationId => _$this._organizationId;
+  set organizationId(String? organizationId) =>
+      _$this._organizationId = organizationId;
+
+  GUnfollowOrganizationInputBuilder();
+
+  GUnfollowOrganizationInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _clientMutationId = $v.clientMutationId;
+      _organizationId = $v.organizationId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GUnfollowOrganizationInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GUnfollowOrganizationInput;
+  }
+
+  @override
+  void update(void Function(GUnfollowOrganizationInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GUnfollowOrganizationInput build() {
+    final _$result = _$v ??
+        new _$GUnfollowOrganizationInput._(
+            clientMutationId: clientMutationId,
+            organizationId: BuiltValueNullFieldError.checkNotNull(
+                organizationId,
+                'GUnfollowOrganizationInput',
+                'organizationId'));
     replace(_$result);
     return _$result;
   }
@@ -45692,7 +55267,13 @@ class _$GUpdateBranchProtectionRuleInput
   @override
   final bool? allowsForcePushes;
   @override
+  final bool? blocksCreations;
+  @override
   final String branchProtectionRuleId;
+  @override
+  final BuiltList<String>? bypassForcePushActorIds;
+  @override
+  final BuiltList<String>? bypassPullRequestActorIds;
   @override
   final String? clientMutationId;
   @override
@@ -45707,6 +55288,8 @@ class _$GUpdateBranchProtectionRuleInput
   final int? requiredApprovingReviewCount;
   @override
   final BuiltList<String>? requiredStatusCheckContexts;
+  @override
+  final BuiltList<GRequiredStatusCheckInput>? requiredStatusChecks;
   @override
   final bool? requiresApprovingReviews;
   @override
@@ -45735,7 +55318,10 @@ class _$GUpdateBranchProtectionRuleInput
   _$GUpdateBranchProtectionRuleInput._(
       {this.allowsDeletions,
       this.allowsForcePushes,
+      this.blocksCreations,
       required this.branchProtectionRuleId,
+      this.bypassForcePushActorIds,
+      this.bypassPullRequestActorIds,
       this.clientMutationId,
       this.dismissesStaleReviews,
       this.isAdminEnforced,
@@ -45743,6 +55329,7 @@ class _$GUpdateBranchProtectionRuleInput
       this.pushActorIds,
       this.requiredApprovingReviewCount,
       this.requiredStatusCheckContexts,
+      this.requiredStatusChecks,
       this.requiresApprovingReviews,
       this.requiresCodeOwnerReviews,
       this.requiresCommitSignatures,
@@ -45773,7 +55360,10 @@ class _$GUpdateBranchProtectionRuleInput
     return other is GUpdateBranchProtectionRuleInput &&
         allowsDeletions == other.allowsDeletions &&
         allowsForcePushes == other.allowsForcePushes &&
+        blocksCreations == other.blocksCreations &&
         branchProtectionRuleId == other.branchProtectionRuleId &&
+        bypassForcePushActorIds == other.bypassForcePushActorIds &&
+        bypassPullRequestActorIds == other.bypassPullRequestActorIds &&
         clientMutationId == other.clientMutationId &&
         dismissesStaleReviews == other.dismissesStaleReviews &&
         isAdminEnforced == other.isAdminEnforced &&
@@ -45781,6 +55371,7 @@ class _$GUpdateBranchProtectionRuleInput
         pushActorIds == other.pushActorIds &&
         requiredApprovingReviewCount == other.requiredApprovingReviewCount &&
         requiredStatusCheckContexts == other.requiredStatusCheckContexts &&
+        requiredStatusChecks == other.requiredStatusChecks &&
         requiresApprovingReviews == other.requiresApprovingReviews &&
         requiresCodeOwnerReviews == other.requiresCodeOwnerReviews &&
         requiresCommitSignatures == other.requiresCommitSignatures &&
@@ -45814,27 +55405,16 @@ class _$GUpdateBranchProtectionRuleInput
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc(
-                                                                                $jc(
-                                                                                    0,
-                                                                                    allowsDeletions
-                                                                                        .hashCode),
-                                                                                allowsForcePushes
-                                                                                    .hashCode),
-                                                                            branchProtectionRuleId
-                                                                                .hashCode),
-                                                                        clientMutationId
-                                                                            .hashCode),
-                                                                    dismissesStaleReviews
-                                                                        .hashCode),
-                                                                isAdminEnforced
-                                                                    .hashCode),
-                                                            pattern.hashCode),
-                                                        pushActorIds.hashCode),
-                                                    requiredApprovingReviewCount
-                                                        .hashCode),
-                                                requiredStatusCheckContexts
-                                                    .hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc(0, allowsDeletions.hashCode), allowsForcePushes.hashCode), blocksCreations.hashCode), branchProtectionRuleId.hashCode), bypassForcePushActorIds.hashCode),
+                                                                                bypassPullRequestActorIds.hashCode),
+                                                                            clientMutationId.hashCode),
+                                                                        dismissesStaleReviews.hashCode),
+                                                                    isAdminEnforced.hashCode),
+                                                                pattern.hashCode),
+                                                            pushActorIds.hashCode),
+                                                        requiredApprovingReviewCount.hashCode),
+                                                    requiredStatusCheckContexts.hashCode),
+                                                requiredStatusChecks.hashCode),
                                             requiresApprovingReviews.hashCode),
                                         requiresCodeOwnerReviews.hashCode),
                                     requiresCommitSignatures.hashCode),
@@ -45852,7 +55432,10 @@ class _$GUpdateBranchProtectionRuleInput
     return (newBuiltValueToStringHelper('GUpdateBranchProtectionRuleInput')
           ..add('allowsDeletions', allowsDeletions)
           ..add('allowsForcePushes', allowsForcePushes)
+          ..add('blocksCreations', blocksCreations)
           ..add('branchProtectionRuleId', branchProtectionRuleId)
+          ..add('bypassForcePushActorIds', bypassForcePushActorIds)
+          ..add('bypassPullRequestActorIds', bypassPullRequestActorIds)
           ..add('clientMutationId', clientMutationId)
           ..add('dismissesStaleReviews', dismissesStaleReviews)
           ..add('isAdminEnforced', isAdminEnforced)
@@ -45860,6 +55443,7 @@ class _$GUpdateBranchProtectionRuleInput
           ..add('pushActorIds', pushActorIds)
           ..add('requiredApprovingReviewCount', requiredApprovingReviewCount)
           ..add('requiredStatusCheckContexts', requiredStatusCheckContexts)
+          ..add('requiredStatusChecks', requiredStatusChecks)
           ..add('requiresApprovingReviews', requiresApprovingReviews)
           ..add('requiresCodeOwnerReviews', requiresCodeOwnerReviews)
           ..add('requiresCommitSignatures', requiresCommitSignatures)
@@ -45891,10 +55475,28 @@ class GUpdateBranchProtectionRuleInputBuilder
   set allowsForcePushes(bool? allowsForcePushes) =>
       _$this._allowsForcePushes = allowsForcePushes;
 
+  bool? _blocksCreations;
+  bool? get blocksCreations => _$this._blocksCreations;
+  set blocksCreations(bool? blocksCreations) =>
+      _$this._blocksCreations = blocksCreations;
+
   String? _branchProtectionRuleId;
   String? get branchProtectionRuleId => _$this._branchProtectionRuleId;
   set branchProtectionRuleId(String? branchProtectionRuleId) =>
       _$this._branchProtectionRuleId = branchProtectionRuleId;
+
+  ListBuilder<String>? _bypassForcePushActorIds;
+  ListBuilder<String> get bypassForcePushActorIds =>
+      _$this._bypassForcePushActorIds ??= new ListBuilder<String>();
+  set bypassForcePushActorIds(ListBuilder<String>? bypassForcePushActorIds) =>
+      _$this._bypassForcePushActorIds = bypassForcePushActorIds;
+
+  ListBuilder<String>? _bypassPullRequestActorIds;
+  ListBuilder<String> get bypassPullRequestActorIds =>
+      _$this._bypassPullRequestActorIds ??= new ListBuilder<String>();
+  set bypassPullRequestActorIds(
+          ListBuilder<String>? bypassPullRequestActorIds) =>
+      _$this._bypassPullRequestActorIds = bypassPullRequestActorIds;
 
   String? _clientMutationId;
   String? get clientMutationId => _$this._clientMutationId;
@@ -45932,6 +55534,14 @@ class GUpdateBranchProtectionRuleInputBuilder
   set requiredStatusCheckContexts(
           ListBuilder<String>? requiredStatusCheckContexts) =>
       _$this._requiredStatusCheckContexts = requiredStatusCheckContexts;
+
+  ListBuilder<GRequiredStatusCheckInput>? _requiredStatusChecks;
+  ListBuilder<GRequiredStatusCheckInput> get requiredStatusChecks =>
+      _$this._requiredStatusChecks ??=
+          new ListBuilder<GRequiredStatusCheckInput>();
+  set requiredStatusChecks(
+          ListBuilder<GRequiredStatusCheckInput>? requiredStatusChecks) =>
+      _$this._requiredStatusChecks = requiredStatusChecks;
 
   bool? _requiresApprovingReviews;
   bool? get requiresApprovingReviews => _$this._requiresApprovingReviews;
@@ -45992,7 +55602,10 @@ class GUpdateBranchProtectionRuleInputBuilder
     if ($v != null) {
       _allowsDeletions = $v.allowsDeletions;
       _allowsForcePushes = $v.allowsForcePushes;
+      _blocksCreations = $v.blocksCreations;
       _branchProtectionRuleId = $v.branchProtectionRuleId;
+      _bypassForcePushActorIds = $v.bypassForcePushActorIds?.toBuilder();
+      _bypassPullRequestActorIds = $v.bypassPullRequestActorIds?.toBuilder();
       _clientMutationId = $v.clientMutationId;
       _dismissesStaleReviews = $v.dismissesStaleReviews;
       _isAdminEnforced = $v.isAdminEnforced;
@@ -46001,6 +55614,7 @@ class GUpdateBranchProtectionRuleInputBuilder
       _requiredApprovingReviewCount = $v.requiredApprovingReviewCount;
       _requiredStatusCheckContexts =
           $v.requiredStatusCheckContexts?.toBuilder();
+      _requiredStatusChecks = $v.requiredStatusChecks?.toBuilder();
       _requiresApprovingReviews = $v.requiresApprovingReviews;
       _requiresCodeOwnerReviews = $v.requiresCodeOwnerReviews;
       _requiresCommitSignatures = $v.requiresCommitSignatures;
@@ -46035,10 +55649,13 @@ class GUpdateBranchProtectionRuleInputBuilder
           new _$GUpdateBranchProtectionRuleInput._(
               allowsDeletions: allowsDeletions,
               allowsForcePushes: allowsForcePushes,
+              blocksCreations: blocksCreations,
               branchProtectionRuleId: BuiltValueNullFieldError.checkNotNull(
                   branchProtectionRuleId,
                   'GUpdateBranchProtectionRuleInput',
                   'branchProtectionRuleId'),
+              bypassForcePushActorIds: _bypassForcePushActorIds?.build(),
+              bypassPullRequestActorIds: _bypassPullRequestActorIds?.build(),
               clientMutationId: clientMutationId,
               dismissesStaleReviews: dismissesStaleReviews,
               isAdminEnforced: isAdminEnforced,
@@ -46047,6 +55664,7 @@ class GUpdateBranchProtectionRuleInputBuilder
               requiredApprovingReviewCount: requiredApprovingReviewCount,
               requiredStatusCheckContexts:
                   _requiredStatusCheckContexts?.build(),
+              requiredStatusChecks: _requiredStatusChecks?.build(),
               requiresApprovingReviews: requiresApprovingReviews,
               requiresCodeOwnerReviews: requiresCodeOwnerReviews,
               requiresCommitSignatures: requiresCommitSignatures,
@@ -46060,11 +55678,18 @@ class GUpdateBranchProtectionRuleInputBuilder
     } catch (_) {
       late String _$failedField;
       try {
+        _$failedField = 'bypassForcePushActorIds';
+        _bypassForcePushActorIds?.build();
+        _$failedField = 'bypassPullRequestActorIds';
+        _bypassPullRequestActorIds?.build();
+
         _$failedField = 'pushActorIds';
         _pushActorIds?.build();
 
         _$failedField = 'requiredStatusCheckContexts';
         _requiredStatusCheckContexts?.build();
+        _$failedField = 'requiredStatusChecks';
+        _requiredStatusChecks?.build();
 
         _$failedField = 'reviewDismissalActorIds';
         _reviewDismissalActorIds?.build();
@@ -48448,6 +58073,150 @@ class GUpdateEnterpriseOrganizationProjectsSettingInputBuilder
   }
 }
 
+class _$GUpdateEnterpriseOwnerOrganizationRoleInput
+    extends GUpdateEnterpriseOwnerOrganizationRoleInput {
+  @override
+  final String? clientMutationId;
+  @override
+  final String enterpriseId;
+  @override
+  final String organizationId;
+  @override
+  final GRoleInOrganization organizationRole;
+
+  factory _$GUpdateEnterpriseOwnerOrganizationRoleInput(
+          [void Function(GUpdateEnterpriseOwnerOrganizationRoleInputBuilder)?
+              updates]) =>
+      (new GUpdateEnterpriseOwnerOrganizationRoleInputBuilder()
+            ..update(updates))
+          .build();
+
+  _$GUpdateEnterpriseOwnerOrganizationRoleInput._(
+      {this.clientMutationId,
+      required this.enterpriseId,
+      required this.organizationId,
+      required this.organizationRole})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(enterpriseId,
+        'GUpdateEnterpriseOwnerOrganizationRoleInput', 'enterpriseId');
+    BuiltValueNullFieldError.checkNotNull(organizationId,
+        'GUpdateEnterpriseOwnerOrganizationRoleInput', 'organizationId');
+    BuiltValueNullFieldError.checkNotNull(organizationRole,
+        'GUpdateEnterpriseOwnerOrganizationRoleInput', 'organizationRole');
+  }
+
+  @override
+  GUpdateEnterpriseOwnerOrganizationRoleInput rebuild(
+          void Function(GUpdateEnterpriseOwnerOrganizationRoleInputBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GUpdateEnterpriseOwnerOrganizationRoleInputBuilder toBuilder() =>
+      new GUpdateEnterpriseOwnerOrganizationRoleInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GUpdateEnterpriseOwnerOrganizationRoleInput &&
+        clientMutationId == other.clientMutationId &&
+        enterpriseId == other.enterpriseId &&
+        organizationId == other.organizationId &&
+        organizationRole == other.organizationRole;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc($jc($jc(0, clientMutationId.hashCode), enterpriseId.hashCode),
+            organizationId.hashCode),
+        organizationRole.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            'GUpdateEnterpriseOwnerOrganizationRoleInput')
+          ..add('clientMutationId', clientMutationId)
+          ..add('enterpriseId', enterpriseId)
+          ..add('organizationId', organizationId)
+          ..add('organizationRole', organizationRole))
+        .toString();
+  }
+}
+
+class GUpdateEnterpriseOwnerOrganizationRoleInputBuilder
+    implements
+        Builder<GUpdateEnterpriseOwnerOrganizationRoleInput,
+            GUpdateEnterpriseOwnerOrganizationRoleInputBuilder> {
+  _$GUpdateEnterpriseOwnerOrganizationRoleInput? _$v;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  String? _enterpriseId;
+  String? get enterpriseId => _$this._enterpriseId;
+  set enterpriseId(String? enterpriseId) => _$this._enterpriseId = enterpriseId;
+
+  String? _organizationId;
+  String? get organizationId => _$this._organizationId;
+  set organizationId(String? organizationId) =>
+      _$this._organizationId = organizationId;
+
+  GRoleInOrganization? _organizationRole;
+  GRoleInOrganization? get organizationRole => _$this._organizationRole;
+  set organizationRole(GRoleInOrganization? organizationRole) =>
+      _$this._organizationRole = organizationRole;
+
+  GUpdateEnterpriseOwnerOrganizationRoleInputBuilder();
+
+  GUpdateEnterpriseOwnerOrganizationRoleInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _clientMutationId = $v.clientMutationId;
+      _enterpriseId = $v.enterpriseId;
+      _organizationId = $v.organizationId;
+      _organizationRole = $v.organizationRole;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GUpdateEnterpriseOwnerOrganizationRoleInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GUpdateEnterpriseOwnerOrganizationRoleInput;
+  }
+
+  @override
+  void update(
+      void Function(GUpdateEnterpriseOwnerOrganizationRoleInputBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GUpdateEnterpriseOwnerOrganizationRoleInput build() {
+    final _$result = _$v ??
+        new _$GUpdateEnterpriseOwnerOrganizationRoleInput._(
+            clientMutationId: clientMutationId,
+            enterpriseId: BuiltValueNullFieldError.checkNotNull(enterpriseId,
+                'GUpdateEnterpriseOwnerOrganizationRoleInput', 'enterpriseId'),
+            organizationId: BuiltValueNullFieldError.checkNotNull(
+                organizationId,
+                'GUpdateEnterpriseOwnerOrganizationRoleInput',
+                'organizationId'),
+            organizationRole: BuiltValueNullFieldError.checkNotNull(
+                organizationRole,
+                'GUpdateEnterpriseOwnerOrganizationRoleInput',
+                'organizationRole'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
 class _$GUpdateEnterpriseProfileInput extends GUpdateEnterpriseProfileInput {
   @override
   final String? clientMutationId;
@@ -50119,6 +59888,148 @@ class GUpdateNotificationRestrictionSettingInputBuilder
   }
 }
 
+class _$GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput
+    extends GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput {
+  @override
+  final String? clientMutationId;
+  @override
+  final bool forkingEnabled;
+  @override
+  final String organizationId;
+
+  factory _$GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput(
+          [void Function(
+                  GUpdateOrganizationAllowPrivateRepositoryForkingSettingInputBuilder)?
+              updates]) =>
+      (new GUpdateOrganizationAllowPrivateRepositoryForkingSettingInputBuilder()
+            ..update(updates))
+          .build();
+
+  _$GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput._(
+      {this.clientMutationId,
+      required this.forkingEnabled,
+      required this.organizationId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        forkingEnabled,
+        'GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput',
+        'forkingEnabled');
+    BuiltValueNullFieldError.checkNotNull(
+        organizationId,
+        'GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput',
+        'organizationId');
+  }
+
+  @override
+  GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput rebuild(
+          void Function(
+                  GUpdateOrganizationAllowPrivateRepositoryForkingSettingInputBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GUpdateOrganizationAllowPrivateRepositoryForkingSettingInputBuilder
+      toBuilder() =>
+          new GUpdateOrganizationAllowPrivateRepositoryForkingSettingInputBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput &&
+        clientMutationId == other.clientMutationId &&
+        forkingEnabled == other.forkingEnabled &&
+        organizationId == other.organizationId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc($jc(0, clientMutationId.hashCode), forkingEnabled.hashCode),
+        organizationId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            'GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput')
+          ..add('clientMutationId', clientMutationId)
+          ..add('forkingEnabled', forkingEnabled)
+          ..add('organizationId', organizationId))
+        .toString();
+  }
+}
+
+class GUpdateOrganizationAllowPrivateRepositoryForkingSettingInputBuilder
+    implements
+        Builder<GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput,
+            GUpdateOrganizationAllowPrivateRepositoryForkingSettingInputBuilder> {
+  _$GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput? _$v;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  bool? _forkingEnabled;
+  bool? get forkingEnabled => _$this._forkingEnabled;
+  set forkingEnabled(bool? forkingEnabled) =>
+      _$this._forkingEnabled = forkingEnabled;
+
+  String? _organizationId;
+  String? get organizationId => _$this._organizationId;
+  set organizationId(String? organizationId) =>
+      _$this._organizationId = organizationId;
+
+  GUpdateOrganizationAllowPrivateRepositoryForkingSettingInputBuilder();
+
+  GUpdateOrganizationAllowPrivateRepositoryForkingSettingInputBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _clientMutationId = $v.clientMutationId;
+      _forkingEnabled = $v.forkingEnabled;
+      _organizationId = $v.organizationId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v =
+        other as _$GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput;
+  }
+
+  @override
+  void update(
+      void Function(
+              GUpdateOrganizationAllowPrivateRepositoryForkingSettingInputBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput build() {
+    final _$result = _$v ??
+        new _$GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput._(
+            clientMutationId: clientMutationId,
+            forkingEnabled: BuiltValueNullFieldError.checkNotNull(
+                forkingEnabled,
+                'GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput',
+                'forkingEnabled'),
+            organizationId: BuiltValueNullFieldError.checkNotNull(
+                organizationId,
+                'GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput',
+                'organizationId'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
 class _$GUpdateProjectCardInput extends GUpdateProjectCardInput {
   @override
   final String? clientMutationId;
@@ -50359,6 +60270,158 @@ class GUpdateProjectColumnInputBuilder
   }
 }
 
+class _$GUpdateProjectDraftIssueInput extends GUpdateProjectDraftIssueInput {
+  @override
+  final BuiltList<String>? assigneeIds;
+  @override
+  final String? body;
+  @override
+  final String? clientMutationId;
+  @override
+  final String draftIssueId;
+  @override
+  final String? title;
+
+  factory _$GUpdateProjectDraftIssueInput(
+          [void Function(GUpdateProjectDraftIssueInputBuilder)? updates]) =>
+      (new GUpdateProjectDraftIssueInputBuilder()..update(updates)).build();
+
+  _$GUpdateProjectDraftIssueInput._(
+      {this.assigneeIds,
+      this.body,
+      this.clientMutationId,
+      required this.draftIssueId,
+      this.title})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        draftIssueId, 'GUpdateProjectDraftIssueInput', 'draftIssueId');
+  }
+
+  @override
+  GUpdateProjectDraftIssueInput rebuild(
+          void Function(GUpdateProjectDraftIssueInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GUpdateProjectDraftIssueInputBuilder toBuilder() =>
+      new GUpdateProjectDraftIssueInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GUpdateProjectDraftIssueInput &&
+        assigneeIds == other.assigneeIds &&
+        body == other.body &&
+        clientMutationId == other.clientMutationId &&
+        draftIssueId == other.draftIssueId &&
+        title == other.title;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc($jc($jc(0, assigneeIds.hashCode), body.hashCode),
+                clientMutationId.hashCode),
+            draftIssueId.hashCode),
+        title.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GUpdateProjectDraftIssueInput')
+          ..add('assigneeIds', assigneeIds)
+          ..add('body', body)
+          ..add('clientMutationId', clientMutationId)
+          ..add('draftIssueId', draftIssueId)
+          ..add('title', title))
+        .toString();
+  }
+}
+
+class GUpdateProjectDraftIssueInputBuilder
+    implements
+        Builder<GUpdateProjectDraftIssueInput,
+            GUpdateProjectDraftIssueInputBuilder> {
+  _$GUpdateProjectDraftIssueInput? _$v;
+
+  ListBuilder<String>? _assigneeIds;
+  ListBuilder<String> get assigneeIds =>
+      _$this._assigneeIds ??= new ListBuilder<String>();
+  set assigneeIds(ListBuilder<String>? assigneeIds) =>
+      _$this._assigneeIds = assigneeIds;
+
+  String? _body;
+  String? get body => _$this._body;
+  set body(String? body) => _$this._body = body;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  String? _draftIssueId;
+  String? get draftIssueId => _$this._draftIssueId;
+  set draftIssueId(String? draftIssueId) => _$this._draftIssueId = draftIssueId;
+
+  String? _title;
+  String? get title => _$this._title;
+  set title(String? title) => _$this._title = title;
+
+  GUpdateProjectDraftIssueInputBuilder();
+
+  GUpdateProjectDraftIssueInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _assigneeIds = $v.assigneeIds?.toBuilder();
+      _body = $v.body;
+      _clientMutationId = $v.clientMutationId;
+      _draftIssueId = $v.draftIssueId;
+      _title = $v.title;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GUpdateProjectDraftIssueInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GUpdateProjectDraftIssueInput;
+  }
+
+  @override
+  void update(void Function(GUpdateProjectDraftIssueInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GUpdateProjectDraftIssueInput build() {
+    _$GUpdateProjectDraftIssueInput _$result;
+    try {
+      _$result = _$v ??
+          new _$GUpdateProjectDraftIssueInput._(
+              assigneeIds: _assigneeIds?.build(),
+              body: body,
+              clientMutationId: clientMutationId,
+              draftIssueId: BuiltValueNullFieldError.checkNotNull(draftIssueId,
+                  'GUpdateProjectDraftIssueInput', 'draftIssueId'),
+              title: title);
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'assigneeIds';
+        _assigneeIds?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'GUpdateProjectDraftIssueInput', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
 class _$GUpdateProjectInput extends GUpdateProjectInput {
   @override
   final String? body;
@@ -50502,6 +60565,1020 @@ class GUpdateProjectInputBuilder
                 projectId, 'GUpdateProjectInput', 'projectId'),
             public: public,
             state: state);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GUpdateProjectNextInput extends GUpdateProjectNextInput {
+  @override
+  final String? clientMutationId;
+  @override
+  final bool? closed;
+  @override
+  final String? description;
+  @override
+  final String? projectId;
+  @override
+  final bool? public;
+  @override
+  final String? shortDescription;
+  @override
+  final String? title;
+
+  factory _$GUpdateProjectNextInput(
+          [void Function(GUpdateProjectNextInputBuilder)? updates]) =>
+      (new GUpdateProjectNextInputBuilder()..update(updates)).build();
+
+  _$GUpdateProjectNextInput._(
+      {this.clientMutationId,
+      this.closed,
+      this.description,
+      this.projectId,
+      this.public,
+      this.shortDescription,
+      this.title})
+      : super._();
+
+  @override
+  GUpdateProjectNextInput rebuild(
+          void Function(GUpdateProjectNextInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GUpdateProjectNextInputBuilder toBuilder() =>
+      new GUpdateProjectNextInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GUpdateProjectNextInput &&
+        clientMutationId == other.clientMutationId &&
+        closed == other.closed &&
+        description == other.description &&
+        projectId == other.projectId &&
+        public == other.public &&
+        shortDescription == other.shortDescription &&
+        title == other.title;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc($jc($jc(0, clientMutationId.hashCode), closed.hashCode),
+                        description.hashCode),
+                    projectId.hashCode),
+                public.hashCode),
+            shortDescription.hashCode),
+        title.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GUpdateProjectNextInput')
+          ..add('clientMutationId', clientMutationId)
+          ..add('closed', closed)
+          ..add('description', description)
+          ..add('projectId', projectId)
+          ..add('public', public)
+          ..add('shortDescription', shortDescription)
+          ..add('title', title))
+        .toString();
+  }
+}
+
+class GUpdateProjectNextInputBuilder
+    implements
+        Builder<GUpdateProjectNextInput, GUpdateProjectNextInputBuilder> {
+  _$GUpdateProjectNextInput? _$v;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  bool? _closed;
+  bool? get closed => _$this._closed;
+  set closed(bool? closed) => _$this._closed = closed;
+
+  String? _description;
+  String? get description => _$this._description;
+  set description(String? description) => _$this._description = description;
+
+  String? _projectId;
+  String? get projectId => _$this._projectId;
+  set projectId(String? projectId) => _$this._projectId = projectId;
+
+  bool? _public;
+  bool? get public => _$this._public;
+  set public(bool? public) => _$this._public = public;
+
+  String? _shortDescription;
+  String? get shortDescription => _$this._shortDescription;
+  set shortDescription(String? shortDescription) =>
+      _$this._shortDescription = shortDescription;
+
+  String? _title;
+  String? get title => _$this._title;
+  set title(String? title) => _$this._title = title;
+
+  GUpdateProjectNextInputBuilder();
+
+  GUpdateProjectNextInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _clientMutationId = $v.clientMutationId;
+      _closed = $v.closed;
+      _description = $v.description;
+      _projectId = $v.projectId;
+      _public = $v.public;
+      _shortDescription = $v.shortDescription;
+      _title = $v.title;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GUpdateProjectNextInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GUpdateProjectNextInput;
+  }
+
+  @override
+  void update(void Function(GUpdateProjectNextInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GUpdateProjectNextInput build() {
+    final _$result = _$v ??
+        new _$GUpdateProjectNextInput._(
+            clientMutationId: clientMutationId,
+            closed: closed,
+            description: description,
+            projectId: projectId,
+            public: public,
+            shortDescription: shortDescription,
+            title: title);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GUpdateProjectNextItemFieldInput
+    extends GUpdateProjectNextItemFieldInput {
+  @override
+  final String? clientMutationId;
+  @override
+  final String? fieldId;
+  @override
+  final String? itemId;
+  @override
+  final String? projectId;
+  @override
+  final String? value;
+
+  factory _$GUpdateProjectNextItemFieldInput(
+          [void Function(GUpdateProjectNextItemFieldInputBuilder)? updates]) =>
+      (new GUpdateProjectNextItemFieldInputBuilder()..update(updates)).build();
+
+  _$GUpdateProjectNextItemFieldInput._(
+      {this.clientMutationId,
+      this.fieldId,
+      this.itemId,
+      this.projectId,
+      this.value})
+      : super._();
+
+  @override
+  GUpdateProjectNextItemFieldInput rebuild(
+          void Function(GUpdateProjectNextItemFieldInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GUpdateProjectNextItemFieldInputBuilder toBuilder() =>
+      new GUpdateProjectNextItemFieldInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GUpdateProjectNextItemFieldInput &&
+        clientMutationId == other.clientMutationId &&
+        fieldId == other.fieldId &&
+        itemId == other.itemId &&
+        projectId == other.projectId &&
+        value == other.value;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc($jc($jc(0, clientMutationId.hashCode), fieldId.hashCode),
+                itemId.hashCode),
+            projectId.hashCode),
+        value.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GUpdateProjectNextItemFieldInput')
+          ..add('clientMutationId', clientMutationId)
+          ..add('fieldId', fieldId)
+          ..add('itemId', itemId)
+          ..add('projectId', projectId)
+          ..add('value', value))
+        .toString();
+  }
+}
+
+class GUpdateProjectNextItemFieldInputBuilder
+    implements
+        Builder<GUpdateProjectNextItemFieldInput,
+            GUpdateProjectNextItemFieldInputBuilder> {
+  _$GUpdateProjectNextItemFieldInput? _$v;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  String? _fieldId;
+  String? get fieldId => _$this._fieldId;
+  set fieldId(String? fieldId) => _$this._fieldId = fieldId;
+
+  String? _itemId;
+  String? get itemId => _$this._itemId;
+  set itemId(String? itemId) => _$this._itemId = itemId;
+
+  String? _projectId;
+  String? get projectId => _$this._projectId;
+  set projectId(String? projectId) => _$this._projectId = projectId;
+
+  String? _value;
+  String? get value => _$this._value;
+  set value(String? value) => _$this._value = value;
+
+  GUpdateProjectNextItemFieldInputBuilder();
+
+  GUpdateProjectNextItemFieldInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _clientMutationId = $v.clientMutationId;
+      _fieldId = $v.fieldId;
+      _itemId = $v.itemId;
+      _projectId = $v.projectId;
+      _value = $v.value;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GUpdateProjectNextItemFieldInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GUpdateProjectNextItemFieldInput;
+  }
+
+  @override
+  void update(void Function(GUpdateProjectNextItemFieldInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GUpdateProjectNextItemFieldInput build() {
+    final _$result = _$v ??
+        new _$GUpdateProjectNextItemFieldInput._(
+            clientMutationId: clientMutationId,
+            fieldId: fieldId,
+            itemId: itemId,
+            projectId: projectId,
+            value: value);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GUpdateProjectV2DraftIssueInput
+    extends GUpdateProjectV2DraftIssueInput {
+  @override
+  final BuiltList<String>? assigneeIds;
+  @override
+  final String? body;
+  @override
+  final String? clientMutationId;
+  @override
+  final String draftIssueId;
+  @override
+  final String? title;
+
+  factory _$GUpdateProjectV2DraftIssueInput(
+          [void Function(GUpdateProjectV2DraftIssueInputBuilder)? updates]) =>
+      (new GUpdateProjectV2DraftIssueInputBuilder()..update(updates)).build();
+
+  _$GUpdateProjectV2DraftIssueInput._(
+      {this.assigneeIds,
+      this.body,
+      this.clientMutationId,
+      required this.draftIssueId,
+      this.title})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        draftIssueId, 'GUpdateProjectV2DraftIssueInput', 'draftIssueId');
+  }
+
+  @override
+  GUpdateProjectV2DraftIssueInput rebuild(
+          void Function(GUpdateProjectV2DraftIssueInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GUpdateProjectV2DraftIssueInputBuilder toBuilder() =>
+      new GUpdateProjectV2DraftIssueInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GUpdateProjectV2DraftIssueInput &&
+        assigneeIds == other.assigneeIds &&
+        body == other.body &&
+        clientMutationId == other.clientMutationId &&
+        draftIssueId == other.draftIssueId &&
+        title == other.title;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc($jc($jc(0, assigneeIds.hashCode), body.hashCode),
+                clientMutationId.hashCode),
+            draftIssueId.hashCode),
+        title.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GUpdateProjectV2DraftIssueInput')
+          ..add('assigneeIds', assigneeIds)
+          ..add('body', body)
+          ..add('clientMutationId', clientMutationId)
+          ..add('draftIssueId', draftIssueId)
+          ..add('title', title))
+        .toString();
+  }
+}
+
+class GUpdateProjectV2DraftIssueInputBuilder
+    implements
+        Builder<GUpdateProjectV2DraftIssueInput,
+            GUpdateProjectV2DraftIssueInputBuilder> {
+  _$GUpdateProjectV2DraftIssueInput? _$v;
+
+  ListBuilder<String>? _assigneeIds;
+  ListBuilder<String> get assigneeIds =>
+      _$this._assigneeIds ??= new ListBuilder<String>();
+  set assigneeIds(ListBuilder<String>? assigneeIds) =>
+      _$this._assigneeIds = assigneeIds;
+
+  String? _body;
+  String? get body => _$this._body;
+  set body(String? body) => _$this._body = body;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  String? _draftIssueId;
+  String? get draftIssueId => _$this._draftIssueId;
+  set draftIssueId(String? draftIssueId) => _$this._draftIssueId = draftIssueId;
+
+  String? _title;
+  String? get title => _$this._title;
+  set title(String? title) => _$this._title = title;
+
+  GUpdateProjectV2DraftIssueInputBuilder();
+
+  GUpdateProjectV2DraftIssueInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _assigneeIds = $v.assigneeIds?.toBuilder();
+      _body = $v.body;
+      _clientMutationId = $v.clientMutationId;
+      _draftIssueId = $v.draftIssueId;
+      _title = $v.title;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GUpdateProjectV2DraftIssueInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GUpdateProjectV2DraftIssueInput;
+  }
+
+  @override
+  void update(void Function(GUpdateProjectV2DraftIssueInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GUpdateProjectV2DraftIssueInput build() {
+    _$GUpdateProjectV2DraftIssueInput _$result;
+    try {
+      _$result = _$v ??
+          new _$GUpdateProjectV2DraftIssueInput._(
+              assigneeIds: _assigneeIds?.build(),
+              body: body,
+              clientMutationId: clientMutationId,
+              draftIssueId: BuiltValueNullFieldError.checkNotNull(draftIssueId,
+                  'GUpdateProjectV2DraftIssueInput', 'draftIssueId'),
+              title: title);
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'assigneeIds';
+        _assigneeIds?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'GUpdateProjectV2DraftIssueInput', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GUpdateProjectV2Input extends GUpdateProjectV2Input {
+  @override
+  final String? clientMutationId;
+  @override
+  final bool? closed;
+  @override
+  final String projectId;
+  @override
+  final bool? public;
+  @override
+  final String? readme;
+  @override
+  final String? shortDescription;
+  @override
+  final String? title;
+
+  factory _$GUpdateProjectV2Input(
+          [void Function(GUpdateProjectV2InputBuilder)? updates]) =>
+      (new GUpdateProjectV2InputBuilder()..update(updates)).build();
+
+  _$GUpdateProjectV2Input._(
+      {this.clientMutationId,
+      this.closed,
+      required this.projectId,
+      this.public,
+      this.readme,
+      this.shortDescription,
+      this.title})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        projectId, 'GUpdateProjectV2Input', 'projectId');
+  }
+
+  @override
+  GUpdateProjectV2Input rebuild(
+          void Function(GUpdateProjectV2InputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GUpdateProjectV2InputBuilder toBuilder() =>
+      new GUpdateProjectV2InputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GUpdateProjectV2Input &&
+        clientMutationId == other.clientMutationId &&
+        closed == other.closed &&
+        projectId == other.projectId &&
+        public == other.public &&
+        readme == other.readme &&
+        shortDescription == other.shortDescription &&
+        title == other.title;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc($jc($jc(0, clientMutationId.hashCode), closed.hashCode),
+                        projectId.hashCode),
+                    public.hashCode),
+                readme.hashCode),
+            shortDescription.hashCode),
+        title.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GUpdateProjectV2Input')
+          ..add('clientMutationId', clientMutationId)
+          ..add('closed', closed)
+          ..add('projectId', projectId)
+          ..add('public', public)
+          ..add('readme', readme)
+          ..add('shortDescription', shortDescription)
+          ..add('title', title))
+        .toString();
+  }
+}
+
+class GUpdateProjectV2InputBuilder
+    implements Builder<GUpdateProjectV2Input, GUpdateProjectV2InputBuilder> {
+  _$GUpdateProjectV2Input? _$v;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  bool? _closed;
+  bool? get closed => _$this._closed;
+  set closed(bool? closed) => _$this._closed = closed;
+
+  String? _projectId;
+  String? get projectId => _$this._projectId;
+  set projectId(String? projectId) => _$this._projectId = projectId;
+
+  bool? _public;
+  bool? get public => _$this._public;
+  set public(bool? public) => _$this._public = public;
+
+  String? _readme;
+  String? get readme => _$this._readme;
+  set readme(String? readme) => _$this._readme = readme;
+
+  String? _shortDescription;
+  String? get shortDescription => _$this._shortDescription;
+  set shortDescription(String? shortDescription) =>
+      _$this._shortDescription = shortDescription;
+
+  String? _title;
+  String? get title => _$this._title;
+  set title(String? title) => _$this._title = title;
+
+  GUpdateProjectV2InputBuilder();
+
+  GUpdateProjectV2InputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _clientMutationId = $v.clientMutationId;
+      _closed = $v.closed;
+      _projectId = $v.projectId;
+      _public = $v.public;
+      _readme = $v.readme;
+      _shortDescription = $v.shortDescription;
+      _title = $v.title;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GUpdateProjectV2Input other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GUpdateProjectV2Input;
+  }
+
+  @override
+  void update(void Function(GUpdateProjectV2InputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GUpdateProjectV2Input build() {
+    final _$result = _$v ??
+        new _$GUpdateProjectV2Input._(
+            clientMutationId: clientMutationId,
+            closed: closed,
+            projectId: BuiltValueNullFieldError.checkNotNull(
+                projectId, 'GUpdateProjectV2Input', 'projectId'),
+            public: public,
+            readme: readme,
+            shortDescription: shortDescription,
+            title: title);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GUpdateProjectV2ItemFieldValueInput
+    extends GUpdateProjectV2ItemFieldValueInput {
+  @override
+  final String? clientMutationId;
+  @override
+  final String fieldId;
+  @override
+  final String itemId;
+  @override
+  final String projectId;
+  @override
+  final GProjectV2FieldValue value;
+
+  factory _$GUpdateProjectV2ItemFieldValueInput(
+          [void Function(GUpdateProjectV2ItemFieldValueInputBuilder)?
+              updates]) =>
+      (new GUpdateProjectV2ItemFieldValueInputBuilder()..update(updates))
+          .build();
+
+  _$GUpdateProjectV2ItemFieldValueInput._(
+      {this.clientMutationId,
+      required this.fieldId,
+      required this.itemId,
+      required this.projectId,
+      required this.value})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        fieldId, 'GUpdateProjectV2ItemFieldValueInput', 'fieldId');
+    BuiltValueNullFieldError.checkNotNull(
+        itemId, 'GUpdateProjectV2ItemFieldValueInput', 'itemId');
+    BuiltValueNullFieldError.checkNotNull(
+        projectId, 'GUpdateProjectV2ItemFieldValueInput', 'projectId');
+    BuiltValueNullFieldError.checkNotNull(
+        value, 'GUpdateProjectV2ItemFieldValueInput', 'value');
+  }
+
+  @override
+  GUpdateProjectV2ItemFieldValueInput rebuild(
+          void Function(GUpdateProjectV2ItemFieldValueInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GUpdateProjectV2ItemFieldValueInputBuilder toBuilder() =>
+      new GUpdateProjectV2ItemFieldValueInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GUpdateProjectV2ItemFieldValueInput &&
+        clientMutationId == other.clientMutationId &&
+        fieldId == other.fieldId &&
+        itemId == other.itemId &&
+        projectId == other.projectId &&
+        value == other.value;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc($jc($jc(0, clientMutationId.hashCode), fieldId.hashCode),
+                itemId.hashCode),
+            projectId.hashCode),
+        value.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GUpdateProjectV2ItemFieldValueInput')
+          ..add('clientMutationId', clientMutationId)
+          ..add('fieldId', fieldId)
+          ..add('itemId', itemId)
+          ..add('projectId', projectId)
+          ..add('value', value))
+        .toString();
+  }
+}
+
+class GUpdateProjectV2ItemFieldValueInputBuilder
+    implements
+        Builder<GUpdateProjectV2ItemFieldValueInput,
+            GUpdateProjectV2ItemFieldValueInputBuilder> {
+  _$GUpdateProjectV2ItemFieldValueInput? _$v;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  String? _fieldId;
+  String? get fieldId => _$this._fieldId;
+  set fieldId(String? fieldId) => _$this._fieldId = fieldId;
+
+  String? _itemId;
+  String? get itemId => _$this._itemId;
+  set itemId(String? itemId) => _$this._itemId = itemId;
+
+  String? _projectId;
+  String? get projectId => _$this._projectId;
+  set projectId(String? projectId) => _$this._projectId = projectId;
+
+  GProjectV2FieldValueBuilder? _value;
+  GProjectV2FieldValueBuilder get value =>
+      _$this._value ??= new GProjectV2FieldValueBuilder();
+  set value(GProjectV2FieldValueBuilder? value) => _$this._value = value;
+
+  GUpdateProjectV2ItemFieldValueInputBuilder();
+
+  GUpdateProjectV2ItemFieldValueInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _clientMutationId = $v.clientMutationId;
+      _fieldId = $v.fieldId;
+      _itemId = $v.itemId;
+      _projectId = $v.projectId;
+      _value = $v.value.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GUpdateProjectV2ItemFieldValueInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GUpdateProjectV2ItemFieldValueInput;
+  }
+
+  @override
+  void update(
+      void Function(GUpdateProjectV2ItemFieldValueInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GUpdateProjectV2ItemFieldValueInput build() {
+    _$GUpdateProjectV2ItemFieldValueInput _$result;
+    try {
+      _$result = _$v ??
+          new _$GUpdateProjectV2ItemFieldValueInput._(
+              clientMutationId: clientMutationId,
+              fieldId: BuiltValueNullFieldError.checkNotNull(
+                  fieldId, 'GUpdateProjectV2ItemFieldValueInput', 'fieldId'),
+              itemId: BuiltValueNullFieldError.checkNotNull(
+                  itemId, 'GUpdateProjectV2ItemFieldValueInput', 'itemId'),
+              projectId: BuiltValueNullFieldError.checkNotNull(projectId,
+                  'GUpdateProjectV2ItemFieldValueInput', 'projectId'),
+              value: value.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'value';
+        value.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'GUpdateProjectV2ItemFieldValueInput', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GUpdateProjectV2ItemPositionInput
+    extends GUpdateProjectV2ItemPositionInput {
+  @override
+  final String? afterId;
+  @override
+  final String? clientMutationId;
+  @override
+  final String itemId;
+  @override
+  final String projectId;
+
+  factory _$GUpdateProjectV2ItemPositionInput(
+          [void Function(GUpdateProjectV2ItemPositionInputBuilder)? updates]) =>
+      (new GUpdateProjectV2ItemPositionInputBuilder()..update(updates)).build();
+
+  _$GUpdateProjectV2ItemPositionInput._(
+      {this.afterId,
+      this.clientMutationId,
+      required this.itemId,
+      required this.projectId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        itemId, 'GUpdateProjectV2ItemPositionInput', 'itemId');
+    BuiltValueNullFieldError.checkNotNull(
+        projectId, 'GUpdateProjectV2ItemPositionInput', 'projectId');
+  }
+
+  @override
+  GUpdateProjectV2ItemPositionInput rebuild(
+          void Function(GUpdateProjectV2ItemPositionInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GUpdateProjectV2ItemPositionInputBuilder toBuilder() =>
+      new GUpdateProjectV2ItemPositionInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GUpdateProjectV2ItemPositionInput &&
+        afterId == other.afterId &&
+        clientMutationId == other.clientMutationId &&
+        itemId == other.itemId &&
+        projectId == other.projectId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc($jc($jc(0, afterId.hashCode), clientMutationId.hashCode),
+            itemId.hashCode),
+        projectId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GUpdateProjectV2ItemPositionInput')
+          ..add('afterId', afterId)
+          ..add('clientMutationId', clientMutationId)
+          ..add('itemId', itemId)
+          ..add('projectId', projectId))
+        .toString();
+  }
+}
+
+class GUpdateProjectV2ItemPositionInputBuilder
+    implements
+        Builder<GUpdateProjectV2ItemPositionInput,
+            GUpdateProjectV2ItemPositionInputBuilder> {
+  _$GUpdateProjectV2ItemPositionInput? _$v;
+
+  String? _afterId;
+  String? get afterId => _$this._afterId;
+  set afterId(String? afterId) => _$this._afterId = afterId;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  String? _itemId;
+  String? get itemId => _$this._itemId;
+  set itemId(String? itemId) => _$this._itemId = itemId;
+
+  String? _projectId;
+  String? get projectId => _$this._projectId;
+  set projectId(String? projectId) => _$this._projectId = projectId;
+
+  GUpdateProjectV2ItemPositionInputBuilder();
+
+  GUpdateProjectV2ItemPositionInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _afterId = $v.afterId;
+      _clientMutationId = $v.clientMutationId;
+      _itemId = $v.itemId;
+      _projectId = $v.projectId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GUpdateProjectV2ItemPositionInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GUpdateProjectV2ItemPositionInput;
+  }
+
+  @override
+  void update(
+      void Function(GUpdateProjectV2ItemPositionInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GUpdateProjectV2ItemPositionInput build() {
+    final _$result = _$v ??
+        new _$GUpdateProjectV2ItemPositionInput._(
+            afterId: afterId,
+            clientMutationId: clientMutationId,
+            itemId: BuiltValueNullFieldError.checkNotNull(
+                itemId, 'GUpdateProjectV2ItemPositionInput', 'itemId'),
+            projectId: BuiltValueNullFieldError.checkNotNull(
+                projectId, 'GUpdateProjectV2ItemPositionInput', 'projectId'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GUpdatePullRequestBranchInput extends GUpdatePullRequestBranchInput {
+  @override
+  final String? clientMutationId;
+  @override
+  final String? expectedHeadOid;
+  @override
+  final String pullRequestId;
+
+  factory _$GUpdatePullRequestBranchInput(
+          [void Function(GUpdatePullRequestBranchInputBuilder)? updates]) =>
+      (new GUpdatePullRequestBranchInputBuilder()..update(updates)).build();
+
+  _$GUpdatePullRequestBranchInput._(
+      {this.clientMutationId,
+      this.expectedHeadOid,
+      required this.pullRequestId})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        pullRequestId, 'GUpdatePullRequestBranchInput', 'pullRequestId');
+  }
+
+  @override
+  GUpdatePullRequestBranchInput rebuild(
+          void Function(GUpdatePullRequestBranchInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GUpdatePullRequestBranchInputBuilder toBuilder() =>
+      new GUpdatePullRequestBranchInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GUpdatePullRequestBranchInput &&
+        clientMutationId == other.clientMutationId &&
+        expectedHeadOid == other.expectedHeadOid &&
+        pullRequestId == other.pullRequestId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc($jc(0, clientMutationId.hashCode), expectedHeadOid.hashCode),
+        pullRequestId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GUpdatePullRequestBranchInput')
+          ..add('clientMutationId', clientMutationId)
+          ..add('expectedHeadOid', expectedHeadOid)
+          ..add('pullRequestId', pullRequestId))
+        .toString();
+  }
+}
+
+class GUpdatePullRequestBranchInputBuilder
+    implements
+        Builder<GUpdatePullRequestBranchInput,
+            GUpdatePullRequestBranchInputBuilder> {
+  _$GUpdatePullRequestBranchInput? _$v;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  String? _expectedHeadOid;
+  String? get expectedHeadOid => _$this._expectedHeadOid;
+  set expectedHeadOid(String? expectedHeadOid) =>
+      _$this._expectedHeadOid = expectedHeadOid;
+
+  String? _pullRequestId;
+  String? get pullRequestId => _$this._pullRequestId;
+  set pullRequestId(String? pullRequestId) =>
+      _$this._pullRequestId = pullRequestId;
+
+  GUpdatePullRequestBranchInputBuilder();
+
+  GUpdatePullRequestBranchInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _clientMutationId = $v.clientMutationId;
+      _expectedHeadOid = $v.expectedHeadOid;
+      _pullRequestId = $v.pullRequestId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GUpdatePullRequestBranchInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GUpdatePullRequestBranchInput;
+  }
+
+  @override
+  void update(void Function(GUpdatePullRequestBranchInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GUpdatePullRequestBranchInput build() {
+    final _$result = _$v ??
+        new _$GUpdatePullRequestBranchInput._(
+            clientMutationId: clientMutationId,
+            expectedHeadOid: expectedHeadOid,
+            pullRequestId: BuiltValueNullFieldError.checkNotNull(pullRequestId,
+                'GUpdatePullRequestBranchInput', 'pullRequestId'));
     replace(_$result);
     return _$result;
   }
@@ -51425,6 +62502,175 @@ class GUpdateRepositoryInputBuilder
   }
 }
 
+class _$GUpdateSponsorshipPreferencesInput
+    extends GUpdateSponsorshipPreferencesInput {
+  @override
+  final String? clientMutationId;
+  @override
+  final GSponsorshipPrivacy? privacyLevel;
+  @override
+  final bool? receiveEmails;
+  @override
+  final String? sponsorId;
+  @override
+  final String? sponsorLogin;
+  @override
+  final String? sponsorableId;
+  @override
+  final String? sponsorableLogin;
+
+  factory _$GUpdateSponsorshipPreferencesInput(
+          [void Function(GUpdateSponsorshipPreferencesInputBuilder)?
+              updates]) =>
+      (new GUpdateSponsorshipPreferencesInputBuilder()..update(updates))
+          .build();
+
+  _$GUpdateSponsorshipPreferencesInput._(
+      {this.clientMutationId,
+      this.privacyLevel,
+      this.receiveEmails,
+      this.sponsorId,
+      this.sponsorLogin,
+      this.sponsorableId,
+      this.sponsorableLogin})
+      : super._();
+
+  @override
+  GUpdateSponsorshipPreferencesInput rebuild(
+          void Function(GUpdateSponsorshipPreferencesInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GUpdateSponsorshipPreferencesInputBuilder toBuilder() =>
+      new GUpdateSponsorshipPreferencesInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GUpdateSponsorshipPreferencesInput &&
+        clientMutationId == other.clientMutationId &&
+        privacyLevel == other.privacyLevel &&
+        receiveEmails == other.receiveEmails &&
+        sponsorId == other.sponsorId &&
+        sponsorLogin == other.sponsorLogin &&
+        sponsorableId == other.sponsorableId &&
+        sponsorableLogin == other.sponsorableLogin;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc(
+                        $jc($jc(0, clientMutationId.hashCode),
+                            privacyLevel.hashCode),
+                        receiveEmails.hashCode),
+                    sponsorId.hashCode),
+                sponsorLogin.hashCode),
+            sponsorableId.hashCode),
+        sponsorableLogin.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GUpdateSponsorshipPreferencesInput')
+          ..add('clientMutationId', clientMutationId)
+          ..add('privacyLevel', privacyLevel)
+          ..add('receiveEmails', receiveEmails)
+          ..add('sponsorId', sponsorId)
+          ..add('sponsorLogin', sponsorLogin)
+          ..add('sponsorableId', sponsorableId)
+          ..add('sponsorableLogin', sponsorableLogin))
+        .toString();
+  }
+}
+
+class GUpdateSponsorshipPreferencesInputBuilder
+    implements
+        Builder<GUpdateSponsorshipPreferencesInput,
+            GUpdateSponsorshipPreferencesInputBuilder> {
+  _$GUpdateSponsorshipPreferencesInput? _$v;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  GSponsorshipPrivacy? _privacyLevel;
+  GSponsorshipPrivacy? get privacyLevel => _$this._privacyLevel;
+  set privacyLevel(GSponsorshipPrivacy? privacyLevel) =>
+      _$this._privacyLevel = privacyLevel;
+
+  bool? _receiveEmails;
+  bool? get receiveEmails => _$this._receiveEmails;
+  set receiveEmails(bool? receiveEmails) =>
+      _$this._receiveEmails = receiveEmails;
+
+  String? _sponsorId;
+  String? get sponsorId => _$this._sponsorId;
+  set sponsorId(String? sponsorId) => _$this._sponsorId = sponsorId;
+
+  String? _sponsorLogin;
+  String? get sponsorLogin => _$this._sponsorLogin;
+  set sponsorLogin(String? sponsorLogin) => _$this._sponsorLogin = sponsorLogin;
+
+  String? _sponsorableId;
+  String? get sponsorableId => _$this._sponsorableId;
+  set sponsorableId(String? sponsorableId) =>
+      _$this._sponsorableId = sponsorableId;
+
+  String? _sponsorableLogin;
+  String? get sponsorableLogin => _$this._sponsorableLogin;
+  set sponsorableLogin(String? sponsorableLogin) =>
+      _$this._sponsorableLogin = sponsorableLogin;
+
+  GUpdateSponsorshipPreferencesInputBuilder();
+
+  GUpdateSponsorshipPreferencesInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _clientMutationId = $v.clientMutationId;
+      _privacyLevel = $v.privacyLevel;
+      _receiveEmails = $v.receiveEmails;
+      _sponsorId = $v.sponsorId;
+      _sponsorLogin = $v.sponsorLogin;
+      _sponsorableId = $v.sponsorableId;
+      _sponsorableLogin = $v.sponsorableLogin;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GUpdateSponsorshipPreferencesInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GUpdateSponsorshipPreferencesInput;
+  }
+
+  @override
+  void update(
+      void Function(GUpdateSponsorshipPreferencesInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GUpdateSponsorshipPreferencesInput build() {
+    final _$result = _$v ??
+        new _$GUpdateSponsorshipPreferencesInput._(
+            clientMutationId: clientMutationId,
+            privacyLevel: privacyLevel,
+            receiveEmails: receiveEmails,
+            sponsorId: sponsorId,
+            sponsorLogin: sponsorLogin,
+            sponsorableId: sponsorableId,
+            sponsorableLogin: sponsorableLogin);
+    replace(_$result);
+    return _$result;
+  }
+}
+
 class _$GUpdateSubscriptionInput extends GUpdateSubscriptionInput {
   @override
   final String? clientMutationId;
@@ -51995,6 +63241,150 @@ class GUpdateTeamReviewAssignmentInputBuilder
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'GUpdateTeamReviewAssignmentInput', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GUpdateTeamsRepositoryInput extends GUpdateTeamsRepositoryInput {
+  @override
+  final String? clientMutationId;
+  @override
+  final GRepositoryPermission permission;
+  @override
+  final String repositoryId;
+  @override
+  final BuiltList<String> teamIds;
+
+  factory _$GUpdateTeamsRepositoryInput(
+          [void Function(GUpdateTeamsRepositoryInputBuilder)? updates]) =>
+      (new GUpdateTeamsRepositoryInputBuilder()..update(updates)).build();
+
+  _$GUpdateTeamsRepositoryInput._(
+      {this.clientMutationId,
+      required this.permission,
+      required this.repositoryId,
+      required this.teamIds})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        permission, 'GUpdateTeamsRepositoryInput', 'permission');
+    BuiltValueNullFieldError.checkNotNull(
+        repositoryId, 'GUpdateTeamsRepositoryInput', 'repositoryId');
+    BuiltValueNullFieldError.checkNotNull(
+        teamIds, 'GUpdateTeamsRepositoryInput', 'teamIds');
+  }
+
+  @override
+  GUpdateTeamsRepositoryInput rebuild(
+          void Function(GUpdateTeamsRepositoryInputBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GUpdateTeamsRepositoryInputBuilder toBuilder() =>
+      new GUpdateTeamsRepositoryInputBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GUpdateTeamsRepositoryInput &&
+        clientMutationId == other.clientMutationId &&
+        permission == other.permission &&
+        repositoryId == other.repositoryId &&
+        teamIds == other.teamIds;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc($jc($jc(0, clientMutationId.hashCode), permission.hashCode),
+            repositoryId.hashCode),
+        teamIds.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('GUpdateTeamsRepositoryInput')
+          ..add('clientMutationId', clientMutationId)
+          ..add('permission', permission)
+          ..add('repositoryId', repositoryId)
+          ..add('teamIds', teamIds))
+        .toString();
+  }
+}
+
+class GUpdateTeamsRepositoryInputBuilder
+    implements
+        Builder<GUpdateTeamsRepositoryInput,
+            GUpdateTeamsRepositoryInputBuilder> {
+  _$GUpdateTeamsRepositoryInput? _$v;
+
+  String? _clientMutationId;
+  String? get clientMutationId => _$this._clientMutationId;
+  set clientMutationId(String? clientMutationId) =>
+      _$this._clientMutationId = clientMutationId;
+
+  GRepositoryPermission? _permission;
+  GRepositoryPermission? get permission => _$this._permission;
+  set permission(GRepositoryPermission? permission) =>
+      _$this._permission = permission;
+
+  String? _repositoryId;
+  String? get repositoryId => _$this._repositoryId;
+  set repositoryId(String? repositoryId) => _$this._repositoryId = repositoryId;
+
+  ListBuilder<String>? _teamIds;
+  ListBuilder<String> get teamIds =>
+      _$this._teamIds ??= new ListBuilder<String>();
+  set teamIds(ListBuilder<String>? teamIds) => _$this._teamIds = teamIds;
+
+  GUpdateTeamsRepositoryInputBuilder();
+
+  GUpdateTeamsRepositoryInputBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _clientMutationId = $v.clientMutationId;
+      _permission = $v.permission;
+      _repositoryId = $v.repositoryId;
+      _teamIds = $v.teamIds.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GUpdateTeamsRepositoryInput other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GUpdateTeamsRepositoryInput;
+  }
+
+  @override
+  void update(void Function(GUpdateTeamsRepositoryInputBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$GUpdateTeamsRepositoryInput build() {
+    _$GUpdateTeamsRepositoryInput _$result;
+    try {
+      _$result = _$v ??
+          new _$GUpdateTeamsRepositoryInput._(
+              clientMutationId: clientMutationId,
+              permission: BuiltValueNullFieldError.checkNotNull(
+                  permission, 'GUpdateTeamsRepositoryInput', 'permission'),
+              repositoryId: BuiltValueNullFieldError.checkNotNull(
+                  repositoryId, 'GUpdateTeamsRepositoryInput', 'repositoryId'),
+              teamIds: teamIds.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'teamIds';
+        teamIds.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'GUpdateTeamsRepositoryInput', _$failedField, e.toString());
       }
       rethrow;
     }
