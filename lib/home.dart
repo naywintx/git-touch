@@ -20,7 +20,7 @@ import 'package:git_touch/screens/gh_notification.dart';
 import 'package:git_touch/screens/gh_user.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:launch_review/launch_review.dart';
-import 'package:package_info/package_info.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:provider/provider.dart';
 import 'package:git_touch/screens/gh_news.dart';
 import 'package:git_touch/screens/gh_search.dart';

@@ -10,7 +10,7 @@ import 'package:git_touch/widgets/action_button.dart';
 import 'package:git_touch/widgets/app_bar_title.dart';
 import 'package:git_touch/widgets/table_view.dart';
 import 'package:launch_review/launch_review.dart';
-import 'package:package_info/package_info.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:provider/provider.dart';
 import 'package:tuple/tuple.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';

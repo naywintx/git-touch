@@ -52,7 +52,7 @@ dependencies:
   json_annotation:
   launch_review:
   nanoid:
-  package_info:
+  package_info_plus:
   primer:
   provider:
   share:
