@@ -1,9 +1,9 @@
 import 'package:ferry/ferry.dart';
 import 'package:flutter/material.dart';
-import 'package:git_touch/graphql/github.data.gql.dart';
-import 'package:git_touch/graphql/github.req.gql.dart';
-import 'package:git_touch/graphql/github.var.gql.dart';
-import 'package:git_touch/graphql/schema.schema.gql.dart';
+import 'package:git_touch/graphql/__generated__/github.data.gql.dart';
+import 'package:git_touch/graphql/__generated__/github.req.gql.dart';
+import 'package:git_touch/graphql/__generated__/github.var.gql.dart';
+import 'package:git_touch/graphql/__generated__/schema.schema.gql.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
 import 'package:git_touch/utils/utils.dart';

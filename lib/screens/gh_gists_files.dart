@@ -1,9 +1,9 @@
 import 'package:ferry/ferry.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:git_touch/graphql/github.data.gql.dart';
-import 'package:git_touch/graphql/github.req.gql.dart';
-import 'package:git_touch/graphql/github.var.gql.dart';
+import 'package:git_touch/graphql/__generated__/github.data.gql.dart';
+import 'package:git_touch/graphql/__generated__/github.req.gql.dart';
+import 'package:git_touch/graphql/__generated__/github.var.gql.dart';
 import 'package:git_touch/scaffolds/refresh_stateful.dart';
 import 'package:git_touch/widgets/app_bar_title.dart';
 import 'package:git_touch/widgets/object_tree.dart';

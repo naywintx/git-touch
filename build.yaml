@@ -1,9 +1,7 @@
 targets:
   $default:
     builders:
-      gql_build|ast_builder:
-        enabled: true
-      gql_build|schema_builder:
+      ferry_generator|graphql_builder:
         enabled: true
         options:
           schema: git_touch|lib/graphql/schema.graphql
@@ -14,43 +12,10 @@ targets:
               name: String
             GitObjectID:
               name: String
-      gql_build|data_builder:
-        enabled: true
-        options:
-          schema: git_touch|lib/graphql/schema.graphql
-          type_overrides:
-            DateTime:
-              name: DateTime
-            URI:
-              name: String
-            GitObjectID:
-              name: String
-      gql_build|var_builder:
-        enabled: true
-        options:
-          schema: git_touch|lib/graphql/schema.graphql
-          type_overrides:
-            DateTime:
-              name: DateTime
-            URI:
-              name: String
-            GitObjectID:
-              name: String
-      gql_build|serializer_builder:
+      ferry_generator|serializer_builder:
         enabled: true
         options:
           schema: git_touch|lib/graphql/schema.graphql
           custom_serializers:
             - import: package:git_touch/utils/date_time_serializer.dart
               name: DateTimeSerializer
-      ferry_generator|req_builder:
-        enabled: true
-        options:
-          schema: git_touch|lib/graphql/schema.graphql
-          type_overrides:
-            DateTime:
-              name: DateTime
-            URI:
-              name: String
-            GitObjectID:
-              name: String

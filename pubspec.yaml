@@ -32,8 +32,8 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   cupertino_icons:
-  ferry: 0.10.4
-  ferry_flutter: 0.5.4
+  ferry:
+  ferry_flutter:
   file_icon:
   filesize:
   fimber:
@@ -44,7 +44,7 @@ dependencies:
   flutter_vector_icons:
   github:
   github_trending:
-  gql: 0.13.0
+  gql:
   gql_http_link:
   http:
   # in_app_review:
@@ -72,7 +72,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   build_runner:
-  ferry_generator: 0.4.4
+  ferry_generator:
   json_serializable:
 
   # The "flutter_lints" package below contains a set of recommended lints to

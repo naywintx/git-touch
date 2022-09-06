@@ -1,8 +1,8 @@
 import 'dart:core';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:git_touch/graphql/github.data.gql.dart';
-import 'package:git_touch/graphql/schema.schema.gql.dart';
+import 'package:git_touch/graphql/__generated__/github.data.gql.dart';
+import 'package:git_touch/graphql/__generated__/schema.schema.gql.dart';
 import 'package:git_touch/models/theme.dart';
 import 'package:git_touch/widgets/label.dart';
 import 'package:provider/provider.dart';

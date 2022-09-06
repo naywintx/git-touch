@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:git_touch/graphql/github.data.gql.dart';
+import 'package:git_touch/graphql/__generated__/github.data.gql.dart';
 import 'package:git_touch/models/bitbucket.dart';
 import 'package:git_touch/models/gitlab.dart';
 import 'package:git_touch/models/gogs.dart';
