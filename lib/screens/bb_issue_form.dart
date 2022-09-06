@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/bitbucket.dart';
 import 'package:git_touch/models/theme.dart';
@@ -11,7 +10,7 @@ import 'package:flutter_gen/gen_l10n/S.dart';
 class BbIssueFormScreen extends StatefulWidget {
   final String owner;
   final String name;
-  BbIssueFormScreen(this.owner, this.name);
+  const BbIssueFormScreen(this.owner, this.name);
 
   @override
   _BbIssueFormScreenState createState() => _BbIssueFormScreenState();

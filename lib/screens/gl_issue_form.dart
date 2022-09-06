@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitlab.dart';
 import 'package:git_touch/models/theme.dart';
@@ -10,7 +9,7 @@ import 'package:flutter_gen/gen_l10n/S.dart';
 
 class GlIssueFormScreen extends StatefulWidget {
   final int id;
-  GlIssueFormScreen(this.id);
+  const GlIssueFormScreen(this.id);
 
   @override
   _GlIssueFormScreenState createState() => _GlIssueFormScreenState();

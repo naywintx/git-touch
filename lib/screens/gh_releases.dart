@@ -13,13 +13,13 @@ import 'package:git_touch/graphql/__generated__/github.req.gql.dart';
 class GhReleasesScreen extends StatelessWidget {
   final String owner;
   final String name;
-  GhReleasesScreen(this.owner, this.name);
+  const GhReleasesScreen(this.owner, this.name);
 
   @override
   Widget build(BuildContext context) {
     return ListStatefulScaffold<GReleasesData_repository_releases_nodes,
         String?>(
-      title: AppBarTitle("Releases"),
+      title: const AppBarTitle("Releases"),
       fetch: (page) async {
         final req = GReleasesReq((b) => b
           ..vars.owner = owner

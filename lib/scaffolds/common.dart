@@ -9,7 +9,7 @@ class CommonScaffold extends StatelessWidget {
   final Widget? action;
   final PreferredSizeWidget? bottom;
 
-  CommonScaffold({
+  const CommonScaffold({
     required this.title,
     required this.body,
     this.action,

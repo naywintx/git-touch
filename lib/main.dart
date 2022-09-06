@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:git_touch/app.dart';
 import 'package:git_touch/models/code.dart';
 import 'package:git_touch/models/auth.dart';
@@ -32,36 +31,36 @@ void main() async {
         codeModel.init(),
       ]);
 
-      CommonRouter.routes.forEach((screen) {
+      for (var screen in CommonRouter.routes) {
         themeModel.router.define(CommonRouter.prefix + screen.path,
             handler: Handler(handlerFunc: screen.handler));
-      });
-      GitlabRouter.routes.forEach((screen) {
+      }
+      for (var screen in GitlabRouter.routes) {
         themeModel.router.define(GitlabRouter.prefix + screen.path,
             handler: Handler(handlerFunc: screen.handler));
-      });
-      GiteaRouter.routes.forEach((screen) {
+      }
+      for (var screen in GiteaRouter.routes) {
         themeModel.router.define(GiteaRouter.prefix + screen.path,
             handler: Handler(handlerFunc: screen.handler));
-      });
-      BitbucketRouter.routes.forEach((screen) {
+      }
+      for (var screen in BitbucketRouter.routes) {
         themeModel.router.define(BitbucketRouter.prefix + screen.path,
             handler: Handler(handlerFunc: screen.handler));
-      });
-      GithubRouter.routes.forEach((screen) {
+      }
+      for (var screen in GithubRouter.routes) {
         themeModel.router.define(GithubRouter.prefix + screen.path,
             handler: Handler(handlerFunc: screen.handler));
-      });
-      GiteeRouter.routes.forEach((screen) {
+      }
+      for (var screen in GiteeRouter.routes) {
         themeModel.router.define(GiteeRouter.prefix + screen.path,
             handler: Handler(handlerFunc: screen.handler));
-      });
-      GogsRouter.routes.forEach((screen) {
+      }
+      for (var screen in GogsRouter.routes) {
         themeModel.router.define(GogsRouter.prefix + screen.path,
             handler: Handler(handlerFunc: screen.handler));
-      });
+      }
       // To match status bar color to app bar color
-      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
       ));
 

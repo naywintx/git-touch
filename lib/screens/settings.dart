@@ -93,7 +93,7 @@ class SettingsScreen extends StatelessWidget {
                           onTap: (_) async {
                             final res = await theme.showConfirm(
                               context,
-                              Text(
+                              const Text(
                                   'The app will reload to make the language setting take effect'),
                             );
                             if (res == true && theme.locale != key) {
@@ -132,8 +132,9 @@ class SettingsScreen extends StatelessWidget {
                       ActionItem(
                         text: t.item1,
                         onTap: (_) {
-                          if (theme.brighnessValue != t.item2)
+                          if (theme.brighnessValue != t.item2) {
                             theme.setBrightness(t.item2);
+                          }
                         },
                       )
                   ]);
@@ -201,11 +202,10 @@ class SettingsScreen extends StatelessWidget {
             items: [
               TableViewItem(
                 text: Text(AppLocalizations.of(context)!.submitAnIssue),
-                rightWidget: Text('git-touch/git-touch'),
-                url: (auth.activeAccount!.platform == PlatformType.github
+                rightWidget: const Text('git-touch/git-touch'),
+                url: '${auth.activeAccount!.platform == PlatformType.github
                         ? '/github'
-                        : 'https://github.com') +
-                    '/git-touch/git-touch/issues/new',
+                        : 'https://github.com'}/git-touch/git-touch/issues/new',
               ),
               TableViewItem(
                 text: Text(AppLocalizations.of(context)!.rateThisApp),
@@ -218,7 +218,7 @@ class SettingsScreen extends StatelessWidget {
               ),
               TableViewItem(
                 text: Text(AppLocalizations.of(context)!.email),
-                rightWidget: Text('pd4d10@gmail.com'),
+                rightWidget: const Text('pd4d10@gmail.com'),
                 hideRightChevron: true,
                 url: 'mailto:pd4d10@gmail.com',
               ),
@@ -240,11 +240,10 @@ class SettingsScreen extends StatelessWidget {
                   )),
               TableViewItem(
                 text: Text(AppLocalizations.of(context)!.sourceCode),
-                rightWidget: Text('git-touch/git-touch'),
-                url: (auth.activeAccount!.platform == PlatformType.github
+                rightWidget: const Text('git-touch/git-touch'),
+                url: '${auth.activeAccount!.platform == PlatformType.github
                         ? '/github'
-                        : 'https://github.com') +
-                    '/git-touch/git-touch',
+                        : 'https://github.com'}/git-touch/git-touch',
               ),
             ],
           ),

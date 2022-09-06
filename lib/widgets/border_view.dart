@@ -6,7 +6,7 @@ class BorderView extends StatelessWidget {
   final double? height;
   final double leftPadding;
 
-  BorderView({
+  const BorderView({
     this.height,
     this.leftPadding = 0,
   });

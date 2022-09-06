@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/theme.dart';
 import 'package:git_touch/scaffolds/common.dart';
@@ -11,7 +10,7 @@ import 'package:flutter_gen/gen_l10n/S.dart';
 class GhIssueFormScreen extends StatefulWidget {
   final String owner;
   final String name;
-  GhIssueFormScreen(this.owner, this.name);
+  const GhIssueFormScreen(this.owner, this.name);
 
   @override
   _GhIssueFormScreenState createState() => _GhIssueFormScreenState();

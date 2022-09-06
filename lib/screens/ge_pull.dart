@@ -19,7 +19,7 @@ class GePullScreen extends StatelessWidget {
   final String number;
   final bool isPr;
 
-  GePullScreen(this.owner, this.name, this.number, {this.isPr: false});
+  const GePullScreen(this.owner, this.name, this.number, {this.isPr = false});
 
   List<ActionItem> _buildCommentActionItem(
       BuildContext context, GiteeComment comment) {
@@ -96,8 +96,9 @@ class GePullScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   LinkWidget(
+                    url: '/gitee/$owner/$name',
                     child: Container(
-                      padding: EdgeInsets.symmetric(vertical: 8),
+                      padding: const EdgeInsets.symmetric(vertical: 8),
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
@@ -109,7 +110,7 @@ class GePullScreen extends StatelessWidget {
                                     url: pull.user!.avatarUrl,
                                     size: AvatarSize.extraSmall,
                                   ),
-                                  SizedBox(width: 4),
+                                  const SizedBox(width: 4),
                                   Text(
                                     '$owner / $name',
                                     style: TextStyle(
@@ -117,7 +118,7 @@ class GePullScreen extends StatelessWidget {
                                       color: theme.palette.secondaryText,
                                     ),
                                   ),
-                                  SizedBox(width: 4),
+                                  const SizedBox(width: 4),
                                   Text(
                                     '#$number',
                                     style: TextStyle(
@@ -128,27 +129,27 @@ class GePullScreen extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            SizedBox(height: 8),
+                            const SizedBox(height: 8),
                             Text(
                               pull.title!,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
-                            SizedBox(height: 8),
+                            const SizedBox(height: 8),
                             StateLabel(
                                 pull.state == 'open'
                                     ? StateLabelStatus.pullOpened
                                     : StateLabelStatus.pullClosed,
                                 small: true),
-                            SizedBox(height: 16),
+                            const SizedBox(height: 16),
                             CommonStyle.border,
                             CommonStyle.border,
                             LinkWidget(
                               url: '/gitee/$owner/$name/pulls/$number/files',
                               child: Container(
-                                padding: EdgeInsets.symmetric(vertical: 8),
+                                padding: const EdgeInsets.symmetric(vertical: 8),
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
@@ -164,15 +165,15 @@ class GePullScreen extends StatelessWidget {
                                       children: <Widget>[
                                         Text(
                                           '+$additions',
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                             color: Colors.green,
                                             fontSize: 15,
                                           ),
                                         ),
-                                        SizedBox(width: 2),
+                                        const SizedBox(width: 2),
                                         Text(
                                           '-$deletions',
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                             color: Colors.red,
                                             fontSize: 15,
                                           ),
@@ -206,13 +207,13 @@ class GePullScreen extends StatelessWidget {
                                             '/gitee/$owner/$name/commits/${commit.sha}',
                                         child: Container(
                                           padding:
-                                              EdgeInsets.symmetric(vertical: 8),
+                                              const EdgeInsets.symmetric(vertical: 8),
                                           child: Row(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceBetween,
                                             children: <Widget>[
                                               Text(
-                                                '${commit.sha!.substring(0, 7)}',
+                                                commit.sha!.substring(0, 7),
                                                 style: TextStyle(
                                                   color: theme.palette.primary,
                                                   fontSize: 17,
@@ -229,7 +230,6 @@ class GePullScreen extends StatelessWidget {
                                 )),
                           ]),
                     ),
-                    url: '/gitee/$owner/$name',
                   ),
                   CommonStyle.border,
                 ],
@@ -237,7 +237,7 @@ class GePullScreen extends StatelessWidget {
           Column(children: [
             for (var comment in comments) ...[
               Padding(
-                  padding: EdgeInsets.only(left: 10),
+                  padding: const EdgeInsets.only(left: 10),
                   child: CommentItem(
                     avatar: Avatar(
                       url: comment.user!.avatarUrl,
@@ -251,7 +251,7 @@ class GePullScreen extends StatelessWidget {
                         _buildCommentActionItem(context, comment),
                   )),
               CommonStyle.border,
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
             ],
           ]),
         ]);

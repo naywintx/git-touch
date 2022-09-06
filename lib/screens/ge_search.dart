@@ -22,7 +22,7 @@ class GeSearchScreen extends StatefulWidget {
 class _GeSearchScreenState extends State<GeSearchScreen> {
   int? _activeTab = 0;
   bool _loading = false;
-  List<List> _payloads = [[], [], []];
+  final List<List> _payloads = [[], [], []];
 
   TextEditingController? _controller;
   String get _keyword => _controller!.text.trim();
@@ -79,7 +79,7 @@ class _GeSearchScreenState extends State<GeSearchScreen> {
           color: theme.palette.background,
           child: CupertinoTextField(
             prefix: Row(
-              children: <Widget>[
+              children: const <Widget>[
                 SizedBox(width: 8),
                 Icon(Octicons.search, size: 20, color: PrimerColors.gray400),
               ],
@@ -132,7 +132,7 @@ class _GeSearchScreenState extends State<GeSearchScreen> {
           login: p.login,
           name: p.name,
           avatarUrl: p.avatarUrl,
-          bio: Text(p.bio != null ? p.bio : p.htmlUrl),
+          bio: Text(p.bio ?? p.htmlUrl),
         );
       default:
         return IssueItem(
@@ -160,7 +160,7 @@ class _GeSearchScreenState extends State<GeSearchScreen> {
             if (theme == AppThemeType.cupertino)
               Center(
                 child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 8),
+                  padding: const EdgeInsets.symmetric(vertical: 8),
                   child: CupertinoSlidingSegmentedControl(
                     groupValue: _activeTab,
                     onValueChanged: _onTabSwitch,
@@ -168,13 +168,13 @@ class _GeSearchScreenState extends State<GeSearchScreen> {
                         key,
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8),
-                          child: Text(text, style: TextStyle(fontSize: 14)),
+                          child: Text(text, style: const TextStyle(fontSize: 14)),
                         ))),
                   ),
                 ),
               ),
             if (_loading)
-              Loading()
+              const Loading()
             else
               ..._payloads[_activeTab!].map(_buildItem).toList(),
           ],

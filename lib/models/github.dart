@@ -14,16 +14,12 @@ class GithubEvent {
 
   Tuple2<String, String>? _repo;
   String get repoOwner {
-    if (_repo == null) {
-      _repo = parseRepositoryFullName(repo!.name!);
-    }
+    _repo ??= parseRepositoryFullName(repo!.name!);
     return _repo!.item1;
   }
 
   String get repoName {
-    if (_repo == null) {
-      _repo = parseRepositoryFullName(repo!.name!);
-    }
+    _repo ??= parseRepositoryFullName(repo!.name!);
     return _repo!.item2;
   }
 
@@ -165,9 +161,7 @@ class GithubNotificationItemSubject {
 
   int? _number;
   int? get number {
-    if (_number == null) {
-      _number = int.parse(url?.split('/').last ?? '0');
-    }
+    _number ??= int.parse(url?.split('/').last ?? '0');
     return _number;
   }
 
@@ -183,16 +177,12 @@ class GithubNotificationItemRepo {
 
   Tuple2<String, String>? _repo;
   String get owner {
-    if (_repo == null) {
-      _repo = parseRepositoryFullName(fullName!);
-    }
+    _repo ??= parseRepositoryFullName(fullName!);
     return _repo!.item1;
   }
 
   String get name {
-    if (_repo == null) {
-      _repo = parseRepositoryFullName(fullName!);
-    }
+    _repo ??= parseRepositoryFullName(fullName!);
     return _repo!.item2;
   }
 

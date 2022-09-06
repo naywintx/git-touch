@@ -11,7 +11,7 @@ class GoCommitsScreen extends StatelessWidget {
   final String owner;
   final String name;
   final String? branch;
-  GoCommitsScreen(this.owner, this.name, {this.branch = 'master'});
+  const GoCommitsScreen(this.owner, this.name, {this.branch = 'master'});
 
   // TODO: API only returns most recent commit. No provision for all commits.
   @override

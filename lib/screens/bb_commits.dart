@@ -5,14 +5,13 @@ import 'package:git_touch/scaffolds/list_stateful.dart';
 import 'package:git_touch/widgets/app_bar_title.dart';
 import 'package:git_touch/widgets/commit_item.dart';
 import 'package:provider/provider.dart';
-import 'package:git_touch/utils/utils.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
 
 class BbCommitsScreen extends StatelessWidget {
   final String owner;
   final String name;
   final String ref;
-  BbCommitsScreen(this.owner, this.name, this.ref);
+  const BbCommitsScreen(this.owner, this.name, this.ref);
 
   @override
   Widget build(BuildContext context) {

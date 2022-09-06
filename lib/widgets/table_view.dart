@@ -9,13 +9,13 @@ import 'link.dart';
 class TableViewHeader extends StatelessWidget {
   final String? title;
 
-  TableViewHeader(this.title);
+  const TableViewHeader(this.title);
 
   @override
   Widget build(BuildContext context) {
     final theme = Provider.of<ThemeModel>(context);
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       child: Text(
         title!.toUpperCase(),
         style: TextStyle(color: theme.palette.secondaryText, fontSize: 13),
@@ -33,7 +33,7 @@ class TableViewItem extends StatelessWidget {
   final String? url;
   final bool hideRightChevron;
 
-  TableViewItem({
+  const TableViewItem({
     required this.text,
     this.leftIconData,
     this.leftWidget,
@@ -53,7 +53,7 @@ class TableViewItem extends StatelessWidget {
       child: DefaultTextStyle(
         style: TextStyle(fontSize: 17, color: theme.palette.text),
         overflow: TextOverflow.ellipsis,
-        child: Container(
+        child: SizedBox(
           height: 44,
           child: Row(
             children: [
@@ -76,14 +76,14 @@ class TableViewItem extends StatelessWidget {
                   ),
                   child: rightWidget!,
                 ),
-                SizedBox(width: 6)
+                const SizedBox(width: 6)
               ],
               if ((onTap != null || url != null) && !hideRightChevron)
                 Icon(Ionicons.chevron_forward,
                     size: 20, color: theme.palette.tertiaryText)
               else
-                SizedBox(width: 2),
-              SizedBox(width: 8),
+                const SizedBox(width: 2),
+              const SizedBox(width: 8),
             ],
           ),
         ),
@@ -97,7 +97,7 @@ class TableView extends StatelessWidget {
   final Iterable<Widget> items;
   final bool? hasIcon;
 
-  TableView({this.headerText, required this.items, this.hasIcon = true});
+  const TableView({this.headerText, required this.items, this.hasIcon = true});
 
   double get _leftPadding => hasIcon == true ? 44 : 12;
 

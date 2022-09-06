@@ -19,7 +19,7 @@ class GoRepoScreen extends StatelessWidget {
   final String owner;
   final String name;
   final String? branch;
-  GoRepoScreen(this.owner, this.name, {this.branch});
+  const GoRepoScreen(this.owner, this.name, {this.branch});
 
   @override
   Widget build(BuildContext context) {
@@ -32,11 +32,11 @@ class GoRepoScreen extends StatelessWidget {
           return GogsRepository.fromJson(v);
         });
 
-        final md = () =>
+        md() =>
             auth.fetchGogs('/repos/$owner/$name/contents/README.md').then((v) {
               return (v['content'] as String?)?.base64ToUtf8 ?? '';
             });
-        final html = () => md().then((v) async {
+        html() => md().then((v) async {
               final res = await http.post(
                 Uri.parse('${auth.activeAccount!.domain}/api/v1/markdown/raw'),
                 headers: {'Authorization': 'token ${auth.token}'},
@@ -47,8 +47,9 @@ class GoRepoScreen extends StatelessWidget {
         final readmeData = MarkdownViewData(context, md: md, html: html);
         List<GogsBranch> branches =
             await auth.fetchGogs('/repos/$owner/$name/branches').then((v) {
-          if (!(v is List))
-            return []; // Valid API Response only returned if repo contains >= 2 branches
+          if (v is! List) {
+            return [];
+          } // Valid API Response only returned if repo contains >= 2 branches
           return [for (var branch in v) GogsBranch.fromJson(branch)];
         });
 
@@ -92,30 +93,28 @@ class GoRepoScreen extends StatelessWidget {
               items: [
                 TableViewItem(
                   leftIconData: Octicons.code,
-                  text: Text('Code'),
+                  text: const Text('Code'),
                   url: '/gogs/$owner/$name/blob?ref=${branch ?? 'master'}',
                 ),
                 TableViewItem(
                   leftIconData: Octicons.issue_opened,
-                  text: Text('Issues'),
+                  text: const Text('Issues'),
                   url: '/gogs/$owner/$name/issues',
                 ),
-                TableViewItem(
+                const TableViewItem(
                   leftIconData: Octicons.git_pull_request,
                   text: Text(
                       'Pull requests'), // TODO: when API endpoint is available
                 ),
                 TableViewItem(
                   leftIconData: Octicons.history,
-                  text: Text('Commits'),
+                  text: const Text('Commits'),
                   url: '/gogs/$owner/$name/commits?ref=${branch ?? 'master'}',
                 ),
                 TableViewItem(
                   leftIconData: Octicons.git_branch,
                   text: Text(AppLocalizations.of(context)!.branches),
-                  rightWidget: Text((branch ?? 'master') +
-                      ' • ' +
-                      '${branches.length.toString()}'),
+                  rightWidget: Text('${branch ?? 'master'} • ${branches.length.toString()}'),
                   onTap: () async {
                     await theme.showPicker(
                       context,

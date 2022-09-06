@@ -8,7 +8,7 @@ class CupertinoLink extends StatefulWidget {
   final Widget? child;
   final Function? onTap;
 
-  CupertinoLink({this.child, this.onTap});
+  const CupertinoLink({this.child, this.onTap});
 
   @override
   _CupertinoLinkState createState() => _CupertinoLinkState();
@@ -53,7 +53,7 @@ class LinkWidget extends StatelessWidget {
   final Function? onTap;
   final Function? onLongPress;
 
-  LinkWidget({
+  const LinkWidget({
     required this.child,
     this.url,
     this.onTap,
@@ -68,12 +68,12 @@ class LinkWidget extends StatelessWidget {
       case AppThemeType.cupertino:
         Widget w = CupertinoButton(
           minSize: 0,
-          child: child,
           padding: EdgeInsets.zero,
           onPressed: () async {
             if (onTap != null) onTap!();
             if (url != null) theme.push(context, url!);
           },
+          child: child,
         );
         if (onLongPress != null) {
           w = GestureDetector(
@@ -82,12 +82,12 @@ class LinkWidget extends StatelessWidget {
         return w;
       default:
         return InkWell(
-          child: child,
           onTap: () async {
             if (onTap != null) onTap!();
             if (url != null) theme.push(context, url!);
           },
           onLongPress: onLongPress as void Function()?,
+          child: child,
         );
     }
   }

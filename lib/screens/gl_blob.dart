@@ -12,7 +12,7 @@ class GlBlobScreen extends StatelessWidget {
   final int id;
   final String ref;
   final String? path;
-  GlBlobScreen(this.id, this.ref, {this.path});
+  const GlBlobScreen(this.id, this.ref, {this.path});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class GlBlobScreen extends StatelessWidget {
             '/projects/$id/repository/files/${path!.urlencode}?ref=$ref');
         return GitlabBlob.fromJson(res);
       },
-      action: ActionEntry(iconData: Ionicons.cog, url: '/choose-code-theme'),
+      action: const ActionEntry(iconData: Ionicons.cog, url: '/choose-code-theme'),
       bodyBuilder: (data, _) {
         return BlobView(path, base64Text: data.content);
       },

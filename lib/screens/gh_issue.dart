@@ -1,6 +1,5 @@
 import 'package:ferry/ferry.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:git_touch/graphql/__generated__/github.data.gql.dart';
 import 'package:git_touch/graphql/__generated__/github.req.gql.dart';
 import 'package:git_touch/graphql/__generated__/github.var.gql.dart';
@@ -21,7 +20,7 @@ class GhIssueScreen extends StatelessWidget {
   final String owner;
   final String name;
   final int number;
-  GhIssueScreen(this.owner, this.name, this.number);
+  const GhIssueScreen(this.owner, this.name, this.number);
 
   Widget _buildHeader(
     BuildContext context, {
@@ -45,7 +44,7 @@ class GhIssueScreen extends StatelessWidget {
                 child: Row(
                   children: <Widget>[
                     Avatar(url: avatarUrl, size: AvatarSize.extraSmall),
-                    SizedBox(width: 4),
+                    const SizedBox(width: 4),
                     Text(
                       '$owner / $name',
                       style: TextStyle(
@@ -53,7 +52,7 @@ class GhIssueScreen extends StatelessWidget {
                         color: theme.palette.secondaryText,
                       ),
                     ),
-                    SizedBox(width: 4),
+                    const SizedBox(width: 4),
                     Text(
                       '#$number',
                       style: TextStyle(
@@ -64,20 +63,20 @@ class GhIssueScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 8),
+              const SizedBox(height: 8),
               Text(
                 title,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              SizedBox(height: 8),
+              const SizedBox(height: 8),
               StateLabel(status, small: true),
-              SizedBox(height: 8),
+              const SizedBox(height: 8),
               CommonStyle.border,
               ...extraWidgets,
-              SizedBox(height: 8),
+              const SizedBox(height: 8),
               body,
             ],
           ),
@@ -218,8 +217,9 @@ class GhIssueScreen extends StatelessWidget {
             body: CommentItem.gql(pr, pr, (key) {}),
             extraWidgets: [
               LinkWidget(
+                url: '/github/$owner/$name/pull/$number/files',
                 child: Container(
-                  padding: EdgeInsets.symmetric(vertical: 8),
+                  padding: const EdgeInsets.symmetric(vertical: 8),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
@@ -231,13 +231,13 @@ class GhIssueScreen extends StatelessWidget {
                       Row(
                         children: <Widget>[
                           Text('+${pr.additions}',
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Colors.green,
                                 fontSize: 15,
                               )),
-                          SizedBox(width: 2),
+                          const SizedBox(width: 2),
                           Text('-${pr.deletions}',
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Colors.red,
                                 fontSize: 15,
                               )),
@@ -248,7 +248,6 @@ class GhIssueScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                url: '/github/$owner/$name/pull/$number/files',
               ),
               CommonStyle.border,
             ],
@@ -280,8 +279,8 @@ class GhIssueScreen extends StatelessWidget {
           );
         }
       },
-      onLoadMore: (_cursor) async {
-        final res = await _queryIssue(context, cursor: _cursor);
+      onLoadMore: (cursor) async {
+        final res = await _queryIssue(context, cursor: cursor);
         if (res.issueOrPullRequest!.G__typename == 'Issue') {
           final issue = res.issueOrPullRequest
               as GIssueData_repository_issueOrPullRequest__asIssue;

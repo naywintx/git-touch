@@ -11,8 +11,9 @@ import 'package:flutter_gen/gen_l10n/S.dart';
 class GhContributorsScreen extends StatelessWidget {
   final String owner;
   final String name;
-  GhContributorsScreen(this.owner, this.name);
+  const GhContributorsScreen(this.owner, this.name);
 
+  @override
   Widget build(BuildContext context) {
     return ListStatefulScaffold<GithubContributorItem, int>(
       title: AppBarTitle(AppLocalizations.of(context)!.contributors),

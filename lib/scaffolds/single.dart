@@ -6,7 +6,7 @@ class SingleScaffold extends StatelessWidget {
   final Widget body;
   final Widget? action;
 
-  SingleScaffold({
+  const SingleScaffold({
     required this.title,
     required this.body,
     this.action,

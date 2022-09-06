@@ -15,7 +15,7 @@ class BlobView extends StatelessWidget {
   final String? text;
   final String? base64Text;
   final String? networkUrl;
-  BlobView(
+  const BlobView(
     this.name, {
     this.text,
     this.base64Text,
@@ -45,7 +45,7 @@ class BlobView extends StatelessWidget {
                 loadingBuilder: (_, child, p) {
                   if (p == null) return child;
                   // TODO: progress
-                  return Loading();
+                  return const Loading();
                 },
               )
             : Image.memory(base64.decode(base64Text!));

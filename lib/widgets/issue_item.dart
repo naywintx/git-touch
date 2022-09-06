@@ -43,7 +43,7 @@ class IssueItem extends StatelessWidget {
   final Widget? labels;
   final bool isPr;
 
-  IssueItem({
+  const IssueItem({
     required this.url,
     required this.subtitle,
     required this.title,
@@ -72,18 +72,18 @@ class IssueItem extends StatelessWidget {
               children: <Widget>[
                 Icon(isPr ? Octicons.git_pull_request : Octicons.issue_opened,
                     color: GithubPalette.open, size: 20),
-                SizedBox(width: 6),
+                const SizedBox(width: 6),
                 Expanded(
                   child: Container(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: join(SizedBox(height: 8), [
+                      children: join(const SizedBox(height: 8), [
                         Text.rich(
                           TextSpan(
                             children: [
                               TextSpan(text: '$title '),
                               TextSpan(
-                                text: '$subtitle',
+                                text: subtitle,
                                 style: TextStyle(
                                   color: theme.palette.tertiaryText,
                                   fontWeight: FontWeight.normal,
@@ -112,15 +112,15 @@ class IssueItem extends StatelessWidget {
                                   size: AvatarSize.extraSmall,
                                   url: avatarUrl,
                                 ),
-                                SizedBox(width: 4),
+                                const SizedBox(width: 4),
                                 Text(
                                   author!,
-                                  style: TextStyle(fontWeight: FontWeight.w600),
+                                  style: const TextStyle(fontWeight: FontWeight.w600),
                                 ),
                               ],
                               Expanded(
                                   child: Text(
-                                ' opened ' + timeago.format(updatedAt!),
+                                ' opened ${timeago.format(updatedAt!)}',
                                 style: TextStyle(
                                   fontSize: 17,
                                   color: theme.palette.secondaryText,
@@ -128,11 +128,11 @@ class IssueItem extends StatelessWidget {
                                 overflow: TextOverflow.ellipsis,
                               )),
                               if (commentCount! > 0) ...[
-                                Expanded(child: SizedBox()),
+                                const Expanded(child: SizedBox()),
                                 Icon(Octicons.comment,
                                     size: 14,
                                     color: theme.palette.secondaryText),
-                                SizedBox(width: 3),
+                                const SizedBox(width: 3),
                                 Text(numberFormat.format(commentCount))
                               ],
                             ],

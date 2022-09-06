@@ -19,7 +19,7 @@ import 'package:flutter_gen/gen_l10n/S.dart';
 class GtRepoScreen extends StatelessWidget {
   final String owner;
   final String name;
-  GtRepoScreen(this.owner, this.name);
+  const GtRepoScreen(this.owner, this.name);
 
   @override
   Widget build(BuildContext context) {
@@ -31,11 +31,11 @@ class GtRepoScreen extends StatelessWidget {
           return GiteaRepository.fromJson(v);
         });
 
-        final md = () =>
+        md() =>
             auth.fetchGitea('/repos/$owner/$name/contents/README.md').then((v) {
               return (v['content'] as String?)?.base64ToUtf8 ?? '';
             });
-        final html = () => md().then((v) async {
+        html() => md().then((v) async {
               final res = await http.post(
                 Uri.parse('${auth.activeAccount!.domain}/api/v1/markdown/raw'),
                 headers: {'Authorization': 'token ${auth.token}'},
@@ -84,25 +84,25 @@ class GtRepoScreen extends StatelessWidget {
               items: [
                 TableViewItem(
                   leftIconData: Octicons.code,
-                  text: Text('Code'),
+                  text: const Text('Code'),
                   rightWidget: Text(filesize(p.size! * 1000)),
                   url: '/gitea/$owner/$name/blob',
                 ),
                 TableViewItem(
                   leftIconData: Octicons.issue_opened,
-                  text: Text('Issues'),
+                  text: const Text('Issues'),
                   rightWidget: Text(numberFormat.format(p.openIssuesCount)),
                   url: '/gitea/$owner/$name/issues',
                 ),
                 TableViewItem(
                   leftIconData: Octicons.git_pull_request,
-                  text: Text('Pull requests'),
+                  text: const Text('Pull requests'),
                   rightWidget: Text(numberFormat.format(p.openPrCounter)),
                   url: '/gitea/$owner/$name/pulls',
                 ),
                 TableViewItem(
                   leftIconData: Octicons.history,
-                  text: Text('Commits'),
+                  text: const Text('Commits'),
                   url: '/gitea/$owner/$name/commits',
                 ),
               ],

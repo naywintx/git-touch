@@ -1,6 +1,5 @@
 import 'package:universal_io/io.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:git_touch/models/theme.dart';
 import 'package:git_touch/widgets/border_view.dart';
@@ -36,14 +35,14 @@ class StorageKeys {
 
 class CommonStyle {
   static const padding = EdgeInsets.symmetric(horizontal: 16, vertical: 12);
-  static final border = BorderView();
+  static const border = BorderView();
   static const verticalGap = SizedBox(height: 18);
   static final monospace = Platform.isIOS ? 'Menlo' : 'monospace'; // FIXME:
 }
 
 Color convertColor(String? cssHex) {
   if (cssHex == null) {
-    return Color(0xffededed); // Default color
+    return const Color(0xffededed); // Default color
   }
 
   if (cssHex.startsWith('#')) {
@@ -52,7 +51,7 @@ Color convertColor(String? cssHex) {
   if (cssHex.length == 3) {
     cssHex = cssHex.split('').map((char) => char + char).join('');
   }
-  return Color(int.tryParse('ff' + cssHex, radix: 16) ?? 0);
+  return Color(int.tryParse('ff$cssHex', radix: 16) ?? 0);
 }
 
 Color getFontColorByBrightness(Color color) {
@@ -95,12 +94,12 @@ class GithubPalette {
 }
 
 // final pageSize = 5;
-final PAGE_SIZE = 30;
+const PAGE_SIZE = 30;
 
 var createWarning =
-    (String text) => Text(text, style: TextStyle(color: Colors.redAccent));
+    (String text) => Text(text, style: const TextStyle(color: Colors.redAccent));
 var warningSpan =
-    TextSpan(text: 'xxx', style: TextStyle(color: Colors.redAccent));
+    const TextSpan(text: 'xxx', style: TextStyle(color: Colors.redAccent));
 
 List<T> join<T>(T seperator, List<T> xs) {
   List<T> result = [];
@@ -140,7 +139,7 @@ bool isNotNullOrEmpty(String? text) {
 class PrimerBranchName extends StatelessWidget {
   final String? name;
 
-  PrimerBranchName(this.name);
+  const PrimerBranchName(this.name);
 
   static const branchBgColor = Color(0xffeaf5ff);
 
@@ -148,9 +147,9 @@ class PrimerBranchName extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Provider.of<ThemeModel>(context);
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 2, horizontal: 4),
+      padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 4),
       height: 16,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: branchBgColor,
         borderRadius: BorderRadius.all(Radius.circular(3)),
       ),

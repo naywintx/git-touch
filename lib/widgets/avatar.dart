@@ -18,7 +18,7 @@ class Avatar extends StatelessWidget {
   final String? linkUrl;
   final BorderRadius? borderRadius;
 
-  Avatar({
+  const Avatar({
     required this.url,
     this.size = AvatarSize.medium,
     this.linkUrl,
@@ -43,10 +43,10 @@ class Avatar extends StatelessWidget {
               image: url!,
               width: size,
               height: size,
-              fadeInDuration: Duration(milliseconds: 200),
-              fadeOutDuration: Duration(milliseconds: 100),
+              fadeInDuration: const Duration(milliseconds: 200),
+              fadeOutDuration: const Duration(milliseconds: 100),
               imageErrorBuilder: (_, __, ___) {
-                Fimber.e('image error: ' + url!);
+                Fimber.e('image error: ${url!}');
                 return fallbackWidget;
               },
             ),

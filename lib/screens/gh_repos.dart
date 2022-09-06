@@ -12,12 +12,12 @@ import 'package:timeago/timeago.dart' as timeago;
 
 class GhRepos extends StatelessWidget {
   final String login;
-  GhRepos(this.login);
+  const GhRepos(this.login);
 
   @override
   Widget build(BuildContext context) {
     return ListStatefulScaffold<GReposRepoItem, String?>(
-      title: AppBarTitle('Repositories'),
+      title: const AppBarTitle('Repositories'),
       fetch: (cursor) async {
         final auth = context.read<AuthModel>();
         final req = GReposReq((b) {
@@ -43,12 +43,12 @@ class GhRepos extends StatelessWidget {
 
 class GhStars extends StatelessWidget {
   final String login;
-  GhStars(this.login);
+  const GhStars(this.login);
 
   @override
   Widget build(BuildContext context) {
     return ListStatefulScaffold<GReposRepoItem, String?>(
-      title: AppBarTitle('Stars'),
+      title: const AppBarTitle('Stars'),
       fetch: (cursor) async {
         final auth = context.read<AuthModel>();
         final req = GStarsReq((b) {

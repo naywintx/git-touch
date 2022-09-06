@@ -6,14 +6,14 @@ import 'package:provider/provider.dart';
 class Loading extends StatelessWidget {
   final bool more;
 
-  Loading({this.more = false});
+  const Loading({this.more = false});
 
   Widget _buildIndicator(BuildContext context) {
     switch (Provider.of<ThemeModel>(context).theme) {
       case AppThemeType.cupertino:
-        return CupertinoActivityIndicator(radius: 12);
+        return const CupertinoActivityIndicator(radius: 12);
       default:
-        return SizedBox(
+        return const SizedBox(
           width: 24,
           height: 24,
           child: CircularProgressIndicator(),

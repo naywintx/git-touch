@@ -18,7 +18,7 @@ class BbIssueScreen extends StatelessWidget {
   final String number;
   final bool isPr;
 
-  BbIssueScreen(this.owner, this.name, this.number, {this.isPr: false});
+  const BbIssueScreen(this.owner, this.name, this.number, {this.isPr = false});
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +60,7 @@ class BbIssueScreen extends StatelessWidget {
                           url: issue.reporter!.avatarUrl,
                           size: AvatarSize.extraSmall,
                         ),
-                        SizedBox(width: 4),
+                        const SizedBox(width: 4),
                         Text(
                           '$owner / $name',
                           style: TextStyle(
@@ -68,7 +68,7 @@ class BbIssueScreen extends StatelessWidget {
                             color: theme.palette.secondaryText,
                           ),
                         ),
-                        SizedBox(width: 4),
+                        const SizedBox(width: 4),
                         Text(
                           '#$number',
                           style: TextStyle(
@@ -79,24 +79,24 @@ class BbIssueScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Text(
                     issue.title!,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   StateLabel(StateLabelStatus.issueOpened),
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
                   CommonStyle.border,
                 ],
               )),
           Column(children: [
             for (var comment in comments) ...[
               Padding(
-                  padding: EdgeInsets.only(left: 10),
+                  padding: const EdgeInsets.only(left: 10),
                   child: CommentItem(
                       avatar: Avatar(
                         url: comment.user!.avatarUrl,
@@ -107,7 +107,7 @@ class BbIssueScreen extends StatelessWidget {
                       login: comment.user!.displayName,
                       prefix: 'bitbucket')),
               CommonStyle.border,
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
             ],
           ]),
         ]);

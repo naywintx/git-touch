@@ -15,7 +15,7 @@ import 'package:tuple/tuple.dart';
 class GoUserScreen extends StatelessWidget {
   final String login;
   final bool isViewer;
-  GoUserScreen(this.login, {this.isViewer = false});
+  const GoUserScreen(this.login, {this.isViewer = false});
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class GoUserScreen extends StatelessWidget {
         ]);
       },
       action: isViewer
-          ? ActionEntry(
+          ? const ActionEntry(
               iconData: Ionicons.cog,
               url: '/settings',
             )
@@ -75,7 +75,7 @@ class GoUserScreen extends StatelessWidget {
               items: [
                 TableViewItem(
                   leftIconData: Octicons.home,
-                  text: Text('Organizations'),
+                  text: const Text('Organizations'),
                   url:
                       '/gogs/${user.username}?tab=organizations&isViewer=$isViewer',
                 ),

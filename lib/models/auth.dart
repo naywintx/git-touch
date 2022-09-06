@@ -145,9 +145,7 @@ class AuthModel with ChangeNotifier {
       if (info['error'] != null) {
         throw info['error'] +
             '. ' +
-            (info['error_description'] != null
-                ? info['error_description']
-                : '');
+            (info['error_description'] ?? '');
       }
       final user = GitlabUser.fromJson(info);
       await _addAccount(Account(
@@ -304,7 +302,7 @@ class AuthModel with ChangeNotifier {
     return DataWithPage(
       data: info,
       cursor: page + 1,
-      hasMore: info is List && info.length > 0,
+      hasMore: info is List && info.isNotEmpty,
       total: int.tryParse(res.headers['x-total-count'] ?? '') ??
           TOTAL_COUNT_FALLBACK,
     );
@@ -408,7 +406,7 @@ class AuthModel with ChangeNotifier {
     return DataWithPage(
       data: info,
       cursor: page + 1,
-      hasMore: info is List && info.length > 0,
+      hasMore: info is List && info.isNotEmpty,
       total: int.tryParse(res.headers['x-total-count'] ?? '') ??
           TOTAL_COUNT_FALLBACK,
     );
@@ -683,23 +681,20 @@ class AuthModel with ChangeNotifier {
   }
 
   // http timeout
-  var _timeoutDuration = Duration(seconds: 10);
+  final _timeoutDuration = const Duration(seconds: 10);
   // var _timeoutDuration = Duration(seconds: 1);
 
   GitHub? _ghClient;
   GitHub get ghClient {
-    if (_ghClient == null) {
-      _ghClient = GitHub(auth: Authentication.withToken(token));
-    }
+    _ghClient ??= GitHub(auth: Authentication.withToken(token));
     return _ghClient!;
   }
 
   Client? _gqlClient;
   Client get gqlClient {
-    if (_gqlClient == null) {
-      _gqlClient = Client(
+    _gqlClient ??= Client(
         link: HttpLink(
-          _apiPrefix + '/graphql',
+          '$_apiPrefix/graphql',
           defaultHeaders: {HttpHeaders.authorizationHeader: 'token $token'},
         ),
         // https://ferrygraphql.com/docs/fetch-policies#default-fetchpolicies
@@ -707,20 +702,17 @@ class AuthModel with ChangeNotifier {
           OperationType.query: FetchPolicy.NetworkOnly,
         },
       );
-    }
 
     return _gqlClient!;
   }
 
-  Future<dynamic> query(String query, [String? _token]) async {
-    if (_token == null) {
-      _token = token;
-    }
+  Future<dynamic> query(String query, [String? token]) async {
+    token ??= token;
 
     final res = await http
-        .post(Uri.parse(_apiPrefix + '/graphql'),
+        .post(Uri.parse('$_apiPrefix/graphql'),
             headers: {
-              HttpHeaders.authorizationHeader: 'token $_token',
+              HttpHeaders.authorizationHeader: 'token $token',
               HttpHeaders.contentTypeHeader: 'application/json'
             },
             body: json.encode({'query': query}))

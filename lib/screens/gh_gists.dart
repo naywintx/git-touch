@@ -13,7 +13,7 @@ import 'package:git_touch/graphql/__generated__/github.req.gql.dart';
 
 class GhGistsScreen extends StatelessWidget {
   final String login;
-  GhGistsScreen(this.login);
+  const GhGistsScreen(this.login);
 
   @override
   Widget build(BuildContext context) {

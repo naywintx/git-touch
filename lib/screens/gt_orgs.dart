@@ -9,8 +9,8 @@ import 'package:flutter_gen/gen_l10n/S.dart';
 
 class GtOrgsScreen extends StatelessWidget {
   final String api;
-  GtOrgsScreen() : api = '/orgs';
-  GtOrgsScreen.ofUser(String login) : api = '/users/$login/orgs';
+  const GtOrgsScreen() : api = '/orgs';
+  const GtOrgsScreen.ofUser(String login) : api = '/users/$login/orgs';
 
   @override
   Widget build(BuildContext context) {

@@ -17,7 +17,7 @@ class GhObjectScreen extends StatelessWidget {
   final String ref;
   final String? path;
   final String? raw;
-  GhObjectScreen(this.owner, this.name, this.ref, {this.path, this.raw});
+  const GhObjectScreen(this.owner, this.name, this.ref, {this.path, this.raw});
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +49,7 @@ class GhObjectScreen extends StatelessWidget {
       },
       actionBuilder: (data, _) {
         if (data.isFile) {
-          return ActionEntry(
+          return const ActionEntry(
             iconData: Ionicons.cog,
             url: '/choose-code-theme',
           );

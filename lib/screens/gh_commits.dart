@@ -6,7 +6,6 @@ import 'package:git_touch/graphql/__generated__/github.var.gql.dart';
 import 'package:git_touch/graphql/__generated__/schema.schema.gql.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
-import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/app_bar_title.dart';
 import 'package:git_touch/widgets/commit_item.dart';
 import 'package:provider/provider.dart';
@@ -16,15 +15,15 @@ class GhCommits extends StatelessWidget {
   final String owner;
   final String name;
   final String? branch;
-  GhCommits(this.owner, this.name, {this.branch});
+  const GhCommits(this.owner, this.name, {this.branch});
 
   Widget _buildStatus(GStatusState? state) {
     const size = 18.0;
     switch (state) {
       case GStatusState.SUCCESS:
-        return Icon(Octicons.check, color: GithubPalette.open, size: size);
+        return const Icon(Octicons.check, color: GithubPalette.open, size: size);
       case GStatusState.FAILURE:
-        return Icon(Octicons.x, color: GithubPalette.closed, size: size);
+        return const Icon(Octicons.x, color: GithubPalette.closed, size: size);
       default:
         return Container();
     }
@@ -65,7 +64,7 @@ class GhCommits extends StatelessWidget {
           widgets: p.status == null
               ? null
               : [
-                  SizedBox(width: 4),
+                  const SizedBox(width: 4),
                   _buildStatus(p.status!.state),
                 ],
         );

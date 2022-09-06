@@ -29,13 +29,13 @@ class ObjectTreeItem extends StatelessWidget {
       case 'tree': // github gql, gitlab
       case 'dir': // github rest, gitea
       case 'commit_directory': // bitbucket
-        return Icon(
+        return const Icon(
           Octicons.file_directory,
           color: PrimerColors.blue300,
           size: 24,
         );
       case 'commit':
-        return Icon(
+        return const Icon(
           Octicons.file_submodule,
           color: PrimerColors.blue300,
           size: 24,

@@ -13,7 +13,7 @@ class FilesItem extends StatelessWidget {
   final int? deletions;
   final String? patch;
 
-  FilesItem({
+  const FilesItem({
     required this.filename,
     required this.status,
     required this.deletions,
@@ -27,7 +27,7 @@ class FilesItem extends StatelessWidget {
     final codeProvider = Provider.of<CodeModel>(context);
     return Card(
       color: theme.palette.background,
-      margin: EdgeInsets.all(0),
+      margin: const EdgeInsets.all(0),
       child: ExpansionTile(
         title: Text(
           filename!,

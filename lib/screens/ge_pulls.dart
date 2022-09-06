@@ -11,7 +11,7 @@ class GePullsScreen extends StatelessWidget {
   final String owner;
   final String name;
   final bool isPr;
-  GePullsScreen(this.owner, this.name, {this.isPr = false});
+  const GePullsScreen(this.owner, this.name, {this.isPr = false});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class GePullsScreen extends StatelessWidget {
         author: p.user!.login,
         avatarUrl: p.user!.avatarUrl,
         commentCount: 0, // fix this
-        subtitle: '#' + p.number.toString(),
+        subtitle: '#${p.number}',
         title: p.title,
         updatedAt: DateTime.parse(p.updatedAt!),
         url: '/gitee/$owner/$name/pulls/${p.number}',

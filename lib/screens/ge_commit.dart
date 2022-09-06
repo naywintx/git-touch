@@ -14,7 +14,7 @@ class GeCommitScreen extends StatelessWidget {
   final String owner;
   final String name;
   final String sha;
-  GeCommitScreen(this.owner, this.name, this.sha);
+  const GeCommitScreen(this.owner, this.name, this.sha);
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +43,7 @@ class GeCommitScreen extends StatelessWidget {
                           url: data.author!.avatarUrl,
                           size: AvatarSize.extraSmall,
                         ),
-                        SizedBox(width: 4),
+                        const SizedBox(width: 4),
                         Text(
                           '$owner / $name',
                           style: TextStyle(
@@ -51,9 +51,9 @@ class GeCommitScreen extends StatelessWidget {
                             color: theme.palette.secondaryText,
                           ),
                         ),
-                        SizedBox(width: 4),
+                        const SizedBox(width: 4),
                         Text(
-                          '${sha.substring(0, 7)}',
+                          sha.substring(0, 7),
                           style: TextStyle(
                             fontSize: 17,
                             color: theme.palette.tertiaryText,
@@ -62,10 +62,10 @@ class GeCommitScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Text(
                     data.commit!.message!,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w600,
                     ),

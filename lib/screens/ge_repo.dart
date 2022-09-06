@@ -27,7 +27,7 @@ class GeRepoScreen extends StatelessWidget {
   final String owner;
   final String name;
   final String? branch;
-  GeRepoScreen(this.owner, this.name, {this.branch});
+  const GeRepoScreen(this.owner, this.name, {this.branch});
 
   @override
   Widget build(BuildContext context) {
@@ -40,11 +40,10 @@ class GeRepoScreen extends StatelessWidget {
           return GiteeRepo.fromJson(v);
         });
 
-        final md =
-            () => auth.fetchGitee('/repos/$owner/$name/readme').then((v) {
+        md() => auth.fetchGitee('/repos/$owner/$name/readme').then((v) {
                   return (v['content'] as String?)?.base64ToUtf8 ?? '';
                 });
-        final html = () => md().then((v) async {
+        html() => md().then((v) async {
               final res = await http.post(
                 Uri.parse('${auth.activeAccount!.domain}/api/v5/markdown'),
                 headers: {'Authorization': 'token ${auth.token}'},
@@ -97,7 +96,7 @@ class GeRepoScreen extends StatelessWidget {
                         setData(t);
                       },
                     ),
-                    SizedBox(width: 8),
+                    const SizedBox(width: 8),
                     MutationButton(
                       active: t.item4.isStarred,
                       text: t.item4.isStarred ? 'Unstar' : 'Star',
@@ -136,34 +135,32 @@ class GeRepoScreen extends StatelessWidget {
               items: [
                 TableViewItem(
                   leftIconData: Octicons.code,
-                  text: Text('Code'),
+                  text: const Text('Code'),
                   rightWidget: Text(p.license ?? ''),
                   url: '/gitee/$owner/$name/tree/${branch ?? p.defaultBranch}',
                 ),
                 TableViewItem(
                   leftIconData: Octicons.issue_opened,
-                  text: Text('Issues'),
+                  text: const Text('Issues'),
                   rightWidget: Text(numberFormat.format(p.openIssuesCount)),
                   url: '/gitee/$owner/$name/issues',
                 ),
                 if (p.pullRequestsEnabled!)
                   TableViewItem(
                     leftIconData: Octicons.git_pull_request,
-                    text: Text('Pull requests'),
+                    text: const Text('Pull requests'),
                     url: '/gitee/$owner/$name/pulls',
                   ),
                 TableViewItem(
                   leftIconData: Octicons.history,
-                  text: Text('Commits'),
+                  text: const Text('Commits'),
                   url:
                       '/gitee/$owner/$name/commits?branch=${branch ?? p.defaultBranch}',
                 ),
                 TableViewItem(
                   leftIconData: Octicons.git_branch,
                   text: Text(AppLocalizations.of(context)!.branches),
-                  rightWidget: Text((branch ?? p.defaultBranch)! +
-                      ' • ' +
-                      branches.length.toString()),
+                  rightWidget: Text('${(branch ?? p.defaultBranch)!} • ${branches.length}'),
                   onTap: () async {
                     if (branches.length < 2) return;
 
@@ -187,7 +184,7 @@ class GeRepoScreen extends StatelessWidget {
                 ),
                 TableViewItem(
                     leftIconData: Octicons.organization,
-                    text: Text('Contributors'),
+                    text: const Text('Contributors'),
                     url: '/gitee/$owner/$name/contributors'),
               ],
             ),

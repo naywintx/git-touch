@@ -15,7 +15,7 @@ import 'package:flutter_gen/gen_l10n/S.dart';
 class GhGistsFilesScreen extends StatelessWidget {
   final String id;
   final String login;
-  GhGistsFilesScreen(this.login, this.id);
+  const GhGistsFilesScreen(this.login, this.id);
 
   @override
   Widget build(BuildContext context) {

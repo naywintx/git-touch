@@ -15,7 +15,7 @@ class GtObjectScreen extends StatelessWidget {
   final String owner;
   final String name;
   final String? path;
-  GtObjectScreen(this.owner, this.name, {this.path});
+  const GtObjectScreen(this.owner, this.name, {this.path});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class GtObjectScreen extends StatelessWidget {
         if (p is List) {
           return null;
         } else {
-          return ActionEntry(
+          return const ActionEntry(
             iconData: Ionicons.cog,
             url: '/choose-code-theme',
           );

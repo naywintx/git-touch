@@ -13,8 +13,9 @@ class GeFilesScreen extends StatelessWidget {
   final String owner;
   final String name;
   final String pullNumber;
-  GeFilesScreen(this.owner, this.name, this.pullNumber);
+  const GeFilesScreen(this.owner, this.name, this.pullNumber);
 
+  @override
   Widget build(BuildContext context) {
     return ListStatefulScaffold<GiteePullFile, int>(
       title: AppBarTitle(AppLocalizations.of(context)!.files),

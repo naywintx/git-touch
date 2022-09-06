@@ -23,7 +23,7 @@ class UserHeader extends StatelessWidget {
     List<Widget>? rightWidgets,
   }) : rightWidgets = [
           if (isViewer)
-            MutationButton(
+            const MutationButton(
               active: false,
               text: 'Switch accounts',
               url: '/login',
@@ -49,7 +49,7 @@ class UserHeader extends StatelessWidget {
               ]
             ],
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           if (name != null && name!.isNotEmpty) ...[
             Text(
               name!,
@@ -59,7 +59,7 @@ class UserHeader extends StatelessWidget {
                 fontWeight: FontWeight.w600,
               ),
             ),
-            SizedBox(height: 4),
+            const SizedBox(height: 4),
           ],
           Text(
             login!,
@@ -68,7 +68,7 @@ class UserHeader extends StatelessWidget {
               fontSize: 18,
             ),
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           if (createdAt != null)
             Row(
               children: <Widget>[
@@ -77,7 +77,7 @@ class UserHeader extends StatelessWidget {
                   size: 16,
                   color: theme.palette.tertiaryText,
                 ),
-                SizedBox(width: 4),
+                const SizedBox(width: 4),
                 Text(
                   'Joined on ${dateFormat.format(createdAt!)}',
                   style: TextStyle(
@@ -88,7 +88,7 @@ class UserHeader extends StatelessWidget {
               ],
             ),
           if (bio != null && bio!.isNotEmpty) ...[
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               bio!,
               style: TextStyle(

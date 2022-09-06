@@ -13,8 +13,9 @@ class GhFilesScreen extends StatelessWidget {
   final String owner;
   final String name;
   final int pullNumber;
-  GhFilesScreen(this.owner, this.name, this.pullNumber);
+  const GhFilesScreen(this.owner, this.name, this.pullNumber);
 
+  @override
   Widget build(BuildContext context) {
     return ListStatefulScaffold<GithubFilesItem, int>(
       title: AppBarTitle(AppLocalizations.of(context)!.files),

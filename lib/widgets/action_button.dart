@@ -46,7 +46,7 @@ class ActionButton extends StatelessWidget {
   final IconData iconData;
   final int? selected;
 
-  ActionButton({
+  const ActionButton({
     required this.title,
     required this.items,
     this.iconData = Ionicons.ellipsis_horizontal,
@@ -60,7 +60,6 @@ class ActionButton extends StatelessWidget {
       case AppThemeType.cupertino:
         return CupertinoButton(
           minSize: 0,
-          child: Icon(iconData, size: 22),
           padding: EdgeInsets.zero,
           onPressed: () async {
             var value = await showCupertinoModalPopup<int>(
@@ -73,7 +72,7 @@ class ActionButton extends StatelessWidget {
                       child: Row(
                         children: [
                           Icon(entry.value.iconData),
-                          SizedBox(width: 10),
+                          const SizedBox(width: 10),
                           Text(
                             entry.value.text!,
                             style: TextStyle(
@@ -89,11 +88,11 @@ class ActionButton extends StatelessWidget {
                     );
                   }).toList(),
                   cancelButton: CupertinoActionSheetAction(
-                    child: const Text('Cancel'),
                     isDefaultAction: true,
                     onPressed: () {
                       Navigator.pop(context);
                     },
+                    child: const Text('Cancel'),
                   ),
                 );
               },
@@ -101,10 +100,12 @@ class ActionButton extends StatelessWidget {
 
             if (value != null) {
               if (items[value].onTap != null) items[value].onTap!(context);
-              if (items[value].url != null)
+              if (items[value].url != null) {
                 theme.push(context, items[value].url!);
+              }
             }
           },
+          child: Icon(iconData, size: 22),
         );
       default:
         return PopupMenuButton(
@@ -117,7 +118,7 @@ class ActionButton extends StatelessWidget {
                 child: Row(
                   children: [
                     Icon(entry.value.iconData),
-                    SizedBox(width: 10),
+                    const SizedBox(width: 10),
                     Text(entry.value.text!)
                   ],
                 ),

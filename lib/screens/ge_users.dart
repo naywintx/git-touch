@@ -10,19 +10,19 @@ class GeUsersScreen extends StatelessWidget {
   final String api;
   final String title;
 
-  GeUsersScreen.followers(String login)
+  const GeUsersScreen.followers(String login)
       : api = '/users/$login/followers',
         title = 'Followers';
-  GeUsersScreen.following(String login)
+  const GeUsersScreen.following(String login)
       : api = '/users/$login/following',
         title = "Following";
   // GeUsersScreen.member(String login)
   //     : api = '/orgs/$login/members',
   //       title = "Members";
-  GeUsersScreen.stargazers(String owner, String repo)
+  const GeUsersScreen.stargazers(String owner, String repo)
       : api = '/repos/$owner/$repo/stargazers',
         title = 'Stargazers';
-  GeUsersScreen.watchers(String owner, String repo)
+  const GeUsersScreen.watchers(String owner, String repo)
       : api = '/repos/$owner/$repo/subscribers',
         title = 'Watchers';
 

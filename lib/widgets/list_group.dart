@@ -9,7 +9,7 @@ class ListGroup<T> extends StatelessWidget {
   final Widget Function(T item, int index) itemBuilder;
   final EdgeInsetsGeometry padding;
 
-  ListGroup({
+  const ListGroup({
     required this.title,
     required this.items,
     required this.itemBuilder,
@@ -34,12 +34,12 @@ class ListGroup<T> extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           border: Border.all(color: theme.palette.border),
-          borderRadius: BorderRadius.all(Radius.circular(3)),
+          borderRadius: const BorderRadius.all(Radius.circular(3)),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Container(padding: EdgeInsets.all(8), child: title),
+            Container(padding: const EdgeInsets.all(8), child: title),
             items.isEmpty
                 ? EmptyWidget()
                 : Column(

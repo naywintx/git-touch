@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:git_touch/models/theme.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:provider/provider.dart';
@@ -18,7 +17,7 @@ class LanguageBarItem {
 
 class LanguageBar extends StatelessWidget {
   final List<LanguageBarItem> items;
-  LanguageBar(this.items);
+  const LanguageBar(this.items);
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +42,7 @@ class LanguageBar extends StatelessWidget {
             height: 10,
             child: Row(
               children: join(
-                SizedBox(width: 1),
+                const SizedBox(width: 1),
                 items
                     .map((lang) => Container(
                         color: convertColor(lang.hexColor),
@@ -78,7 +77,7 @@ class LanguageBar extends StatelessWidget {
                       shape: BoxShape.circle,
                     ),
                   ),
-                  SizedBox(width: 8),
+                  const SizedBox(width: 8),
                   Text(
                     edge.name!,
                     style: TextStyle(

@@ -11,7 +11,7 @@ class ContributorItem extends StatelessWidget {
   final int? commits;
   final String url;
 
-  ContributorItem({
+  const ContributorItem({
     required this.login,
     required this.avatarUrl,
     required this.commits,
@@ -28,7 +28,7 @@ class ContributorItem extends StatelessWidget {
         child: Row(
           children: <Widget>[
             Avatar(url: avatarUrl, size: AvatarSize.large),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -46,14 +46,14 @@ class ContributorItem extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 6),
+                  const SizedBox(height: 6),
                   if (commits != null)
                     DefaultTextStyle(
                       style: TextStyle(
                         color: theme.palette.secondaryText,
                         fontSize: 16,
                       ),
-                      child: Text("Commits: " + commits.toString()),
+                      child: Text("Commits: $commits"),
                     ),
                 ],
               ),

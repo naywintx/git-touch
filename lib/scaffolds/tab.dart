@@ -14,7 +14,7 @@ class TabScaffold extends StatelessWidget {
   final int activeTab;
   final Function(int index) onTabSwitch;
 
-  TabScaffold({
+  const TabScaffold({
     required this.title,
     required this.body,
     this.action,

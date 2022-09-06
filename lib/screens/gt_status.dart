@@ -21,7 +21,7 @@ class GtStatusScreen extends StatelessWidget {
           auth.fetchGitea('/settings/repository'),
           auth.fetchGitea('/settings/ui'),
         ]);
-        return JsonEncoder.withIndent('  ').convert({
+        return const JsonEncoder.withIndent('  ').convert({
           ...res[0],
           'attachment': res[1],
           'api': res[2],

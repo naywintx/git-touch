@@ -29,7 +29,7 @@ class GhBioWidget extends StatelessWidget {
             size: 15,
             color: theme.palette.secondaryText,
           ),
-          SizedBox(width: 4),
+          const SizedBox(width: 4),
           Expanded(child: Text(p.company!, overflow: TextOverflow.ellipsis)),
         ],
       );
@@ -42,7 +42,7 @@ class GhBioWidget extends StatelessWidget {
             size: 15,
             color: theme.palette.secondaryText,
           ),
-          SizedBox(width: 4),
+          const SizedBox(width: 4),
           Expanded(child: Text(p.location!, overflow: TextOverflow.ellipsis)),
         ],
       );
@@ -54,7 +54,7 @@ class GhBioWidget extends StatelessWidget {
           size: 15,
           color: theme.palette.secondaryText,
         ),
-        SizedBox(width: 4),
+        const SizedBox(width: 4),
         Expanded(
             child: Text('Joined on ${dateFormat.format(p.createdAt)}',
                 overflow: TextOverflow.ellipsis)),
@@ -70,7 +70,7 @@ class UserItem extends StatelessWidget {
   final Widget? bio;
   final String url;
 
-  UserItem.github({
+  const UserItem.github({
     required this.login,
     required this.name,
     required this.avatarUrl,
@@ -81,10 +81,10 @@ class UserItem extends StatelessWidget {
       : login = p.login,
         name = p.name,
         avatarUrl = p.avatarUrl,
-        url = '/github/' + p.login,
+        url = '/github/${p.login}',
         bio = GhBioWidget(p);
 
-  UserItem.gitlab({
+  const UserItem.gitlab({
     required this.login,
     required this.name,
     required this.avatarUrl,
@@ -92,7 +92,7 @@ class UserItem extends StatelessWidget {
     required int? id,
   }) : url = '/gitlab/user/$id';
 
-  UserItem.gitlabGroup({
+  const UserItem.gitlabGroup({
     required this.login,
     required this.name,
     required this.avatarUrl,
@@ -100,28 +100,28 @@ class UserItem extends StatelessWidget {
     required int? id,
   }) : url = '/gitlab/group/$id';
 
-  UserItem.gitea({
+  const UserItem.gitea({
     required this.login,
     required this.name,
     required this.avatarUrl,
     required this.bio,
   }) : url = '/gitea/$login';
 
-  UserItem.gitee({
+  const UserItem.gitee({
     required this.login,
     required this.name,
     required this.avatarUrl,
     required this.bio,
   }) : url = '/gitee/$login';
 
-  UserItem.bitbucket({
+  const UserItem.bitbucket({
     required this.login,
     required this.name,
     required this.avatarUrl,
     required this.bio,
   }) : url = '/bitbucket/$login?team=1';
 
-  UserItem.gogs({
+  const UserItem.gogs({
     required this.login,
     required this.name,
     required this.avatarUrl,
@@ -139,7 +139,7 @@ class UserItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Avatar(url: avatarUrl, size: AvatarSize.large),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -158,7 +158,7 @@ class UserItem extends StatelessWidget {
                             fontWeight: FontWeight.w500,
                           ),
                         ),
-                        SizedBox(width: 8),
+                        const SizedBox(width: 8),
                       ],
                       Expanded(
                         child: Text(
@@ -172,7 +172,7 @@ class UserItem extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 6),
+                  const SizedBox(height: 6),
                   if (bio != null)
                     DefaultTextStyle(
                       style: TextStyle(

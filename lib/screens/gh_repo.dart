@@ -29,7 +29,7 @@ class GhRepoScreen extends StatelessWidget {
   final String owner;
   final String name;
   final String? branch;
-  GhRepoScreen(this.owner, this.name, {this.branch});
+  const GhRepoScreen(this.owner, this.name, {this.branch});
 
   String _buildWatchState(GSubscriptionState? state) {
     switch (state) {
@@ -65,7 +65,7 @@ class GhRepoScreen extends StatelessWidget {
             .getJSON('/repos/$owner/$name/stats/contributors')
             .then((v) => (v as List).length);
 
-        final readmeFactory = (String acceptHeader) {
+        readmeFactory(String acceptHeader) {
           return () {
             return ghClient.request(
               'GET',
@@ -78,7 +78,7 @@ class GhRepoScreen extends StatelessWidget {
               return '';
             });
           };
-        };
+        }
         final readmeData = MarkdownViewData(
           context,
           md: readmeFactory('application/vnd.github.v3.raw'),
@@ -93,8 +93,7 @@ class GhRepoScreen extends StatelessWidget {
           title: AppLocalizations.of(context)!.repositoryActions,
           items: [
             ActionItem(
-              text: AppLocalizations.of(context)!.projects +
-                  '(${repo.projects.totalCount})',
+              text: '${AppLocalizations.of(context)!.projects}(${repo.projects.totalCount})',
               url: repo.projectsUrl,
             ),
             ...ActionItem.getUrlActions(repo.url),
@@ -165,7 +164,7 @@ class GhRepoScreen extends StatelessWidget {
                         ]);
                       },
                     ),
-                    SizedBox(width: 8),
+                    const SizedBox(width: 8),
                     MutationButton(
                       active: repo.viewerHasStarred,
                       text: repo.viewerHasStarred ? 'Unstar' : 'Star',
@@ -275,9 +274,7 @@ class GhRepoScreen extends StatelessWidget {
                     TableViewItem(
                       leftIconData: Octicons.git_branch,
                       text: Text(AppLocalizations.of(context)!.branches),
-                      rightWidget: Text(ref.name +
-                          ' • ' +
-                          numberFormat.format(repo.refs!.totalCount)),
+                      rightWidget: Text('${ref.name} • ${numberFormat.format(repo.refs!.totalCount)}'),
                       onTap: () async {
                         final refs = repo.refs!.nodes!;
                         if (refs.length < 2) return;

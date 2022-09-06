@@ -5,7 +5,6 @@ import 'package:git_touch/graphql/__generated__/github.req.gql.dart';
 import 'package:git_touch/graphql/__generated__/github.var.gql.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
-import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/action_entry.dart';
 import 'package:git_touch/widgets/app_bar_title.dart';
 import 'package:git_touch/widgets/issue_item.dart';
@@ -16,7 +15,7 @@ import 'package:flutter_gen/gen_l10n/S.dart';
 class GhIssuesScreen extends StatelessWidget {
   final String owner;
   final String name;
-  GhIssuesScreen(this.owner, this.name);
+  const GhIssuesScreen(this.owner, this.name);
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +45,7 @@ class GhIssuesScreen extends StatelessWidget {
           author: p.author?.login,
           avatarUrl: p.author?.avatarUrl,
           commentCount: p.comments.totalCount,
-          subtitle: '#' + p.number.toString(),
+          subtitle: '#${p.number}',
           title: p.title,
           updatedAt: p.updatedAt,
           labels: p.labels!.nodes!.isEmpty

@@ -14,7 +14,7 @@ import 'package:flutter_gen/gen_l10n/S.dart';
 class GhPullsScreen extends StatelessWidget {
   final String owner;
   final String name;
-  GhPullsScreen(this.owner, this.name);
+  const GhPullsScreen(this.owner, this.name);
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class GhPullsScreen extends StatelessWidget {
         author: p.author?.login,
         avatarUrl: p.author?.avatarUrl,
         commentCount: p.comments.totalCount,
-        subtitle: '#' + p.number.toString(),
+        subtitle: '#${p.number}',
         title: p.title,
         updatedAt: p.updatedAt,
         labels: p.labels!.nodes!.isEmpty

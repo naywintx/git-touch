@@ -7,7 +7,7 @@ class UserName extends StatelessWidget {
   final String? login;
   final String prefix;
 
-  UserName(this.login, this.prefix);
+  const UserName(this.login, this.prefix);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class UserName extends StatelessWidget {
       url: '/$prefix/$login',
       child: Container(
         // padding: EdgeInsets.all(2),
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(4)),
         ),
         child: Text(

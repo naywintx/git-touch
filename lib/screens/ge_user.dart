@@ -17,7 +17,7 @@ import 'package:timeago/timeago.dart' as timeago;
 class GeUserScreen extends StatelessWidget {
   final String login;
   final bool isViewer;
-  GeUserScreen(this.login, {this.isViewer = false});
+  const GeUserScreen(this.login, {this.isViewer = false});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class GeUserScreen extends StatelessWidget {
       },
       title: AppBarTitle(isViewer ? 'Me' : login),
       action: isViewer
-          ? ActionEntry(
+          ? const ActionEntry(
               iconData: Ionicons.cog,
               url: '/settings',
             )

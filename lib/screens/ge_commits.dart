@@ -11,7 +11,7 @@ class GeCommitsScreen extends StatelessWidget {
   final String owner;
   final String name;
   final String? branch;
-  GeCommitsScreen(this.owner, this.name, {this.branch});
+  const GeCommitsScreen(this.owner, this.name, {this.branch});
 
   @override
   Widget build(BuildContext context) {

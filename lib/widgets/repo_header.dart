@@ -15,7 +15,7 @@ class RepoHeader extends StatelessWidget {
   final List<Widget>? actions;
   final List<Widget>? trailings;
 
-  RepoHeader({
+  const RepoHeader({
     required this.avatarUrl,
     required this.avatarLink,
     required this.owner,
@@ -33,7 +33,7 @@ class RepoHeader extends StatelessWidget {
       padding: CommonStyle.padding,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: join(SizedBox(height: 12), [
+        children: join(const SizedBox(height: 12), [
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -42,7 +42,7 @@ class RepoHeader extends StatelessWidget {
                 size: AvatarSize.small,
                 linkUrl: avatarLink,
               ),
-              SizedBox(width: 8),
+              const SizedBox(width: 8),
               Expanded(
                 child: Text(
                   '$owner / $name',

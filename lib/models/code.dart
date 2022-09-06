@@ -1,5 +1,4 @@
 import 'package:fimber/fimber.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/theme_map.dart';
 import 'package:git_touch/utils/utils.dart';

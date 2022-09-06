@@ -7,7 +7,7 @@ class ActionEntry extends StatelessWidget {
   final IconData? iconData;
   final String? url;
   final VoidCallback? onTap;
-  ActionEntry({this.url, this.iconData, this.onTap});
+  const ActionEntry({this.url, this.iconData, this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -16,12 +16,12 @@ class ActionEntry extends StatelessWidget {
       case AppThemeType.cupertino:
         return CupertinoButton(
           minSize: 0,
-          child: Icon(iconData, size: 22),
           padding: EdgeInsets.zero,
           onPressed: () {
             if (onTap != null) onTap!();
             if (url != null) theme.push(context, url!);
           },
+          child: Icon(iconData, size: 22),
         );
       default:
         return IconButton(

@@ -14,7 +14,7 @@ class GeBlobScreen extends StatelessWidget {
   final String name;
   final String sha;
   final String path;
-  GeBlobScreen(this.owner, this.name, this.sha, this.path);
+  const GeBlobScreen(this.owner, this.name, this.sha, this.path);
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class GeBlobScreen extends StatelessWidget {
         final res = await auth.fetchGitee('/repos/$owner/$name/git/blobs/$sha');
         return GiteeBlob.fromJson(res).content;
       },
-      action: ActionEntry(iconData: Ionicons.cog, url: '/choose-code-theme'),
+      action: const ActionEntry(iconData: Ionicons.cog, url: '/choose-code-theme'),
       bodyBuilder: (content, _) {
         return BlobView(path, base64Text: content);
       },

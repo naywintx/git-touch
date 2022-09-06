@@ -7,7 +7,7 @@ class TextWithAt extends StatelessWidget {
   final TextStyle? style;
   final bool oneLine;
 
-  TextWithAt({
+  const TextWithAt({
     required this.text,
     required this.linkFactory,
     this.style,

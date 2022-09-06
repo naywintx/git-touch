@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:git_touch/graphql/__generated__/github.data.gql.dart';
 import 'package:git_touch/graphql/__generated__/schema.schema.gql.dart';
@@ -125,7 +124,7 @@ mutation {
                 _onReaction(item);
               },
               child: Container(
-                padding: EdgeInsets.all(4),
+                padding: const EdgeInsets.all(4),
                 decoration: BoxDecoration(
                   color: item.reacted
                       ? (theme.brightness == Brightness.dark
@@ -136,8 +135,8 @@ mutation {
                 child: Wrap(
                   crossAxisAlignment: WrapCrossAlignment.center,
                   children: <Widget>[
-                    Text(item.text, style: TextStyle(fontSize: 18)),
-                    SizedBox(width: 4),
+                    Text(item.text, style: const TextStyle(fontSize: 18)),
+                    const SizedBox(width: 4),
                     Text(numberFormat.format(item.count),
                         style: TextStyle(
                             color: theme.palette.primary, fontSize: 14))
@@ -158,7 +157,7 @@ mutation {
             ]);
           },
           child: Container(
-            padding: EdgeInsets.all(4),
+            padding: const EdgeInsets.all(4),
             child: Wrap(
               crossAxisAlignment: WrapCrossAlignment.center,
               children: <Widget>[
@@ -188,7 +187,7 @@ class CommentItem extends StatelessWidget {
       : avatar = Avatar(
           url: p.author?.avatarUrl ??
               'https://avatars.githubusercontent.com/u/10137?s=460&u=b1951d34a583cf12ec0d3b0781ba19be97726318&v=4',
-          linkUrl: '/github/' + (p.author?.login ?? 'ghost'),
+          linkUrl: '/github/${p.author?.login ?? 'ghost'}',
         ),
         login = p.author?.login ?? 'ghost',
         createdAt = p.createdAt,
@@ -197,7 +196,7 @@ class CommentItem extends StatelessWidget {
         prefix = 'github',
         commentActionItemList = []; // TODO
 
-  CommentItem({
+  const CommentItem({
     required this.avatar,
     required this.login,
     required this.createdAt,
@@ -215,13 +214,13 @@ class CommentItem extends StatelessWidget {
       children: <Widget>[
         Row(children: <Widget>[
           avatar,
-          SizedBox(width: 8),
+          const SizedBox(width: 8),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 UserName(login, prefix),
-                SizedBox(height: 2),
+                const SizedBox(height: 2),
                 Text(
                   timeago.format(createdAt!),
                   style: TextStyle(
@@ -240,9 +239,9 @@ class CommentItem extends StatelessWidget {
                 ],
               )),
         ]),
-        SizedBox(height: 12),
+        const SizedBox(height: 12),
         MarkdownFlutterView(body, padding: EdgeInsets.zero), // TODO: link
-        SizedBox(height: 12),
+        const SizedBox(height: 12),
         if (widgets != null) ...widgets!
       ],
     );

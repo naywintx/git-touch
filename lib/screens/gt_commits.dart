@@ -11,7 +11,7 @@ class GtCommitsScreen extends StatelessWidget {
   final String owner;
   final String name;
   // final String branch; // TODO:
-  GtCommitsScreen(this.owner, this.name);
+  const GtCommitsScreen(this.owner, this.name);
 
   @override
   Widget build(BuildContext context) {

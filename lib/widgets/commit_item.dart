@@ -14,7 +14,7 @@ class CommitItem extends StatelessWidget {
   final String? author;
   final DateTime? createdAt;
   final List<Widget>? widgets;
-  CommitItem({
+  const CommitItem({
     required this.url,
     required this.avatarUrl,
     required this.avatarLink,
@@ -35,7 +35,7 @@ class CommitItem extends StatelessWidget {
           children: <Widget>[
             if (avatarUrl != null) ...[
               Avatar(url: avatarUrl, linkUrl: avatarLink),
-              SizedBox(width: 10),
+              const SizedBox(width: 10),
             ],
             Expanded(
               child: Column(
@@ -50,7 +50,7 @@ class CommitItem extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,
                   ),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Row(
                     children: <Widget>[
                       Text(author!,

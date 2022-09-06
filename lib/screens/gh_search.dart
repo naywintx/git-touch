@@ -21,7 +21,7 @@ class GhSearchScreen extends StatefulWidget {
 class _GhSearchScreenState extends State<GhSearchScreen> {
   int? _activeTab = 0;
   bool _loading = false;
-  List<List?> _payloads = [[], [], []];
+  final List<List?> _payloads = [[], [], []];
 
   TextEditingController? _controller;
 
@@ -121,7 +121,7 @@ class _GhSearchScreenState extends State<GhSearchScreen> {
           color: theme.palette.background,
           child: CupertinoTextField(
             prefix: Row(
-              children: <Widget>[
+              children: const <Widget>[
                 SizedBox(width: 8),
                 Icon(Octicons.search, size: 20, color: PrimerColors.gray400),
               ],
@@ -199,10 +199,10 @@ class _GhSearchScreenState extends State<GhSearchScreen> {
           author: p['author']['login'],
           avatarUrl: p['author']['avatarUrl'],
           commentCount: p['comments']['totalCount'],
-          subtitle: '#' + p['number'].toString(),
+          subtitle: '#${p['number']}',
           title: p['title'],
           updatedAt: DateTime.parse(p['updatedAt']),
-          url: '/github' + Uri.parse(p['url']).path,
+          url: '/github${Uri.parse(p['url']).path}',
           isPr: p['__typename'] == 'PullRequest',
         );
     }
@@ -220,7 +220,7 @@ class _GhSearchScreenState extends State<GhSearchScreen> {
             if (theme == AppThemeType.cupertino)
               Center(
                 child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 8),
+                  padding: const EdgeInsets.symmetric(vertical: 8),
                   child: CupertinoSlidingSegmentedControl(
                     groupValue: _activeTab,
                     onValueChanged: _onTabSwitch,
@@ -228,13 +228,13 @@ class _GhSearchScreenState extends State<GhSearchScreen> {
                         key,
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8),
-                          child: Text(text, style: TextStyle(fontSize: 14)),
+                          child: Text(text, style: const TextStyle(fontSize: 14)),
                         ))),
                   ),
                 ),
               ),
             if (_loading)
-              Loading()
+              const Loading()
             else
               ..._payloads[_activeTab!]!.map(_buildItem).toList(),
           ],

@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/theme.dart';
 import 'package:git_touch/scaffolds/common.dart';
@@ -11,7 +10,7 @@ class BbIssueCommentScreen extends StatefulWidget {
   final String owner;
   final String name;
   final String number;
-  BbIssueCommentScreen(this.owner, this.name, this.number);
+  const BbIssueCommentScreen(this.owner, this.name, this.number);
 
   @override
   _BbIssueCommentScreenState createState() => _BbIssueCommentScreenState();
@@ -25,7 +24,7 @@ class _BbIssueCommentScreenState extends State<BbIssueCommentScreen> {
     final theme = Provider.of<ThemeModel>(context);
     final auth = Provider.of<AuthModel>(context);
     return CommonScaffold(
-      title: Text('New Comment'),
+      title: const Text('New Comment'),
       body: Column(
         children: <Widget>[
           Padding(
@@ -42,7 +41,7 @@ class _BbIssueCommentScreenState extends State<BbIssueCommentScreen> {
             ),
           ),
           CupertinoButton.filled(
-            child: Text('Comment'),
+            child: const Text('Comment'),
             onPressed: () async {
               await auth.fetchBb(
                 '/repositories/${widget.owner}/${widget.name}/issues/${widget.number}/comments',

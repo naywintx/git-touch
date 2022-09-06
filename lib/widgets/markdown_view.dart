@@ -21,7 +21,7 @@ class MarkdownViewData {
 
 class MarkdownView extends StatelessWidget {
   final MarkdownViewData? data;
-  MarkdownView(this.data);
+  const MarkdownView(this.data);
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +58,7 @@ class MarkdownView extends StatelessWidget {
 // TODO: Safari table width
 class MarkdownWebView extends StatelessWidget {
   final String? html;
-  MarkdownWebView(this.html);
+  const MarkdownWebView(this.html);
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +86,7 @@ class MarkdownFlutterView extends StatelessWidget {
   final List<String>? basePaths;
   final EdgeInsetsGeometry padding;
 
-  MarkdownFlutterView(
+  const MarkdownFlutterView(
     this.text, {
     this.basePaths,
     this.padding = const EdgeInsets.all(12),
@@ -101,10 +101,10 @@ class MarkdownFlutterView extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Provider.of<ThemeModel>(context);
     final code = Provider.of<CodeModel>(context);
-    final _basicStyle =
+    final basicStyle =
         TextStyle(fontSize: 16, color: theme.palette.text, height: 1.5);
-    final _hStyle =
-        _basicStyle.copyWith(fontWeight: FontWeight.w600, height: 1.25);
+    final hStyle =
+        basicStyle.copyWith(fontWeight: FontWeight.w600, height: 1.25);
 
     return Container(
       padding: padding,
@@ -158,42 +158,42 @@ class MarkdownFlutterView extends StatelessWidget {
           launchStringUrl(url);
         },
         styleSheet: MarkdownStyleSheet(
-          a: _basicStyle.copyWith(color: theme.palette.primary),
-          p: _basicStyle,
-          code: _basicStyle.copyWith(
+          a: basicStyle.copyWith(color: theme.palette.primary),
+          p: basicStyle,
+          code: basicStyle.copyWith(
             backgroundColor: theme.palette.grayBackground,
             fontSize: 16 * 0.85,
             height: 1.45,
             fontFamily: code.fontStyle.fontFamily,
           ),
-          h1: _hStyle.copyWith(fontSize: 32),
-          h2: _hStyle.copyWith(fontSize: 24),
-          h3: _hStyle.copyWith(fontSize: 20),
-          h4: _hStyle,
-          h5: _hStyle.copyWith(fontSize: 14),
-          h6: _hStyle.copyWith(
+          h1: hStyle.copyWith(fontSize: 32),
+          h2: hStyle.copyWith(fontSize: 24),
+          h3: hStyle.copyWith(fontSize: 20),
+          h4: hStyle,
+          h5: hStyle.copyWith(fontSize: 14),
+          h6: hStyle.copyWith(
               fontSize: 16 * 0.85, color: theme.palette.tertiaryText),
-          em: _basicStyle.copyWith(fontStyle: FontStyle.italic),
-          strong: _basicStyle.copyWith(fontWeight: FontWeight.w600),
+          em: basicStyle.copyWith(fontStyle: FontStyle.italic),
+          strong: basicStyle.copyWith(fontWeight: FontWeight.w600),
           del: const TextStyle(decoration: TextDecoration.lineThrough),
-          blockquote: _basicStyle.copyWith(color: theme.palette.tertiaryText),
-          img: _basicStyle,
-          checkbox: _basicStyle,
+          blockquote: basicStyle.copyWith(color: theme.palette.tertiaryText),
+          img: basicStyle,
+          checkbox: basicStyle,
           blockSpacing: 16,
           listIndent: 32,
-          listBullet: _basicStyle,
+          listBullet: basicStyle,
           // tableHead: _basicStyle,
-          tableBody: _basicStyle,
+          tableBody: basicStyle,
           // tableHeadAlign: TextAlign.center,
           // tableBorder: TableBorder.all(color: Colors.grey.shade300, width: 0),
           // tableColumnWidth: const FlexColumnWidth(),
           // tableCellsPadding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
-          blockquotePadding: EdgeInsets.symmetric(horizontal: 16),
-          blockquoteDecoration: BoxDecoration(
+          blockquotePadding: const EdgeInsets.symmetric(horizontal: 16),
+          blockquoteDecoration: const BoxDecoration(
             border:
                 Border(left: BorderSide(color: Color(0xffdfe2e5), width: 4)),
           ),
-          codeblockPadding: EdgeInsets.all(16),
+          codeblockPadding: const EdgeInsets.all(16),
           codeblockDecoration: BoxDecoration(
             color: theme.palette.grayBackground,
             borderRadius: BorderRadius.circular(3),

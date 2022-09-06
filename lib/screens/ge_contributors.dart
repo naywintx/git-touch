@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:git_touch/models/gitee.dart';
 import 'package:git_touch/models/theme.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
-import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/app_bar_title.dart';
 import 'package:provider/provider.dart';
 import 'package:git_touch/models/auth.dart';
@@ -12,8 +11,9 @@ import 'package:flutter_gen/gen_l10n/S.dart';
 class GeContributorsScreen extends StatelessWidget {
   final String owner;
   final String name;
-  GeContributorsScreen(this.owner, this.name);
+  const GeContributorsScreen(this.owner, this.name);
 
+  @override
   Widget build(BuildContext context) {
     return ListStatefulScaffold<GiteeContributor, int>(
       title: AppBarTitle(AppLocalizations.of(context)!.contributors),
@@ -40,7 +40,7 @@ class GeContributorsScreen extends StatelessWidget {
           padding: CommonStyle.padding,
           child: Row(
             children: <Widget>[
-              SizedBox(width: 10),
+              const SizedBox(width: 10),
               Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -58,7 +58,7 @@ class GeContributorsScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(height: 6),
+                    const SizedBox(height: 6),
                     if (v.contributions != null)
                       DefaultTextStyle(
                         style: TextStyle(
@@ -66,7 +66,7 @@ class GeContributorsScreen extends StatelessWidget {
                           fontSize: 16,
                         ),
                         child: Text(
-                            "Contributions: " + v.contributions.toString()),
+                            "Contributions: ${v.contributions}"),
                       ),
                   ],
                 ),

@@ -11,7 +11,7 @@ class GlCommitsScreen extends StatelessWidget {
   final String id;
   final String? prefix;
   final String? branch;
-  GlCommitsScreen(this.id, {this.prefix, this.branch});
+  const GlCommitsScreen(this.id, {this.prefix, this.branch});
 
   @override
   Widget build(BuildContext context) {

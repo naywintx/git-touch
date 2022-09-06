@@ -5,13 +5,12 @@ import 'package:git_touch/scaffolds/list_stateful.dart';
 import 'package:git_touch/widgets/app_bar_title.dart';
 import 'package:git_touch/widgets/issue_item.dart';
 import 'package:provider/provider.dart';
-import 'package:git_touch/utils/utils.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
 
 class BbPullsScreen extends StatelessWidget {
   final String owner;
   final String name;
-  BbPullsScreen(this.owner, this.name);
+  const BbPullsScreen(this.owner, this.name);
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +35,7 @@ class BbPullsScreen extends StatelessWidget {
           avatarUrl: v.author!.avatarUrl,
           author: v.author!.displayName,
           title: v.title,
-          subtitle: '#' + pullNumber.toString(),
+          subtitle: '#$pullNumber',
           commentCount: 0,
           updatedAt: v.createdOn,
           url:

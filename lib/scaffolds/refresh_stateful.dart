@@ -12,7 +12,7 @@ class RefreshStatefulScaffold<T> extends StatefulWidget {
   final Widget? action;
   final canRefresh;
 
-  RefreshStatefulScaffold({
+  const RefreshStatefulScaffold({
     required this.title,
     required this.bodyBuilder,
     required this.fetch,
@@ -48,7 +48,7 @@ class _RefreshStatefulScaffoldState<T>
       _data = await widget.fetch();
     } catch (err) {
       _error = err.toString();
-      throw err;
+      rethrow;
     } finally {
       if (mounted) {
         setState(() {
@@ -61,7 +61,7 @@ class _RefreshStatefulScaffoldState<T>
   Widget? get _action {
     if (widget.action != null) return widget.action;
     if (widget.actionBuilder == null || _data == null) return null;
-    return widget.actionBuilder!(_data!, (v) {
+    return widget.actionBuilder!(_data as T, (v) {
       setState(() {
         _data = v;
       });
@@ -71,7 +71,7 @@ class _RefreshStatefulScaffoldState<T>
   @override
   Widget build(BuildContext context) {
     Widget child = ErrorLoadingWrapper(
-      bodyBuilder: () => widget.bodyBuilder(_data!, (v) {
+      bodyBuilder: () => widget.bodyBuilder(_data as T, (v) {
         setState(() {
           _data = v;
         });

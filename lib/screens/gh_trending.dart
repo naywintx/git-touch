@@ -13,6 +13,7 @@ import 'package:flutter_gen/gen_l10n/S.dart';
 class GhTrendingScreen extends StatelessWidget {
   static final trending = GithubTrending(prefix: 'https://gtrend.yapie.me');
 
+  @override
   Widget build(BuildContext context) {
     return TabStatefulScaffold<List>(
       title: AppBarTitle(AppLocalizations.of(context)!.trending),
@@ -67,7 +68,7 @@ class GhTrendingScreen extends StatelessWidget {
                                       size: 17,
                                       color: theme.palette.secondaryText,
                                     ),
-                                    SizedBox(width: 4),
+                                    const SizedBox(width: 4),
                                     Expanded(
                                         child: Text(
                                       '${v.username} / ${v.repo!.name}',

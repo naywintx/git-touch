@@ -16,7 +16,7 @@ class GistsItem extends StatelessWidget {
   final DateTime? updatedAt;
   final String? id;
 
-  GistsItem({
+  const GistsItem({
     required this.description,
     required this.login,
     required this.filenames,
@@ -47,7 +47,7 @@ class GistsItem extends StatelessWidget {
                         size: AvatarSize.small,
                         linkUrl: '/github/$login',
                       ),
-                      SizedBox(width: 8),
+                      const SizedBox(width: 8),
                       Expanded(
                         child: Text.rich(
                           TextSpan(children: [
@@ -72,7 +72,7 @@ class GistsItem extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   if (description != null && description!.isNotEmpty) ...[
                     Text(
                       description!,
@@ -81,7 +81,7 @@ class GistsItem extends StatelessWidget {
                         fontSize: 16,
                       ),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                   ],
                   if (updatedAt != null) ...[
                     Text(
@@ -91,7 +91,7 @@ class GistsItem extends StatelessWidget {
                         color: theme.palette.tertiaryText,
                       ),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                   ],
                   DefaultTextStyle(
                     style: TextStyle(color: theme.palette.text, fontSize: 14),
@@ -107,13 +107,13 @@ class GistsItem extends StatelessWidget {
                               shape: BoxShape.circle,
                             ),
                           ),
-                        SizedBox(width: 4),
+                        const SizedBox(width: 4),
                         if (language != null)
                           Text(
                             language!,
                             overflow: TextOverflow.ellipsis,
                           ),
-                        SizedBox(width: 24),
+                        const SizedBox(width: 24),
                       ],
                     ),
                   ),

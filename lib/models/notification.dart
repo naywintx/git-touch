@@ -10,16 +10,12 @@ class NotificationGroup {
 
   Tuple2<String, String>? _repo;
   String get owner {
-    if (_repo == null) {
-      _repo = parseRepositoryFullName(fullName!);
-    }
+    _repo ??= parseRepositoryFullName(fullName!);
     return _repo!.item1;
   }
 
   String get name {
-    if (_repo == null) {
-      _repo = parseRepositoryFullName(fullName!);
-    }
+    _repo ??= parseRepositoryFullName(fullName!);
     return _repo!.item2;
   }
 

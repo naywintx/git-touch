@@ -11,7 +11,7 @@ import 'package:flutter_gen/gen_l10n/S.dart';
 class GlMergeRequestsScreen extends StatelessWidget {
   final String id;
   final String? prefix;
-  GlMergeRequestsScreen(this.id, {this.prefix});
+  const GlMergeRequestsScreen(this.id, {this.prefix});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class GlMergeRequestsScreen extends StatelessWidget {
         author: p.author!.username,
         avatarUrl: p.author!.avatarUrl,
         commentCount: p.userNotesCount,
-        subtitle: '#' + p.iid.toString(),
+        subtitle: '#${p.iid}',
         title: p.title,
         updatedAt: p.updatedAt,
         labels: p.labels!.isEmpty

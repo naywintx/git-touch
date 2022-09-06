@@ -10,7 +10,7 @@ class TabStatefulScaffold<T> extends StatefulWidget {
   final List<String> tabs;
   final Widget Function(T payload, void Function() refresh)? actionBuilder;
 
-  TabStatefulScaffold({
+  const TabStatefulScaffold({
     required this.title,
     required this.bodyBuilder,
     required this.fetchData,
@@ -74,7 +74,7 @@ class _TabStatefulScaffoldState<T> extends State<TabStatefulScaffold<T>> {
       _payload = await widget.fetchData(_activeTab);
     } catch (err) {
       _error = err.toString();
-      throw err;
+      rethrow;
     } finally {
       if (mounted) {
         setState(() {
@@ -90,7 +90,7 @@ class _TabStatefulScaffoldState<T> extends State<TabStatefulScaffold<T>> {
       title: widget.title,
       action: widget.actionBuilder == null
           ? null
-          : widget.actionBuilder!(_payload!, _refresh),
+          : widget.actionBuilder!(_payload as T, _refresh),
       tabs: widget.tabs,
       activeTab: _activeTab,
       onTabSwitch: (selected) async {
@@ -105,7 +105,7 @@ class _TabStatefulScaffoldState<T> extends State<TabStatefulScaffold<T>> {
       },
       onRefresh: _refresh,
       body: ErrorLoadingWrapper(
-        bodyBuilder: () => widget.bodyBuilder(_payload!, _activeTab),
+        bodyBuilder: () => widget.bodyBuilder(_payload as T, _activeTab),
         error: _error,
         loading: _payload == null,
         reload: _refresh,

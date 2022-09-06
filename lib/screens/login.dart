@@ -54,7 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Row(
           children: <Widget>[
             Avatar(url: account.avatarUrl, size: AvatarSize.large),
-            Padding(padding: EdgeInsets.only(left: 10)),
+            const Padding(padding: EdgeInsets.only(left: 10)),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -63,7 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     account.login,
                     style: TextStyle(fontSize: 20, color: theme.palette.text),
                   ),
-                  Padding(padding: EdgeInsets.only(top: 6)),
+                  const Padding(padding: EdgeInsets.only(top: 6)),
                   Text(
                     account.domain,
                     style: TextStyle(color: theme.palette.secondaryText),
@@ -72,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             (index == auth.activeAccountIndex)
-                ? Icon(Ionicons.checkmark)
+                ? const Icon(Ionicons.checkmark)
                 : Container(),
           ],
         ),
@@ -84,23 +84,23 @@ class _LoginScreenState extends State<LoginScreen> {
       {IconData? brand, required String text, Function? onTap}) {
     final theme = Provider.of<ThemeModel>(context);
     return LinkWidget(
+      onTap: onTap,
       child: Container(
-        padding: EdgeInsets.symmetric(vertical: 20),
+        padding: const EdgeInsets.symmetric(vertical: 20),
         decoration: BoxDecoration(
           border: Border(bottom: BorderSide(color: theme.palette.border)),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Icon(Ionicons.add),
-            SizedBox(width: 4),
+            const Icon(Ionicons.add),
+            const SizedBox(width: 4),
             Icon(brand),
-            SizedBox(width: 8),
-            Text(text, style: TextStyle(fontSize: 16)),
+            const SizedBox(width: 8),
+            Text(text, style: const TextStyle(fontSize: 16)),
           ],
         ),
       ),
-      onTap: onTap,
     );
   }
 
@@ -113,9 +113,9 @@ class _LoginScreenState extends State<LoginScreen> {
       children: <Widget>[
         if (showDomain)
           MyTextField(controller: _domainController, placeholder: 'Domain'),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         MyTextField(placeholder: 'Access token', controller: _tokenController),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         if (notes != null) ...notes,
       ],
     );
@@ -123,7 +123,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void showError(err) {
     context.read<ThemeModel>().showConfirm(context,
-        Text(AppLocalizations.of(context)!.somethingBadHappens + '$err'));
+        Text('${AppLocalizations.of(context)!.somethingBadHappens}$err'));
   }
 
   @override
@@ -133,7 +133,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return SingleScaffold(
       title: AppBarTitle(AppLocalizations.of(context)!.selectAccount),
       body: auth.loading
-          ? Center(child: Loading())
+          ? const Center(child: Loading())
           : Container(
               child: Column(
                 children: [
@@ -164,11 +164,11 @@ class _LoginScreenState extends State<LoginScreen> {
                                 Text(
                                   AppLocalizations.of(context)!
                                       .permissionRequiredMessage,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.w400),
                                 ),
-                                SizedBox(height: 8),
+                                const SizedBox(height: 8),
                                 Text(
                                   'user, repo, read:org, notifications',
                                   style: TextStyle(
@@ -205,10 +205,10 @@ class _LoginScreenState extends State<LoginScreen> {
                             Text(
                               AppLocalizations.of(context)!
                                   .permissionRequiredMessage,
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 14, fontWeight: FontWeight.w400),
                             ),
-                            SizedBox(height: 8),
+                            const SizedBox(height: 8),
                             Text(
                               'api, read_user, read_repository',
                               style: TextStyle(
@@ -240,18 +240,18 @@ class _LoginScreenState extends State<LoginScreen> {
                             MyTextField(
                                 controller: _domainController,
                                 placeholder: 'Domain'),
-                            SizedBox(height: 8),
+                            const SizedBox(height: 8),
                             MyTextField(
                                 placeholder: 'Username',
                                 controller: _usernameController),
-                            SizedBox(height: 8),
+                            const SizedBox(height: 8),
                             MyTextField(
                                 placeholder: 'App password',
                                 controller: _passwordController),
-                            SizedBox(height: 8),
+                            const SizedBox(height: 8),
                             Text.rich(
                               TextSpan(children: [
-                                TextSpan(
+                                const TextSpan(
                                   text:
                                       'Note: App password is different with the password. Follow ',
                                 ),
@@ -265,17 +265,17 @@ class _LoginScreenState extends State<LoginScreen> {
                                           'https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/');
                                     },
                                 ),
-                                TextSpan(text: ' to create one.')
+                                const TextSpan(text: ' to create one.')
                               ]),
                             ),
-                            SizedBox(height: 8),
+                            const SizedBox(height: 8),
                             Text(
                               AppLocalizations.of(context)!
                                   .permissionRequiredMessage,
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 14, fontWeight: FontWeight.w400),
                             ),
-                            SizedBox(height: 8),
+                            const SizedBox(height: 8),
                             Text(
                               'Account: read\nTeam membership: read\nProjects: read\nRepositories: read\nPull requests: read\nIssues: read\nSnippets: read',
                               style: TextStyle(
@@ -306,13 +306,13 @@ class _LoginScreenState extends State<LoginScreen> {
                           Column(
                             children: [
                               _buildPopup(context, showDomain: true),
-                              Text.rich(TextSpan(children: [
+                              const Text.rich(TextSpan(children: [
                                 TextSpan(
                                   text:
                                       'Note: To login with Codeberg change the domain name to: ',
                                 ),
                               ])),
-                              SizedBox(height: 8),
+                              const SizedBox(height: 8),
                               Text(
                                 'https://codeberg.org',
                                 style: TextStyle(
@@ -332,7 +332,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                   ),
                   _buildAddItem(
-                    text: AppLocalizations.of(context)!.giteeAccount + '(码云)',
+                    text: '${AppLocalizations.of(context)!.giteeAccount}(码云)',
                     brand: Ionicons.git_branch_outline, // TODO: brand icon
                     onTap: () async {
                       final result = await theme.showConfirm(

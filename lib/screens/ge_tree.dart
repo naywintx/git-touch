@@ -14,7 +14,7 @@ class GeTreeScreen extends StatelessWidget {
   final String owner;
   final String name;
   final String sha;
-  GeTreeScreen(this.owner, this.name, this.sha);
+  const GeTreeScreen(this.owner, this.name, this.sha);
 
   @override
   Widget build(BuildContext context) {

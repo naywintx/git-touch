@@ -16,7 +16,7 @@ class GoObjectScreen extends StatelessWidget {
   final String name;
   final String? path;
   final String? ref;
-  GoObjectScreen(this.owner, this.name, {this.path, this.ref});
+  const GoObjectScreen(this.owner, this.name, {this.path, this.ref});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class GoObjectScreen extends StatelessWidget {
         if (p is List) {
           return null;
         } else {
-          return ActionEntry(
+          return const ActionEntry(
             iconData: Ionicons.cog,
             url: '/choose-code-theme',
           );

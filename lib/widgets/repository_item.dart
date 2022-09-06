@@ -26,7 +26,7 @@ class RepositoryItem extends StatelessWidget {
   final String url;
   final String? avatarLink;
 
-  RepositoryItem({
+  const RepositoryItem({
     required this.owner,
     required this.avatarUrl,
     required this.name,
@@ -160,7 +160,7 @@ class RepositoryItem extends StatelessWidget {
                         size: AvatarSize.small,
                         linkUrl: avatarLink,
                       ),
-                      SizedBox(width: 8),
+                      const SizedBox(width: 8),
                       Expanded(
                         child: Text.rich(
                           TextSpan(children: [
@@ -185,16 +185,16 @@ class RepositoryItem extends StatelessWidget {
                         ),
                       ),
                       if (iconData != null) ...[
-                        SizedBox(width: 6),
+                        const SizedBox(width: 6),
                         DefaultTextStyle(
+                          style: TextStyle(color: theme.palette.secondaryText),
                           child: Icon(iconData,
                               size: 18, color: theme.palette.secondaryText),
-                          style: TextStyle(color: theme.palette.secondaryText),
                         ),
                       ]
                     ],
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   if (description != null && description!.isNotEmpty) ...[
                     Text(
                       description!,
@@ -203,7 +203,7 @@ class RepositoryItem extends StatelessWidget {
                         fontSize: 16,
                       ),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                   ],
                   if (note != null) ...[
                     Text(
@@ -213,7 +213,7 @@ class RepositoryItem extends StatelessWidget {
                         color: theme.palette.tertiaryText,
                       ),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                   ],
                   DefaultTextStyle(
                     style: TextStyle(color: theme.palette.text, fontSize: 14),
@@ -229,24 +229,24 @@ class RepositoryItem extends StatelessWidget {
                               shape: BoxShape.circle,
                             ),
                           ),
-                          SizedBox(width: 4),
+                          const SizedBox(width: 4),
                           Text(
                             primaryLanguageName!,
                             overflow: TextOverflow.ellipsis,
                           ),
-                          SizedBox(width: 24),
+                          const SizedBox(width: 24),
                         ],
                         if (starCount! > 0) ...[
                           Icon(Octicons.star,
                               size: 16, color: theme.palette.text),
-                          SizedBox(width: 2),
+                          const SizedBox(width: 2),
                           Text(numberFormat.format(starCount)),
-                          SizedBox(width: 24),
+                          const SizedBox(width: 24),
                         ],
                         if (forkCount! > 0) ...[
                           Icon(Octicons.repo_forked,
                               size: 16, color: theme.palette.text),
-                          SizedBox(width: 2),
+                          const SizedBox(width: 2),
                           Text(numberFormat.format(forkCount)),
                         ],
                       ],

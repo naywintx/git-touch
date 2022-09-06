@@ -30,21 +30,21 @@ class GhNotificationScreenState extends State<GhNotificationScreen> {
       context.read<NotificationModel>().setCount(ns.length);
     }
 
-    Map<String, NotificationGroup> _groupMap = {};
+    Map<String, NotificationGroup> groupMap = {};
 
-    ns.forEach((item) {
+    for (var item in ns) {
       final repo = item.repository!.fullName ?? ''; // TODO: nullable
-      if (_groupMap[repo] == null) {
-        _groupMap[repo] = NotificationGroup(repo);
+      if (groupMap[repo] == null) {
+        groupMap[repo] = NotificationGroup(repo);
       }
 
-      _groupMap[repo]!.items.add(item);
-    });
+      groupMap[repo]!.items.add(item);
+    }
 
-    if (_groupMap.isNotEmpty) {
+    if (groupMap.isNotEmpty) {
       // query state of issues and pull requests
       var schema = '{';
-      _groupMap.forEach((repo, group) {
+      groupMap.forEach((repo, group) {
         // Check if issue and pull request exist
         if (group.items.where((item) {
           return item.subject!.type == 'Issue' ||
@@ -56,7 +56,7 @@ class GhNotificationScreenState extends State<GhNotificationScreen> {
         schema +=
             '${group.key}: repository(owner: "${group.owner}", name: "${group.name}") {';
 
-        group.items.forEach((item) {
+        for (var item in group.items) {
           switch (item.subject!.type) {
             case 'Issue':
               schema += '''
@@ -73,31 +73,31 @@ ${item.key}: pullRequest(number: ${item.subject!.number}) {
 ''';
               break;
           }
-        });
+        }
 
         schema += '}';
       });
       schema += '}';
 
-      if (schema == '{}') return _groupMap;
+      if (schema == '{}') return groupMap;
 
       // Fimber.d(schema);
       var data = await context.read<AuthModel>().query(schema);
-      _groupMap.forEach((repo, group) {
-        group.items.forEach((item) {
+      groupMap.forEach((repo, group) {
+        for (var item in group.items) {
           var groupData = data[group.key];
-          if (groupData == null) return;
+          if (groupData == null) continue;
 
           var itemData = data[group.key][item.key];
           if (itemData != null) {
             item.state = itemData['state'];
           }
-        });
+        }
       });
       // Fimber.d(data);
     }
 
-    return _groupMap;
+    return groupMap;
   }
 
   Widget _buildGroupItem(
@@ -168,7 +168,7 @@ ${item.key}: pullRequest(number: ${item.subject!.number}) {
 
         return Column(
           children: [
-            Padding(padding: EdgeInsets.only(top: 10)),
+            const Padding(padding: EdgeInsets.only(top: 10)),
             ...groupMap.entries
                 .map((entry) => _buildGroupItem(context, entry, groupMap))
                 .toList()

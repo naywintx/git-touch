@@ -9,7 +9,7 @@ class RefreshWrapper extends StatelessWidget {
   final Widget body;
   final void Function() onRefresh;
 
-  RefreshWrapper({
+  const RefreshWrapper({
     required this.onRefresh,
     required this.body,
   });
@@ -44,7 +44,7 @@ class ErrorLoadingWrapper extends StatelessWidget {
   final void Function() reload;
   final Widget? Function() bodyBuilder;
 
-  ErrorLoadingWrapper({
+  const ErrorLoadingWrapper({
     required this.error,
     required this.loading,
     required this.reload,
@@ -58,7 +58,7 @@ class ErrorLoadingWrapper extends StatelessWidget {
     }
 
     if (loading) {
-      return Loading();
+      return const Loading();
     }
 
     return bodyBuilder()!;

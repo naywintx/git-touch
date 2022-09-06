@@ -62,7 +62,7 @@ class GlTodosScreen extends StatelessWidget {
     final theme = Provider.of<ThemeModel>(context);
 
     return RefreshStatefulScaffold<Iterable<GitlabTodo>>(
-      title: Text('Todos'),
+      title: const Text('Todos'),
       fetch: () async {
         final vs = await context.read<AuthModel>().fetchGitlab('/todos');
         return (vs as List).map((v) => GitlabTodo.fromJson(v));
@@ -81,7 +81,7 @@ class GlTodosScreen extends StatelessWidget {
                     Avatar(
                         url: item.author!.avatarUrl,
                         linkUrl: '/gitlab/user/${item.author!.id}'),
-                    SizedBox(width: 12),
+                    const SizedBox(width: 12),
                     Expanded(
                       child: Text.rich(
                         TextSpan(

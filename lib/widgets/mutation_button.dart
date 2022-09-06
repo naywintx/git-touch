@@ -9,7 +9,7 @@ class MutationButton extends StatelessWidget {
   final String? url;
   final VoidCallback? onTap;
 
-  MutationButton({
+  const MutationButton({
     required this.active,
     required this.text,
     this.url,
@@ -27,13 +27,13 @@ class MutationButton extends StatelessWidget {
       url: url,
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           horizontal: 12,
           vertical: 4,
         ),
         decoration: BoxDecoration(
           color: backgroundColor,
-          borderRadius: BorderRadius.all(Radius.circular(20)),
+          borderRadius: const BorderRadius.all(Radius.circular(20)),
           border: Border.all(color: theme.palette.primary),
         ),
         child: Text(

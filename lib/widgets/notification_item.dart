@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:git_touch/widgets/issue_icon.dart';
 import 'package:git_touch/models/github.dart';
 import 'package:git_touch/utils/utils.dart';
@@ -13,7 +12,7 @@ class NotificationItem extends StatefulWidget {
   final GithubNotificationItem payload;
   final Function markAsRead;
 
-  NotificationItem({
+  const NotificationItem({
     Key? key,
     required this.payload,
     required this.markAsRead,
@@ -36,20 +35,20 @@ class _NotificationItemState extends State<NotificationItem> {
       case 'Issue':
         switch (payload.state) {
           case 'OPEN':
-            return IssueIcon(IssueIconState.open, size: 20);
+            return const IssueIcon(IssueIconState.open, size: 20);
           case 'CLOSED':
-            return IssueIcon(IssueIconState.closed, size: 20);
+            return const IssueIcon(IssueIconState.closed, size: 20);
           default:
             return _buildIcon(Octicons.person);
         }
       case 'PullRequest':
         switch (payload.state) {
           case 'OPEN':
-            return IssueIcon(IssueIconState.prOpen, size: 20);
+            return const IssueIcon(IssueIconState.prOpen, size: 20);
           case 'CLOSED':
-            return IssueIcon(IssueIconState.prClosed, size: 20);
+            return const IssueIcon(IssueIconState.prClosed, size: 20);
           case 'MERGED':
-            return IssueIcon(IssueIconState.prMerged, size: 20);
+            return const IssueIcon(IssueIconState.prMerged, size: 20);
           default:
             return _buildIcon(Octicons.person);
         }
@@ -123,11 +122,11 @@ class _NotificationItemState extends State<NotificationItem> {
       child: Opacity(
         opacity: payload.unread! ? 1 : 0.5,
         child: Container(
-          padding: EdgeInsets.all(8),
+          padding: const EdgeInsets.all(8),
           child: Row(
             children: <Widget>[
               Container(
-                padding: EdgeInsets.only(right: 8),
+                padding: const EdgeInsets.only(right: 8),
                 child: _buildIconData(),
               ),
               Expanded(
@@ -137,7 +136,7 @@ class _NotificationItemState extends State<NotificationItem> {
                   style: TextStyle(fontSize: 15, color: theme.palette.text),
                 ),
               ),
-              LinkWidget(child: _buildCheckIcon(), onTap: _markAsRead),
+              LinkWidget(onTap: _markAsRead, child: _buildCheckIcon()),
             ],
           ),
         ),

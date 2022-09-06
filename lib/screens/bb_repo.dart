@@ -19,7 +19,7 @@ class BbRepoScreen extends StatelessWidget {
   final String owner;
   final String name;
   final String? branch;
-  BbRepoScreen(this.owner, this.name, {this.branch});
+  const BbRepoScreen(this.owner, this.name, {this.branch});
 
   @override
   Widget build(BuildContext context) {
@@ -60,33 +60,31 @@ class BbRepoScreen extends StatelessWidget {
               items: [
                 TableViewItem(
                   leftIconData: Octicons.code,
-                  text: Text('Code'),
+                  text: const Text('Code'),
                   rightWidget: Text(filesize(p.size)),
                   url:
                       '/bitbucket/$owner/$name/src/${branch ?? p.mainbranch!.name}',
                 ),
                 TableViewItem(
                   leftIconData: Octicons.issue_opened,
-                  text: Text('Issues'),
+                  text: const Text('Issues'),
                   url: '/bitbucket/$owner/$name/issues',
                 ),
                 TableViewItem(
                   leftIconData: Octicons.git_pull_request,
-                  text: Text('Pull requests'),
+                  text: const Text('Pull requests'),
                   url: '/bitbucket/$owner/$name/pulls',
                 ),
                 TableViewItem(
                   leftIconData: Octicons.history,
-                  text: Text('Commits'),
+                  text: const Text('Commits'),
                   url:
                       '/bitbucket/$owner/$name/commits/${branch ?? p.mainbranch!.name}',
                 ),
                 TableViewItem(
                   leftIconData: Octicons.git_branch,
                   text: Text(AppLocalizations.of(context)!.branches),
-                  rightWidget: Text((branch ?? p.mainbranch!.name)! +
-                      ' • ' +
-                      branches.length.toString()),
+                  rightWidget: Text('${(branch ?? p.mainbranch!.name)!} • ${branches.length}'),
                   onTap: () async {
                     if (branches.length < 2) return;
 

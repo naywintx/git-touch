@@ -20,7 +20,7 @@ import 'package:flutter_gen/gen_l10n/S.dart';
 class GlProjectScreen extends StatelessWidget {
   final int id;
   final String? branch;
-  GlProjectScreen(this.id, {this.branch});
+  const GlProjectScreen(this.id, {this.branch});
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +46,7 @@ class GlProjectScreen extends StatelessWidget {
 
         MarkdownViewData? readmeData;
         if (p.readmeUrl != null) {
-          final md = () => auth.fetchWithGitlabToken(
+          md() => auth.fetchWithGitlabToken(
               p.readmeUrl!.replaceFirst(r'/blob/', '/raw/'));
           readmeData = MarkdownViewData(
             context,
@@ -163,7 +163,7 @@ class GlProjectScreen extends StatelessWidget {
                     future: langFuture,
                     builder: (context, snapshot) {
                       if (snapshot.data == null) {
-                        return Text('');
+                        return const Text('');
                       } else {
                         final langs = snapshot.data!.keys;
                         return Text(langs.isEmpty
@@ -176,7 +176,7 @@ class GlProjectScreen extends StatelessWidget {
                       ? null
                       : Text(filesize(p.statistics!.repositorySize)),
                   url:
-                      '/gitlab/projects/$id/tree/${branch == null ? p.defaultBranch : branch}',
+                      '/gitlab/projects/$id/tree/${branch ?? p.defaultBranch}',
                 ),
                 if (p.issuesEnabled!)
                   TableViewItem(
@@ -204,9 +204,7 @@ class GlProjectScreen extends StatelessWidget {
                   leftIconData: Octicons.git_branch,
                   text: Text(AppLocalizations.of(context)!.branches),
                   rightWidget: Text(
-                      ((branch ?? p.defaultBranch) ?? '' /** empty project */) +
-                          ' • ' +
-                          branches.length.toString()),
+                      '${(branch ?? p.defaultBranch) ?? ''} • ${branches.length}'),
                   onTap: () async {
                     if (branches.length < 2) return;
 

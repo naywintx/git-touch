@@ -15,7 +15,7 @@ import 'package:flutter_gen/gen_l10n/S.dart';
 /// So we use RESTful API here for repos of org
 class GhOrgReposScreen extends StatelessWidget {
   final String owner;
-  GhOrgReposScreen(this.owner);
+  const GhOrgReposScreen(this.owner);
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,5 @@
 import 'dart:core';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:git_touch/graphql/__generated__/github.data.gql.dart';
 import 'package:git_touch/graphql/__generated__/schema.schema.gql.dart';
 import 'package:git_touch/models/theme.dart';
@@ -20,7 +19,7 @@ class TimelineEventItem extends StatelessWidget {
   final Color iconColor;
   final TextSpan? textSpan;
 
-  TimelineEventItem({
+  const TimelineEventItem({
     this.actor,
     this.iconData = Octicons.octoface,
     this.iconColor = Colors.grey,
@@ -33,9 +32,9 @@ class TimelineEventItem extends StatelessWidget {
 
     return Row(
       children: <Widget>[
-        SizedBox(width: 6),
+        const SizedBox(width: 6),
         Icon(iconData, color: iconColor, size: 20),
-        SizedBox(width: 12),
+        const SizedBox(width: 12),
         Expanded(
           child: Text.rich(
             TextSpan(
@@ -56,7 +55,7 @@ class TimelineEventItem extends StatelessWidget {
 
 class TimelineItem extends StatelessWidget {
   final dynamic node;
-  TimelineItem(this.node);
+  const TimelineItem(this.node);
 
   Widget _buildFallback(String? type, BuildContext context) {
     return TimelineEventItem(
@@ -252,7 +251,7 @@ class TimelineItem extends StatelessWidget {
                     ' ${AppLocalizations.of(context)!.renamedTitleEventMessage(p.currentTitle)} '),
             TextSpan(
               text: p.previousTitle,
-              style: TextStyle(decoration: TextDecoration.lineThrough),
+              style: const TextStyle(decoration: TextDecoration.lineThrough),
             ),
           ]),
         );
@@ -463,7 +462,7 @@ class TimelineItem extends StatelessWidget {
           iconData: Octicons.eye,
           actor: p.actor!.login,
           textSpan: TextSpan(children: [
-            TextSpan(text: ' removed '),
+            const TextSpan(text: ' removed '),
             createUserSpan(
                 context,
                 (p.requestedReviewer

@@ -12,13 +12,13 @@ class GistObjectScreen extends StatelessWidget {
   final String? raw;
   final String? content;
 
-  GistObjectScreen(this.login, this.id, this.file, {this.raw, this.content});
+  const GistObjectScreen(this.login, this.id, this.file, {this.raw, this.content});
 
   @override
   Widget build(BuildContext context) {
     return CommonScaffold(
         title: AppBarTitle(file),
-        action: ActionEntry(
+        action: const ActionEntry(
           iconData: Ionicons.cog,
           url: '/choose-code-theme',
         ),

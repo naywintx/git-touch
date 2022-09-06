@@ -10,10 +10,10 @@ class GoUsersScreen extends StatelessWidget {
   final String api;
   final String title;
 
-  GoUsersScreen.followers(String login)
+  const GoUsersScreen.followers(String login)
       : api = '/users/$login/followers',
         title = 'Followers';
-  GoUsersScreen.following(String login)
+  const GoUsersScreen.following(String login)
       : api = '/users/$login/following',
         title = "Following";
 

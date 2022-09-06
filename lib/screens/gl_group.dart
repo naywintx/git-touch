@@ -14,7 +14,7 @@ import 'package:flutter_gen/gen_l10n/S.dart';
 
 class GlGroupScreen extends StatelessWidget {
   final int id;
-  GlGroupScreen(this.id);
+  const GlGroupScreen(this.id);
 
   @override
   Widget build(BuildContext context) {

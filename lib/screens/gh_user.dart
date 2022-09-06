@@ -139,7 +139,7 @@ class _User extends StatelessWidget {
                 leftIconData: Octicons.organization,
                 text: TextWithAt(
                   text: p!.company!,
-                  linkFactory: (text) => '/github/' + text.substring(1),
+                  linkFactory: (text) => '/github/${text.substring(1)}',
                   style: TextStyle(fontSize: 17, color: theme.palette.text),
                   oneLine: true,
                 ),
@@ -149,8 +149,7 @@ class _User extends StatelessWidget {
                 leftIconData: Octicons.location,
                 text: Text(p!.location!),
                 onTap: () {
-                  launchStringUrl('https://www.google.com/maps/place/' +
-                      p!.location!.replaceAll(RegExp(r'\s+'), ''));
+                  launchStringUrl('https://www.google.com/maps/place/${p!.location!.replaceAll(RegExp(r'\s+'), '')}');
                 },
               ),
             if (isNotNullOrEmpty(p!.email))
@@ -158,7 +157,7 @@ class _User extends StatelessWidget {
                 leftIconData: Octicons.mail,
                 text: Text(p!.email),
                 onTap: () {
-                  launchStringUrl('mailto:' + p!.email);
+                  launchStringUrl('mailto:${p!.email}');
                 },
               ),
             if (isNotNullOrEmpty(p!.websiteUrl))
@@ -188,7 +187,7 @@ class _User extends StatelessWidget {
 
 class _Org extends StatelessWidget {
   final GUserData_repositoryOwner__asOrganization? p;
-  _Org(this.p);
+  const _Org(this.p);
 
   @override
   Widget build(BuildContext context) {
@@ -227,8 +226,7 @@ class _Org extends StatelessWidget {
                 leftIconData: Octicons.location,
                 text: Text(p!.location!),
                 onTap: () {
-                  launchStringUrl('https://www.google.com/maps/place/' +
-                      p!.location!.replaceAll(RegExp(r'\s+'), ''));
+                  launchStringUrl('https://www.google.com/maps/place/${p!.location!.replaceAll(RegExp(r'\s+'), '')}');
                 },
               ),
             if (isNotNullOrEmpty(p!.email))
@@ -236,7 +234,7 @@ class _Org extends StatelessWidget {
                 leftIconData: Octicons.mail,
                 text: Text(p!.email!),
                 onTap: () {
-                  launchStringUrl('mailto:' + p!.email!);
+                  launchStringUrl('mailto:${p!.email!}');
                 },
               ),
             if (isNotNullOrEmpty(p!.websiteUrl))
@@ -276,7 +274,7 @@ class GhViewer extends StatelessWidget {
         return res.data!.viewer;
       },
       title: AppBarTitle(AppLocalizations.of(context)!.me),
-      action: ActionEntry(
+      action: const ActionEntry(
         iconData: Ionicons.cog,
         url: '/settings',
       ),
@@ -289,7 +287,7 @@ class GhViewer extends StatelessWidget {
 
 class GhUser extends StatelessWidget {
   final String login;
-  GhUser(this.login);
+  const GhUser(this.login);
 
   @override
   Widget build(BuildContext context) {

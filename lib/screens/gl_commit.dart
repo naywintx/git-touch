@@ -15,7 +15,7 @@ import 'package:flutter_gen/gen_l10n/S.dart';
 class GlCommitScreen extends StatelessWidget {
   final String id;
   final String? sha;
-  GlCommitScreen(this.id, {this.sha});
+  const GlCommitScreen(this.id, {this.sha});
 
   Future<List<GitlabDiff>> _query(BuildContext context) async {
     final auth = context.read<AuthModel>();

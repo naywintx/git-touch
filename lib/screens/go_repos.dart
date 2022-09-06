@@ -11,10 +11,10 @@ class GoReposScreen extends StatelessWidget {
   final String title;
   final bool isViewer;
 
-  GoReposScreen(String owner, {this.isViewer = false})
+  const GoReposScreen(String owner, {this.isViewer = false})
       : api = isViewer ? '/users/$owner/repos' : '/user/repos',
         title = 'Repositories';
-  GoReposScreen.org(String owner)
+  const GoReposScreen.org(String owner)
       : api = '/orgs/$owner/repos',
         title = 'Repositories',
         isViewer = false;

@@ -10,7 +10,7 @@ import 'package:flutter_gen/gen_l10n/S.dart';
 class GlMembersScreen extends StatelessWidget {
   final int id;
   final String type;
-  GlMembersScreen(this.id, this.type);
+  const GlMembersScreen(this.id, this.type);
 
   // https://docs.gitlab.com/ee/api/access_requests.html#valid-access-levels
   static const accessLevelMap = {

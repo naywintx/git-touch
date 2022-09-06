@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/theme.dart';
 import 'package:git_touch/scaffolds/common.dart';
@@ -14,8 +13,8 @@ class GtIssueCommentScreen extends StatefulWidget {
   final bool isPr;
   final String body;
   final String id;
-  GtIssueCommentScreen(this.owner, this.name, this.number,
-      {this.isPr: false, this.body: '', this.id: ''});
+  const GtIssueCommentScreen(this.owner, this.name, this.number,
+      {this.isPr = false, this.body = '', this.id = ''});
 
   @override
   _GtIssueCommentScreenState createState() => _GtIssueCommentScreenState();
@@ -23,7 +22,7 @@ class GtIssueCommentScreen extends StatefulWidget {
 
 class _GtIssueCommentScreenState extends State<GtIssueCommentScreen> {
   bool isEdit = false;
-  TextEditingController _controller = new TextEditingController();
+  final TextEditingController _controller = TextEditingController();
 
   @override
   void initState() {
@@ -52,7 +51,7 @@ class _GtIssueCommentScreenState extends State<GtIssueCommentScreen> {
             ),
           ),
           CupertinoButton.filled(
-            child: Text('Comment'),
+            child: const Text('Comment'),
             onPressed: () async {
               if (!isEdit) {
                 await auth.fetchGitea(

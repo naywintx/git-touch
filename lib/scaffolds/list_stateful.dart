@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/widgets.dart';
 import 'package:git_touch/models/theme.dart';
 import 'package:git_touch/scaffolds/common.dart';
 import 'package:git_touch/utils/utils.dart';
@@ -17,7 +16,7 @@ class ListStatefulScaffold<T, K> extends StatefulWidget {
   final Widget Function(T payload) itemBuilder;
   final Future<ListPayload<T, K>> Function(K? cursor) fetch;
 
-  ListStatefulScaffold({
+  const ListStatefulScaffold({
     required this.title,
     required this.fetch,
     required this.itemBuilder,
@@ -39,7 +38,7 @@ class _ListStatefulScaffoldState<T, K>
   K? cursor;
   bool? hasMore;
 
-  ScrollController _controller = ScrollController();
+  final ScrollController _controller = ScrollController();
 
   @override
   void initState() {
@@ -75,7 +74,7 @@ class _ListStatefulScaffoldState<T, K>
       hasMore = p.hasMore;
     } catch (err) {
       error = err.toString();
-      throw err;
+      rethrow;
     } finally {
       if (mounted) {
         setState(() {
@@ -97,7 +96,7 @@ class _ListStatefulScaffoldState<T, K>
       hasMore = p.hasMore;
     } catch (err) {
       error = err.toString();
-      throw err;
+      rethrow;
     } finally {
       if (mounted) {
         setState(() {
@@ -110,7 +109,7 @@ class _ListStatefulScaffoldState<T, K>
   Widget _buildItem(BuildContext context, int index) {
     if (index == 2 * items.length) {
       if (hasMore != false) {
-        return Loading(more: true);
+        return const Loading(more: true);
       } else {
         return Container();
       }
@@ -127,7 +126,7 @@ class _ListStatefulScaffoldState<T, K>
         child: ErrorReload(text: error, onTap: _refresh),
       );
     } else if (loading && items.isEmpty) {
-      return SliverToBoxAdapter(child: Loading(more: false));
+      return const SliverToBoxAdapter(child: Loading(more: false));
     } else if (items.isEmpty) {
       return SliverToBoxAdapter(child: EmptyWidget());
     } else {
@@ -144,7 +143,7 @@ class _ListStatefulScaffoldState<T, K>
     if (error.isNotEmpty) {
       return ErrorReload(text: error, onTap: _refresh);
     } else if (loading && items.isEmpty) {
-      return Loading(more: false);
+      return const Loading(more: false);
     } else if (items.isEmpty) {
       return EmptyWidget();
     } else {

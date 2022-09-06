@@ -26,7 +26,7 @@ class GtUserScreenPayload {
 class GtUserScreen extends StatelessWidget {
   final String login;
   final bool isViewer;
-  GtUserScreen(this.login, {this.isViewer = false});
+  const GtUserScreen(this.login, {this.isViewer = false});
 
   static List<List<ContributionDay>> normalizeHeatmap(List userHeatmap) {
     final heatmapItems = [
@@ -91,7 +91,7 @@ class GtUserScreen extends StatelessWidget {
         return payload;
       },
       action: isViewer
-          ? ActionEntry(
+          ? const ActionEntry(
               iconData: Ionicons.cog,
               url: '/settings',
             )
@@ -134,7 +134,7 @@ class GtUserScreen extends StatelessWidget {
                 items: [
                   TableViewItem(
                     leftIconData: Octicons.home,
-                    text: Text('Organizations'),
+                    text: const Text('Organizations'),
                     url: '/gitea/$login?tab=organizations',
                   ),
                 ],
@@ -201,7 +201,7 @@ class GtUserScreen extends StatelessWidget {
             ],
           );
         } else {
-          return Text('404'); // TODO:
+          return const Text('404'); // TODO:
         }
       },
     );

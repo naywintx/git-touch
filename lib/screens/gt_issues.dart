@@ -3,7 +3,6 @@ import 'package:flutter_gen/gen_l10n/S.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitea.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
-import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/action_entry.dart';
 import 'package:git_touch/widgets/app_bar_title.dart';
 import 'package:git_touch/widgets/issue_item.dart';
@@ -14,7 +13,7 @@ class GtIssuesScreen extends StatelessWidget {
   final String owner;
   final String name;
   final bool isPr;
-  GtIssuesScreen(this.owner, this.name, {this.isPr = false});
+  const GtIssuesScreen(this.owner, this.name, {this.isPr = false});
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +42,7 @@ class GtIssuesScreen extends StatelessWidget {
         author: p.user!.login,
         avatarUrl: p.user!.avatarUrl,
         commentCount: p.comments,
-        subtitle: '#' + p.number.toString(),
+        subtitle: '#${p.number}',
         title: p.title,
         updatedAt: p.updatedAt,
         url: isPr

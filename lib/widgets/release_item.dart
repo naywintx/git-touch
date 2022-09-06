@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:git_touch/graphql/__generated__/github.data.gql.dart';
 import 'package:git_touch/models/theme.dart';
@@ -19,7 +18,7 @@ class ReleaseItem extends StatelessWidget {
   final String? description;
   final GReleasesData_repository_releases_nodes_releaseAssets? releaseAssets;
 
-  ReleaseItem(
+  const ReleaseItem(
       {required this.login,
       required this.publishedAt,
       required this.name,
@@ -33,12 +32,12 @@ class ReleaseItem extends StatelessWidget {
     final theme = Provider.of<ThemeModel>(context);
     return Column(
       children: [
-        SizedBox(
+        const SizedBox(
           height: 12,
         ),
         Row(children: <Widget>[
           Avatar(url: avatarUrl, size: AvatarSize.large),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -56,15 +55,13 @@ class ReleaseItem extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 6),
+                const SizedBox(height: 6),
                 DefaultTextStyle(
                   style: TextStyle(
                     color: theme.palette.secondaryText,
                     fontSize: 16,
                   ),
-                  child: Text(login! +
-                      " ${AppLocalizations.of(context)!.released} " +
-                      timeago.format(publishedAt!)),
+                  child: Text("${login!} ${AppLocalizations.of(context)!.released} ${timeago.format(publishedAt!)}"),
                 ),
               ],
             ),
@@ -74,14 +71,14 @@ class ReleaseItem extends StatelessWidget {
           MarkdownFlutterView(
             description,
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
         ],
         Card(
           color: theme.palette.grayBackground,
-          margin: EdgeInsets.all(0),
+          margin: const EdgeInsets.all(0),
           child: ExpansionTile(
             title: Text(
-              'Assets (' + (releaseAssets?.nodes?.length ?? 0).toString() + ')',
+              'Assets (${releaseAssets?.nodes?.length ?? 0})',
               style: TextStyle(
                 color: theme.palette.secondaryText,
                 fontSize: 18,
@@ -107,7 +104,7 @@ class ReleaseItem extends StatelessWidget {
                             onPressed: () {
                               theme.push(context, asset.downloadUrl);
                             },
-                            icon: Icon(Ionicons.download_outline)),
+                            icon: const Icon(Ionicons.download_outline)),
                         hideRightChevron: true,
                       ),
                 ],

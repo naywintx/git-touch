@@ -290,11 +290,11 @@ class ThemeModel with ChangeNotifier {
           title: content,
           actions: <Widget>[
             CupertinoDialogAction(
-              child: const Text('cancel'),
               isDefaultAction: true,
               onPressed: () {
                 Navigator.pop(context, false);
               },
+              child: const Text('cancel'),
             ),
             CupertinoDialogAction(
               child: const Text('OK'),
@@ -356,7 +356,6 @@ class ThemeModel with ChangeNotifier {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   CupertinoButton(
-                    child: Text('Cancel'),
                     onPressed: () {
                       Navigator.pop(context);
                       _selectedItem = groupItem.value;
@@ -365,9 +364,9 @@ class ThemeModel with ChangeNotifier {
                       horizontal: 16.0,
                       vertical: 5.0,
                     ),
+                    child: const Text('Cancel'),
                   ),
                   CupertinoButton(
-                    child: Text('Confirm'),
                     onPressed: () {
                       Navigator.pop(context);
                       groupItem.onClose!(_selectedItem);
@@ -376,18 +375,15 @@ class ThemeModel with ChangeNotifier {
                       horizontal: 16.0,
                       vertical: 5.0,
                     ),
+                    child: const Text('Confirm'),
                   )
                 ],
               ),
             ),
-            Container(
+            SizedBox(
               height: 216,
               child: CupertinoPicker(
                 backgroundColor: palette.background,
-                children: <Widget>[
-                  for (var v in groupItem.items)
-                    Text(v.text!, style: TextStyle(color: palette.text)),
-                ],
                 itemExtent: 40,
                 scrollController: FixedExtentScrollController(
                     initialItem: groupItem.items
@@ -406,6 +402,10 @@ class ThemeModel with ChangeNotifier {
                     });
                   }
                 },
+                children: <Widget>[
+                  for (var v in groupItem.items)
+                    Text(v.text!, style: TextStyle(color: palette.text)),
+                ],
               ),
             )
           ],
@@ -419,22 +419,22 @@ class ThemeModel with ChangeNotifier {
       context: context,
       builder: (BuildContext context) {
         return CupertinoActionSheet(
-          title: Text('Actions'),
+          title: const Text('Actions'),
           actions: actionItems.asMap().entries.map((entry) {
             return CupertinoActionSheetAction(
-              child: Text(entry.value.text!),
               isDestructiveAction: entry.value.isDestructiveAction,
               onPressed: () {
                 Navigator.pop(context, entry.key);
               },
+              child: Text(entry.value.text!),
             );
           }).toList(),
           cancelButton: CupertinoActionSheetAction(
-            child: const Text('Cancel'),
             isDefaultAction: true,
             onPressed: () {
               Navigator.pop(context);
             },
+            child: const Text('Cancel'),
           ),
         );
       },

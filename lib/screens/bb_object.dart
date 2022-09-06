@@ -4,7 +4,6 @@ import 'package:universal_io/io.dart';
 import 'package:flutter/material.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/bitbucket.dart';
-import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/action_entry.dart';
 import 'package:git_touch/widgets/app_bar_title.dart';
 import 'package:git_touch/widgets/blob_view.dart';
@@ -17,7 +16,7 @@ class BbObjectScreen extends StatelessWidget {
   final String name;
   final String ref;
   final String? path;
-  BbObjectScreen(this.owner, this.name, this.ref, {this.path});
+  const BbObjectScreen(this.owner, this.name, this.ref, {this.path});
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +65,7 @@ class BbObjectScreen extends StatelessWidget {
         }
       },
       actionBuilder: () {
-        return ActionEntry(
+        return const ActionEntry(
           iconData: Ionicons.cog,
           url: '/choose-code-theme',
         );

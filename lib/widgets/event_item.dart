@@ -14,7 +14,7 @@ import 'package:flutter_gen/gen_l10n/S.dart';
 class EventItem extends StatelessWidget {
   final GithubEvent e;
 
-  EventItem(this.e);
+  const EventItem(this.e);
 
   InlineSpan _buildLinkSpan(BuildContext context, String? text, String? url) {
     final theme = Provider.of<ThemeModel>(context);
@@ -55,12 +55,12 @@ class EventItem extends StatelessWidget {
             children: <Widget>[
               Avatar(
                   url: e.actor!.avatarUrl,
-                  linkUrl: '/github/' + e.actor!.login!),
-              SizedBox(width: 10),
+                  linkUrl: '/github/${e.actor!.login!}'),
+              const SizedBox(width: 10),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: join(SizedBox(height: 6), [
+                  children: join(const SizedBox(height: 6), [
                     Text.rich(
                       TextSpan(
                         style: TextStyle(
@@ -101,7 +101,7 @@ class EventItem extends StatelessWidget {
       context: context,
       spans: [
         TextSpan(
-          text: ' ' + e.type!,
+          text: ' ${e.type!}',
           style: TextStyle(color: theme.palette.primary),
         )
       ],
@@ -116,10 +116,10 @@ class EventItem extends StatelessWidget {
       url:
           '/github/${e.repoOwner}/${e.repoName}/compare/${e.payload!.before}/${e.payload!.head}',
       child: Container(
-        padding: EdgeInsets.all(12),
+        padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
             color: theme.palette.grayBackground,
-            borderRadius: BorderRadius.all(Radius.circular(4))),
+            borderRadius: const BorderRadius.all(Radius.circular(4))),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -137,7 +137,7 @@ class EventItem extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             ...e.payload!.commits!.map((commit) {
               return Row(
                 children: <Widget>[
@@ -149,7 +149,7 @@ class EventItem extends StatelessWidget {
                       fontFamily: CommonStyle.monospace,
                     ),
                   ),
-                  SizedBox(width: 6),
+                  const SizedBox(width: 6),
                   Expanded(
                     child: Text(
                       commit.message!,
@@ -173,10 +173,10 @@ class EventItem extends StatelessWidget {
     return LinkWidget(
       url: e.payload!.comment!.htmlUrl,
       child: Container(
-        padding: EdgeInsets.all(12),
+        padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
             color: theme.palette.grayBackground,
-            borderRadius: BorderRadius.all(Radius.circular(4))),
+            borderRadius: const BorderRadius.all(Radius.circular(4))),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -190,7 +190,7 @@ class EventItem extends StatelessWidget {
                     fontFamily: CommonStyle.monospace,
                   ),
                 ),
-                SizedBox(width: 6),
+                const SizedBox(width: 6),
                 Expanded(
                   child: Text(
                     e.payload!.comment!.body!,
@@ -232,20 +232,20 @@ class EventItem extends StatelessWidget {
       url:
           '/github/${e.repoOwner}/${e.repoName}/${isPullRequest ? 'pull' : 'issues'}/${issue.number}',
       child: Container(
-        padding: EdgeInsets.all(12),
+        padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
             color: theme.palette.grayBackground,
-            borderRadius: BorderRadius.all(Radius.circular(4))),
+            borderRadius: const BorderRadius.all(Radius.circular(4))),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: join(SizedBox(height: 6), [
+          children: join(const SizedBox(height: 6), [
             Row(
               children: <Widget>[
                 IssueIcon(state, size: 20),
-                SizedBox(width: 4),
+                const SizedBox(width: 4),
                 Expanded(
                   child: Text(
-                    '#' + issue.number.toString() + ' ' + issue.title!,
+                    '#${issue.number} ${issue.title!}',
                     style: TextStyle(
                       fontWeight: FontWeight.w500,
                       fontSize: 17,
@@ -267,7 +267,7 @@ class EventItem extends StatelessWidget {
             Row(
               children: <Widget>[
                 Avatar(url: issue.user!.avatarUrl, size: AvatarSize.extraSmall),
-                SizedBox(width: 8),
+                const SizedBox(width: 8),
                 Text(issue.user!.login!,
                     style: TextStyle(
                       fontSize: 14,
@@ -280,7 +280,7 @@ class EventItem extends StatelessWidget {
                     size: 14,
                     color: theme.palette.tertiaryText,
                   ),
-                  SizedBox(width: 4),
+                  const SizedBox(width: 4),
                   Text(issue.comments.toString(),
                       style: TextStyle(
                         fontSize: 14,
@@ -391,16 +391,16 @@ class EventItem extends StatelessWidget {
         String pageNamesEdited = "";
         for (GithubPagesItem page in e.payload!.pages!) {
           if (page.action == "edited") {
-            pageNamesEdited += ", " + page.pageName!;
+            pageNamesEdited += ", ${page.pageName!}";
           } else {
-            pageNamesCreated += ", " + page.pageName!;
+            pageNamesCreated += ", ${page.pageName!}";
           }
         }
-        if (pageNamesCreated.length > 0) {
+        if (pageNamesCreated.isNotEmpty) {
           pageNamesCreated =
               " ${AppLocalizations.of(context)!.createdPages(pageNamesCreated)}";
         }
-        if (pageNamesEdited.length > 0) {
+        if (pageNamesEdited.isNotEmpty) {
           pageNamesEdited =
               " ${AppLocalizations.of(context)!.editedPages(pageNamesEdited)}";
         }
@@ -411,7 +411,7 @@ class EventItem extends StatelessWidget {
       case 'InstallationEvent':
         String? action = e.payload!.action;
         if (action == 'new_permissions_accepted') {
-          action = "${AppLocalizations.of(context)!.newPermissionsAccepted}";
+          action = AppLocalizations.of(context)!.newPermissionsAccepted;
         }
         return _buildItem(
           context: context,
@@ -429,10 +429,10 @@ class EventItem extends StatelessWidget {
         String addedRepos = "";
         String removedRepos = "";
         for (GithubNotificationItemRepo repo in repositoriesAdded) {
-          addedRepos += repo.fullName! + ", ";
+          addedRepos += "${repo.fullName!}, ";
         }
         for (GithubNotificationItemRepo repo in repositoriesRemoved) {
-          removedRepos += repo.fullName! + ", ";
+          removedRepos += "${repo.fullName!}, ";
         }
         String finalListOfRepos = "";
         if (addedRepos != "") {
@@ -440,13 +440,12 @@ class EventItem extends StatelessWidget {
               "${AppLocalizations.of(context)!.wereAddedTo(addedRepos, e.payload!.installation!.id.toString())}\n ";
         }
         if (removedRepos != "") {
-          finalListOfRepos += removedRepos +
-              " ${AppLocalizations.of(context)!.wereRemovedFrom(removedRepos, e.payload!.installation!.id.toString())}";
+          finalListOfRepos += "$removedRepos ${AppLocalizations.of(context)!.wereRemovedFrom(removedRepos, e.payload!.installation!.id.toString())}";
         }
         return _buildItem(
           context: context,
           spans: [
-            TextSpan(text: '$finalListOfRepos'),
+            TextSpan(text: finalListOfRepos),
           ],
         );
       case 'IssueCommentEvent':
@@ -536,7 +535,7 @@ class EventItem extends StatelessWidget {
           action = ' ${AppLocalizations.of(context)!.convertProjectCard} ';
         } else {
           action =
-              action! + ' ${AppLocalizations.of(context)!.theProjectCard} ';
+              '${action!} ${AppLocalizations.of(context)!.theProjectCard} ';
         }
         return _buildItem(
           context: context,
@@ -622,7 +621,7 @@ class EventItem extends StatelessWidget {
             TextSpan(text: '${AppLocalizations.of(context)!.released} '),
             _buildLinkSpan(context, e.payload!.release!.tagName,
                 e.payload!.release!.htmlUrl),
-            TextSpan(text: ' at '),
+            const TextSpan(text: ' at '),
             _buildRepo(context)
           ],
         );

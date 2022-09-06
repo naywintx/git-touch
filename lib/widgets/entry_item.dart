@@ -9,7 +9,7 @@ class EntryItem extends StatelessWidget {
   final String text;
   final String? url;
 
-  EntryItem({
+  const EntryItem({
     required this.text,
     this.count,
     this.url,
@@ -23,7 +23,7 @@ class EntryItem extends StatelessWidget {
       child: LinkWidget(
         url: url,
         child: Container(
-          padding: EdgeInsets.symmetric(vertical: 14),
+          padding: const EdgeInsets.symmetric(vertical: 14),
           child: Column(
             children: <Widget>[
               Text(

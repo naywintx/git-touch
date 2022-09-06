@@ -11,13 +11,13 @@ class GeReposScreen extends StatelessWidget {
   final String api;
   final String title;
 
-  GeReposScreen(String owner)
+  const GeReposScreen(String owner)
       : api = '/users/$owner/repos',
         title = 'Repositories';
-  GeReposScreen.star(String owner)
+  const GeReposScreen.star(String owner)
       : api = '/users/$owner/starred',
         title = 'Stars';
-  GeReposScreen.forks(String owner, String name)
+  const GeReposScreen.forks(String owner, String name)
       : api = '/repos/$owner/$name/forks',
         title = 'Forks';
 

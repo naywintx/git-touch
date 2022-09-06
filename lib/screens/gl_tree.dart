@@ -6,14 +6,13 @@ import 'package:git_touch/widgets/object_tree.dart';
 import 'package:flutter/material.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:provider/provider.dart';
-import 'package:git_touch/utils/utils.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
 
 class GlTreeScreen extends StatelessWidget {
   final int id;
   final String ref;
   final String? path;
-  GlTreeScreen(this.id, this.ref, {this.path});
+  const GlTreeScreen(this.id, this.ref, {this.path});
 
   @override
   Widget build(BuildContext context) {

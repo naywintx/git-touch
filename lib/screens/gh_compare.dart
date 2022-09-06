@@ -14,8 +14,9 @@ class GhComparisonScreen extends StatelessWidget {
   final String name;
   final String before;
   final String head;
-  GhComparisonScreen(this.owner, this.name, this.before, this.head);
+  const GhComparisonScreen(this.owner, this.name, this.before, this.head);
 
+  @override
   Widget build(BuildContext context) {
     return RefreshStatefulScaffold(
       title: AppBarTitle(AppLocalizations.of(context)!.files),

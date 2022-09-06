@@ -13,7 +13,7 @@ class IssueIcon extends StatelessWidget {
   final IssueIconState state;
   final double? size;
 
-  IssueIcon(this.state, {this.size});
+  const IssueIcon(this.state, {this.size});
 
   @override
   Widget build(BuildContext context) {
