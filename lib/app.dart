@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
     final auth = Provider.of<AuthModel>(context);
     final theme = Provider.of<ThemeModel>(context);
 
+    // ignore: prefer_function_declarations_over_variables
     final LocaleListResolutionCallback localeListResolutionCallback =
         (locales, supportedLocales) {
       // 1. user set locale
@@ -60,13 +61,12 @@ class MyApp extends StatelessWidget {
                 brightness: theme.brightness,
                 primaryColor:
                     theme.brightness == Brightness.dark ? null : Colors.white,
-                accentColor: theme.palette.primary,
                 scaffoldBackgroundColor: theme.palette.background,
-                pageTransitionsTheme: PageTransitionsTheme(
+                pageTransitionsTheme: const PageTransitionsTheme(
                   builders: {
                     TargetPlatform.android: ZoomPageTransitionsBuilder(),
                   },
-                ),
+                ), colorScheme: ColorScheme.fromSwatch().copyWith(secondary: theme.palette.primary),
               ),
               home: Home(),
               localizationsDelegates: AppLocalizations.localizationsDelegates,

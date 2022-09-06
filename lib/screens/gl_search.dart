@@ -70,7 +70,7 @@ class _GlSearchScreenState extends State<GlSearchScreen> {
           color: theme.palette.background,
           child: CupertinoTextField(
             prefix: Row(
-              children: <Widget>[
+              children: const <Widget>[
                 SizedBox(width: 8),
                 Icon(Octicons.search, size: 20, color: PrimerColors.gray400),
               ],
@@ -104,16 +104,16 @@ class _GlSearchScreenState extends State<GlSearchScreen> {
 
   static const tabs = ['Projects', 'Users'];
 
-  Widget _buildItem(_p) {
+  Widget _buildItem(project) {
     if (_activeTab == 0) {
-      final p = _p as GitlabProject;
+      final p = project as GitlabProject;
       final updatedAt = timeago.format(p.lastActivityAt!);
       return RepositoryItem.gl(
         payload: p,
         note: 'Updated $updatedAt',
       );
     } else {
-      final p = _p as GitlabUser;
+      final p = project as GitlabUser;
       return UserItem.gitlab(
         login: p.username,
         name: p.name,
@@ -136,7 +136,7 @@ class _GlSearchScreenState extends State<GlSearchScreen> {
             if (theme == AppThemeType.cupertino)
               Center(
                 child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 8),
+                  padding: const EdgeInsets.symmetric(vertical: 8),
                   child: CupertinoSlidingSegmentedControl(
                     groupValue: _activeTab,
                     onValueChanged: _onTabSwitch,
@@ -144,13 +144,13 @@ class _GlSearchScreenState extends State<GlSearchScreen> {
                         key,
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8),
-                          child: Text(text, style: TextStyle(fontSize: 14)),
+                          child: Text(text, style: const TextStyle(fontSize: 14)),
                         ))),
                   ),
                 ),
               ),
             if (_loading)
-              Loading()
+              const Loading()
             else if (_activeTab == 0)
               ..._projects.map(_buildItem).toList()
             else

@@ -47,7 +47,7 @@ class _HomeState extends State<Home> {
   @override
   initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 5), () async {
+    Future.delayed(const Duration(seconds: 5), () async {
       final latest = await GitHub()
           .repositories
           .getLatestRelease(RepositorySlug.full('git-touch/git-touch'));
@@ -57,7 +57,7 @@ class _HomeState extends State<Home> {
               .compareTo(Version.parse(current)) ==
           1) {
         final res = await context.read<ThemeModel>().showConfirm(context,
-            Text('New version released. Would you like to download it?'));
+            const Text('New version released. Would you like to download it?'));
         if (res == true) {
           if (Platform.isIOS) {
             // go to app store
@@ -103,7 +103,7 @@ class _HomeState extends State<Home> {
           case 2:
             return GlSearchScreen();
           case 3:
-            return GlUserScreen(null);
+            return const GlUserScreen(null);
         }
         break;
       case PlatformType.bitbucket:
@@ -113,13 +113,13 @@ class _HomeState extends State<Home> {
           case 1:
             return BbTeamsScreen();
           case 2:
-            return BbUserScreen(null);
+            return const BbUserScreen(null);
         }
         break;
       case PlatformType.gitea:
         switch (index) {
           case 0:
-            return GtOrgsScreen();
+            return const GtOrgsScreen();
           case 1:
             return GtUserScreen(auth.activeAccount!.login, isViewer: true);
         }
@@ -180,23 +180,23 @@ class _HomeState extends State<Home> {
 
   List<BottomNavigationBarItem> _buildNavigationItems(String platform) {
     final search = BottomNavigationBarItem(
-      icon: Icon(Ionicons.search_outline),
-      activeIcon: Icon(Ionicons.search),
+      icon: const Icon(Ionicons.search_outline),
+      activeIcon: const Icon(Ionicons.search),
       label: AppLocalizations.of(context)!.search,
     );
     final group = BottomNavigationBarItem(
-      icon: Icon(Ionicons.people_outline),
-      activeIcon: Icon(Ionicons.people),
+      icon: const Icon(Ionicons.people_outline),
+      activeIcon: const Icon(Ionicons.people),
       label: AppLocalizations.of(context)!.organizations,
     );
     final me = BottomNavigationBarItem(
-      icon: Icon(Ionicons.person_outline),
-      activeIcon: Icon(Ionicons.person),
+      icon: const Icon(Ionicons.person_outline),
+      activeIcon: const Icon(Ionicons.person),
       label: AppLocalizations.of(context)!.me,
     );
     final explore = BottomNavigationBarItem(
-      icon: Icon(Ionicons.compass_outline),
-      activeIcon: Icon(Ionicons.compass),
+      icon: const Icon(Ionicons.compass_outline),
+      activeIcon: const Icon(Ionicons.compass),
       label: AppLocalizations.of(context)!.explore,
     );
 
@@ -204,8 +204,8 @@ class _HomeState extends State<Home> {
       case PlatformType.github:
         return [
           BottomNavigationBarItem(
-            icon: Icon(Ionicons.newspaper_outline),
-            activeIcon: Icon(Ionicons.newspaper),
+            icon: const Icon(Ionicons.newspaper_outline),
+            activeIcon: const Icon(Ionicons.newspaper),
             label: AppLocalizations.of(context)!.news,
           ),
           BottomNavigationBarItem(
@@ -215,8 +215,8 @@ class _HomeState extends State<Home> {
             label: AppLocalizations.of(context)!.notification,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Ionicons.flame_outline),
-            activeIcon: Icon(Ionicons.flame),
+            icon: const Icon(Ionicons.flame_outline),
+            activeIcon: const Icon(Ionicons.flame),
             label: AppLocalizations.of(context)!.trending,
           ),
           search,

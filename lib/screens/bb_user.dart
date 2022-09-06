@@ -13,14 +13,14 @@ import 'package:git_touch/utils/utils.dart';
 class BbUserScreen extends StatelessWidget {
   final String? login;
   final bool isTeam;
-  BbUserScreen(this.login, {this.isTeam = false});
+  const BbUserScreen(this.login, {this.isTeam = false});
   bool get isViewer => login == null;
 
   @override
   Widget build(BuildContext context) {
     final auth = Provider.of<AuthModel>(context);
-    final _accountId = auth.activeAccount!.accountId;
-    final _login = login ?? auth.activeAccount!.login;
+    final accountId = auth.activeAccount!.accountId;
+    final finalLogin = login ?? auth.activeAccount!.login;
     return RefreshStatefulScaffold<Tuple2<BbUser, Iterable<BbRepo>>>(
       title: Text(isViewer
           ? 'Me'
@@ -30,16 +30,16 @@ class BbUserScreen extends StatelessWidget {
       fetch: () async {
         final res = await Future.wait([
           auth
-              .fetchBbJson('/${isTeam ? 'teams' : 'users'}/$_accountId')
+              .fetchBbJson('/${isTeam ? 'teams' : 'users'}/$accountId')
               .then((value) => BbUser.fromJson(value)),
           auth
-              .fetchBbWithPage('/repositories/$_login')
+              .fetchBbWithPage('/repositories/$finalLogin')
               .then((value) => [for (var v in value.items) BbRepo.fromJson(v)]),
         ]);
         return Tuple2(res[0] as BbUser, res[1] as Iterable<BbRepo>);
       },
       action: isViewer
-          ? ActionEntry(
+          ? const ActionEntry(
               iconData: Ionicons.cog,
               url: '/settings',
             )
@@ -50,7 +50,7 @@ class BbUserScreen extends StatelessWidget {
         return Column(
           children: <Widget>[
             UserHeader(
-              login: _login,
+              login: finalLogin,
               avatarUrl: user.avatarUrl,
               name: user.displayName,
               createdAt: user.createdOn,

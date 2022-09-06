@@ -7,7 +7,7 @@ class MyLabel extends StatelessWidget {
   final String? cssColor;
   final Color? textColor;
 
-  MyLabel({
+  const MyLabel({
     required this.name,
     this.color,
     this.cssColor,
@@ -16,18 +16,18 @@ class MyLabel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _color = color ?? convertColor(cssColor);
+    final finalColor = color ?? convertColor(cssColor);
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 2, horizontal: 6),
+      padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 6),
       decoration: BoxDecoration(
-        color: _color,
-        borderRadius: BorderRadius.all(Radius.circular(4)),
+        color: finalColor,
+        borderRadius: const BorderRadius.all(Radius.circular(4)),
       ),
       child: Text(
         name!,
         style: TextStyle(
           fontSize: 13,
-          color: textColor ?? getFontColorByBrightness(_color),
+          color: textColor ?? getFontColorByBrightness(finalColor),
           // fontWeight: FontWeight.w600,
         ),
       ),

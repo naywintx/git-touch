@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/widgets.dart';
 import 'package:git_touch/models/theme.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:provider/provider.dart';
@@ -36,7 +35,7 @@ class LongListStatefulScaffold<T, K> extends StatefulWidget {
   final Future<LongListPayload<T, K>> Function() onRefresh;
   final Future<LongListPayload<T, K>> Function(String? cursor) onLoadMore;
 
-  LongListStatefulScaffold({
+  const LongListStatefulScaffold({
     required this.title,
     this.trailingBuilder,
     required this.headerBuilder,
@@ -74,7 +73,7 @@ class _LongListStatefulScaffoldState<T, K>
       payload = await widget.onRefresh();
     } catch (err) {
       error = err.toString();
-      throw err;
+      rethrow;
     } finally {
       if (mounted) {
         setState(() {
@@ -90,11 +89,10 @@ class _LongListStatefulScaffoldState<T, K>
       loadingMore = true;
     });
     try {
-      LongListPayload<T?, K> _payload =
-          await widget.onLoadMore(payload!.cursor);
-      payload!.totalCount = _payload.totalCount;
-      payload!.cursor = _payload.cursor;
-      payload!.leadingItems.addAll(_payload.leadingItems);
+      LongListPayload<T?, K> p = await widget.onLoadMore(payload!.cursor);
+      payload!.totalCount = p.totalCount;
+      payload!.cursor = p.cursor;
+      payload!.leadingItems.addAll(p.leadingItems);
     } finally {
       if (mounted) {
         setState(() {
@@ -134,9 +132,9 @@ class _LongListStatefulScaffoldState<T, K>
                   Text('$count hidden items',
                       style:
                           TextStyle(color: theme.palette.text, fontSize: 15)),
-                  Padding(padding: EdgeInsets.only(top: 4)),
+                  const Padding(padding: EdgeInsets.only(top: 4)),
                   loadingMore
-                      ? CupertinoActivityIndicator()
+                      ? const CupertinoActivityIndicator()
                       : Text(
                           'Load more...',
                           style: TextStyle(
@@ -168,7 +166,7 @@ class _LongListStatefulScaffoldState<T, K>
           child: ErrorReload(text: error, onTap: _refresh));
     } else if (loading) {
       // TODO:
-      return SliverToBoxAdapter(child: Loading(more: false));
+      return const SliverToBoxAdapter(child: Loading(more: false));
     } else {
       return SliverList(
         delegate:

@@ -14,7 +14,7 @@ import 'package:flutter_gen/gen_l10n/S.dart';
 
 class GlUserScreen extends StatelessWidget {
   final int? id;
-  GlUserScreen(this.id);
+  const GlUserScreen(this.id);
   bool get isViewer => id == null;
 
   @override
@@ -25,10 +25,10 @@ class GlUserScreen extends StatelessWidget {
           : AppLocalizations.of(context)!.user),
       fetch: () async {
         final auth = context.read<AuthModel>();
-        final _id = id ?? auth.activeAccount!.gitlabId;
+        final finalId = id ?? auth.activeAccount!.gitlabId;
         final res = await Future.wait([
-          auth.fetchGitlab('/users/$_id'),
-          auth.fetchGitlab('/users/$_id/projects'),
+          auth.fetchGitlab('/users/$finalId'),
+          auth.fetchGitlab('/users/$finalId/projects'),
         ]);
         return Tuple2(
           GitlabUser.fromJson(res[0]),
@@ -36,7 +36,7 @@ class GlUserScreen extends StatelessWidget {
         );
       },
       action: isViewer
-          ? ActionEntry(
+          ? const ActionEntry(
               iconData: Ionicons.cog,
               url: '/settings',
             )
