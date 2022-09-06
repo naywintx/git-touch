@@ -96,8 +96,8 @@ class GithubPalette {
 // final pageSize = 5;
 const PAGE_SIZE = 30;
 
-var createWarning =
-    (String text) => Text(text, style: const TextStyle(color: Colors.redAccent));
+var createWarning = (String text) =>
+    Text(text, style: const TextStyle(color: Colors.redAccent));
 var warningSpan =
     const TextSpan(text: 'xxx', style: TextStyle(color: Colors.redAccent));
 
@@ -169,8 +169,9 @@ class PrimerBranchName extends StatelessWidget {
 launchStringUrl(String? url) async {
   if (url == null) return;
 
-  if (await canLaunch(url)) {
-    await launch(url);
+  final uri = Uri.parse(url);
+  if (await canLaunchUrl(uri)) {
+    await launchUrl(uri);
   } else {
     // TODO: fallback
   }

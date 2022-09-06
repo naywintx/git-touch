@@ -7,10 +7,8 @@ import 'package:webview_flutter/webview_flutter.dart';
 class HtmlView extends StatefulWidget {
   final String html;
   HtmlView(String text, {String? cssText, List<String> cssLinks = const []})
-      : html = '<meta name="viewport" content="width=device-width">${cssLinks
-                .map((link) =>
-                    '<link rel="stylesheet" href="$link" crossorigin="anonymous" />')
-                .join('')}<style>body{margin:12px}${cssText ?? ''}</style>$text';
+      : html =
+            '<meta name="viewport" content="width=device-width">${cssLinks.map((link) => '<link rel="stylesheet" href="$link" crossorigin="anonymous" />').join('')}<style>body{margin:12px}${cssText ?? ''}</style>$text';
 
   @override
   _HtmlViewState createState() => _HtmlViewState();
@@ -24,7 +22,7 @@ class _HtmlViewState extends State<HtmlView> {
 
   updateHeight() async {
     final value = await controller
-        .evaluateJavascript("document.documentElement.scrollHeight;");
+        .runJavascriptReturningResult("document.documentElement.scrollHeight;");
     // print(value);
     if (mounted) {
       setState(() {

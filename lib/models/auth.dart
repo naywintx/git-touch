@@ -84,7 +84,7 @@ class AuthModel with ChangeNotifier {
 
   // https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/#web-application-flow
   Future<void> _onSchemeDetected(Uri? uri) async {
-    await closeWebView();
+    await closeInAppWebView();
 
     loading = true;
     notifyListeners();
@@ -143,9 +143,7 @@ class AuthModel with ChangeNotifier {
         throw info['message'];
       }
       if (info['error'] != null) {
-        throw info['error'] +
-            '. ' +
-            (info['error_description'] ?? '');
+        throw info['error'] + '. ' + (info['error_description'] ?? '');
       }
       final user = GitlabUser.fromJson(info);
       await _addAccount(Account(
@@ -693,15 +691,15 @@ class AuthModel with ChangeNotifier {
   Client? _gqlClient;
   Client get gqlClient {
     _gqlClient ??= Client(
-        link: HttpLink(
-          '$_apiPrefix/graphql',
-          defaultHeaders: {HttpHeaders.authorizationHeader: 'token $token'},
-        ),
-        // https://ferrygraphql.com/docs/fetch-policies#default-fetchpolicies
-        defaultFetchPolicies: {
-          OperationType.query: FetchPolicy.NetworkOnly,
-        },
-      );
+      link: HttpLink(
+        '$_apiPrefix/graphql',
+        defaultHeaders: {HttpHeaders.authorizationHeader: 'token $token'},
+      ),
+      // https://ferrygraphql.com/docs/fetch-policies#default-fetchpolicies
+      defaultFetchPolicies: {
+        OperationType.query: FetchPolicy.NetworkOnly,
+      },
+    );
 
     return _gqlClient!;
   }
