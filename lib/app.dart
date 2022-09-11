@@ -1,11 +1,11 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:git_touch/home.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/S.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/theme.dart';
-import 'package:provider/provider.dart';
-import 'package:flutter_gen/gen_l10n/S.dart';
+import 'package:git_touch/router.dart';
 import 'package:intl/locale.dart' as l;
+import 'package:provider/provider.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -49,14 +49,19 @@ class MyApp extends StatelessWidget {
     return Container(
       key: auth.rootKey,
       child: theme.theme == AppThemeType.cupertino
-          ? CupertinoApp(
+          ? CupertinoApp.router(
+              routeInformationProvider: router.routeInformationProvider,
+              routeInformationParser: router.routeInformationParser,
+              routerDelegate: router.routerDelegate,
               theme: CupertinoThemeData(brightness: theme.brightness),
-              home: Home(),
               localizationsDelegates: AppLocalizations.localizationsDelegates,
               supportedLocales: AppLocalizations.supportedLocales,
               localeListResolutionCallback: localeListResolutionCallback,
             )
-          : MaterialApp(
+          : MaterialApp.router(
+              routeInformationProvider: router.routeInformationProvider,
+              routeInformationParser: router.routeInformationParser,
+              routerDelegate: router.routerDelegate,
               theme: ThemeData(
                 brightness: theme.brightness,
                 primaryColor:
@@ -66,9 +71,10 @@ class MyApp extends StatelessWidget {
                   builders: {
                     TargetPlatform.android: ZoomPageTransitionsBuilder(),
                   },
-                ), colorScheme: ColorScheme.fromSwatch().copyWith(secondary: theme.palette.primary),
+                ),
+                colorScheme: ColorScheme.fromSwatch()
+                    .copyWith(secondary: theme.palette.primary),
               ),
-              home: Home(),
               localizationsDelegates: AppLocalizations.localizationsDelegates,
               supportedLocales: AppLocalizations.supportedLocales,
               localeListResolutionCallback: localeListResolutionCallback,

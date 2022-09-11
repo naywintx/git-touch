@@ -1,15 +1,16 @@
-import 'package:universal_io/io.dart';
 import 'dart:async';
+
 import 'package:fimber/fimber.dart';
-import 'package:fluro/fluro.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:git_touch/utils/utils.dart';
-import 'package:git_touch/widgets/action_button.dart';
-import 'package:primer/primer.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
+import 'package:git_touch/utils/utils.dart';
+import 'package:git_touch/widgets/action_button.dart';
+import 'package:go_router/go_router.dart';
+import 'package:primer/primer.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:universal_io/io.dart';
 
 class AppThemeType {
   static const material = 0;
@@ -177,8 +178,6 @@ class ThemeModel with ChangeNotifier {
     notifyListeners();
   }
 
-  final router = FluroRouter();
-
   final paletteLight = Palette(
     primary: PrimerColors.blue500,
     text: Colors.black,
@@ -250,14 +249,11 @@ class ThemeModel with ChangeNotifier {
   push(BuildContext context, String url, {bool replace = false}) {
     // Fimber.d(url);
     if (url.startsWith('/')) {
-      return router.navigateTo(
-        context,
-        url,
-        transition: theme == AppThemeType.cupertino
-            ? TransitionType.cupertino
-            : TransitionType.material,
-        replace: replace,
-      );
+      if (replace) {
+        context.replace(url);
+      } else {
+        context.push(url);
+      }
     } else {
       launchStringUrl(url);
     }

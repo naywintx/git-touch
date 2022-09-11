@@ -37,7 +37,6 @@ dependencies:
   file_icon:
   filesize:
   fimber:
-  fluro:
   flutter_highlight:
   flutter_markdown:
   flutter_svg:
@@ -67,6 +66,7 @@ dependencies:
   sentry_flutter:
   pub_semver:
   google_fonts:
+  go_router:
 
 dev_dependencies:
   flutter_test:

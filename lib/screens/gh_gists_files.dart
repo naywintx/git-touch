@@ -1,16 +1,16 @@
 import 'package:ferry/ferry.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/S.dart';
 import 'package:git_touch/graphql/__generated__/github.data.gql.dart';
 import 'package:git_touch/graphql/__generated__/github.req.gql.dart';
 import 'package:git_touch/graphql/__generated__/github.var.gql.dart';
+import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/scaffolds/refresh_stateful.dart';
 import 'package:git_touch/widgets/app_bar_title.dart';
 import 'package:git_touch/widgets/object_tree.dart';
 import 'package:git_touch/widgets/table_view.dart';
 import 'package:provider/provider.dart';
-import 'package:git_touch/models/auth.dart';
-import 'package:flutter_gen/gen_l10n/S.dart';
 
 class GhGistsFilesScreen extends StatelessWidget {
   final String id;
